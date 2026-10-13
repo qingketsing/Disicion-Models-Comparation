@@ -1,0 +1,19 @@
+{
+  "qwen": {
+    "billing": "instance",
+    "currency": "CNY",
+    "instance_price_per_hour": null,
+    "price_source": "TODO: actual instance invoice / region / SKU",
+    "price_date": "TODO",
+    "fx_date": "TODO if currency conversion is needed"
+  },
+  "jev": {
+    "billing": "api",
+    "currency": "CNY",
+    "input_price_per_million": null,
+    "output_price_per_million": null,
+    "price_source": "TODO: actual API pricing / billing record",
+    "price_date": "TODO",
+    "fx_date": "TODO if currency conversion is needed"
+  }
+}

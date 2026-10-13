@@ -1,0 +1,12 @@
+{
+  "hours": 730,
+  "utilization": 0.7,
+  "training_cost": 0,
+  "maintenance_cost": 0,
+  "scenarios": [
+    {"name": "low", "monthly_requests": 10000, "peak_rps": 1},
+    {"name": "medium", "monthly_requests": 100000, "peak_rps": 2},
+    {"name": "high", "monthly_requests": 1000000, "peak_rps": 8}
+  ],
+  "note": "Illustrative traffic scenarios, to be confirmed before reporting."
+}

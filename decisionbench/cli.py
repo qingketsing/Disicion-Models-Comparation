@@ -11,7 +11,7 @@ from decisionbench.metrics import request_cost, summarize
 from decisionbench.runners import load, quality, warmup
 
 
-async def run(config_path: Path, root: Path):
+async def run(config_path: Path, root: Path, on_created=None):
     config = load_config(config_path)
     catalog_paths = [resolve_path(root, config.catalog)]
     if config.mode == "dynamic":
@@ -27,6 +27,8 @@ async def run(config_path: Path, root: Path):
         output, manifest = create_run(
             root, config, config_path, resolve_path(root, config.dataset), catalog_paths
         )
+        if on_created is not None:
+            on_created(output)
         print(f"Run directory: {output}", flush=True)
         with (output / "warmup_requests.jsonl").open("w", encoding="utf-8") as stream:
             await warmup(
@@ -132,10 +134,10 @@ def main():
     if args.command == "run":
         asyncio.run(run(args.config.resolve(), args.root.resolve()))
     elif args.command == "cost":
-        manifest = json.loads((args.run_dir / "manifest.json").read_text())
+        manifest = json.loads((args.run_dir / "manifest.json").read_text(encoding="utf-8"))
         if manifest["state"] != "completed":
             parser.error("cost requires a completed run")
-        pricing = json.loads(args.pricing.read_text())
+        pricing = json.loads(args.pricing.read_text(encoding="utf-8"))
         result = request_cost(
             read_jsonl(args.run_dir / "requests.jsonl"),
             manifest["elapsed_s"],

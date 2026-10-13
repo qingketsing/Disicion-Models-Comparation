@@ -4,12 +4,37 @@ Jev / Qwen / BERT 共用数据、测量和成本口径的实验框架。Controll
 
 当前为新实现的 v0.1。用户提供的方案已保存在 `docs/ORIGINAL_PLAN.txt`，附件中没有 Starter ZIP。本项目不包含真实 Jev、Qwen 或 BERT 跑分。
 
-## 本机开始
+## Qwen 与 Jev 远程实验
 
-已创建 Python 3.12 虚拟环境并安装 Controller、开发和 classic Serving 依赖。进入目录：
+已新增可执行实验套件：质量评测、开放环负载、嵌套候选类别规模、可选类别说明消融、配对分析和实际价格重算。实验入口默认只预览；`--execute` 才发送请求，Jev 执行还需要显式请求预算。
+
+- [详细实验方案](refine-logs/EXPERIMENT_PLAN.md) 与 [实验追踪](refine-logs/EXPERIMENT_TRACKER.md)
+- [服务器操作手册](docs/REMOTE_EXPERIMENTS.md)
+- [实验参数模板](configs/experiment-suite.yaml) 与 [真实价格模板](configs/pricing-real.template.json)
 
 ```bash
-cd /Users/jiaweiliu/decisionbench
+# 软件验证：fixture + Mock，完全不调用 Qwen/Jev。
+python -m scripts.smoke_suite --name local-smoke-v1
+# 真实数据和人工审阅说明准备好后，冻结可上传的实验套件。
+python -m decisionbench.suite prepare -c configs/experiment-suite.yaml --out experiments/massive-v1
+# 预览请求数量，不构造 Adapter、不发送 HTTP 请求。
+python -m decisionbench.suite run --plan experiments/massive-v1/plan.json --block checkpoint
+# 完成真实实验后离线复算并生成 CSV/PNG。
+python -m decisionbench.analysis --plan experiments/massive-v1/plan.json --out reports/massive-v1 --plots
+```
+
+## 本机开始
+
+Windows 副本已在 2026-10-13 创建 Python 3.12 虚拟环境。PowerShell 进入项目目录后：
+
+```powershell
+.venv\Scripts\Activate.ps1
+python -m pytest -q
+```
+
+Linux/macOS 安装环境后激活并运行基础自测：
+
+```bash
 source .venv/bin/activate
 pytest -q
 python -m decisionbench.cli run -c configs/smoke-quality.yaml
@@ -63,10 +88,10 @@ python scripts/prepare_datasets.py --name banking77 --download --out data/normal
 
 ## 模型启动与接入
 
-本机已生成 `models/classic`，可直接启动服务。新机器或新版本才运行训练命令；`--out` 不能覆盖已有模型目录。小型 fixture 用于验证真实 HTTP 链路：
+`models/classic` 默认被 Git 忽略，不随仓库提供。首次使用先训练；`--out` 不能覆盖已有模型目录。小型 fixture 用于验证真实 HTTP 链路：
 
 ```bash
-# 本机已有 models/classic，可以跳过这条训练命令。
+# 若已训练并保留 models/classic，可以跳过这条命令。
 python -m services.train_classic --train data/fixtures/train.jsonl --catalog data/fixtures/catalog.json --out models/classic
 MODEL_PATH=models/classic uvicorn services.classic_server:app --host 127.0.0.1 --port 8002
 # 另一个终端激活同一虚拟环境后：

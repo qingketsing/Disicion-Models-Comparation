@@ -11,6 +11,19 @@ from decisionbench.protocol import Catalog, Decision, ModelInput
 INSTRUCTIONS = "Select the single intent that best matches the user's request from the catalog."
 
 
+def qwen_messages(sample: ModelInput, catalog: Catalog):
+    return [
+        {
+            "role": "system",
+            "content": INSTRUCTIONS
+            + '\nReturn only JSON: {"label":"<intent>"}.\n'
+            + "Catalog:\n"
+            + json.dumps(catalog.labels, ensure_ascii=False),
+        },
+        {"role": "user", "content": sample.text},
+    ]
+
+
 class InvalidOutput(ValueError):
     def __init__(self, message: str, decision: Decision | None = None):
         super().__init__(message)
@@ -127,16 +140,7 @@ class QwenAdapter(HTTPAdapter):
             "/v1/chat/completions",
             {
                 "model": self.model,
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": INSTRUCTIONS
-                        + '\nReturn only JSON: {"label":"<intent>"}.\n'
-                        + "Catalog:\n"
-                        + json.dumps(catalog.labels, ensure_ascii=False),
-                    },
-                    {"role": "user", "content": sample.text},
-                ],
+                "messages": qwen_messages(sample, catalog),
                 "temperature": 0,
                 "max_tokens": self.max_tokens,
                 "chat_template_kwargs": {"enable_thinking": False},

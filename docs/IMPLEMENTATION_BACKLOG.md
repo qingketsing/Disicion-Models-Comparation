@@ -17,6 +17,8 @@
 
 ## P1：正式实验
 
+2026-10-13 已补齐实验编排工具：冻结套件、无请求预览、Jev 请求预算、断点续跑、10/30/60 嵌套类别实验、可选说明消融、配对准确率区间、独立质量复算、真实价格批量重算、CSV/PNG 和上传包。见 `refine-logs/EXPERIMENT_PLAN.md` 与 `docs/REMOTE_EXPERIMENTS.md`。这些工具通过本地 Mock/fixture 验证；下面的真实实验、稳态容量和 GPU 验证仍待完成。
+
 - 质量：完整 MASSIVE/BANKING77 测试集，CLINC150 已知/OOS 分组，错误分析。
 - 性能：固定 RPS 扫描、Poisson 到达、120 秒初测后扩展稳态，3–5 次重复与置信区间。
 - 对照：用 `vllm bench serve` 交叉验证 Qwen 内部与客户端指标。

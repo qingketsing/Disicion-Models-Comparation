@@ -15,6 +15,8 @@ serve = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1", "prometheus-client>=0.21,<1"]
 classic = ["scikit-learn>=1.6,<2", "joblib>=1.4,<2"]
 bert = ["torch>=2.6,<3", "transformers>=4.51,<5", "datasets>=3,<5", "accelerate>=1,<2"]
 analysis = ["pandas>=2.2,<3", "pyarrow>=19,<24"]
+experiments = ["matplotlib>=3.9,<4"]
+tokenizer = ["transformers>=4.51,<5"]
 
 [project.scripts]
 decisionbench = "decisionbench.cli:main"

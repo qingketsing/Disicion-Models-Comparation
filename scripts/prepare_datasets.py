@@ -143,7 +143,7 @@ def main():
         raise ValueError("source must provide nonempty train, validation and test splits")
     labels = sorted({r["label"] for rows in splits.values() for r in rows})
     descriptions = (
-        json.loads(args.descriptions.read_text())
+        json.loads(args.descriptions.read_text(encoding="utf-8"))
         if args.descriptions
         else {label: label.replace("_", " ") for label in labels}
     )

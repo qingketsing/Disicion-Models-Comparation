@@ -11,3 +11,6 @@ models/*
 data/raw/
 data/normalized/
 .DS_Store
+experiments/
+reports/
+dist/

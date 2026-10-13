@@ -1,0 +1,66 @@
+# Edit and freeze this file before preparing the server experiment bundle.
+name: massive-qwen-jev-v1
+dataset_dir: data/normalized/massive
+models:
+  qwen:
+    adapter:
+      kind: qwen
+      base_url: http://127.0.0.1:8000
+      model: Qwen/Qwen3-0.6B
+      max_tokens: 64
+    warmup: 50
+    environment:
+      worker_gpu: "TODO"
+      model_revision: "TODO"
+      container_digest: "TODO"
+      inference_precision: bfloat16
+      max_model_len: 4096
+      prefix_cache: disabled
+      network_path: "TODO: Controller location / worker path"
+  jev:
+    adapter:
+      kind: jev
+      base_url: https://api.typesafe.ai
+      model: jev-1.13.0
+      api_key_env: TYPESAFE_API_KEY
+    warmup: 5
+    environment:
+      network_path: "TODO: Controller region / API network path"
+      api_quota_rps: "TODO"
+common:
+  timeout_s: 30
+  slo_ms: 500
+  max_concurrency: 32
+  min_success_rate: 0.99
+  max_scheduler_lag_ms: 20
+cooldown_s: 30
+blocks:
+  checkpoint:
+    enabled: true
+    dataset: checkpoint-300.jsonl
+    repeats: 1
+  main:
+    enabled: true
+    dataset: test.jsonl
+    repeats: 3
+  load:
+    enabled: true
+    dataset: test.jsonl
+    rates: [1, 2, 4, 8]
+    duration_s: 120  # Pilot; change to >=300 before formal capacity experiments.
+    repeats: 3
+  scale:
+    enabled: true
+    dataset: test.jsonl
+    sizes: [10, 30, 60]
+    seeds: [42, 43, 44]
+    samples_per_anchor_class: 20
+  descriptions:
+    enabled: false
+    dataset: test.jsonl
+    repeats: 1
+    # JSON files must contain a reviewed label -> description mapping, all labels.
+    mappings:
+      brief: data/descriptions/brief.json
+      detailed: data/descriptions/detailed.json
+      boundary: data/descriptions/boundary.json

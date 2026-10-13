@@ -11,10 +11,12 @@ parser.add_argument("--out", type=Path, default=Path("results/comparison.csv"))
 args = parser.parse_args()
 rows = []
 for path in sorted(args.results.glob("*/summary.json")):
-    manifest = json.loads((path.parent / "manifest.json").read_text())
+    manifest = json.loads((path.parent / "manifest.json").read_text(encoding="utf-8"))
     if manifest["state"] != "completed":
         continue
-    s = json.loads(path.read_text())
+    s = json.loads(path.read_text(encoding="utf-8"))
+    cost_path = path.parent / "cost.json"
+    cost = json.loads(cost_path.read_text(encoding="utf-8")) if cost_path.exists() else s["cost"]
     rows.append(
         {
             "run": path.parent.name,
@@ -29,8 +31,9 @@ for path in sorted(args.results.glob("*/summary.json")):
             "goodput_qps": s["goodput_qps"],
             "p95_ms": s["latency_attempted"]["p95_ms"],
             "slo_capacity_candidate": s["slo_capacity_candidate"],
-            "currency": s["cost"].get("currency"),
-            "cost_per_million_slo_valid": s["cost"].get("cost_per_million_slo_valid"),
+            "currency": cost.get("currency"),
+            "cost_per_million_slo_valid": cost.get("cost_per_million_slo_valid"),
+            "cost_source": "cost.json" if cost_path.exists() else "summary.json",
         }
     )
 if not rows:
