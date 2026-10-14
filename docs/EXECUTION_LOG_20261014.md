@@ -78,3 +78,15 @@ Jev 主测试首轮 07:36:24 UTC 启动，后续阶段尚未启动。Qwen 主测
 `results/execution-20261014/v3-jev-main-interruption.json` 和 watchdog 日志记录中断依据。外部 watchdog 代码存于 `orchestration/stage_watchdog.py`，不改变冻结套件请求协议；Windows 的 venv 启动器可能另有 Python 子进程，故自动异常停止处理整个拥有的子进程树。代码仅从 stdin 获取运行时密钥，不保存凭据。
 
 当前状态：**PAUSED_UNRESOLVED_SSH**。远程 Qwen checkpoint 尚未拉回；Qwen Worker 之前在运行，SSH 不稳定导致无法确认其当前状态或停止，可能继续占用付费实例。用户自建转发保持原样。恢复后先验证连接、进程、输入哈希和 suite 状态，再显式重跑中断的 main，保留本次部分结果与预算记录。完整实验报告须等完整 main/load/scale 完成，不能把 checkpoint 当最终主表。
+
+## 用户恢复授权：只执行 Qwen
+
+2026-10-14 用户确认远程服务器正常，要求只完成 Qwen 实验，Jev 暂停。SSH、Worker 健康检查及 v3 输入/源字节核验通过；本次继续执行未发起任何 Jev 请求。
+
+北京时间 18:28（10:28 UTC）启动 Qwen v3 main。首轮 2974 条完成，Accuracy=0.4593140551，2973 ok、1 invalid_output。目录外预测为 `datetime_settings`，样本 `massive-en-US-test-9193`，真值 `calendar_set`，输出 10 Token，非截断。第二轮在排查期间发出 602 条均正常请求，随后 SIGINT 停止；suite 记录 interrupted，未启动 scale/load。原始首轮和部分第二轮均保留。
+
+独立诊断复现：相同完整 60 类 response_format JSON Schema 请求返回目录外标签，但单一强制标记的枚举生效。直接 `structured_outputs.json` 的单标签诊断也生效；因此不是凭单次正常输出即可证明完整目录约束可靠。保存原始请求/响应于 `results/execution-20261014/qwen-enum-diagnostic-1.json`，3 条诊断请求独立计数，不混入实验。
+
+已查阅已安装 vLLM 0.11.0 协议、结构化输出配置和 CLI：支持固定 `guidance` 后端（llguidance 0.7.30）及 `disable_fallback=true`。例行修复采用固定后端，不改类别说明、数据、权重、提示词、temperature、输出预算或后验映射。不能将当前证据推断为已定位 xgrammar 的内部缺陷；只记录 auto 后端的实际违约及固定 guidance 的验证。
+
+新版本 `configs/experiment-suite-qwen-v4.yaml` 只含 Qwen，25 个 pilot run；部署配置 `configs/qwen-native-westd-guidance.json`。Worker 11305 正常停止，新 Worker 19643 已启动，启动参数与配置哈希保存在 `qwen-guidance-launch.json`。完整目录、强制枚举的 response_format 和 structured_outputs 共 3 条新诊断全部通过，原异常文本不再生成目录外标签，仍可能语义错误。50 项测试、Ruff 通过。v4 checkpoint 正在执行，通过后重跑全套 Qwen；不复用违约的 v3 main 作为新版质量基线。

@@ -17,6 +17,7 @@ p.add_argument(
 )
 p.add_argument("--log-prefix", type=Path)
 p.add_argument("--retry-failed", action="store_true")
+p.add_argument("--stop-invalid", action="store_true", help="Stop on any invalid output")
 a = p.parse_args()
 root = Path.cwd()
 plan = (root / a.plan).resolve()
@@ -59,7 +60,8 @@ if a.model == "jev":
     )
     cmd += ["--max-api-requests", str(budget)]
 control = {
-    "policy": "stop on any HTTP error, any adapter error, or three consecutive transport/timeouts; retain semantic/isolated invalid output measurements",
+    "policy": "stop on any HTTP error, any adapter error, or three consecutive transport/timeouts",
+    "stop_invalid_output": a.stop_invalid,
     "model": a.model,
     "block": a.block,
     "started_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -93,9 +95,10 @@ with Path(str(out) + ".log").open("x", encoding="utf-8") as log:
                         rows.append(json.loads(line))
                     except json.JSONDecodeError:
                         pass
-                bad = next(
-                    (x for x in rows if x["status"] in ("http_error", "adapter_error")), None
-                )
+                fatal = {"http_error", "adapter_error"}
+                if a.stop_invalid:
+                    fatal.add("invalid_output")
+                bad = next((x for x in rows if x["status"] in fatal), None)
                 if (
                     not bad
                     and len(rows) >= 3
