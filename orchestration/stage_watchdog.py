@@ -12,12 +12,18 @@ from pathlib import Path
 p = argparse.ArgumentParser()
 p.add_argument("--model", choices=["qwen", "jev"], required=True)
 p.add_argument("--block", choices=["main", "load", "scale"], required=True)
+p.add_argument(
+    "--plan", type=Path, default=Path("experiments/massive-split-constrained-pilot-v3/plan.json")
+)
+p.add_argument("--log-prefix", type=Path)
+p.add_argument("--retry-failed", action="store_true")
 a = p.parse_args()
 root = Path.cwd()
-plan = root / "experiments/massive-split-constrained-pilot-v3/plan.json"
+plan = (root / a.plan).resolve()
 
 state = root / "results/suites" / hashlib.sha256(plan.read_bytes()).hexdigest() / "index.json"
-out = root / "results/execution-20261014" / f"v3-{a.model}-{a.block}"
+out = a.log_prefix or root / "results/execution-20261014" / f"v3-{a.model}-{a.block}"
+out.parent.mkdir(parents=True, exist_ok=True)
 env = dict(os.environ, PYTHONUTF8="1", PYTHONUNBUFFERED="1")
 if a.model == "jev":
     key = sys.stdin.readline().strip()
@@ -42,8 +48,16 @@ cmd = [
     a.model,
     "--execute",
 ]
+if a.retry_failed:
+    cmd += ["--retry-failed"]
 if a.model == "jev":
-    cmd += ["--max-api-requests", str({"main": 8937, "load": 5460, "scale": 1845}[a.block])]
+    spec = json.loads(plan.read_text(encoding="utf-8"))
+    budget = sum(
+        j["api_requests_upper_bound"]
+        for j in spec["jobs"]
+        if j["model"] == a.model and j["block"] == a.block
+    )
+    cmd += ["--max-api-requests", str(budget)]
 control = {
     "policy": "stop on any HTTP error, any adapter error, or three consecutive transport/timeouts; retain semantic/isolated invalid output measurements",
     "model": a.model,
