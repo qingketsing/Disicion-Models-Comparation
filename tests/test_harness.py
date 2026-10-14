@@ -16,6 +16,23 @@ CATALOG = Catalog("v1", {"alarm_set": "Create alarm", "alarm_cancel": "Cancel al
 SAMPLES = [Sample("1", "alarm", "alarm_set"), Sample("2", "cancel alarm", "alarm_cancel")]
 
 
+@pytest.mark.parametrize("total", [0.99, 1.0, 1.01])
+def test_probability_sum_accepts_inclusive_one_percent_boundary(total):
+    Decision(
+        "alarm_set", "provider", {"alarm_set": total / 2, "alarm_cancel": total / 2},
+        "provider_probability",
+    ).validate(CATALOG)
+
+
+@pytest.mark.parametrize("total", [0.989, 1.011])
+def test_probability_sum_rejects_values_outside_one_percent(total):
+    with pytest.raises(ValueError, match="probabilities do not sum to 1"):
+        Decision(
+            "alarm_set", "provider", {"alarm_set": total / 2, "alarm_cancel": total / 2},
+            "provider_probability",
+        ).validate(CATALOG)
+
+
 def config(**kwargs):
     return RunConfig(
         **{

@@ -51,3 +51,13 @@
 用户选择“增加枚举约束，新版本重跑”。在 Qwen 请求中加入 vLLM `response_format=json_schema`，`label` 的 enum 严格等于当前实验目录；temperature=0、max_tokens=64、禁用 thinking、数据、说明、模型权重和 Jev Choice 均保持原协议。适配器仍校验返回值，不能把非法输出伪装为成功。默认配置保留原无约束路径。
 
 配置：`configs/experiment-suite-split-v2.yaml`。新增请求契约测试验证当前目录枚举和服务端非法返回的处理；44 项测试和 Ruff 检查通过。v1 原始结果和冻结计划保留；v2 必须使用新计划目录和新运行目录，先验证真实 vLLM 结构化输出再重跑 checkpoint。
+
+## v2 checkpoint 与数值边界修复 v3
+
+v2 计划 SHA-256：`9ede63afe8bafa266813d01d580e692ff51cc5391fbd0271eadfda09ebe487d9`；代码版本 `ed27337`。两端源字节同步及 11 组上下文检查通过，真实 vLLM 枚举探针返回合法 `alarm_set`（独立合成请求，不计入 checkpoint）。
+
+- Qwen：`results/20261014T072215Z-checkpoint-full-seed42-rep1-qwen-c62cf027`；300/300 合法，Accuracy=0.5333333333。
+- Jev：`results/20261014T072225Z-checkpoint-full-seed42-rep1-jev-3e4eb4fd`；299/300 合法，Accuracy=0.8733333333。独立复算与日志完整性检查通过。
+- 唯一非法条为 `massive-en-US-validation-5755`，预测标签合法、60 类概率齐全；概率和为 0.99，计算偏差 `0.010000000000000009` 被旧校验器误判为超过 0.01。该预测本身与真值不符，数值修复不提高该样本 Accuracy。
+- 例行修复：使用 `math.fsum` 求和，在既有 1% 容差边界加入 1e-12 的浮点比较精度，保留 0.989/1.011 等越界拒绝。49 项测试和 Ruff 通过。
+- v2 的失败状态不改写。冻结 `configs/experiment-suite-split-v3.yaml`，在相同枚举解码、数据、模型、价格及部署条件下两端重跑 checkpoint；主实验只使用通过检查的新版本。

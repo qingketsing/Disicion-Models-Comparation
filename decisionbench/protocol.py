@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from math import isfinite
+from math import fsum, isclose, isfinite
 
 
 @dataclass(frozen=True)
@@ -53,7 +53,9 @@ class Decision:
         if self.score_type in {"provider_probability", "softmax_uncalibrated"} and self.scores:
             if any(not 0 <= value <= 1 for value in self.scores.values()):
                 raise ValueError("probabilities outside [0, 1]")
-            if abs(sum(self.scores.values()) - 1) > 0.01:
+            deviation = abs(fsum(self.scores.values()) - 1)
+            # Keep the existing 1% tolerance inclusive at its floating-point boundary.
+            if deviation > 0.01 and not isclose(deviation, 0.01, rel_tol=0, abs_tol=1e-12):
                 raise ValueError("probabilities do not sum to 1")
         if self.score_type == "provider_probability" and set(self.scores) != set(catalog.labels):
             raise ValueError("provider probabilities must cover the frozen catalog")

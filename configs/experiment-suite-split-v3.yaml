@@ -1,0 +1,96 @@
+name: massive-split-constrained-pilot-v3
+dataset_dir: data/normalized/massive-ai-v1
+models:
+  qwen:
+    adapter:
+      kind: qwen
+      base_url: http://127.0.0.1:8000
+      model: Qwen/Qwen3-0.6B
+      max_tokens: 64
+      constrain_labels: true
+    warmup: 50
+    environment:
+      deployment: native
+      worker_gpu: NVIDIA GeForce RTX 5090 (32607 MiB)
+      model_revision: modelscope-manifest-sha256:f7cb819c0cbceca9170480b859dc0a593a11db4e976fba9104884828a020f993
+      vllm_version: 0.11.0
+      worker_environment_sha256: 56895e00c67e1b9f3c499340c3e4396a0b553b5865005a7191c34e3a3e4d127c
+      inference_precision: bfloat16
+      max_model_len: 4096
+      prefix_cache: disabled
+      network_path: same westd server; Controller to Worker over loopback
+      decoding: JSON Schema enum of active catalog labels; vLLM structured outputs
+    cost:
+      billing: instance
+      currency: CNY
+      instance_price_per_hour: 2.78
+      price_source: User-provided westd RTX 5090 price
+      price_date: '2026-10-14'
+  jev:
+    adapter:
+      kind: jev
+      base_url: https://api.typesafe.ai
+      model: jev-1.13.0
+      api_key_env: TYPESAFE_API_KEY
+    warmup: 5
+    environment:
+      network_path: Windows local Controller -> Clash HTTP proxy 127.0.0.1:7897 ->
+        Typesafe API; no SSH tunnel
+      api_quota_rps: 80
+      api_quota_tokens_per_second: 100000
+      quota_source: https://docs.typesafe.ai/models (2026-10-14); published dynamic
+        limit, not guaranteed account quota
+    cost:
+      billing: api
+      currency: USD
+      input_price_per_million: 0.042
+      output_price_per_million: 0
+      price_source: https://docs.typesafe.ai/models; user confirmed standard pricing
+      price_date: '2026-10-14'
+common:
+  timeout_s: 30
+  slo_ms: 500
+  max_concurrency: 32
+  min_success_rate: 0.99
+  max_scheduler_lag_ms: 20
+cooldown_s: 30
+blocks:
+  checkpoint:
+    enabled: true
+    dataset: checkpoint-300.jsonl
+    repeats: 1
+  main:
+    enabled: true
+    dataset: test.jsonl
+    repeats: 3
+  load:
+    enabled: true
+    dataset: test.jsonl
+    rates:
+    - 1
+    - 2
+    - 4
+    - 8
+    duration_s: 120
+    repeats: 3
+  scale:
+    enabled: true
+    dataset: test.jsonl
+    sizes:
+    - 10
+    - 30
+    - 60
+    seeds:
+    - 42
+    - 43
+    - 44
+    samples_per_anchor_class: 20
+  descriptions:
+    enabled: false
+    dataset: test.jsonl
+    repeats: 1
+    mappings:
+      brief: data/descriptions/brief.json
+      detailed: data/descriptions/detailed.json
+      boundary: data/descriptions/boundary.json
+
