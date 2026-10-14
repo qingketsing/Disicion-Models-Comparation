@@ -465,3 +465,56 @@ def test_steady_windows_detect_instability_hidden_by_full_window_percentile():
     assert all(s["passed"] for s in segments[1:])
     rows[-1]["scheduler_lag_ms"] = 21
     assert not steady_windows(rows, 300)[-1]["passed"]
+
+
+@pytest.mark.parametrize("mismatch", [None, "sample", "sample_order", "description", "label_order"])
+async def test_capacity_preserves_baseline_bytes_across_platforms(
+    experiment_root, monkeypatch, mismatch
+):
+    root, config, _ = experiment_root
+    original = prepare(config, root, root / "experiments/original")
+    await run_plan(original, root, ["main"], ["qwen"], True)
+    from orchestration import prepare_qwen_capacity as capacity
+
+    def other_platform_prepare(*args):
+        target = prepare(*args)
+        plan = json.loads(target.read_text())
+        for job in plan["jobs"]:
+            cfg = yaml.safe_load((root / job["config"]).read_text())
+            for kind in ("dataset", "catalog"):
+                path = root / cfg[kind]
+                data = path.read_bytes().replace(b"\r\n", b"\n")
+                if kind == "dataset" and mismatch == "sample":
+                    data = data.replace(b"request 0", b"DIFFERENT 0", 1)
+                elif kind == "dataset" and mismatch == "sample_order":
+                    lines = data.splitlines(keepends=True)
+                    lines[0], lines[1] = lines[1], lines[0]
+                    data = b"".join(lines)
+                elif kind == "catalog" and mismatch == "description":
+                    data = data.replace(b"Select alpha", b"Changed alpha", 1)
+                elif kind == "catalog" and mismatch == "label_order":
+                    catalog = json.loads(data)
+                    catalog["labels"] = dict(reversed(list(catalog["labels"].items())))
+                    data = json.dumps(catalog, indent=2).encode() + b"\n"
+                path.write_bytes(data.replace(b"\n", b"\r\n"))
+                job[f"{kind}_sha256"] = file_hash(path)
+                plan["assets_sha256"][cfg[kind]] = file_hash(path)
+        write_json(target, plan)
+        return target
+
+    monkeypatch.setattr(capacity, "prepare", other_platform_prepare)
+    baseline_bytes = original.read_bytes()
+    if mismatch:
+        with pytest.raises(ValueError, match="load inputs differ"):
+            create_capacity_bundle(original, root, root / "experiments/cross-platform", [10], 0.1, 1)
+    else:
+        target = create_capacity_bundle(
+            original, root, root / "experiments/cross-platform", [10], 0.1, 1
+        )
+        plan = json.loads(target.read_text())
+        baseline, load = plan["jobs"]
+        for kind in ("dataset", "catalog"):
+            assert load[f"{kind}_sha256"] == baseline[f"{kind}_sha256"]
+        preview = await run_plan(target, root, [], ["qwen"], False)
+        assert preview["remaining_runs"] == 1
+    assert original.read_bytes() == baseline_bytes

@@ -2,6 +2,7 @@
 
 import argparse
 import copy
+import shutil
 from pathlib import Path
 
 import yaml
@@ -57,12 +58,32 @@ def create_capacity_bundle(source_plan, root, out, rates, duration, repeats=3):
     if plan["source_sha256"] != original["source_sha256"]:
         raise ValueError("source differs from baseline plan")
     for job in plan["jobs"]:
-        if not any(
-            job["dataset_sha256"] == b["dataset_sha256"]
-            and job["catalog_sha256"] == b["catalog_sha256"]
-            for b, _ in baselines
-        ):
+        config = load_config(root / job["config"])
+        paths = (config.dataset, config.catalog)
+        match = None
+        for baseline, _ in baselines:
+            baseline_config = load_config(root / baseline["config"])
+            baseline_paths = (baseline_config.dataset, baseline_config.catalog)
+            # Preparation on Windows and Linux writes different newlines. Accept
+            # ONLY that byte difference, preserving sample and catalog label order,
+            # all descriptions and metadata. Never edit a frozen baseline asset.
+            if all(
+                (root / new).read_bytes().replace(b"\r\n", b"\n")
+                == (root / old).read_bytes().replace(b"\r\n", b"\n")
+                for new, old in zip(paths, baseline_paths)
+            ):
+                match = (baseline, baseline_paths)
+                break
+        if match is None:
             raise ValueError("load inputs differ from existing main quality baseline")
+        baseline, baseline_paths = match
+        for key, new, old in zip(("dataset", "catalog"), paths, baseline_paths):
+            shutil.copyfile(root / old, root / new)
+            digest = file_hash(root / new)
+            if digest != baseline[f"{key}_sha256"]:
+                raise ValueError("baseline input hash changed during capacity preparation")
+            job[f"{key}_sha256"] = digest
+            plan["assets_sha256"][new] = digest
     plan["jobs"] = [j for j, _ in baselines] + plan["jobs"]
     for baseline, _ in baselines:
         cfg = load_config(root / baseline["config"])

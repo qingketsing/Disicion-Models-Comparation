@@ -1,5 +1,6 @@
 """Run bounded adaptive Qwen load extension and independent 300-second confirmation."""
 
+import argparse
 import json
 import os
 import subprocess
@@ -73,12 +74,20 @@ def execute_bundle(name, rates, duration, evidence):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--attempt-suffix", default="")
+    args = parser.parse_args()
+    suffix = args.attempt_suffix
+    if suffix and (not suffix.isascii() or not suffix.replace("-", "").isalnum()):
+        raise ValueError("attempt suffix must contain ASCII letters, digits or hyphens")
+    suffix = f"-{suffix}" if suffix else ""
     if STATUS.exists():
         raise ValueError("capacity driver already exists; inspect before resuming")
     evidence = {
         "state": "waiting_for_pilot",
         "pid": os.getpid(),
         "jev_requests": 0,
+        "attempt_suffix": args.attempt_suffix,
         "plans": [str(PILOT.relative_to(ROOT))],
         "stages": [],
         "extension_policy": "If all three 8-RPS pilot repeats pass, test 16/32, "
@@ -111,13 +120,16 @@ def main():
         write_json(STATUS, evidence)
         if rates[8]["all_repeats_pass"]:
             rates.update(
-                execute_bundle("massive-qwen-guidance-extended16-32-v4", [16, 32], 120, evidence)
+                execute_bundle(
+                    f"massive-qwen-guidance-extended16-32-v4{suffix}", [16, 32], 120, evidence
+                )
             )
             next_rate = 64
             while rates[next_rate / 2]["all_repeats_pass"] and next_rate <= 256:
                 rates.update(
                     execute_bundle(
-                        f"massive-qwen-guidance-extended{next_rate}-v4", [next_rate], 120, evidence
+                        f"massive-qwen-guidance-extended{next_rate}-v4{suffix}",
+                        [next_rate], 120, evidence
                     )
                 )
                 next_rate *= 2
@@ -132,7 +144,7 @@ def main():
         ]
         formal_rates = [candidate] + ([min(failing)] if failing else [])
         evidence["selected_formal_rates"] = formal_rates
-        execute_bundle("massive-qwen-guidance-formal-v4", formal_rates, 300, evidence)
+        execute_bundle(f"massive-qwen-guidance-formal-v4{suffix}", formal_rates, 300, evidence)
         evidence.update(
             state="completed", finished_utc=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
         )
