@@ -127,3 +127,11 @@ Jev 主测试首轮 07:36:24 UTC 启动，后续阶段尚未启动。Qwen 主测
 修复提交 `2445f5d` 已同步服务器。本地全套 56 项测试通过（1 条上游 FastAPI/Starlette 弃用警告），服务器相关 21 项测试通过。11:52:47 UTC 启动容量运行器 PID22854，`--attempt-suffix retry1`，Worker19643 保持原配置。旧失败状态保存在 `qwen-capacity-status-failed-preparation-1.json`，新日志 `qwen-capacity-driver-retry1.log`。新派生计划 SHA-256 `273a0bc262e11c68ee5a02b2c1364254238b697ec45ac5c69a96a7894ffa62c3`；首轮32RPS于11:54:54UTC完成，其余轮次继续执行，尚未形成容量结论。后台跟进已更新为新运行器，避免重复启动。
 
 基础套件25个完成运行已完整拉回本地，快照 `dist/qwen-v4-pilot-complete-snapshot.tar.gz` 的 SHA-256 为 `953c624110e36807e8fb9a9c79e4c71016494a42376647b37babe714811ddc0c`，下载后独立核对与远程一致。仅合并完成的Qwen结果，Jev中断状态保持原样。
+
+## 扩展初测完成；32/64 RPS 正式确认执行中
+
+12:07:51 UTC 16/32 RPS 各三轮120s完成，两档均通过；最差p95为109.024/118.405ms，最大调度迟滞为2.819/17.263ms，合法成功率100%。12:15:10 UTC 64 RPS三轮120s完成，最差p95=234.512ms、最低合法成功率99.98698%，但最大调度迟滞21.745ms超过冻结20ms限制，因此这一技术容量点未通过。第二轮一条失败为 `client_overload`（样本massive-en-US-test-296），并非目录外标签或证据已确认的网络错误。不得直接将该结果解释为GPU吞吐极限。
+
+运行器按预先确定规则停止继续翻倍，12:15:11 UTC开始32/64 RPS各三轮300s正式确认，计划SHA-256 `30d4c2128d5c13588abc43f72fe11fe87ac184637b05ef12315002b1ab98297b`。当前仍运行，尚无正式可持续容量结论。运行状态中pilot阶段的rates字典被扩展结果追加；最终统计按各冻结计划和完成run独立审计，不以该可变状态字典归属计算阶段数量。
+
+已完成的34个独立Qwen运行（借用main基线按run_dir去重）拉回并离线审计，快照 `dist/qwen-v4-extended-complete-snapshot.tar.gz` SHA-256 `550d85bfe1ca5fd18180b7f62bbd569f1399ccead525ef6cfe0b68c4a150a4d3`，下载哈希独立核对一致。预正式审计输出 `reports/qwen-v4-extended-preformal-audit`：源快照、输入、独立复算通过；main三轮2974个唯一样本预测无差异；完成测量请求56742、预热1700。测量区间含drain合计3651.013秒，对应2.819393 CNY，排除预热和空闲、并非租赁账单或最终总费用。最终审计须加入正式复测，不使用此次空的technical_capacity_candidate作最终结论。
