@@ -131,21 +131,34 @@ class JevAdapter(HTTPAdapter):
 
 
 class QwenAdapter(HTTPAdapter):
-    def __init__(self, max_tokens=64, **kwargs):
+    def __init__(self, max_tokens=64, constrain_labels=False, **kwargs):
         super().__init__(**kwargs)
         self.max_tokens = max_tokens
+        self.constrain_labels = constrain_labels
 
     async def predict(self, sample, catalog):
-        data, request_id = await self.post(
-            "/v1/chat/completions",
-            {
-                "model": self.model,
-                "messages": qwen_messages(sample, catalog),
-                "temperature": 0,
-                "max_tokens": self.max_tokens,
-                "chat_template_kwargs": {"enable_thinking": False},
-            },
-        )
+        payload = {
+            "model": self.model,
+            "messages": qwen_messages(sample, catalog),
+            "temperature": 0,
+            "max_tokens": self.max_tokens,
+            "chat_template_kwargs": {"enable_thinking": False},
+        }
+        if self.constrain_labels:
+            payload["response_format"] = {
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "intent_decision",
+                    "strict": True,
+                    "schema": {
+                        "type": "object",
+                        "properties": {"label": {"type": "string", "enum": list(catalog.labels)}},
+                        "required": ["label"],
+                        "additionalProperties": False,
+                    },
+                },
+            }
+        data, request_id = await self.post("/v1/chat/completions", payload)
         usage = data.get("usage") or {}
         decision = Decision(
             "",

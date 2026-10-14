@@ -34,3 +34,20 @@
 ## 本机代理验证（2026-10-14，Asia/Shanghai）
 
 用户指定使用 SSH 远程转发到本机代理。已确认 Clash/Mihomo 本机端口为 `127.0.0.1:7897`；显式经该代理访问 Jev 模型列表返回 HTTP 403，错误类型为 authentication_error、原因是本次未携带密钥，没有区域 451，未发起推理请求。创建后台 SSH 转发进程的命令被自动审批检查拒绝（`blocked by policy`，没有详细原因），隧道未建立。手动启动命令及验证步骤见 `SSH_PROXY_WESTD.md`。下一步需建立隧道，再验证服务器代理及认证，正式实验尚未恢复。
+
+## 恢复、部署调整和 v1 checkpoint
+
+用户自行建立转发后，服务器代理认证探针成功。随后用户明确调整部署：Qwen 和 Controller 在 westd 服务器运行；Jev 和 Controller 在 Windows 本机经 `127.0.0.1:7897` HTTP 代理运行。两端认证/契约验证成功，区域阻断解除；远程 Jev 临时凭据已删除。
+
+使用冻结的 MASSIVE en-US 数据和 AI 审阅的 60 类说明（非人工审阅，见 `DESCRIPTION_REVIEW_20261014.md`），v1 计划 SHA-256 为 `37985034ad4534587645e133a3dd755b478311128a2080aa9ab54151d27663df`。2026-10-14 07:07 UTC 两端分别开始 checkpoint，均完成 300 条测量请求。
+
+- Qwen 无枚举约束：accuracy=0.530000，success_rate=0.980000，6 条目录外标签。输出未截断，无网络失败；保留为真实无约束结果，不能后处理映射为合法标签。
+- Jev Choice：accuracy=0.873333，success_rate=1.000000。
+- Qwen 结果目录：`results/20261014T070731Z-checkpoint-full-seed42-rep1-qwen-abf24e29`（服务器）；Jev：`results/20261014T070732Z-checkpoint-full-seed42-rep1-jev-3c751fa6`（本机）。
+- Windows/Linux Git 检出行尾导致源文件字节哈希差异；v1 在首条实验请求前发现并停止。上传本机原始源字节后校验通过。服务端工作区行尾差异已明确记录，不宣称 Git 干净。
+
+## 用户批准的 v2 方法调整
+
+用户选择“增加枚举约束，新版本重跑”。在 Qwen 请求中加入 vLLM `response_format=json_schema`，`label` 的 enum 严格等于当前实验目录；temperature=0、max_tokens=64、禁用 thinking、数据、说明、模型权重和 Jev Choice 均保持原协议。适配器仍校验返回值，不能把非法输出伪装为成功。默认配置保留原无约束路径。
+
+配置：`configs/experiment-suite-split-v2.yaml`。新增请求契约测试验证当前目录枚举和服务端非法返回的处理；44 项测试和 Ruff 检查通过。v1 原始结果和冻结计划保留；v2 必须使用新计划目录和新运行目录，先验证真实 vLLM 结构化输出再重跑 checkpoint。

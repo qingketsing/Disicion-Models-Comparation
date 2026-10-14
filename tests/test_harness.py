@@ -197,6 +197,33 @@ async def test_jev_official_choice_contract_and_confidence(monkeypatch):
         await adapter.close()
 
 
+async def test_qwen_schema_tracks_active_catalog_and_still_rejects_bad_server_output():
+    adapter = QwenAdapter(base_url="http://worker", model="qwen", constrain_labels=True)
+
+    def inspect(body):
+        schema = body["response_format"]["json_schema"]["schema"]
+        assert schema["properties"]["label"]["enum"] == list(CATALOG.labels)
+        assert schema["additionalProperties"] is False
+
+    await mock_http(
+        adapter,
+        {
+            "choices": [
+                {"message": {"content": '{"label":"outside_catalog"}'}, "finish_reason": "stop"}
+            ],
+            "usage": {"prompt_tokens": 123, "completion_tokens": 8},
+        },
+        inspect,
+    )
+    try:
+        from decisionbench.adapters import InvalidOutput
+
+        with pytest.raises(InvalidOutput):
+            await adapter.predict(SAMPLES[0].model_input(), CATALOG)
+    finally:
+        await adapter.close()
+
+
 @pytest.mark.parametrize(
     "content,finish,status",
     [
