@@ -61,3 +61,20 @@ v2 计划 SHA-256：`9ede63afe8bafa266813d01d580e692ff51cc5391fbd0271eadfda09ebe
 - 唯一非法条为 `massive-en-US-validation-5755`，预测标签合法、60 类概率齐全；概率和为 0.99，计算偏差 `0.010000000000000009` 被旧校验器误判为超过 0.01。该预测本身与真值不符，数值修复不提高该样本 Accuracy。
 - 例行修复：使用 `math.fsum` 求和，在既有 1% 容差边界加入 1e-12 的浮点比较精度，保留 0.989/1.011 等越界拒绝。49 项测试和 Ruff 通过。
 - v2 的失败状态不改写。冻结 `configs/experiment-suite-split-v3.yaml`，在相同枚举解码、数据、模型、价格及部署条件下两端重跑 checkpoint；主实验只使用通过检查的新版本。
+
+## v3 checkpoint 通过与外部连接暂停
+
+v3 代码 `d2052b2`；计划 SHA-256 `ffb1c6210eb9c1a506223df3ceba679c2911ce2ec628cb679930d540948d7977`。两端各 300 条 checkpoint 和独立质量复算通过。
+
+| 模型 | Accuracy | 完整目录 Macro-F1 | 合法成功率 | 结果目录 |
+|---|---:|---:|---:|---|
+| Qwen | 0.5333333333 | 0.5126157589 | 1.000000 | `results/20261014T073054Z-checkpoint-full-seed42-rep1-qwen-81ef1d7f`（远程） |
+| Jev | 0.8766666667 | 0.8645240870 | 1.000000 | `results/20261014T073104Z-checkpoint-full-seed42-rep1-jev-a99bd8c9`（本地） |
+
+Jev 主测试首轮 07:36:24 UTC 启动，后续阶段尚未启动。Qwen 主测试启动前，SSH 反复在接受 RSA 公钥后的认证阶段断开；偶尔只读查询成功但启动未成功。尝试常规连接、单独密钥/签名算法及公共 DNS 解析出的真实地址（保持已验证 host key 检查），未能稳定恢复。无法确认服务端原因，已询问用户实例/端口是否改变，并按用户“无法处理时停下来”要求停止推进。
+
+08:00:15 UTC 停止本轮拥有的 Jev Controller，核对 suite 锁中的实际 PID 108848 已退出后，明确将 manifest、suite entry、attempt 标记 `interrupted / ExternalControllerStop`，删除失效锁；原始请求记录未改写。部分测量 2933/2974 条，其中 2930 ok、3 network_error；不作为完整 main 结果，不启动第二/第三轮或负载/规模实验。请求日志 SHA-256：`b101c806fc11a807615d6660b4005bf8b7e1f4bfb96803c81ea20b0e20e3c893`。缺失请求/usage 不能据已知日志推断为零费用。
+
+`results/execution-20261014/v3-jev-main-interruption.json` 和 watchdog 日志记录中断依据。外部 watchdog 代码存于 `orchestration/stage_watchdog.py`，不改变冻结套件请求协议；Windows 的 venv 启动器可能另有 Python 子进程，故自动异常停止处理整个拥有的子进程树。代码仅从 stdin 获取运行时密钥，不保存凭据。
+
+当前状态：**PAUSED_UNRESOLVED_SSH**。远程 Qwen checkpoint 尚未拉回；Qwen Worker 之前在运行，SSH 不稳定导致无法确认其当前状态或停止，可能继续占用付费实例。用户自建转发保持原样。恢复后先验证连接、进程、输入哈希和 suite 状态，再显式重跑中断的 main，保留本次部分结果与预算记录。完整实验报告须等完整 main/load/scale 完成，不能把 checkpoint 当最终主表。
