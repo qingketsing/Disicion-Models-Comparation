@@ -15,6 +15,7 @@ from decisionbench.protocol import Catalog, Sample
 from decisionbench.suite import execution_checks, prepare, run_plan
 from decisionbench.variants import scale_variants, write_samples
 from orchestration.prepare_qwen_capacity import create_capacity_bundle
+from orchestration.qwen_report import steady_windows
 from scripts.check_qwen_context import check_plan
 from scripts.package_experiments import package
 
@@ -439,3 +440,28 @@ async def test_capacity_bundle_reuses_audited_quality_without_model_calls(experi
         stream.write("\n")
     with pytest.raises(ValueError, match="completed run modified"):
         create_capacity_bundle(original, root, root / "experiments/tampered", [10], 0.1, 1)
+
+
+def test_steady_windows_detect_instability_hidden_by_full_window_percentile():
+    rows = [
+        dict(
+            scheduled_s=i / 10,
+            dispatch_s=i / 10,
+            status="ok",
+            e2e_latency_ms=100,
+            scheduler_lag_ms=1,
+        )
+        for i in range(3000)
+    ]
+    for row in rows[:60]:
+        row["e2e_latency_ms"] = 600
+    # Only 2% slow overall, but the first 60-second segment has 10% slow.
+    from decisionbench.metrics import percentile
+
+    assert percentile([r["e2e_latency_ms"] for r in rows], 95) == 100
+    segments = steady_windows(rows, 300)
+    assert len(segments) == 5
+    assert not segments[0]["passed"]
+    assert all(s["passed"] for s in segments[1:])
+    rows[-1]["scheduler_lag_ms"] = 21
+    assert not steady_windows(rows, 300)[-1]["passed"]
