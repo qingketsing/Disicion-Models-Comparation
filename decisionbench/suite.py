@@ -271,11 +271,14 @@ def execution_checks(config):
         required += [
             "worker_gpu",
             "model_revision",
-            "container_digest",
             "inference_precision",
             "max_model_len",
             "prefix_cache",
         ]
+        if config.environment.get("deployment") == "native":
+            required += ["worker_environment_sha256", "vllm_version"]
+        else:
+            required += ["container_digest"]
     else:
         required += ["api_quota_rps"]
         key = config.adapter.get("api_key_env")

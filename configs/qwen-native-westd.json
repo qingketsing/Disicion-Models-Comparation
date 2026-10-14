@@ -1,0 +1,11 @@
+{
+  "worker_python": "/root/autodl-tmp/decisionbench-worker-cu128/bin/python",
+  "model_path": "/root/autodl-tmp/decisionbench/models/qwen3-0.6b",
+  "model_revision": "modelscope-manifest-sha256:f7cb819c0cbceca9170480b859dc0a593a11db4e976fba9104884828a020f993",
+  "served_model_name": "Qwen/Qwen3-0.6B",
+  "dtype": "bfloat16",
+  "max_model_len": 4096,
+  "gpu_memory_utilization": 0.9,
+  "max_num_seqs": 32,
+  "port": 8000
+}

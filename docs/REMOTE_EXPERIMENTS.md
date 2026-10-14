@@ -1,6 +1,6 @@
 # 远程服务器实验操作手册
 
-本地已经准备代码。以下服务器命令在方案、服务器与计费预算确认后执行。当前没有上传、租赁 GPU 或调用真实 API。
+本地已经准备代码。当前服务器为 westd:16259，项目路径 `/root/autodl-tmp/decisionbench`；最新准备与验证记录见 [2026-10-14 新服务器记录](WESTD_PREPARATION_20261014.md)。以下通用操作中的路径按实际位置替换。真实模型实验与 Jev 付费请求尚未执行。
 
 ## 1. 本地查看与上传包
 
@@ -60,6 +60,8 @@ python -m scripts.prepare_datasets --name massive --source data/raw/amazon-massi
 ## 4. Qwen GPU Worker
 
 要求 Linux + NVIDIA 驱动 + Docker + NVIDIA Container Toolkit。12–16GB 是 0.6B 的选型起点；实际部署和并发测试决定能否满足配置。
+
+当前 westd 服务器没有 Docker，使用 `scripts.launch_qwen_native` 和 `configs/qwen-native-westd.json`。原生部署在 suite 中设置 `deployment: native`，填写 `worker_environment_sha256` 和 `vllm_version`，无需 container_digest。下面的 Docker 操作适用于有容器运行时的服务器。
 
 ```bash
 cp .env.example .env

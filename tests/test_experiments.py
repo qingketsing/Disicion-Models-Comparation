@@ -385,3 +385,28 @@ def test_default_matrix_and_api_request_budget(tmp_path):
     jobs = json.loads(plan.read_text())["jobs"]
     assert len(jobs) == 50
     assert sum(j["api_requests_upper_bound"] for j in jobs) == 3 * len(rows) + 7625
+
+
+def test_native_worker_environment_is_explicit():
+    config = RunConfig(
+        name="native",
+        mode="quality",
+        dataset="x",
+        catalog="x",
+        adapter={"kind": "qwen"},
+        environment={
+            "deployment": "native",
+            "worker_gpu": "RTX 5090",
+            "model_revision": "abc123",
+            "vllm_version": "0.31.0",
+            "worker_environment_sha256": "f" * 64,
+            "inference_precision": "bfloat16",
+            "max_model_len": 4096,
+            "prefix_cache": "disabled",
+            "network_path": "same host loopback",
+        },
+    )
+    execution_checks(config)
+    del config.environment["worker_environment_sha256"]
+    with pytest.raises(ValueError, match="worker_environment_sha256"):
+        execution_checks(config)

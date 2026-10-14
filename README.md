@@ -6,6 +6,8 @@ Jev / Qwen / BERT 共用数据、测量和成本口径的实验框架。Controll
 
 ## Qwen 与 Jev 远程实验
 
+2026-10-14 新服务器上传、环境和模型准备记录见 [westd 准备记录](docs/WESTD_PREPARATION_20261014.md)，原生启动配置为 `configs/qwen-native-westd.json`。
+
 已新增可执行实验套件：质量评测、开放环负载、嵌套候选类别规模、可选类别说明消融、配对分析和实际价格重算。实验入口默认只预览；`--execute` 才发送请求，Jev 执行还需要显式请求预算。
 
 - [详细实验方案](refine-logs/EXPERIMENT_PLAN.md) 与 [实验追踪](refine-logs/EXPERIMENT_TRACKER.md)
