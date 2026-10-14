@@ -169,3 +169,9 @@ v1第二轮在291条测量后因连续3条网络错误被watchdog于2026-10-14 1
 新增外部控制选项`--stop-transport-error`，发现任何网络错误或超时即停止拥有进程树，不自动补发样本、不在同一轮隐藏重试。轮询间隔2秒，停止前仍可能有在途请求完成，全部保留。该选项用于v2，原有watchdog默认规则不变。运行器在内存接收凭据，探针成功后串行执行checkpoint/main/scale/load，每阶段离线复算，通过后才进入下一阶段；异常停止并保留证据，禁止无限计费重试。相关24项测试通过，Ruff通过。
 
 旧v1的checkpoint、完整main1、中断main2、冻结计划、suite状态和执行日志已另存`dist/jev-local-v1-before-network-rerun-snapshot.tar.gz`及SHA256回执。Qwen全部结果与报告保持封存。
+
+16:05:52UTC（北京时间10月15日00:05:52）启动v2，Git `ae38112`。鉴权GET与单条合成Choice POST均200、契约通过。16:05:56UTC进入checkpoint，5条预热中4ok、1network_error；2秒轮询检测到预热错误时已有3条测量完成（均ok），16:06:04UTC终止拥有进程树。三轮main、scale、load均未开始。不能将这次checkpoint计为完成，也不能据单次探针成功宣布网络稳定。
+
+停止后确认driver/watchdog/controller及suite锁记录的进程均退出，将生命周期元数据修正为interrupted，删除匹配的陈旧锁；warmup/requests原字节哈希均核验未变，回执`jev-local-v2-interruption.json`。代理7897仍监听；后续5次不携带鉴权的只读GET均403，属于预期拒绝，无新增推理请求，不能解释为已证实的密钥错误。当前证据只能说明端点可达但传输间歇失败，尚不能确定代理节点或上游链路的具体故障。
+
+按照用户“无法决定或无法处理时停下来”的要求，当前状态 **JEV_STOPPED_NETWORK / QWEN_COMPLETE**，暂停计费模型请求和自动重跑，保留v2现场归档`dist/jev-local-v2-transport-stop-snapshot.tar.gz`及SHA256回执。连接稳定后需从完整新尝试开始，不能补齐少量样本后冒充单轮结果；本次与v1调用均计入执行历史和费用核算。

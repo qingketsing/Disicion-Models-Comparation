@@ -1,6 +1,6 @@
 # 实验执行追踪 v1
 
-更新：2026-10-15（Asia/Shanghai）。当前：Qwen v4 全部40个独立运行完成，最终离线审计通过，报告和备份完成；Jev v1因网络中断，按用户要求用v2完整重跑受影响轮次，准备启动。固定 guidance 后端仅用于Qwen，旧版本记录保留。此表用于里程碑；逐 run 的执行状态由 results/suites/<plan哈希>/index.json 记录。
+更新：2026-10-15（Asia/Shanghai）。当前：Qwen v4 全部40个独立运行完成，最终离线审计通过，报告和备份完成；Jev v2重跑在checkpoint预热再次出现网络错误，已停止，待连接故障解决。旧版本和原始记录保留。固定 guidance 后端仅用于Qwen。此表用于里程碑；逐 run 的执行状态由 results/suites/<plan哈希>/index.json 记录。
 
 | Run ID | Milestone | Purpose | System / Variant | Split | Metrics | Priority | Status | Notes |
 |--------|-----------|---------|------------------|-------|---------|----------|--------|-------|
@@ -9,7 +9,7 @@
 | ENV | M0 | 服务器与上下文验证 | Qwen + tokenizer | 全部启用输入 | 显存、revision、输入长度 | MUST | DONE | RTX 5090 32GB；11 组上下文检查通过 |
 | CP-Q | M1 | Qwen checkpoint | 0.6B / 完整目录 | dev 300 | 合法输出、Accuracy、F1 | MUST | DONE-v4 | 300 条；Accuracy 53.33%；合法 100%；固定 guidance；50 条预热 |
 | CP-J | M1 | Jev checkpoint | 固定 API 版本 | dev 300 | 同上、usage | MUST | DONE-v1-local | 300 条；Accuracy 87.33%；合法 100%；5 条预热；新计划，旧v3保留 |
-| MAIN | M2 | 主质量与错误分析 | 两模型各 3 轮 | 完整 test | Accuracy、F1、配对差异 | MUST | QWEN DONE / JEV RETRY-v2 | Qwen 三轮各2974，Accuracy45.93%，合法100%；Jev v1首轮7网络错误、次轮中断，v2完整重跑 |
+| MAIN | M2 | 主质量与错误分析 | 两模型各 3 轮 | 完整 test | Accuracy、F1、配对差异 | MUST | QWEN DONE / JEV STOPPED-NETWORK | Jev v1首轮7网络错误、次轮中断；v2预热再次网络错误，重跑尚未进入main |
 | LOAD-P | M3 | 负载初测 | 两模型 × 4 RPS × 3 轮 | test 抽样 | p95、Goodput、调度、失败 | MUST | QWEN DONE / JEV PAUSED | 1/2/4/8 RPS 各120s三轮均通过；25/25基础套件完成 |
 | LOAD-F | M3 | 正式容量复测 | 关键负载点 ≥3轮 | test 抽样 | 稳态、可持续容量 | MUST | QWEN DONE / JEV PAUSED | 32/64RPS各300s三轮；32及15个60s窗口通过，64两轮调度迟滞超限 |
 | SCALE | M4 | 候选规模 | 两模型 × 10/30/60 × 3种子 | 固定 anchor test 子集 | 质量、延迟、Token | MUST | QWEN DONE / JEV PAUSED | Qwen9 run，10/30/60均值79.33%/63.5%/52.5%，每次200条 |
