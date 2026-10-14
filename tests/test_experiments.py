@@ -14,6 +14,7 @@ from decisionbench.datasets import load_catalog, load_samples
 from decisionbench.protocol import Catalog, Sample
 from decisionbench.suite import execution_checks, prepare, run_plan
 from decisionbench.variants import scale_variants, write_samples
+from orchestration.prepare_qwen_capacity import create_capacity_bundle
 from scripts.check_qwen_context import check_plan
 from scripts.package_experiments import package
 
@@ -410,3 +411,31 @@ def test_native_worker_environment_is_explicit():
     del config.environment["worker_environment_sha256"]
     with pytest.raises(ValueError, match="worker_environment_sha256"):
         execution_checks(config)
+
+
+async def test_capacity_bundle_reuses_audited_quality_without_model_calls(experiment_root):
+    root, config, _ = experiment_root
+    original = prepare(config, root, root / "experiments/original")
+    with pytest.raises(ValueError, match="baselines must be completed"):
+        # A state with no completed baseline must never permit a load bundle.
+        state_dir = root / "results/suites" / file_hash(original)
+        state_dir.mkdir(parents=True)
+        write_json(state_dir / "index.json", {"jobs": {}, "attempts": []})
+        create_capacity_bundle(original, root, root / "experiments/unready", [10], 0.1, 1)
+    await run_plan(original, root, ["main"], ["qwen"], True)
+    target = create_capacity_bundle(original, root, root / "experiments/capacity", [10], 0.1, 1)
+    data = json.loads(target.read_text())
+    assert {j["model"] for j in data["jobs"]} == {"qwen"}
+    assert len(data["baseline_reuse"]["runs"]) == 1
+    preview = await run_plan(target, root, [], ["qwen"], False)
+    assert preview["remaining_runs"] == 1
+    await run_plan(target, root, ["load"], ["qwen"], True)
+    assert (await run_plan(target, root, [], ["qwen"], False))["remaining_runs"] == 0
+    old_state = json.loads(
+        (root / "results/suites" / file_hash(original) / "index.json").read_text()
+    )
+    run_dir = root / old_state["jobs"]["main-full-seed42-rep1-qwen"]["run_dir"]
+    with (run_dir / "requests.jsonl").open("a") as stream:
+        stream.write("\n")
+    with pytest.raises(ValueError, match="completed run modified"):
+        create_capacity_bundle(original, root, root / "experiments/tampered", [10], 0.1, 1)
