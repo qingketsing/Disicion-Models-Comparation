@@ -2,6 +2,8 @@
 
 > Tracks experiment planning and implementation artifacts. All real server experiments remain pending.
 
+2026-10-14：westd 新服务器准备已完成；实机启动与合成接口验证见 `docs/WESTD_PREPARATION_20261014.md`。正式实验仍待执行。新增原生启动、ModelScope 下载、草稿 tokenizer 检查及合成 Qwen 接口检查脚本；新增 `configs/experiment-suite-westd.yaml`、`configs/qwen-native-westd.json` 和 `requirements-worker-westd.in`。本轮日志与依赖冻结在服务器 `results/preparation/`，本地备份在 `dist/westd-preparation-20261014/`，不纳入源码 Git。
+
 | Timestamp | Skill | File | Stage | Description |
 |-----------|-------|------|-------|-------------|
 | 2026-10-13 12:42:51 | /experiment-plan | refine-logs/EXPERIMENT_PLAN_20261013_124251.md | implementation | 五项实验的协议、预算、执行顺序和待确认参数 |

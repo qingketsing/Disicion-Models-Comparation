@@ -1,0 +1,7 @@
+# Verified on RTX 5090; the worker venv reuses this exact base CUDA stack.
+# Create with /root/miniconda3/bin/python -m venv --system-site-packages ...
+# Full measured dependency freeze lives in results/preparation/worker-requirements.lock.txt.
+torch==2.8.0+cu128
+torchvision==0.23.0+cu128
+vllm==0.11.0
+transformers==4.57.6
