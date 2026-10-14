@@ -1,6 +1,6 @@
 # 实验执行追踪 v1
 
-更新：2026-10-14（Asia/Shanghai）。当前：SSH 恢复，只执行 Qwen；Jev 暂停。v4 固定 guidance 后端，旧版本记录保留。此表用于里程碑；逐 run 的执行状态由 results/suites/<plan哈希>/index.json 记录。
+更新：2026-10-14（Asia/Shanghai）。当前：Qwen v4 全部40个独立运行完成，最终离线审计通过，报告和备份完成；Jev 暂停。固定 guidance 后端，旧版本记录保留。此表用于里程碑；逐 run 的执行状态由 results/suites/<plan哈希>/index.json 记录。
 
 | Run ID | Milestone | Purpose | System / Variant | Split | Metrics | Priority | Status | Notes |
 |--------|-----------|---------|------------------|-------|---------|----------|--------|-------|
@@ -11,8 +11,8 @@
 | CP-J | M1 | Jev checkpoint | 固定 API 版本 | dev 300 | 同上、usage | MUST | DONE-v3 | 300 条；Accuracy 87.67%；合法 100%；5 条预热 |
 | MAIN | M2 | 主质量与错误分析 | 两模型各 3 轮 | 完整 test | Accuracy、F1、配对差异 | MUST | QWEN DONE / JEV PAUSED | Qwen 三轮各2974，Accuracy45.93%，合法100%；Jev旧首轮中断记录保留 |
 | LOAD-P | M3 | 负载初测 | 两模型 × 4 RPS × 3 轮 | test 抽样 | p95、Goodput、调度、失败 | MUST | QWEN DONE / JEV PAUSED | 1/2/4/8 RPS 各120s三轮均通过；25/25基础套件完成 |
-| LOAD-F | M3 | 正式容量复测 | 关键负载点 ≥3轮 | test 抽样 | 稳态、可持续容量 | MUST | QWEN QUEUED | 独立派生计划，负载初测后300s三轮及60s窗口核验 |
+| LOAD-F | M3 | 正式容量复测 | 关键负载点 ≥3轮 | test 抽样 | 稳态、可持续容量 | MUST | QWEN DONE / JEV PAUSED | 32/64RPS各300s三轮；32及15个60s窗口通过，64两轮调度迟滞超限 |
 | SCALE | M4 | 候选规模 | 两模型 × 10/30/60 × 3种子 | 固定 anchor test 子集 | 质量、延迟、Token | MUST | QWEN DONE / JEV PAUSED | Qwen9 run，10/30/60均值79.33%/63.5%/52.5%，每次200条 |
-| COST | M4 | 实际费用与 TCO | 真实价格、业务场景 | 已完成日志 | Cost/1M、月度费用 | MUST | TODO | 不发送请求 |
+| COST | M4 | 实际费用与 TCO | 真实价格、业务场景 | 已完成日志 | Cost/1M、月度费用 | MUST | QWEN DONE / JEV PAUSED | 2.78CNY/h；测量费用4.209604CNY，非账单；32RPS约24.13CNY/百万合法成功 |
 | DESC | M5 | 类别说明消融 | brief/detailed/boundary | 完整 test | 质量收益与 Token 增长 | OPTIONAL | DISABLED | 默认不执行 |
-| REPORT | M5 | 汇总报告 | 两模型 | 已完成实验 | 主表、曲线、限制 | MUST | TODO | 不使用合成验证数据作结论 |
+| REPORT | M5 | 汇总报告 | Qwen-only | 已完成实验 | 主表、曲线、限制 | MUST | QWEN DONE / JEV PAUSED | docs/QWEN_EXPERIMENT_REPORT_20261014.md；40独立run去重审计与SHA256备份 |
