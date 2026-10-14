@@ -116,6 +116,7 @@ def main():
     parser.add_argument(
         "--descriptions", type=Path, help="Reviewed JSON label-to-description mapping"
     )
+    parser.add_argument("--description-reviewer", choices=["human", "ai"], default="human")
     args = parser.parse_args()
     if args.out.exists() and any(args.out.iterdir()):
         parser.error("output must be empty; choose a new frozen dataset directory")
@@ -177,7 +178,17 @@ def main():
             "sizes": {k: len(v) for k, v in splits.items()},
             "split_policy": "MASSIVE native partitions; BANKING77 10% per-class train holdout, original test unchanged",
             "descriptions_reviewed": args.descriptions is not None,
-            "description_note": "Generated label names are placeholders; review before checkpoint acceptance",
+            "description_reviewer": args.description_reviewer if args.descriptions else None,
+            "description_mapping_sha256": file_hash(args.descriptions)
+            if args.descriptions
+            else None,
+            "description_note": (
+                "AI-authored and AI-reviewed from training examples; not human-reviewed."
+                if args.descriptions and args.description_reviewer == "ai"
+                else "Reviewed mapping supplied."
+                if args.descriptions
+                else "Generated label names are placeholders; review before checkpoint acceptance"
+            ),
             "license": "CC BY 4.0; retain publisher attribution in reports",
             "normalized_sha256": {p.name: file_hash(p) for p in sorted(args.out.glob("*.json*"))},
         },
