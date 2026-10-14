@@ -13,7 +13,6 @@ from decisionbench.artifacts import file_hash, write_json
 from decisionbench.suite import completed_entry, verify_bundle
 from orchestration.prepare_qwen_capacity import create_capacity_bundle
 
-
 ROOT = Path.cwd()
 PILOT = ROOT / "experiments/massive-qwen-guidance-pilot-v4/plan.json"
 STATUS = ROOT / "results/execution-20261014/qwen-capacity-status.json"
@@ -91,7 +90,11 @@ def main():
     write_json(STATUS, evidence)
     try:
         for _ in range(1080):
-            status = read_json(ROOT / "results/execution-20261014/qwen-v4-status.json")
+            try:
+                status = read_json(ROOT / "results/execution-20261014/qwen-v4-status.json")
+            except (FileNotFoundError, json.JSONDecodeError):
+                time.sleep(1)
+                continue
             if status.get("state") == "completed":
                 break
             process = Path("/proc/20426/stat")

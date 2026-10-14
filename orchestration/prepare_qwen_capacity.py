@@ -15,6 +15,8 @@ from decisionbench.suite import completed_entry, prepare, verify_bundle
 def create_capacity_bundle(source_plan, root, out, rates, duration, repeats=3):
     original = read_json(source_plan)
     verify_bundle(original, root)
+    if file_hash(source_plan.parent / "suite.yaml") != original["suite_sha256"]:
+        raise ValueError("source suite specification changed after freeze")
     source_state = read_json(root / "results/suites" / file_hash(source_plan) / "index.json")
     spec = yaml.safe_load((source_plan.parent / "suite.yaml").read_text(encoding="utf-8"))
     model = copy.deepcopy(spec["models"]["qwen"])
@@ -26,6 +28,8 @@ def create_capacity_bundle(source_plan, root, out, rates, duration, repeats=3):
         if not completed_entry(entry, job, root):
             raise ValueError("all source Qwen main baselines must be completed")
         config = load_config(root / job["config"])
+        if config.warmup != model.get("warmup", 0):
+            raise ValueError("baseline warmup setting differs")
         _, _, _, summary, _, _ = audit_run(root / entry["run_dir"])
         if config.adapter != model["adapter"] or summary["success_rate"] < config.min_success_rate:
             raise ValueError("baseline adapter or successful output rate is inconsistent")
