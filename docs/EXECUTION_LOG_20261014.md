@@ -147,3 +147,11 @@ Jev 主测试首轮 07:36:24 UTC 启动，后续阶段尚未启动。Qwen 主测
 中文报告 `docs/QWEN_EXPERIMENT_REPORT_20261014.md` 已完成，涵盖主质量、59/60类F1口径、规模配对区间、容量失败依据、错误AI审阅、费用、版本修复和限制。确认两个拥有的控制器已结束、全部计划作业completed且无suite运行锁后，12:54:33UTC仅向拥有的Worker19643发送SIGTERM并确认退出，回执 `results/execution-20261014/qwen-final-worker-stop.json` 已拉回。未关闭实例或用户SSH转发；停止Worker不停止实例计费。
 
 当前状态 **QWEN_COMPLETE / JEV_PAUSED**。配置、代码和文档以Git管理，原始结果和生成物以独立SHA256归档保管；完成最终本地/远程材料同步后向用户通知并暂停后台跟进。
+
+## 本地 Jev v1 恢复
+
+用户在 Qwen 完成后授权开始本地 Jev 实验。Qwen 的40个独立运行、最终审计和归档不变；Jev 使用新计划 `experiments/massive-jev-local-v1/plan.json`，旧 v3 Jev 中断结果保留且不覆盖。配置 `configs/experiment-suite-jev-local-v1.yaml` 只包含 `jev-1.13.0`，数据、目录、请求协议和官方输入价格按冻结方案填写。API 密钥只通过运行时标准输入进入进程环境，不写入配置、源码或结果日志。
+
+本机 `127.0.0.1:7897` 代理监听。首个探针 v2 曾在 TLS 建连时超时，未发出模型 POST；使用显式 `ALL_PROXY` 后，探针 v3 的 `/v1/models` 和单条 `/v1/systemone` 均 HTTP 200，Choice 契约校验通过。合成探针不计入实验。
+
+Jev checkpoint 于 15:00:24 UTC 启动，5 条预热和300条测量均完成，成功率100%、合法输出100%、Accuracy=0.8733333333，结果目录 `results/20261014T150024Z-checkpoint-full-seed42-rep1-jev-cba314f2`。随后于15:06:01 UTC启动完整 test 三轮主质量实验，预算8937条请求（含15条预热），watchdog 遇 HTTP/适配器/非法输出或连续传输错误会停止并保留证据。运行中曾出现4条连续附近的 `network_error/transport_error`，随后请求恢复为ok；当前未判定为阶段失败，继续观察并在阶段结束复核状态与请求记录。
