@@ -2,6 +2,16 @@
 
 实验实际日期：2026-10-14/15。此分支整理已完成实验的报告、离线结果、图表和证据索引，供后续提交审阅使用。没有启动新实验或修改冻结结果。
 
+## 先看图解
+
+[完整五组实验图解](VISUAL_EXPERIMENT_RESULTS_20261015.md)展示分类质量、目录规模、正式判据、初测状态矩阵与每分钟稳态。图均读取原CSV，原封存报告和数据保持不变。
+
+![分类准确率与逐轮配对差值](../reports/experiment-results-20261015/visualizations/01-quality-paired.png)
+
+![正式负载为什么没通过](../reports/experiment-results-20261015/visualizations/03-formal-thresholds.png)
+
+![每分钟稳态通过情况](../reports/experiment-results-20261015/visualizations/05-formal-minute-windows.png)
+
 ## 报告入口
 
 - [Qwen 最终报告](QWEN_EXPERIMENT_REPORT_20261014.md)：40 个独立完成 run，远程 RTX 5090 / vLLM / Qwen3-0.6B BF16。

@@ -4,6 +4,16 @@
 
 Qwen 封存报告内“Jev 尚未完成”的文字描述其 2026-10-14 截止时点，作为历史文档保留；Jev 最新状态以本比较和 Jev 最终报告为准。
 
+## 结果图解
+
+![两模型主准确率与逐轮配对差值](../reports/experiment-results-20261015/visualizations/01-quality-paired.png)
+
+![候选目录扩大后的准确率](../reports/experiment-results-20261015/visualizations/02-catalog-scale.png)
+
+![正式负载的三个独立判据](../reports/experiment-results-20261015/visualizations/03-formal-thresholds.png)
+
+图中红色仅表示该项超限，绿色仅表示该项达标；最终成功率不等于分类准确率。全部图解、逐分钟窗口、判据说明和SVG导出见[实验图解报告](VISUAL_EXPERIMENT_RESULTS_20261015.md)。图由原封存CSV绘制，不改变测量值或判据。
+
 ## 已完成的主质量结果
 
 双方都使用 MASSIVE en-US 完整 test 的同一组 **2974 个唯一样本**。每个模型重复三轮，三次调用不构成 8922 个独立样本。离线检查逐项比较了输入的 sample_id、原始文本、数据集真值与顺序，以及完整目录的版本、标签顺序和说明；语义输入完全一致。Windows/Linux 文件换行字节可不同，原始文件及各自哈希保留。

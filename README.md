@@ -6,6 +6,8 @@ Jev / Qwen / BERT 共用数据、测量和成本口径的实验框架。Controll
 
 本次结果包括两模型完整报告、逐运行 CSV、图表、规模配对与主质量配对分析。Qwen 主准确率 45.9314%，Jev 三轮均值 86.1242%；Qwen 最高已测正式通过点为 32 RPS，Jev 当前本地代理链路没有通过既定时延/调度判据的确认容量。部署条件与费用口径不同，具体限制见结果入口。
 
+直观查看：[五组实验图解](docs/VISUAL_EXPERIMENT_RESULTS_20261015.md)，包括逐轮质量、目录扩展、负载超限原因和每分钟稳态矩阵，提供PNG与SVG。
+
 ## Qwen 与 Jev 远程实验
 
 2026-10-14 新服务器上传、环境和模型准备记录见 [westd 准备记录](docs/WESTD_PREPARATION_20261014.md)，原生启动配置为 `configs/qwen-native-westd.json`。
