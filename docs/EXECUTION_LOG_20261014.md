@@ -239,3 +239,9 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 2026-10-15 04:21:15UTC（北京时间12:21:15）第二轮main完成2974条逻辑ok，5预热ok；4次追加尝试恢复3条请求，未发生最终失败。04:21:45UTC同一控制器自动开始main3，新目录results/20261015T042145Z-main-full-seed44-rep3-jev-9f7a81b5，未重复启动进程。main2离线audit_run、完成证据哈希、冻结输入/源码与run source快照逐文件校验均通过：Accuracy86.14660390%，全60MacroF1 .8392506082，supported59 .8534751948；已知测量费用.241750068USD为下界，缺失重试usage不冒充完整账单。两轮均同一2974唯一样本，不把5948次重复当5948个独立样本。
 
 已将完成main1/main2、完整冻结计划和捕获时suite状态另存dist/jev-v4-main1-main2-completed-snapshot.tar.gz，SHA256 322fe0abb693fd8c3002e70d81e5a3beb2778e8fb6cd4ebcfda0529532c64c67，回执另存；第三轮运行日志未混入完成结果归档。实时suite不被备份状态覆盖。当前main3运行中，尚未完成scale/load/最终报告。
+
+### 三轮main完成；规模实验进行中
+
+2026-10-15 04:32:46UTC（北京时间12:32:46）main3完成2974测量逻辑ok，3次追加尝试恢复1条，5预热ok。三轮分别Accuracy86.04572966%/86.14660390%/86.18022865%，均值86.12418740%，样本标准差0.06999549个百分点；main3全60Macro-F1 .8393599458、supported59 .8535863855。三轮是相同2974唯一样本的重复，共8922测量逻辑请求、8934测量适配器尝试（12追加），恢复6条；不包含预热、探针、旧失败轮次。三轮已知测量费用合计.725250204USD下界，三轮均有失败尝试未知usage。按sample_id配对预测差异1vs2=33、1vs3=36、2vs3=29，不声称Jev确定性复现。
+
+所有完成run的completed_entry/audit_run、冻结输入和源码哈希以及run source快照逐文件校验通过，回执results/execution-20261014/jev-v4-three-main-audit.json。完成三轮main及当时完成的seed42三组scale（10/30/60类Accuracy98%/93%/89.5%，仅单种子暂不作最终规模均值）归档dist/jev-v4-three-main-completed-snapshot.tar.gz，SHA256 032e2d2f5a9974aad2990e5c8181553e2b24d32543468b3f45835969aa1d2ecf。04:32:49UTC同一driver88332自动进入scale，watchdog launcher108632、实际watchdog85744、suite实际111040；未启动重复控制器。当前main阶段完成、规模阶段继续、负载与最终报告未完成。
