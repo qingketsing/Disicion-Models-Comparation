@@ -223,3 +223,7 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 核验driver83692/watchdog79880/controller73560/lock110076均不存在，修正main2 manifest及suite生命周期为interrupted、移除匹配锁，原始requests SHA256 1ceee844aa7e02a2fa39869d578701edeb9a77b5f2861ee29d5604bf3f4f587a不变。完整归档dist/jev-local-v4-retry3-before-resume1.tar.gz SHA256 cf9c2a76cf23d03c089650cf5846bc22dc40c15c796155032a5f7d2d993fefce。
 
 按用户新授权用原有--resume-transport机制及唯一jev-local-v4-retry3-resume1执行前缀恢复，main1通过哈希及audit_run校验后复用不发请求，main2从完整2974条重跑并保留旧attempt，接着main3/scale/load。剩余23run、13148测量+115预热，最多53052次API尝试，另合成探针最多4POST；这是预算上限。保持原始冻结计划、网络路径、30秒总期限和首次后3次重试，未修改核心代码。
+
+01:47:52UTC（北京时间09:47:52）resume1实际启动，driver100844；连接探针GET/合成POST200，main1完成证据复用。01:47:54UTC重启main2，5预热ok，24条测量中23ok/1HTTP499，01:48:01UTC看门狗按既有HTTP失败策略停止。该请求耗时154.42ms，仅一次尝试，未追加重试，因为当前冻结策略只对httpx.RequestError/传输超时重试。HTTP499本身不能确定由代理还是上游发出，原始日志未保留响应体/服务器头，不把它认定为已证实的传输异常或凭据故障。未擅自扩大HTTP重试范围。
+
+核验driver100844/watchdog84040/controller87452/lock86600均已退出后，manifest/suite修正interrupted、error_type=WatchdogHTTPStop，原始请求哈希e131a8f0e4e69cdcd76c155c4e5af8968bdfb4ab50d397e558bc10152ad59d12保持不变，移除匹配陈旧锁。归档dist/jev-local-v4-retry3-resume1-http499-snapshot.tar.gz SHA256 ba038186a674031732be554fccedebc7a480707ba705d3650802b052306def95。当前main1完成，main2仍未完成，停止后续请求并通知用户此新错误；后台跟进暂停，避免未经处理反复计费重跑。
