@@ -203,3 +203,13 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 核验driver107920、watchdog71288、controller94044及锁PID103652均退出后，修正main manifest/suite为interrupted，追加attempt状态，移除匹配的陈旧锁。原warmup/requests字节哈希保持为`a5b97e25df84bff9234251b4bceb926fb47359eb9e409176efd6c02ddb2815c7`和`81b4a7fa36ba0529dcb40bb1d8f21c712cdc517445526db3b1ca3d46ed52f4e8`，回执`jev-local-v3-retry1-interruption.json`。旧attempt和全部原始记录保留。
 
 01:20:53UTC做10次无鉴权只读GET，均收到预期403，新增推理请求0；7897代理仍监听。本次诊断没有复现传输异常，但不能推翻刚发生的主测试网络错误或证明未来连接稳定；已有日志只记录transport_error，无法进一步定位中间代理/上游具体根因。停止计费请求及自动重跑并通知用户，不改变原网络路径、超时或阈值。完整冻结计划、三个v3 attempt及执行/诊断记录归档`dist/jev-local-v3-retry1-transport-stop-snapshot.tar.gz`及SHA256回执。当前 **QWEN_COMPLETE / JEV_STOPPED_NETWORK**，Jev最终报告与其余实验尚未完成。
+
+## 用户授权网络重试策略：本地Jev v4 retry3
+
+用户明确要求“遇到网络错误就重试请求3次，不要直接停下来，再重新做实验”。按首次请求后最多追加3次实现，最多4次适配器调用；只对传输异常和传输超时重试，不重试HTTP错误、非法输出或适配器业务异常。间隔0.5/1/2秒，保留原30秒总请求期限，期限耗尽可能少于3次；保持原始scheduled时间和同一并发槽位，重试/等待时间计入端到端延迟及500ms SLO，不能把重试后成功的延迟重置为最后一次耗时。看门狗只读取逻辑请求最终状态，成功恢复继续执行，重试用尽或总期限耗尽才作为最终失败处理。
+
+新增可配置network_retries（默认0，历史默认行为不变）和network_retry_backoff_s。每条请求的network_attempts记录尝试序号、起止时刻、真实异常类型、状态、退避和未知usage；不写异常原文或认证信息。summary另报适配器尝试、额外调用、传输失败和恢复数。失败尝试即使后来成功仍可能已计费，因此usage_complete=false、成本仅下界，最终报告须展示初次失败与重试恢复，不能把逻辑成功率当原始链路成功率。预算上限按最多4次调用放大并在执行前校验。合成连接探针亦最多追加3次网络重试，逐次计数和记录，与测量分开；探针每次调用超时30秒，实验测量则为总30秒期限。
+
+新计划experiments/massive-jev-local-v4-retry3/plan.json SHA256 `e4af0d581f9306b49f0d1f72e8b84404510dfb44e905def4b6803bf756fdf267`；24run（main3/scale9/load12），16122测量、120预热，最多64968次API调用，另探针最多4次POST。这是上限而非已发生调用或费用。原local-v3 checkpoint300已完成并保留为旧策略预检证据，本版本不再发送checkpoint，不将其伪装成本次retry3测量。所有旧完整/中断结果及冻结输入保留，v4重新完整执行三轮main，不拼接旧样本。
+
+本次修改了核心源码，原冻结v1/v2/v3计划不再用当前源码继续执行；其source快照及结果保留，历史审计用run自身冻结证据，不修改旧计划哈希以绕过校验。Qwen报告及40run封存不重跑。全套74项测试通过（1条上游Starlette弃用警告），包含3次追加重试后成功、4次失败上限、不重试429/非法输出、总期限、端到端退避、未知usage成本下界及4倍预算拒绝不足。Ruff通过。

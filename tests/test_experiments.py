@@ -137,7 +137,8 @@ async def test_preview_freeze_and_portability(experiment_root, monkeypatch):
         await run_plan(plan, root, [], [])
 
 
-async def test_api_budget_checked_before_requests(experiment_root, monkeypatch):
+@pytest.mark.parametrize("network_retries", [0, 3])
+async def test_api_budget_checked_before_requests(experiment_root, monkeypatch, network_retries):
     root, config, spec = experiment_root
     spec["models"]["jev"] = {
         "adapter": {
@@ -149,6 +150,7 @@ async def test_api_budget_checked_before_requests(experiment_root, monkeypatch):
         "warmup": 5,
         "environment": {"network_path": "test", "api_quota_rps": 10},
     }
+    spec["common"]["network_retries"] = network_retries
     config.write_text(yaml.safe_dump(spec))
     plan = prepare(config, root, root / "experiments/toy")
     monkeypatch.setenv("TEST_API_KEY", "fake-key")
@@ -158,9 +160,9 @@ async def test_api_budget_checked_before_requests(experiment_root, monkeypatch):
 
     monkeypatch.setattr("decisionbench.suite.run", forbidden)
     preview = await run_plan(plan, root, ["main"], ["jev"])
-    assert preview["api_requests_upper_bound_this_invocation"] == 21
+    assert preview["api_requests_upper_bound_this_invocation"] == 21 * (network_retries + 1)
     with pytest.raises(ValueError, match="budget"):
-        await run_plan(plan, root, ["main"], ["jev"], True, 20)
+        await run_plan(plan, root, ["main"], ["jev"], True, 21 * (network_retries + 1) - 1)
     assert not (root / "results").exists()
     data = json.loads(plan.read_text())
     for job in data["jobs"]:

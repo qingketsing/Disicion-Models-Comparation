@@ -3,6 +3,7 @@
 import argparse
 import asyncio
 import os
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -13,7 +14,7 @@ from decisionbench.artifacts import write_json
 from decisionbench.protocol import Catalog, Decision
 
 
-async def probe(out):
+async def probe(out, network_retries=0):
     token = os.environ["TYPESAFE_API_KEY"]
     catalog = Catalog(
         "synthetic-probe-v1",
@@ -35,15 +36,34 @@ async def probe(out):
         "evaluation_requests": 0,
         "request": payload,
         "steps": [],
+        "network_retries": network_retries,
+        "transport_attempts": [],
     }
     async with httpx.AsyncClient(
         headers={"Authorization": f"Bearer {token}"}, timeout=30
     ) as client:
         for method, path, body in (("GET", "/v1/models", None), ("POST", "/v1/systemone", payload)):
-            if method == "POST":
-                record["evaluation_requests"] += 1
             try:
-                response = await client.request(method, "https://api.typesafe.ai" + path, json=body)
+                for attempt_index in range(network_retries + 1):
+                    attempt = {"path": path, "attempt": attempt_index + 1}
+                    record["transport_attempts"].append(attempt)
+                    if method == "POST":
+                        record["evaluation_requests"] += 1
+                    started = time.perf_counter()
+                    try:
+                        response = await client.request(
+                            method, "https://api.typesafe.ai" + path, json=body
+                        )
+                        attempt["status"] = response.status_code
+                        break
+                    except httpx.RequestError as exc:
+                        attempt["error_type"] = type(exc).__name__
+                        if attempt_index == network_retries:
+                            raise
+                        await asyncio.sleep(0.5 * 2**attempt_index)
+                    finally:
+                        attempt["elapsed_ms"] = (time.perf_counter() - started) * 1000
+                        write_json(out, record)
                 step = {
                     "path": path,
                     "status": response.status_code,
@@ -83,11 +103,12 @@ async def probe(out):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--network-retries", type=int, choices=range(4), default=0)
     args = parser.parse_args()
     if args.out.exists():
         parser.error("choose a new output; no silent retries")
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    asyncio.run(probe(args.out))
+    asyncio.run(probe(args.out, args.network_retries))
 
 
 if __name__ == "__main__":

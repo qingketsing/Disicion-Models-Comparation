@@ -85,7 +85,8 @@ def main():
         )
         cmd += ["--max-api-requests", str(budget)]
     control = {
-        "policy": "stop on any HTTP error, any adapter error, or three consecutive transport/timeouts",
+        "policy": "inspect final logical request status after any configured transport retries; "
+        "stop on HTTP/adapter error, transport exhaustion when enabled, or three final transport failures",
         "stop_invalid_output": a.stop_invalid,
         "stop_transport_error": a.stop_transport_error,
         "model": a.model,

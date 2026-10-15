@@ -111,6 +111,23 @@ def summarize(records, config, elapsed_s, labels):
         summary["quality_note"] = (
             "Quality under load; use a separate quality run for semantic baseline."
         )
+    if any("network_attempts" in r for r in records):
+        attempts = [a for r in records for a in r.get("network_attempts", [])]
+        summary["network_retry"] = {
+            "max_additional_retries": config.network_retries,
+            "total_request_deadline_s": config.timeout_s,
+            "adapter_attempts": len(attempts),
+            "additional_attempts": sum(
+                max(0, len(r.get("network_attempts", [])) - 1) for r in records
+            ),
+            "transport_failures": sum(
+                a["status"] in {"network_error", "timeout"} for a in attempts
+            ),
+            "recovered_requests": sum(
+                r["status"] == "ok" and len(r.get("network_attempts", [])) > 1 for r in records
+            ),
+            "latency_scope": "original scheduled arrival through retries and backoff to completion",
+        }
     summary["cost"] = request_cost(records, elapsed_s, config.cost, config.slo_ms)
     return summary
 
@@ -140,7 +157,9 @@ def request_cost(records, elapsed_s, pricing, slo_ms):
         total = elapsed_s * pricing["instance_price_per_hour"] / 3600
     else:
         complete = all(
-            r.get("input_tokens") is not None and r.get("output_tokens") is not None
+            r.get("input_tokens") is not None
+            and r.get("output_tokens") is not None
+            and not any(a.get("usage_unknown") for a in r.get("network_attempts", []))
             for r in records
             if r["status"] != "client_overload"
         )

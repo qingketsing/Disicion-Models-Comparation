@@ -143,7 +143,8 @@ def prepare(config_path: Path, root: Path, out: Path):
                     "config_sha256": file_hash(path),
                     "dataset_sha256": file_hash(dataset),
                     "catalog_sha256": file_hash(catalog_path),
-                    "api_requests_upper_bound": count + config.warmup
+                    "api_requests_upper_bound": (count + config.warmup)
+                    * (1 + config.network_retries)
                     if config.adapter["kind"] == "jev"
                     else 0,
                 }
@@ -237,7 +238,11 @@ def verify_bundle(plan, root):
             if config.mode == "load"
             else len(read_jsonl(root / config.dataset))
         )
-        expected_api = expected + config.warmup if config.adapter["kind"] == "jev" else 0
+        expected_api = (
+            (expected + config.warmup) * (1 + config.network_retries)
+            if config.adapter["kind"] == "jev"
+            else 0
+        )
         if (
             config.name != job["id"]
             or expected != job["measurement_requests"]

@@ -80,7 +80,15 @@ async def measure(adapter, sample, catalog, config, origin, scheduled, phase="me
         remaining = config.timeout_s - (dispatched - scheduled)
         if remaining <= 0:
             raise TimeoutError
-        decision = await asyncio.wait_for(adapter.predict(sample.model_input(), catalog), remaining)
+        if config.network_retries:
+            record["network_attempts"] = []
+            decision = await predict_with_network_retries(
+                adapter, sample, catalog, config, scheduled, origin, record["network_attempts"]
+            )
+        else:
+            decision = await asyncio.wait_for(
+                adapter.predict(sample.model_input(), catalog), remaining
+            )
         attach_decision(record, decision)
         decision.validate(catalog)
         record["status"] = "ok"
@@ -106,6 +114,52 @@ async def measure(adapter, sample, catalog, config, origin, scheduled, phase="me
     record["service_latency_ms"] = (completed - dispatched) * 1000
     record["e2e_latency_ms"] = max(0, (completed - scheduled) * 1000)
     return record
+
+
+async def predict_with_network_retries(
+    adapter, sample, catalog, config, scheduled, origin, attempts
+):
+    """Retry transport errors only, inside the original total request deadline.
+
+    The pending task keeps its concurrency slot throughout retries and backoff.
+    HTTP errors and invalid responses propagate immediately; secrets are never logged.
+    """
+    deadline = scheduled + config.timeout_s
+    for index in range(config.network_retries + 1):
+        started = time.perf_counter()
+        remaining = deadline - started
+        if remaining <= 0:
+            raise TimeoutError
+        attempt = {"attempt": index + 1, "started_s": started - origin}
+        attempts.append(attempt)
+        try:
+            decision = await asyncio.wait_for(
+                adapter.predict(sample.model_input(), catalog), remaining
+            )
+            attempt["status"] = "response_received"
+            return decision
+        except (httpx.RequestError, TimeoutError) as exc:
+            attempt.update(
+                status="timeout"
+                if isinstance(exc, (TimeoutError, httpx.TimeoutException))
+                else "network_error",
+                error_type=type(exc).__name__,
+                usage_unknown=True,
+                completed_s=time.perf_counter() - origin,
+            )
+            if index == config.network_retries:
+                raise
+            delay = config.network_retry_backoff_s * (2**index)
+            # A 30s total deadline remains 30s, even with retries enabled.
+            if time.perf_counter() + delay >= deadline:
+                raise
+            attempt["retry_backoff_s"] = delay
+            await asyncio.sleep(delay)
+        except BaseException as exc:
+            attempt.update(status="not_retried", error_type=type(exc).__name__)
+            raise
+        finally:
+            attempt.setdefault("completed_s", time.perf_counter() - origin)
 
 
 async def warmup(adapter, samples, catalog, config, emit):
@@ -138,7 +192,8 @@ async def load(adapter, samples, stages, config, emit):
     """Fixed-rate open loop with bounded tasks and explicit client admission failures.
 
     stages: [(offset_seconds, Catalog)]. Catalog changes use scheduled arrival time,
-    not response completion time. No client-side queue or retry hides overload.
+    not response completion time. Retries, if configured, retain the same task slot
+    and scheduled time, so their overhead remains visible in latency and admission.
     """
     rng = random.Random(config.seed)
     origin = time.perf_counter()

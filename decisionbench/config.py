@@ -25,6 +25,8 @@ class RunConfig:
     cost: dict = field(default_factory=dict)
     environment: dict = field(default_factory=dict)
     stages: list[dict] = field(default_factory=list)
+    network_retries: int = 0
+    network_retry_backoff_s: float = 0.5
 
     def __post_init__(self):
         if self.mode not in {"quality", "load", "dynamic"}:
@@ -42,6 +44,14 @@ class RunConfig:
                 raise ValueError(f"invalid {key}")
         if type(self.seed) is not int:
             raise ValueError("seed must be an integer")
+        if type(self.network_retries) is not int or not 0 <= self.network_retries <= 3:
+            raise ValueError("network_retries must be an integer between 0 and 3")
+        if (
+            not isinstance(self.network_retry_backoff_s, (int, float))
+            or not math.isfinite(self.network_retry_backoff_s)
+            or self.network_retry_backoff_s < 0
+        ):
+            raise ValueError("network_retry_backoff_s must be finite and nonnegative")
         if not 0 <= self.min_success_rate <= 1:
             raise ValueError("min_success_rate must be between 0 and 1")
         if self.offered_rps * self.duration_s > 1_000_000:

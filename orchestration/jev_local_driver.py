@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from decisionbench.analysis import audit_run
+from decisionbench.config import load_config
 from decisionbench.suite import completed_entry, verify_bundle
 
 
@@ -43,6 +44,7 @@ def main():
     root = Path.cwd()
     spec = json.loads(args.plan.read_text(encoding="utf-8"))
     verify_bundle(spec, root)
+    retries = max(load_config(root / job["config"]).network_retries for job in spec["jobs"])
     digest = hashlib.sha256(args.plan.read_bytes()).hexdigest()
     index = root / "results/suites" / digest / "index.json"
     if index.with_name("running.lock").exists():
@@ -83,8 +85,9 @@ def main():
         plan_sha256=digest,
         started_at_utc=datetime.now(timezone.utc).isoformat(),
         completed_blocks=[],
-        stop_on_first_transport_error=True,
+        stop_on_final_request_error=True,
         resume_transport=args.resume_transport,
+        network_retries_per_request=retries,
     )
 
     def save():
@@ -102,6 +105,8 @@ def main():
                     "scripts.probe_jev",
                     "--out",
                     str(args.prefix) + "-probe.json",
+                    "--network-retries",
+                    str(retries),
                 ],
                 env=env,
                 stdout=log,
@@ -109,6 +114,8 @@ def main():
                 check=True,
             )
             for block in ("checkpoint", "main", "scale", "load"):
+                if not any(job["block"] == block for job in spec["jobs"]):
+                    continue
                 status.update(state="running", block=block)
                 command = [
                     sys.executable,
