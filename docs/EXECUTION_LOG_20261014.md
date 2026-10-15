@@ -277,3 +277,11 @@ docs/JEV_ERROR_REVIEW_20261014.md及reports/jev-error-review-20261015保存40条
 限制记录：本次本地Controller主机同时进行了离线审计、bootstrap和工具测试，可能争用CPU/IO并影响调度；没有系统资源时序证据可将某次迟滞归因于特定后台任务。所有原始lag和不通过点保留，不能归咎于API或声称纯模型容量。后续正式300秒确认期间暂停计算密集型本地审计/测试/绘图，仍保持原阈值与原始输入；不把pilot失败重标通过。
 
 质量配对/40例AI审阅/工具代码与文档另存dist/jev-v4-quality-comparison-review-snapshot.tar.gz，SHA256 e524c2dabe51e3006b4dc0d03087ede412bec9f4e12fca52aa3a3b6a52d839dc；19个归档成员逐项哈希重验。该归档不宣称Jev容量或最终总费用已完成。
+
+### Pilot完成与正式最低负载确认启动（2026-10-15）
+
+05:13:30UTC（北京时间13:13:30）原driver88332完成全部24run（main3/scale9/load12），状态pilot_completed并正常退出。12组120秒load共5400逻辑测量，其中5397ok、3client_overload（8RPS seed42），87次追加尝试恢复71条请求，无最终HTTP/传输耗尽。已知load测量费用0.438698358USD为下界，预热另计；数据来自容量driver逐run的completed_entry/audit_run及源快照/窗口审计结果。1/2/4/8RPS各三轮均未满足完整及60秒窗口判据，每轮最大调度lag均>20ms，部分点还有p95>500ms。不能将这些失败宣称API服务吞吐硬上限，且本机同驻工具工作干扰限制已另记。冻结pilot和所有原始结果保留，不重标通过。
+
+容量driver114740按已记录无通过点策略自动准备新计划experiments/massive-jev-local-v4-retry3-formal/plan.json，SHA256 badc58959d3119553ec1fc55e217b985c61433b9a18dab3f19203f05e30ff955。仅新发1RPS、300秒、三轮，另引用原三轮已审计main完成entry，不发送main或checkpoint。新测量900、预热15，首次+3追加的API调用预算上限3660（不是实际调用或费用），每秒四倍预算4attempt/10252Token低于公布配额；局限仍为观测Token筛查而非突发限速保证。派生suite原字节配置configs/massive-jev-local-v4-retry3-formal.yaml纳入Git，未改原plan。
+
+05:13:42UTC正式首轮启动results/20261015T051342Z-load-rps1-seed42-rep1-jev-ec13b7af；watchdog launcher82168/实际110424，suite launcher110324，日志results/execution-20261014/jev-local-v4-retry3-capacity-formal.log及-watchdog.json。容量driver继续运行，禁止重复启动或重发已完成main。正式阶段暂停计算密集型本机审计/测试/绘图，只作轻量状态/日志记录；等待三轮完整300秒和每60秒窗口审计后才判断有无确认容量，不调整阈值。
