@@ -245,3 +245,11 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 2026-10-15 04:32:46UTC（北京时间12:32:46）main3完成2974测量逻辑ok，3次追加尝试恢复1条，5预热ok。三轮分别Accuracy86.04572966%/86.14660390%/86.18022865%，均值86.12418740%，样本标准差0.06999549个百分点；main3全60Macro-F1 .8393599458、supported59 .8535863855。三轮是相同2974唯一样本的重复，共8922测量逻辑请求、8934测量适配器尝试（12追加），恢复6条；不包含预热、探针、旧失败轮次。三轮已知测量费用合计.725250204USD下界，三轮均有失败尝试未知usage。按sample_id配对预测差异1vs2=33、1vs3=36、2vs3=29，不声称Jev确定性复现。
 
 所有完成run的completed_entry/audit_run、冻结输入和源码哈希以及run source快照逐文件校验通过，回执results/execution-20261014/jev-v4-three-main-audit.json。完成三轮main及当时完成的seed42三组scale（10/30/60类Accuracy98%/93%/89.5%，仅单种子暂不作最终规模均值）归档dist/jev-v4-three-main-completed-snapshot.tar.gz，SHA256 032e2d2f5a9974aad2990e5c8181553e2b24d32543468b3f45835969aa1d2ecf。04:32:49UTC同一driver88332自动进入scale，watchdog launcher108632、实际watchdog85744、suite实际111040；未启动重复控制器。当前main阶段完成、规模阶段继续、负载与最终报告未完成。
+
+### 九组规模完成、负载初测进行中（2026-10-15）
+
+04:43:36UTC（北京时间12:43:36）九组scale全部完成，每组200测量和5预热均ok，无额外网络尝试。10/30/60类目录的三种子Accuracy分别为98%/96%/97.5%、93%/92.5%/96.5%、89.5%/90%/92%；均值97.16666667%/94%/90.5%。九组已知测量费用0.091138572USD，预热另计。每种子为同一200条anchor样本的目录规模配对，真值仅覆盖10个anchor类；完整目录F1包含其他零支持类别，不能与完整test的59支持类F1混同。已按种子核对sample_id及真值，计算2000次配对bootstrap，不把不同目录重复测量当新增独立样本。
+
+同一driver88332于04:43:37UTC自动进入load；watchdog launcher106236、实际113964，suite launcher108712、实际97748。首个4RPS/120s完成480逻辑ok，12追加尝试恢复11条；p95=502.560390ms、最大调度迟滞25.284800ms，整体与两个60秒窗口均不通过。第二个2RPS/120s完成240逻辑ok，无追加尝试，p95=255.786670ms，最大调度迟滞95.431600ms，整体及两个窗口因调度超限不通过。这些为既定容量判据未通过，不是请求最终失败；保持原阈值，继续原pilot其余负载点，不重发main或scale，也不能据此声称API服务吞吐上限。已恢复的传输错误仍计入端到端延迟和费用下界，4RPS已知测量费用0.039019722USD为下界，2RPS为0.019511352USD，预热另计。
+
+本次捕获14个完成run（三轮main、九组scale、两个load），逐项completed_entry、audit_run、冻结源码/输入及每run源快照校验通过。审计回执results/execution-20261014/jev-v4-scale-completed-audit.json，另存dist/jev-v4-scale-completed-snapshot.tar.gz，SHA256 9764437925fec22d83c34e5069f251a8ce78311365af8da22dd70eb28dd127ae；归档每成员与源文件SHA256逐一重验，捕获suite状态独立保存，没有覆盖实时状态或混入在途run。后续8RPS seed42运行中，完整负载、正式容量复测、报告尚未完成。
