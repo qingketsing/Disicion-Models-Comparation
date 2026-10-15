@@ -231,3 +231,5 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 ## 用户说明网络波动后授权resume2
 
 用户再次要求现在重新开始。核验无Python实验进程、旧resume1已退出且suite无运行锁；保留已审计完成的v4 main1。旧resume1为HTTP499而非传输异常，新增外部运行器显式--resume-reviewed-http499开关，只有用户明确授权后使用；必须为已标记interrupted/WatchdogHTTPStop、manifest中断一致且所有失败行均HTTP499，拒绝401/429和未知失败。此选项只允许新完整尝试，不改变冻结HTTP不重试策略，不修改核心源码或原计划。相关11项恢复/watchdog测试通过。保持每请求网络最多追加3次/原30秒总期限，main2完整重跑；main1不重复。剩余23run、13148测量+115预热、最多53052次API尝试，另合成探针最多4POST。执行前缀jev-local-v4-retry3-resume2，旧现场与全部attempt保留。
+
+04:09:54UTC（北京时间12:09:54）resume2实际启动，driver88332、main watchdog launcher73296；GET与合成POST均200。main1完成证据复用不发送；main2新目录results/20261015T040957Z-main-full-seed43-rep2-jev-efb6e432，最初49测量ok。后台跟进更新到本次prefix/PID和已授权HTTP499中断恢复，禁止重复启动。
