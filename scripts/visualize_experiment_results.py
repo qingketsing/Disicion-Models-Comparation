@@ -71,6 +71,12 @@ def save(fig, name):
     for suffix in ["png", "svg"]:
         path = OUT / f"{name}.{suffix}"
         fig.savefig(path, dpi=180)
+        if suffix == "svg":
+            svg = path.read_text(encoding="utf-8")
+            path.write_text(
+                "\n".join(line.rstrip() for line in svg.splitlines()) + "\n",
+                encoding="utf-8", newline="\n",
+            )
         OUTPUTS[path.relative_to(ROOT).as_posix()] = digest(path)
     plt.close(fig)
 

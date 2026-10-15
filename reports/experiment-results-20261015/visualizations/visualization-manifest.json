@@ -9,17 +9,17 @@
   },
   "figure_sha256": {
     "reports/experiment-results-20261015/visualizations/01-quality-paired.png": "b83291e6b9f78cdd5c1777348f2dfc933dd1ed765dca3f09c1fa5c932d75e9ac",
-    "reports/experiment-results-20261015/visualizations/01-quality-paired.svg": "cbda01c73ae16cd2f56aacc9d1211f082ff93958b479722ede1e5cd377777691",
+    "reports/experiment-results-20261015/visualizations/01-quality-paired.svg": "27e6de69998b5a874617003f96586c541df3ef5143cf173b6a77b180d9d75733",
     "reports/experiment-results-20261015/visualizations/02-catalog-scale.png": "7e84341944c0e79684af65caab2d1982208d61bdc94fe1f985c970047930df50",
-    "reports/experiment-results-20261015/visualizations/02-catalog-scale.svg": "815d63d8c4d8b40ec9730655de225f5d1cfb0640ec8ea1d4ed8117988ff11a66",
+    "reports/experiment-results-20261015/visualizations/02-catalog-scale.svg": "87fdc06550369fcc751cd31388d3f6e83b32ce27dc61f48fbe20e81e86391c51",
     "reports/experiment-results-20261015/visualizations/03-formal-thresholds.png": "d8728e2c56b68361f0e8d04640b5357916a919fb3cdef4510203e320b136bd98",
-    "reports/experiment-results-20261015/visualizations/03-formal-thresholds.svg": "7e7a5267011fdb907dc0cd915313e1b36f6230c82ce7f4f77594c17eb21ec41a",
+    "reports/experiment-results-20261015/visualizations/03-formal-thresholds.svg": "940eb71b20a6997f0aacd112f643f6f65aa2f875310cb61cdf85c99124d44b9f",
     "reports/experiment-results-20261015/visualizations/04-pilot-status-matrix.png": "ac5720bd74cfb83af1ae9334fd251982f23e726cc88a334871f13c783ce0b631",
-    "reports/experiment-results-20261015/visualizations/04-pilot-status-matrix.svg": "73fe9651e0c3105a49e09bd01202d6769b37343526fa46d7c1ace010f949f580",
+    "reports/experiment-results-20261015/visualizations/04-pilot-status-matrix.svg": "4f7e3adf561a0c8b0e07503e0a17874fcdf28865cc3250af434162649521815e",
     "reports/experiment-results-20261015/visualizations/05-formal-minute-windows.png": "2198ae6af8bc364cfa60fd79ce271acdad521bd076a5ae5a826ad54397a56d72",
-    "reports/experiment-results-20261015/visualizations/05-formal-minute-windows.svg": "31e2f9e30a6cb885bb734d1698bacbb1c6ce1b155d0fe23ada5dcc4494aea531"
+    "reports/experiment-results-20261015/visualizations/05-formal-minute-windows.svg": "186eb2adaa03eb4bf4676e23b0eb723b24bef8d0b0635e3f0d76ded14c7c1bdc"
   },
-  "script_sha256": "0466c13698cdb366226f47a64e71cdf7e7c2e8a85fd270781a09053be8515c92",
+  "script_sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793",
   "semantics": {
     "quality_bar": "mean of three repeats; points are repeats, not independent N",
     "paired_ci": "precomputed per-repeat paired bootstrap95; no pooled 3N",
