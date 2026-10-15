@@ -13,21 +13,23 @@ from decisionbench.config import load_config
 from decisionbench.suite import completed_entry, prepare, verify_bundle
 
 
-def create_capacity_bundle(source_plan, root, out, rates, duration, repeats=3):
+def create_capacity_bundle(source_plan, root, out, rates, duration, repeats=3, *, model_name="qwen"):
+    if model_name not in {"qwen", "jev"}:
+        raise ValueError("capacity baselines support only qwen or jev")
     original = read_json(source_plan)
     verify_bundle(original, root)
     if file_hash(source_plan.parent / "suite.yaml") != original["suite_sha256"]:
         raise ValueError("source suite specification changed after freeze")
     source_state = read_json(root / "results/suites" / file_hash(source_plan) / "index.json")
     spec = yaml.safe_load((source_plan.parent / "suite.yaml").read_text(encoding="utf-8"))
-    model = copy.deepcopy(spec["models"]["qwen"])
+    model = copy.deepcopy(spec["models"][model_name])
     baselines = []
     for job in original["jobs"]:
-        if job["block"] != "main" or job["model"] != "qwen":
+        if job["block"] != "main" or job["model"] != model_name:
             continue
         entry = source_state["jobs"].get(job["id"], {})
         if not completed_entry(entry, job, root):
-            raise ValueError("all source Qwen main baselines must be completed")
+            raise ValueError(f"all source {model_name} main baselines must be completed")
         config = load_config(root / job["config"])
         if config.warmup != model.get("warmup", 0):
             raise ValueError("baseline warmup setting differs")
@@ -42,8 +44,8 @@ def create_capacity_bundle(source_plan, root, out, rates, duration, repeats=3):
                 raise ValueError(f"baseline measurement setting differs: {key}")
         baselines.append((copy.deepcopy(job), copy.deepcopy(entry)))
     if not baselines:
-        raise ValueError("no complete Qwen main quality baselines")
-    spec["models"] = {"qwen": model}
+        raise ValueError(f"no complete {model_name} main quality baselines")
+    spec["models"] = {model_name: model}
     spec["name"] = out.name
     for options in spec["blocks"].values():
         options["enabled"] = False

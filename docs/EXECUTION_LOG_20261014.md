@@ -253,3 +253,15 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 同一driver88332于04:43:37UTC自动进入load；watchdog launcher106236、实际113964，suite launcher108712、实际97748。首个4RPS/120s完成480逻辑ok，12追加尝试恢复11条；p95=502.560390ms、最大调度迟滞25.284800ms，整体与两个60秒窗口均不通过。第二个2RPS/120s完成240逻辑ok，无追加尝试，p95=255.786670ms，最大调度迟滞95.431600ms，整体及两个窗口因调度超限不通过。这些为既定容量判据未通过，不是请求最终失败；保持原阈值，继续原pilot其余负载点，不重发main或scale，也不能据此声称API服务吞吐上限。已恢复的传输错误仍计入端到端延迟和费用下界，4RPS已知测量费用0.039019722USD为下界，2RPS为0.019511352USD，预热另计。
 
 本次捕获14个完成run（三轮main、九组scale、两个load），逐项completed_entry、audit_run、冻结源码/输入及每run源快照校验通过。审计回执results/execution-20261014/jev-v4-scale-completed-audit.json，另存dist/jev-v4-scale-completed-snapshot.tar.gz，SHA256 9764437925fec22d83c34e5069f251a8ce78311365af8da22dd70eb28dd127ae；归档每成员与源文件SHA256逐一重验，捕获suite状态独立保存，没有覆盖实时状态或混入在途run。后续8RPS seed42运行中，完整负载、正式容量复测、报告尚未完成。
+
+### Jev容量复测工具准备与等待控制器（2026-10-15 04:58UTC）
+
+为保持已完成三轮main不重发，将既有容量准备函数增加显式model_name（默认Qwen保持兼容），Jev包装器只接受三轮已完成且audit_run/源快照核验的Jev基线。复用原始baseline输入字节、哈希、部署/价格/网络重试设置与完成entry；只有新load会发送。现有冻结核心源码未修改，v4 verify_bundle仍通过。45项实验工具/容量/恢复/watchdog测试通过，Ruff通过；测试覆盖Qwen及Jev基线复用、修改证据拒绝、CRLF严格兼容、重试配额与正式负载选择。
+
+新增orchestration/prepare_jev_capacity.py和orchestration/jev_capacity_driver.py。容量选择必须等待当前pilot完整完成和离线审计；如8RPS三轮及窗口通过才考虑扩展，先做首次+3追加的尝试和Token预算筛查；若无通过点，则最低1RPS、300秒三轮。最高通过点与最近更高已测失败点正式复测，候选长测失败时只向更低点降级确认，不改500ms/.99/20ms判据，不自动重跑最终HTTP/网络失败。所有正式300秒run及每60秒窗口均需通过，允许结论为无已确认容量。
+
+从三轮main最终usage观测的每次输入+输出Token最大值为2563；8RPS四倍尝试预算为32attempt/s、82016Token/s，16RPS为64attempt/s、164032Token/s，后者超过公布动态100000Token/s，因此不直接照搬Qwen16/32RPS扩展。这是以同输入实测usage作的保守预算筛查，不是精确tokenization保证、每秒突发整形或账号配额保证；重试时刻可能聚集，仍需记录实际尝试，并保留API错误证据。输出价格为0不意味着输出Token不纳入吞吐预算。
+
+04:58:18UTC（北京时间12:58:18）容量等待控制器已启动：launcher96784、实际114740，状态results/execution-20261014/jev-local-v4-retry3-capacity-status.json为waiting_for_pilot，原pilot88332仍独占当前suite执行，未另启动pilot/main/scale或发送容量请求。现有授权suite108712的运行内存环境凭据经临时stdin管道交接至等待控制器，没有写入文件、日志、Git或prompt；启动回执仅记录PID/状态与交接方式，未记录凭据。新控制器可在pilot结束后继续，无需再次输入；若pilot停止或退出则停止后续请求，不能因等待控制器存在而重复启动。
+
+容量工具/启动回执与等待状态快照另存dist/jev-v4-capacity-startup-tools-snapshot.tar.gz，SHA256 89d56189988ef1cc6ccd4b73cf1ccb192650043fe34578b1f468f3e6ed507d95；归档成员逐一SHA256校验，包含45项测试/Ruff/冻结校验回执，不含凭据，捕获时新增容量请求为0。

@@ -416,7 +416,8 @@ def test_native_worker_environment_is_explicit():
         execution_checks(config)
 
 
-async def test_capacity_bundle_reuses_audited_quality_without_model_calls(experiment_root):
+@pytest.mark.parametrize("model_name", ["qwen", "jev"])
+async def test_capacity_bundle_reuses_audited_quality_without_model_calls(experiment_root, model_name):
     root, config, _ = experiment_root
     original = prepare(config, root, root / "experiments/original")
     with pytest.raises(ValueError, match="baselines must be completed"):
@@ -424,24 +425,30 @@ async def test_capacity_bundle_reuses_audited_quality_without_model_calls(experi
         state_dir = root / "results/suites" / file_hash(original)
         state_dir.mkdir(parents=True)
         write_json(state_dir / "index.json", {"jobs": {}, "attempts": []})
-        create_capacity_bundle(original, root, root / "experiments/unready", [10], 0.1, 1)
-    await run_plan(original, root, ["main"], ["qwen"], True)
-    target = create_capacity_bundle(original, root, root / "experiments/capacity", [10], 0.1, 1)
+        create_capacity_bundle(
+            original, root, root / "experiments/unready", [10], 0.1, 1, model_name=model_name
+        )
+    await run_plan(original, root, ["main"], [model_name], True)
+    target = create_capacity_bundle(
+        original, root, root / "experiments/capacity", [10], 0.1, 1, model_name=model_name
+    )
     data = json.loads(target.read_text())
-    assert {j["model"] for j in data["jobs"]} == {"qwen"}
+    assert {j["model"] for j in data["jobs"]} == {model_name}
     assert len(data["baseline_reuse"]["runs"]) == 1
-    preview = await run_plan(target, root, [], ["qwen"], False)
+    preview = await run_plan(target, root, [], [model_name], False)
     assert preview["remaining_runs"] == 1
-    await run_plan(target, root, ["load"], ["qwen"], True)
-    assert (await run_plan(target, root, [], ["qwen"], False))["remaining_runs"] == 0
+    await run_plan(target, root, ["load"], [model_name], True)
+    assert (await run_plan(target, root, [], [model_name], False))["remaining_runs"] == 0
     old_state = json.loads(
         (root / "results/suites" / file_hash(original) / "index.json").read_text()
     )
-    run_dir = root / old_state["jobs"]["main-full-seed42-rep1-qwen"]["run_dir"]
+    run_dir = root / old_state["jobs"][f"main-full-seed42-rep1-{model_name}"]["run_dir"]
     with (run_dir / "requests.jsonl").open("a") as stream:
         stream.write("\n")
     with pytest.raises(ValueError, match="completed run modified"):
-        create_capacity_bundle(original, root, root / "experiments/tampered", [10], 0.1, 1)
+        create_capacity_bundle(
+            original, root, root / "experiments/tampered", [10], 0.1, 1, model_name=model_name
+        )
 
 
 def test_steady_windows_detect_instability_hidden_by_full_window_percentile():
