@@ -13,18 +13,20 @@ from decisionbench.metrics import percentile
 from decisionbench.suite import completed_entry, verify_bundle
 
 
-def load_runs(plans, root):
+def load_runs(plans, root, model_name="qwen"):
+    if model_name not in {"qwen", "jev"}:
+        raise ValueError("report supports qwen or jev")
     found, seen = [], set()
     for path in plans:
         spec = read_json(path)
         verify_bundle(spec, root)
         state = read_json(root / "results/suites" / file_hash(path) / "index.json")
         for job in spec["jobs"]:
-            if job["model"] != "qwen":
+            if job["model"] != model_name:
                 continue
             entry = state["jobs"].get(job["id"], {})
             if not completed_entry(entry, job, root):
-                raise ValueError(f"unfinished Qwen job: {job['id']}")
+                raise ValueError(f"unfinished {model_name} job: {job['id']}")
             if entry["run_dir"] in seen:
                 continue
             directory = root / entry["run_dir"]
@@ -41,13 +43,15 @@ def load_runs(plans, root):
                     raise ValueError(f"run source snapshot differs: {source}")
             warmup = [
                 json.loads(line)
-                for line in (directory / "warmup_requests.jsonl").read_text().splitlines()
+                for line in (directory / "warmup_requests.jsonl").read_text(encoding="utf-8").splitlines()
             ]
             if len(warmup) != manifest["config"]["warmup"]:
                 raise ValueError("warmup request count differs")
             if manifest["synthetic"]:
-                raise ValueError("synthetic runs cannot enter the actual Qwen report")
-            if manifest["config"]["environment"].get("structured_outputs_backend") != "guidance":
+                raise ValueError("synthetic runs cannot enter the actual model report")
+            if manifest["config"]["adapter"]["kind"] != model_name:
+                raise ValueError("run adapter differs from the report model")
+            if model_name == "qwen" and manifest["config"]["environment"].get("structured_outputs_backend") != "guidance":
                 raise ValueError("only fixed guidance v4 and derived suites are allowed")
             seen.add(entry["run_dir"])
             found.append(
@@ -93,10 +97,14 @@ def steady_windows(rows, duration, window=60):
     return windows
 
 
-def analyze(plans, root, out):
+def analyze(plans, root, out, model_name="qwen"):
     if out.exists():
         raise ValueError("use a new report directory")
-    runs = load_runs(plans, root)
+    runs = load_runs(plans, root, model_name)
+    currency = "cny" if model_name == "qwen" else "usd"
+    for run in runs:
+        if run['cost']['currency'].lower() != currency:
+            raise ValueError("report currency differs from audited run pricing")
     out.mkdir(parents=True)
     tables, windows, audits, failures = [], [], [], []
     groups = defaultdict(list)
@@ -129,12 +137,15 @@ def analyze(plans, root, out):
             slo_capacity_candidate=s["slo_capacity_candidate"],
             mean_input_tokens=statistics.mean(r["input_tokens"] or 0 for r in rows),
             mean_output_tokens=statistics.mean(r["output_tokens"] or 0 for r in rows),
-            total_measured_cost_cny=run["cost"]["total_measured_cost"],
-            cost_per_million_successful_cny=run["cost"]["cost_per_million_successful"],
-            cost_per_million_slo_valid_cny=run["cost"]["cost_per_million_slo_valid"],
             elapsed_s=m["elapsed_s"],
             warmup_requests=len(run["warmup"]),
         )
+        item.update({
+            f"total_measured_cost_{currency}": run["cost"]["total_measured_cost"],
+            f"cost_per_million_successful_{currency}": run["cost"]["cost_per_million_successful"],
+            f"cost_per_million_slo_valid_{currency}": run["cost"]["cost_per_million_slo_valid"],
+            "usage_complete": run["cost"].get("usage_complete"),
+        })
         if j["block"] == "load":
             segments = steady_windows(rows, item["duration_s"])
             for segment in segments:
@@ -184,7 +195,7 @@ def analyze(plans, root, out):
             "goodput_qps",
             "correct_goodput_qps",
             "success_rate",
-            "cost_per_million_successful_cny",
+            f"cost_per_million_successful_{currency}",
         ]:
             values = [item[key] for item in items if item[key] is not None]
             agg.update(
@@ -301,7 +312,7 @@ def analyze(plans, root, out):
             "technical_capacity_candidate": capacity,
             "semantic_accuracy_floor": None,
             "note": "Capacity attests legal output, latency and scheduling only; no business accuracy floor was supplied.",
-            "measurement_cost_cny": sum(r["total_measured_cost_cny"] for r in tables),
+            f"measurement_cost_{currency}": sum(r[f"total_measured_cost_{currency}"] for r in tables),
             "measured_seconds_including_drain": sum(r["elapsed_s"] for r in tables),
             "measured_requests": sum(r["requests"] for r in tables),
             "warmup_requests": sum(r["warmup_requests"] for r in tables),

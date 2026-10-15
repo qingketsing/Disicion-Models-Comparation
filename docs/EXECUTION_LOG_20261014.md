@@ -265,3 +265,15 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 04:58:18UTC（北京时间12:58:18）容量等待控制器已启动：launcher96784、实际114740，状态results/execution-20261014/jev-local-v4-retry3-capacity-status.json为waiting_for_pilot，原pilot88332仍独占当前suite执行，未另启动pilot/main/scale或发送容量请求。现有授权suite108712的运行内存环境凭据经临时stdin管道交接至等待控制器，没有写入文件、日志、Git或prompt；启动回执仅记录PID/状态与交接方式，未记录凭据。新控制器可在pilot结束后继续，无需再次输入；若pilot停止或退出则停止后续请求，不能因等待控制器存在而重复启动。
 
 容量工具/启动回执与等待状态快照另存dist/jev-v4-capacity-startup-tools-snapshot.tar.gz，SHA256 89d56189988ef1cc6ccd4b73cf1ccb192650043fe34578b1f468f3e6ed507d95；归档成员逐一SHA256校验，包含45项测试/Ruff/冻结校验回执，不含凭据，捕获时新增容量请求为0。
+
+### 配对质量分析与AI错误审阅完成（2026-10-15）
+
+双方六个完成main的audit_run、源快照及逐轮输入匹配检查通过；比较完整有序sample_id/文本/GT与目录版本/有序标签说明，未因跨平台换行哈希不同而跳过语义检查。每轮仍N=2974，bootstrap2000次/seed42按唯一样本配对，不拼接3N。Jev-Qwen准确率差三轮为40.11432414/40.21519839/40.24882313个百分点，95%区间为[38.26496301,41.86281103]/[38.36583726,41.96368527]/[38.43308675,41.96368527]个百分点。第一轮both_correct1323、Qwen-only43、Jev-only1236、both_wrong372。证据reports/qwen-jev-main-paired-20261015，说明docs/QWEN_JEV_COMPARISON_20261015.md；容量和总费用部分明确未定稿，不据质量差推断部署无关的延迟/成本收益。
+
+docs/JEV_ERROR_REVIEW_20261014.md及reports/jev-error-review-20261015保存40条AI审阅案例，非人工评审。第一轮415条语义错误；按top20混淆方向各一条和seed42剩余样本选至40条。疑似上下文缺失/标注歧义均仅AI假设，不修改原GT、目录或得分，不将定性样本比例当错误分布。每条保留原文、sample_id、GT和预测。
+
+新增orchestration/jev_report.py复用离线analysis/audit及现有窗口/绘图，Jev成本字段明确USD、完成基线去重，测量与预热分别记真实适配器尝试、网络失败/恢复与未知usage下界；另orchestration/jev_cost_ledger.py用于最终统计旧版本/中断/探针的独立费用账。单轮重试汇总现场验证2979attempt/5追加/2恢复及费用下界、5预热独立计价正确。完整90项测试通过（1条上游Starlette弃用警告）、Ruff通过，当前冻结v4 verify_bundle通过；报告器/外部工具修改不改变冻结核心。
+
+限制记录：本次本地Controller主机同时进行了离线审计、bootstrap和工具测试，可能争用CPU/IO并影响调度；没有系统资源时序证据可将某次迟滞归因于特定后台任务。所有原始lag和不通过点保留，不能归咎于API或声称纯模型容量。后续正式300秒确认期间暂停计算密集型本地审计/测试/绘图，仍保持原阈值与原始输入；不把pilot失败重标通过。
+
+质量配对/40例AI审阅/工具代码与文档另存dist/jev-v4-quality-comparison-review-snapshot.tar.gz，SHA256 e524c2dabe51e3006b4dc0d03087ede412bec9f4e12fca52aa3a3b6a52d839dc；19个归档成员逐项哈希重验。该归档不宣称Jev容量或最终总费用已完成。

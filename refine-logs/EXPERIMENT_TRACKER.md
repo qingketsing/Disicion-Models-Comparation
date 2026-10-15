@@ -18,3 +18,5 @@
 | REPORT | M5 | 汇总报告 | Qwen-only | 已完成实验 | 主表、曲线、限制 | MUST | QWEN DONE / JEV PAUSED | docs/QWEN_EXPERIMENT_REPORT_20261014.md；40独立run去重审计与SHA256备份 |
 
 2026-10-15 04:58UTC：Jev容量等待控制器114740（launcher96784）已启动，仅等待pilot88332完成；三轮main复用，未发送新容量请求。正式300秒三轮及每60秒窗口维持500ms/.99/20ms；无通过点时以1RPS确认。重试四倍实际尝试/Token预算先筛查，16RPS按实测最大2563Token/attempt计算超公布Token配额而不直接扩展；该筛查非突发限速保证。工具45项测试/Ruff通过，冻结v4源码校验通过。
+
+2026-10-15：双方三轮main配对离线完成（每轮N2974），Jev准确率高约40.11–40.25个百分点；完整60类/supported59 F1和部署/网络限制见docs/QWEN_JEV_COMPARISON_20261015.md，容量/总费用尚未定稿。Jev40错误AI审阅非人工见docs/JEV_ERROR_REVIEW_20261014.md。90项测试/Ruff及冻结v4验证通过。正式300s阶段暂停计算密集型本地分析，pilot同机工具工作潜在干扰与全部失败调度点保留。
