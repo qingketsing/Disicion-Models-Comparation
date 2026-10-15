@@ -213,3 +213,5 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 新计划experiments/massive-jev-local-v4-retry3/plan.json SHA256 `e4af0d581f9306b49f0d1f72e8b84404510dfb44e905def4b6803bf756fdf267`；24run（main3/scale9/load12），16122测量、120预热，最多64968次API调用，另探针最多4次POST。这是上限而非已发生调用或费用。原local-v3 checkpoint300已完成并保留为旧策略预检证据，本版本不再发送checkpoint，不将其伪装成本次retry3测量。所有旧完整/中断结果及冻结输入保留，v4重新完整执行三轮main，不拼接旧样本。
 
 本次修改了核心源码，原冻结v1/v2/v3计划不再用当前源码继续执行；其source快照及结果保留，历史审计用run自身冻结证据，不修改旧计划哈希以绕过校验。Qwen报告及40run封存不重跑。全套74项测试通过（1条上游Starlette弃用警告），包含3次追加重试后成功、4次失败上限、不重试429/非法输出、总期限、端到端退避、未知usage成本下界及4倍预算拒绝不足。Ruff通过。
+
+01:29:49UTC（北京时间09:29:49）v4-retry3实际启动，driverPID83692，main watchdog launcher79880；鉴权GET/合成POST均200。主测试首轮results/20261015T012952Z-main-full-seed42-rep1-jev-eaa8b9bc，最初136条测量ok，未发生额外尝试。该记录不代表主测试完成；运行器将自动串行main/scale/load并保留每次重试元数据，后台跟进更新为新计划和新策略，禁止误因单次已恢复网络错误停止。
