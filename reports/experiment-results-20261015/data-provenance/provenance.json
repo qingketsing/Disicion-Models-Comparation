@@ -1,0 +1,31 @@
+{
+  "dataset": "massive",
+  "locale": "en-US",
+  "seed": 42,
+  "source_urls": [
+    "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz"
+  ],
+  "source_sha256": {
+    "data/raw/amazon-massive-dataset-1.1.tar.gz": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577"
+  },
+  "banking_revision": null,
+  "sizes": {
+    "test": 2974,
+    "train": 11514,
+    "validation": 2033,
+    "checkpoint-300": 300
+  },
+  "split_policy": "MASSIVE native partitions; BANKING77 10% per-class train holdout, original test unchanged",
+  "descriptions_reviewed": true,
+  "description_note": "AI-authored and AI-reviewed from training examples; not human-reviewed.",
+  "license": "CC BY 4.0; retain publisher attribution in reports",
+  "normalized_sha256": {
+    "catalog.json": "1376ad0bf0fead111a0ab53232a399cbb60c617905220f4d22e9ce32e8c0e44c",
+    "checkpoint-300.jsonl": "c24d58f321de3e07dfa86d013bbb81fcaa943115421c048e9dbc547caf0b00c1",
+    "test.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d",
+    "train.jsonl": "80e270f2c5225cb8af8ed2f0ff045ae0aa8f5d3cfe0219e21777163cb2c0dc32",
+    "validation.jsonl": "f6baf150cb919ece086aa730bcefddf61045d572c03773d1048497068fe9aca2"
+  },
+  "description_reviewer": "ai",
+  "description_mapping_sha256": "c243b3879e39392794d1d1a637bdde9adad42879f9e7f9a7104f55513f049b0d"
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at_utc": "2026-10-15T05:41:45.360564+00:00",
+  "status": "PASS",
+  "review_independence": "deterministic",
+  "acceptance_status": "accepted",
+  "plan_hashes": {
+    "experiments/massive-jev-local-v4-retry3/plan.json": "e4af0d581f9306b49f0d1f72e8b84404510dfb44e905def4b6803bf756fdf267",
+    "experiments/massive-jev-local-v4-retry3-formal/plan.json": "badc58959d3119553ec1fc55e217b985c61433b9a18dab3f19203f05e30ff955"
+  },
+  "distinct_completed_runs": 27,
+  "measurement_requests": 17022,
+  "warmup_requests": 135,
+  "measurement_adapter_attempts": 17196,
+  "windows": 39,
+  "windows_passed": 0,
+  "checks": [
+    "plan assets/current frozen source/config hashes",
+    "suite completion and raw result hashes",
+    "run source snapshots from completed audit",
+    "deduplicated counts/cost/retry equation",
+    "capacity completed/null and window counts"
+  ],
+  "qwen_report_sha256": "1afc6b1c8744deaa60cb5fe098b2e210e127a3796f212f48e866c654ce2c2cb3"
+}

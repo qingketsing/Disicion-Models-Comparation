@@ -1,0 +1,36 @@
+{
+  "git_commit": "e97477915802e880a8ea0e6971cfcc4bf5f08c18",
+  "files": {
+    "reports/qwen-v4-final-20261014/audit.json": "5f39ecf6b96e2a238c6c07e37009c033047891400de4eeba97525bfc383f8d2c",
+    "reports/qwen-v4-final-20261014/failures.csv": "fd6f4966b5a86a563b73f2342228b08e00672dffa847df695c5553104372eb65",
+    "reports/qwen-v4-final-20261014/groups.csv": "e12fb14290522469f7c50d4a8997601ea32bed74d74102e949224be2436bc16b",
+    "reports/qwen-v4-final-20261014/load-correct_goodput_qps.png": "e3e1105f14dd6d55d457bf03c52e13f4dc52c6f51f852bbaad97d07e65c01d9d",
+    "reports/qwen-v4-final-20261014/load-p95_ms.png": "f7ace26f7650e2af6e70e8fb0c0b911e7f9e64f60a1bb4d9becd1dbfd8b242b5",
+    "reports/qwen-v4-final-20261014/main-full-seed42-rep1-qwen-confusion.csv": "85065a22cc41b79d8adaab992253ed95c34986437a00f71a9adec3497698f604",
+    "reports/qwen-v4-final-20261014/main-full-seed42-rep1-qwen-per-class.csv": "6e6c224d79c0ab03b4e1be81bbe7eb31a03d9d67d930806ad188995ea6034de2",
+    "reports/qwen-v4-final-20261014/main-full-seed43-rep2-qwen-confusion.csv": "85065a22cc41b79d8adaab992253ed95c34986437a00f71a9adec3497698f604",
+    "reports/qwen-v4-final-20261014/main-full-seed43-rep2-qwen-per-class.csv": "6e6c224d79c0ab03b4e1be81bbe7eb31a03d9d67d930806ad188995ea6034de2",
+    "reports/qwen-v4-final-20261014/main-full-seed44-rep3-qwen-confusion.csv": "85065a22cc41b79d8adaab992253ed95c34986437a00f71a9adec3497698f604",
+    "reports/qwen-v4-final-20261014/main-full-seed44-rep3-qwen-per-class.csv": "6e6c224d79c0ab03b4e1be81bbe7eb31a03d9d67d930806ad188995ea6034de2",
+    "reports/qwen-v4-final-20261014/runs.csv": "270905ce575433fe4d539f3c109ae69073ffb20e8af3386913980279eec977ab",
+    "reports/qwen-v4-final-20261014/scale-accuracy.png": "798c21ec6097a7197870118a94d1f83a440c3aef6d423e4cf554bcea757c4ea4",
+    "reports/qwen-v4-final-20261014/scale-p95_ms.png": "6520f94f6b87e3578fcf79cc412615fbef6308f0e10d802ce4be6f8931a770df",
+    "reports/qwen-v4-final-20261014/scale-paired-comparisons.csv": "1f3985fa6b5556582b01adea806f7f53aaa7f78e5577d4d5ccc0945c6218294c",
+    "reports/qwen-v4-final-20261014/selected-error-cases.csv": "be4d5eed4cfccbe475b0d928aaa9294e49ab400106feb1c1b24f354de2b17ece",
+    "reports/qwen-v4-final-20261014/steady-60s-windows.csv": "6bc12df1b9aab271b884db91705a8899dd7e807bf71b8969e13f69eb3d0453a9",
+    "docs/QWEN_EXPERIMENT_REPORT_20261014.md": "1afc6b1c8744deaa60cb5fe098b2e210e127a3796f212f48e866c654ce2c2cb3",
+    "docs/QWEN_ERROR_REVIEW_20261014.md": "f61194b6a367e967ecdac22462ee576ab18c20f3ea8e959e3d141ea4c7e52f4b",
+    "docs/EXECUTION_LOG_20261014.md": "3fbfdead159253ba2bb955ff3c0856d490bbb91586ddaf8c5770ec39206265ba",
+    "refine-logs/EXPERIMENT_TRACKER.md": "8cd97ee9a70fc6e1f97bf8df784981493807810c145089944132ddec88b8437b",
+    "configs/experiment-suite-qwen-v4.yaml": "18ca21e68d9a80fe18600b73aa38f1d2ba4d40b94b45c42a3c59f6afa15fa35b",
+    "results/execution-20261014/qwen-final-worker-stop.json": "4119287630439833d33e29f9c57762dddc89064e929d54e232de530efdbf6015",
+    "dist/qwen-final-report.bundle": "93b813e1183ded3d2296ce0eebce246c963016de6369291bf4dfac5499759028",
+    "configs/massive-qwen-guidance-extended16-32-v4-retry1.yaml": "90bebf90a65f41e5101e8dca909a557238eb348531edf075ecb7dce47123240d",
+    "configs/massive-qwen-guidance-extended64-v4-retry1.yaml": "90eb2a02f986cc176ffd83fa97ace58a7ebe3ed4068aa32912eb936406db0126",
+    "configs/massive-qwen-guidance-formal-v4-retry1.yaml": "ae06cb5a63d65ee7ac6e3f7344ef418d581587235d8f5df3382b480c3af5ad5a"
+  },
+  "original_results_archive": {
+    "path": "dist/qwen-v4-final-capacity-snapshot.tar.gz",
+    "sha256": "a799169fce4f501f20924283236def65ab6200085027f0d16e584a5cb75e47d0"
+  }
+}

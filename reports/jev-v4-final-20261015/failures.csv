@@ -1,0 +1,4 @@
+﻿job,sample_id,text,status,expected,prediction,input_tokens,output_tokens
+load-rps8-seed42-rep1-jev,massive-en-US-test-12254,tell me about city traffic,client_overload,transport_traffic,,,
+load-rps8-seed42-rep1-jev,massive-en-US-test-3822,find me info on cars,client_overload,news_query,,,
+load-rps8-seed42-rep1-jev,massive-en-US-test-2338,make an order for noodles one pack make it as takeaway order,client_overload,takeaway_order,,,

@@ -1,0 +1,21 @@
+{
+  "created_at_utc": "2026-10-15T05:50:57.579792+00:00",
+  "archive": "dist/jev-v4-source-provenance-snapshot.tar.gz",
+  "archive_sha256": "9d81c77571c671b74212fd035d592c1c9881974c39088940f41f3d8fd15d7ca7",
+  "members_count": 12,
+  "source_and_archive_members_verified": true,
+  "members_sha256": {
+    "data/descriptions/massive-ai-reviewed-v1.json": "c243b3879e39392794d1d1a637bdde9adad42879f9e7f9a7104f55513f049b0d",
+    "data/normalized/massive-ai-v1/catalog.json": "1376ad0bf0fead111a0ab53232a399cbb60c617905220f4d22e9ce32e8c0e44c",
+    "data/normalized/massive-ai-v1/checkpoint-300.jsonl": "c24d58f321de3e07dfa86d013bbb81fcaa943115421c048e9dbc547caf0b00c1",
+    "data/normalized/massive-ai-v1/provenance.json": "b9ff050010d9e3210bc6745be61d57ca2227eef33ce9cd57061d92e5551747fc",
+    "data/normalized/massive-ai-v1/test.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d",
+    "data/normalized/massive-ai-v1/train.jsonl": "80e270f2c5225cb8af8ed2f0ff045ae0aa8f5d3cfe0219e21777163cb2c0dc32",
+    "data/normalized/massive-ai-v1/validation.jsonl": "f6baf150cb919ece086aa730bcefddf61045d572c03773d1048497068fe9aca2",
+    "data/raw/amazon-massive-dataset-1.1.tar.gz": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577",
+    "reports/jev-v4-final-20261015/publisher-source-verification.json": "dcc185684ae2e38a6f47f156dc9b79fb15f69eca811b1f7818e6e13ed252b8af",
+    "reports/jev-v4-final-20261015/publisher-source-verification.py": "e9b9dc7b8f19d455de74338e88ef27c82b80f49514d211036c0f5e58acabd16f",
+    "results/execution-20261014/jev-publisher-reacquisition-diagnostic.json": "feb9684e23e36eedaa4a6ef20edaba05a4c59d986de71728b84fa7bd043c5a8f",
+    "scripts/prepare_datasets.py": "c3cd1377cdc658a71fa5559908e70ab3bfdbbfb58f60795e55707b8135ab452f"
+  }
+}

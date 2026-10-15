@@ -12,5 +12,11 @@ data/raw/
 data/normalized/
 .DS_Store
 experiments/
-reports/
+reports/*
+!reports/qwen-v4-final-20261014/
+!reports/jev-v4-final-20261015/
+!reports/qwen-jev-main-paired-20261015/
+!reports/jev-error-review-20261015/
+!reports/experiment-results-20261015/
 dist/
+.aris/

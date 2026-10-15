@@ -2,7 +2,9 @@
 
 Jev / Qwen / BERT 共用数据、测量和成本口径的实验框架。Controller 在本机或独立 CPU 主机产生请求，GPU Worker 按模型轮流运行。
 
-当前为新实现的 v0.1。用户提供的方案已保存在 `docs/ORIGINAL_PLAN.txt`，附件中没有 Starter ZIP。本项目不包含真实 Jev、Qwen 或 BERT 跑分。
+实验框架 v0.1，用户提供的方案保存在 `docs/ORIGINAL_PLAN.txt`。2026-10-14/15 的真实 Qwen 与 Jev v4 实验已完成，结果入口见 [本次实验结果](docs/EXPERIMENT_RESULTS_20261015.md)；BERT 尚未执行真实评测。
+
+本次结果包括两模型完整报告、逐运行 CSV、图表、规模配对与主质量配对分析。Qwen 主准确率 45.9314%，Jev 三轮均值 86.1242%；Qwen 最高已测正式通过点为 32 RPS，Jev 当前本地代理链路没有通过既定时延/调度判据的确认容量。部署条件与费用口径不同，具体限制见结果入口。
 
 ## Qwen 与 Jev 远程实验
 
