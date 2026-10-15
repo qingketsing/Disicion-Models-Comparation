@@ -285,3 +285,37 @@ docs/JEV_ERROR_REVIEW_20261014.md及reports/jev-error-review-20261015保存40条
 容量driver114740按已记录无通过点策略自动准备新计划experiments/massive-jev-local-v4-retry3-formal/plan.json，SHA256 badc58959d3119553ec1fc55e217b985c61433b9a18dab3f19203f05e30ff955。仅新发1RPS、300秒、三轮，另引用原三轮已审计main完成entry，不发送main或checkpoint。新测量900、预热15，首次+3追加的API调用预算上限3660（不是实际调用或费用），每秒四倍预算4attempt/10252Token低于公布配额；局限仍为观测Token筛查而非突发限速保证。派生suite原字节配置configs/massive-jev-local-v4-retry3-formal.yaml纳入Git，未改原plan。
 
 05:13:42UTC正式首轮启动results/20261015T051342Z-load-rps1-seed42-rep1-jev-ec13b7af；watchdog launcher82168/实际110424，suite launcher110324，日志results/execution-20261014/jev-local-v4-retry3-capacity-formal.log及-watchdog.json。容量driver继续运行，禁止重复启动或重发已完成main。正式阶段暂停计算密集型本机审计/测试/绘图，只作轻量状态/日志记录；等待三轮完整300秒和每60秒窗口审计后才判断有无确认容量，不调整阈值。
+
+
+### Jev正式容量与全部请求结束（2026-10-15）
+
+05:29:54.481669UTC（北京时间13:29:54）容量driver114740完成并退出，pilot88332及相关watchdog/suite进程已退出。两个计划去重27run，正式1RPS300秒三轮各300逻辑ok，p95为3827.211750/3795.938760/3384.419375ms，最大lag26.104700/26.962300/24.744600ms；0/3整轮及0/15窗口通过，confirmed_capacity_rps=null。正式测量978attempt、78追加、41恢复，费用0.073159716USD下界。无最终HTTP或传输耗尽，未降低阈值或继续重复整轮。正式阶段未做本机密集分析/测试/绘图/压缩。
+
+实际运行orchestration.jev_report对pilot/formal两plan，输出reports/jev-v4-final-20261015；随后实际运行jev_cost_ledger。27run完成证据、源快照及独立复算通过，17022测量=17019ok+3client_overload，17196适配器尝试，177追加/失败、118恢复；135预热全ok、138attempt、3追加/失败、2恢复。已知测量1.328246850USD，含预热1.337850696USD；全历史run及探针2.049680304USD，未知失败usage使总价为下界。详细费用账区分当前、历史、预热及探针。主质量和Qwen配对结果不因负载失败改变。
+
+中文最终报告及配对比较已更新；experiment-audit按技能要求使用新鲜审阅代理，语义判断仅same-family/provisional，确定性复算/哈希单列。收尾归档回执及审阅结论见后续记录。Qwen报告及40run未覆盖，不重启Worker。
+
+
+### 最终确定性核验与原始证据归档
+
+2026-10-15 05:41UTC：jev-v4-final-verification.json记录两份冻结plan的资产/核心源码/config哈希、suite完成与raw结果哈希、去重请求/成本及重试等式、39窗口全失败和容量completed/null核验通过。Qwen封存报告SHA256仍为1afc6b1c8744deaa60cb5fe098b2e210e127a3796f212f48e866c654ce2c2cb3，未修改。
+
+原始/历史/冻结输入与源码/suite/执行现场共2141文件，归档dist/jev-v4-final-evidence-snapshot.tar.gz，SHA256 511a7401a752ea06483997c9efad93e0b36adf684a86a26c46f9c9443f5bb91d。独立回执dist/jev-v4-final-evidence-snapshot.tar.receipt.json逐成员列SHA256，源文件与解包流逐项比对通过，没有覆盖raw。orchestration.jev_final_snapshot为离线归档工具，本次实际执行并Ruff通过。最终文档/离线结果/审阅轨迹另归档，避免把过程中状态快照当最后文档。
+
+experiment-audit首次指定gpt-6-astra因账户404不支持而未执行，错误原文已保存；新鲜gpt-6.1-sol ultra替代审阅直接读取主文件，不传执行者结论，记录same-family/provisional，不冒称指定模型审阅成功。
+
+
+### 语义审阅反馈与来源链补全
+
+新鲜gpt-6.1-sol ultra审阅初轮WARN：原始publisher包缺失、COST追踪范围含未执行月度TCO、交付归档仍待生成、Qwen历史文字需时点说明。未发现指标伪造/自归一化/把中断拼接完整轮次；复核67个双方最终run、2412个run源文件和费用账一致。完整原文保存.aris/traces/experiment-audit/2026-10-15_run01。修正tracker仅费用核算DONE，业务月度TCO未评估；Qwen原报告不动，在配对报告加历史截止/最新状态说明。
+
+05:50UTC从来源清单的Amazon官方S3补回MASSIVE1.1原包40251390字节，SHA256 4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577，与原provenance一致。首次下载未完整、哈希不匹配而被拒绝，随后严格验证Content-Range的分段补取恢复完整包；未改变网络代理/实验路径或发API推理。原生train/dev/test的ID/utt/intent经原准备函数转换，与保留归一化数据逐对象精确一致；checkpoint按seed42重建也一致，五项归一化SHA均匹配。报告脚本/JSON为publisher-source-verification.py/json，不重写GT或运行原始文件。
+
+补充来源归档dist/jev-v4-source-provenance-snapshot.tar.gz，12成员逐SHA256通过，归档SHA256 9d81c77571c671b74212fd035d592c1c9881974c39088940f41f3d8fd15d7ca7。来源可复算性缺口的复查使用同一审阅代理，明确same-family/provisional。主v4证据归档保持不覆盖，新增来源单独备份。
+
+
+### Jev最终审阅与交付封存
+
+定向复查独立读取官方原包，来源/原生行/CRC及归档12/12、2141/2141成员都通过；A/B/D/E/F PASS。C仅因审阅截止时最终交付归档和根审计文件尚未生成而WARN，原文保留，不改成事后假PASS。EXPERIMENT_AUDIT.md/json及全量请求/响应轨迹已生成，semantic same-family/provisional；最终归档生成后由deterministic postflight闭合交付项，外部回执results/execution-20261014/jev-v4-final-completion.json记录最终SHA、Git和自动化状态，避免归档自引用。
+
+最终交付物包含报告、离线CSV/图、工具/测试、审核原文轨迹、两份原始/来源归档的回执和Git bundle。主证据/来源归档保留原SHA不重写；Git只提交明确代码/文档/根审计，.aris/traces不提交。所有实验请求已停止；全部校验与备份完成后暂停jev跟进，不再启动本地/远程实验。各最终归档自身SHA见dist同名独立receipt和final-completion.json。

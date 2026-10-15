@@ -1,0 +1,125 @@
+{
+  "audit_skill": "experiment-audit",
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T05:57:19.046193+00:00",
+  "verdict": "WARN",
+  "overall_verdict": "warn",
+  "integrity_status": "warn",
+  "reason_code": "delivery_pending_at_semantic_review_cutoff",
+  "summary": "Scientific result checks supported; source/TCO/history findings resolved on follow-up. Final packaging closed separately by deterministic receipt.",
+  "auditor": "gpt-6.1-sol-ultra",
+  "agent_id": "/root/integrity_fallback",
+  "verdict_id": "/root/integrity_fallback-followup005",
+  "requested_reviewer_model": "gpt-6-astra",
+  "requested_route_status": "ERROR model_not_supported",
+  "executor_model": "unknown",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6.1-sol",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "trace_path": ".aris/traces/experiment-audit/2026-10-15_run01/",
+  "checks": {
+    "gt_provenance": {
+      "status": "PASS",
+      "details": "Original source exact hash and native-row reconstruction verified on follow-up."
+    },
+    "score_normalization": {
+      "status": "PASS",
+      "details": "Standard denominators; full and supported F1 separate."
+    },
+    "result_existence": {
+      "status": "WARN",
+      "details": "Experimental values and available archives verified; final delivery missing at semantic review cutoff, closed by external deterministic postflight."
+    },
+    "dead_code": {
+      "status": "PASS",
+      "details": "Reported metrics executed; monthly TCO explicitly unevaluated."
+    },
+    "scope": {
+      "status": "PASS",
+      "details": "Repeated samples, anchor scope, deployment/retries/cost and historical cutoff qualified."
+    },
+    "eval_type": "real_gt; real deployment performance; synthetic tooling excluded; AI review is not human_eval"
+  },
+  "claims": [
+    {
+      "id": "main_quality_and_paired_gap",
+      "impact": "supported_with_fixed_task_qualifiers"
+    },
+    {
+      "id": "jev_null_capacity",
+      "impact": "supported_for_current_path"
+    },
+    {
+      "id": "logged_cost",
+      "impact": "supported_lower_bound"
+    },
+    {
+      "id": "monthly_business_tco",
+      "impact": "unevaluated"
+    }
+  ],
+  "delivery_completion_evidence": "results/execution-20261014/jev-v4-final-completion.json",
+  "deterministic_evidence": [
+    "results/execution-20261014/jev-v4-final-verification.json",
+    "reports/jev-v4-final-20261015/publisher-source-verification.json"
+  ],
+  "audited_input_hashes": {
+    "decisionbench/adapters.py": "sha256:25741124607f387913b51e90988d869ff450c2053c25403dfee06a9636692da0",
+    "decisionbench/analysis.py": "sha256:43587611f796555b56ec54a7dd780795c40e8275785ce253909c8c36fa6e66b5",
+    "decisionbench/artifacts.py": "sha256:2de38f761de9898c4c347c4174bb308b5992f4ac5f5af19f6bba1e9b9ae4b38b",
+    "decisionbench/cli.py": "sha256:5b6f1a5cf782f9a586f99caafc8bcb8ff9b31fff051328599f9a1c9faeca5de1",
+    "decisionbench/config.py": "sha256:dd9b0944965fd7b4679351388cea5a6dd7840fd863835f181dbe18459ed6e753",
+    "decisionbench/cost_analysis.py": "sha256:e5886db394ae9a8757225412882115a9ac1299e635bf56def6b072f1b9fa6304",
+    "decisionbench/datasets.py": "sha256:eb5a7da9acc2e57b9de83a8739e3919748935a9fbdc42f6a60fe15b4bbf84623",
+    "decisionbench/metrics.py": "sha256:f2f6e254115b9ff0affc1b29f165e9513ee3f22179e595b71de11c09c04560b5",
+    "decisionbench/protocol.py": "sha256:b9cc32d5853ce12fb258b744d9e939911a3d4f7b08a6a8174c95a86a6bbcd562",
+    "decisionbench/runners.py": "sha256:820563dc2ea0623d34dda58136ac9e20a46a9650489a00255827da56fba9a2f3",
+    "decisionbench/suite.py": "sha256:e994d5f59875f1645b1989b334f254363bf993e9412642b8d8b0760fadac547f",
+    "decisionbench/variants.py": "sha256:c67e7a29a362c40a174ab2c12f28738d8fedca95339126cfd7e5b1e577a9e418",
+    "decisionbench/__init__.py": "sha256:56e3527923f9961fd4863e4bfae1d392001f2a9bd59c0ee9d479bd782b646003",
+    "orchestration/compare_main.py": "sha256:39aa7d22ff10a719cba5034f33778b24025ddaa7c5439a14541b4a7c50fa3685",
+    "orchestration/jev_capacity_driver.py": "sha256:29bb0daf52898824010bfb2794e9db88e0e5996226856b1a1c5c1540a7cf1a5d",
+    "orchestration/jev_cost_ledger.py": "sha256:2638c461f1bc4134161aabe2f6b8df1c395d88745e36ee3b06ab49550e39cd92",
+    "orchestration/jev_final_snapshot.py": "sha256:e23295917caeb45dd1bde8e1973401037a67c486921e4f6f87c03bb0cdd6d7ac",
+    "orchestration/jev_local_driver.py": "sha256:5e4ddbaa2d59a92a1e1bf39d9170a711d196d3a432b7a38e7ce540764afbe13d",
+    "orchestration/jev_report.py": "sha256:ed9aca9a87735ecc1d207e9a7a03d25c12c02427309fc58367505993ea78fd1c",
+    "orchestration/launch_structured_qwen.py": "sha256:25c0320101644f91e8391ea047e00372cc5afea22ff18ebdebda7af8b0459f3f",
+    "orchestration/prepare_jev_capacity.py": "sha256:1b98bba1a311aa6a4316e4df627bc5af736d329fca338cf0da479e47d3bca271",
+    "orchestration/prepare_qwen_capacity.py": "sha256:e89f3a93e3b9e2b98d46349e5ffe961fb7722cd213144ecea4856d9dbce77bf2",
+    "orchestration/qwen_capacity_driver.py": "sha256:5d8c5746d1fa0ab45a92298101650de65cc6f97ece8e688b28a44646500a382e",
+    "orchestration/qwen_report.py": "sha256:bc0406fd8a593810787c2697eae004c1f7b8a04e8af3ad7ec53c9cb88cc4d128",
+    "orchestration/stage_watchdog.py": "sha256:d78acaac1d37d9c46921662a206ff4b72c2343e477385a8297872ac2f8b2fdf5",
+    "scripts/prepare_datasets.py": "sha256:c3cd1377cdc658a71fa5559908e70ab3bfdbbfb58f60795e55707b8135ab452f",
+    "reports/jev-v4-final-20261015/failures.csv": "sha256:40a531a9b866e7fdf5d8b0171ee4084c76aeb98920c57c46cc6a356bc008abb1",
+    "reports/jev-v4-final-20261015/groups.csv": "sha256:f2d12467b11254300d2336530a4f13443fd8b19c471cfd450049e3280320911e",
+    "reports/jev-v4-final-20261015/historical-run-cost-ledger.csv": "sha256:893c8637e6a6bfc56bf0b4815244126d6accd02cb0f005194304f3bd2c62879b",
+    "reports/jev-v4-final-20261015/main-full-seed42-rep1-jev-confusion.csv": "sha256:1d33bd2f7af295b4eb1b9334fcd507026572a773f601088636f26a4e3def6db6",
+    "reports/jev-v4-final-20261015/main-full-seed42-rep1-jev-per-class.csv": "sha256:0fcfbb40282fa6537478c6db14b67e9a6d514854f5079198705fd18f25469e69",
+    "reports/jev-v4-final-20261015/main-full-seed43-rep2-jev-confusion.csv": "sha256:6ec24a15c071779dbe2469bf126a67356c69c966fca01a0a708fac1797df5289",
+    "reports/jev-v4-final-20261015/main-full-seed43-rep2-jev-per-class.csv": "sha256:af833cc659beb399912cf4767d130fdba02295466af49ea94629fb7e701e3f70",
+    "reports/jev-v4-final-20261015/main-full-seed44-rep3-jev-confusion.csv": "sha256:4195b08a3ad398b4d90f6410aba7153f25425295d64192b85bd4b7b32f71d70f",
+    "reports/jev-v4-final-20261015/main-full-seed44-rep3-jev-per-class.csv": "sha256:b0351418b91df1af01a1846c78c943d5561c006be828f0be0697e9156cd2bd63",
+    "reports/jev-v4-final-20261015/network-attempts.csv": "sha256:25442824c57da76ac8490587c16656120d182cfb81343304d5a20b4790b29151",
+    "reports/jev-v4-final-20261015/network-retry-summary.csv": "sha256:6a52ab6cf3a163f8d2b5ac21e26592dd7ed1c944776d8a846930ce559d66618e",
+    "reports/jev-v4-final-20261015/recovered-requests.csv": "sha256:d1d7bd6d1885f6658952d899803e981d87416597fbbcfcdb6344bddcf295c78e",
+    "reports/jev-v4-final-20261015/repeat-disagreements.csv": "sha256:efaf3452f0211cb14dd93597cd708f8068a17e2cf10ffd598a57dd0c51e8df81",
+    "reports/jev-v4-final-20261015/runs.csv": "sha256:0c79c54b8ea2971b88260b4dfff8809c84e94716764cfc5a9b2aa394062bff07",
+    "reports/jev-v4-final-20261015/scale-paired-comparisons.csv": "sha256:7c9a5e4a38c84679f5d0fd2e9cd3ab2a51d924a28008fd495c705ba7e1c14c2a",
+    "reports/jev-v4-final-20261015/selected-error-cases.csv": "sha256:dab9aadb8d5dc0ef9119ca645c73690e90e1af814ed6bef772ef132ce170b5a1",
+    "reports/jev-v4-final-20261015/steady-60s-windows.csv": "sha256:5d9e16d04829ecdf1c80e65e38f746cc9949bca21fbd6c8968dd007f105e6892",
+    "reports/jev-v4-final-20261015/synthetic-probe-cost-ledger.csv": "sha256:9ee9f9a1529b94d30143bd9727130fcbfa8c108b86d1b69e52b91e14b087fcb8",
+    "reports/jev-v4-final-20261015/audit.json": "sha256:7218e745b43e796773d3e0ec218ae0098125561d33d75af48e88ebb3f4ee6832",
+    "reports/jev-v4-final-20261015/historical-cost-audit.json": "sha256:ca4a4a746f9c053fb155b5fc09847f82ab5de9898f39ec332e02e950d341eac2",
+    "reports/jev-v4-final-20261015/network-retry-cost-audit.json": "sha256:8a6ade5ca309e8ae28efaea610a97360e77f985376bd4b6d1d6183795afa3f58",
+    "reports/jev-v4-final-20261015/publisher-source-verification.json": "sha256:dcc185684ae2e38a6f47f156dc9b79fb15f69eca811b1f7818e6e13ed252b8af",
+    "docs/JEV_EXPERIMENT_REPORT_20261014.md": "sha256:5c22ff7bb7863f851e77cbb9241754ffc4ffac65874d05f84c33aaa0550f4c46",
+    "docs/QWEN_JEV_COMPARISON_20261015.md": "sha256:cf4f7647a898bce52fc87434a504c5c33f08a253a0351cab7d8fa22c527ab93f",
+    "refine-logs/EXPERIMENT_TRACKER.md": "sha256:1a1de33e94e59b4ac46b551c369c2aefe3dc6e7aae3cb00bb0780d78bc9be344",
+    "experiments/massive-jev-local-v4-retry3/plan.json": "sha256:e4af0d581f9306b49f0d1f72e8b84404510dfb44e905def4b6803bf756fdf267",
+    "experiments/massive-jev-local-v4-retry3-formal/plan.json": "sha256:badc58959d3119553ec1fc55e217b985c61433b9a18dab3f19203f05e30ff955"
+  },
+  "input_hash_scope_note": "Final artifact bytes after append-only delivery notes; semantic reviewer cutoff and findings are preserved separately. Listing a helper hash does not claim line-by-line semantic review of every helper."
+}
