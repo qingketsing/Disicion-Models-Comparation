@@ -189,3 +189,7 @@ v1第二轮在291条测量后因连续3条网络错误被watchdog于2026-10-14 1
 00:56:20UTC发起10次不携带鉴权的只读GET连接检查，无模型推理请求。其中9次收到预期403，另1次`RemoteProtocolError`；证实连只读连接也存在间歇性传输错误，不能归因于已证实的API密钥故障，也无法仅凭此确定代理节点、服务端或中间链路哪一处断开。诊断回执`jev-local-v3-readonly-diagnostic.json`。不擅自更换网络路径或通过静默重试掩盖错误，停止后续计费请求并通知用户，后台跟进暂停，等待连接故障处理后再恢复。
 
 v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/诊断记录归档为`dist/jev-local-v3-transport-stop-snapshot.tar.gz`与SHA256回执。当前状态 **QWEN_COMPLETE / JEV_STOPPED_NETWORK**，v1/v2/v3失败和费用继续保留用于最终报告。
+
+### 用户再次授权：复用checkpoint，仅重跑未完成轮次
+
+用户再次要求网络传输错误重新跑实验。核验无Python实验进程、代理7897监听后，沿用冻结本地v3计划，新增运行器显式`--resume-transport`：只允许完成证据哈希与离线复算通过的完成项以及已审查的WatchdogTransportStop中断项，拒绝仍running或未知失败。使用suite原有`--retry-failed`机制，已完成checkpoint复用不发请求；main首轮从完整2974条重新开始，原中断attempt与请求目录保留，后续仍执行main2/main3、scale和load。新执行前缀jev-local-v3-retry1，未完成24run上限16242请求（16122测量、120预热），另连接探针1条，不修改冻结模型、数据、并发、网络路径或停止判据。新增恢复校验测试与watchdog测试共8项通过、Ruff通过。该授权为一次新完整尝试，不启用无限重试。

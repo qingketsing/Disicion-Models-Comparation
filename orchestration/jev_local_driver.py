@@ -1,4 +1,4 @@
-"""Run a fresh Jev suite; credentials stay in memory and transport failures stop execution."""
+"""Run a Jev suite; credentials stay in memory and transport failures stop execution."""
 
 import argparse
 import getpass
@@ -14,17 +14,47 @@ from decisionbench.analysis import audit_run
 from decisionbench.suite import completed_entry, verify_bundle
 
 
+def check_resume(spec, state, root):
+    """Reuse verified completions and allow only inspected transport interruptions."""
+    jobs = {job["id"]: job for job in spec["jobs"]}
+    if set(state["jobs"]) - set(jobs):
+        raise ValueError("suite contains unknown jobs")
+    for name, entry in state["jobs"].items():
+        if entry["state"] == "completed":
+            if not completed_entry(entry, jobs[name], root):
+                raise ValueError(f"completed evidence changed: {name}")
+            audit_run(root / entry["run_dir"])
+        elif not (
+            entry["state"] == "interrupted" and entry.get("error_type") == "WatchdogTransportStop"
+        ):
+            raise ValueError(f"unreviewed attempt cannot resume: {name}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--plan", type=Path, required=True)
     parser.add_argument("--prefix", type=Path, required=True)
+    parser.add_argument(
+        "--resume-transport",
+        action="store_true",
+        help="Preserve completed runs and restart inspected interrupted runs",
+    )
     args = parser.parse_args()
     root = Path.cwd()
     spec = json.loads(args.plan.read_text(encoding="utf-8"))
     verify_bundle(spec, root)
     digest = hashlib.sha256(args.plan.read_bytes()).hexdigest()
     index = root / "results/suites" / digest / "index.json"
-    if index.exists() or index.with_name("running.lock").exists():
+    if index.with_name("running.lock").exists():
+        raise SystemExit("suite is locked; inspect the owning controller first")
+    if args.resume_transport:
+        if not index.exists():
+            raise SystemExit("resume requires existing inspected suite state")
+        existing = json.loads(index.read_text(encoding="utf-8"))
+        if existing["plan_sha256"] != digest:
+            raise SystemExit("resume plan hash mismatch")
+        check_resume(spec, existing, root)
+    elif index.exists():
         raise SystemExit("fresh driver requires an unused plan; inspect existing attempts first")
     status_path = Path(str(args.prefix) + "-status.json")
     log_path = Path(str(args.prefix) + "-driver.log")
@@ -54,6 +84,7 @@ def main():
         started_at_utc=datetime.now(timezone.utc).isoformat(),
         completed_blocks=[],
         stop_on_first_transport_error=True,
+        resume_transport=args.resume_transport,
     )
 
     def save():
@@ -94,6 +125,8 @@ def main():
                     "--log-prefix",
                     str(args.prefix) + "-" + block,
                 ]
+                if args.resume_transport:
+                    command.append("--retry-failed")
                 child = subprocess.Popen(
                     command, env=env, stdin=subprocess.PIPE, stdout=log, stderr=log, text=True
                 )
