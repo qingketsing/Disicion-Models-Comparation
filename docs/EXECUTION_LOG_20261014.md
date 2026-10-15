@@ -215,3 +215,11 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 本次修改了核心源码，原冻结v1/v2/v3计划不再用当前源码继续执行；其source快照及结果保留，历史审计用run自身冻结证据，不修改旧计划哈希以绕过校验。Qwen报告及40run封存不重跑。全套74项测试通过（1条上游Starlette弃用警告），包含3次追加重试后成功、4次失败上限、不重试429/非法输出、总期限、端到端退避、未知usage成本下界及4倍预算拒绝不足。Ruff通过。
 
 01:29:49UTC（北京时间09:29:49）v4-retry3实际启动，driverPID83692，main watchdog launcher79880；鉴权GET/合成POST均200。主测试首轮results/20261015T012952Z-main-full-seed42-rep1-jev-eaa8b9bc，最初136条测量ok，未发生额外尝试。该记录不代表主测试完成；运行器将自动串行main/scale/load并保留每次重试元数据，后台跟进更新为新计划和新策略，禁止误因单次已恢复网络错误停止。
+
+## 网络波动后用户授权恢复v4 resume1
+
+用户说明刚才网络波动、现在重新开始实验。检查发现driver已在2026-10-15 01:44:09UTC退出：main1完成2974条全部逻辑ok，独立Accuracy86.04572966%、全60Macro-F1 .8370084067、supported59 .8511949898；5次额外尝试恢复2条，已知测量费用0.241750068USD为下界。01:42:49UTC开始main2，241条中240ok、1网络错误，失败请求经历首次RemoteProtocolError和追加三次ConnectError后最终失败，watchdog于01:44:08UTC停止，并未因单次已恢复异常误停。
+
+核验driver83692/watchdog79880/controller73560/lock110076均不存在，修正main2 manifest及suite生命周期为interrupted、移除匹配锁，原始requests SHA256 1ceee844aa7e02a2fa39869d578701edeb9a77b5f2861ee29d5604bf3f4f587a不变。完整归档dist/jev-local-v4-retry3-before-resume1.tar.gz SHA256 cf9c2a76cf23d03c089650cf5846bc22dc40c15c796155032a5f7d2d993fefce。
+
+按用户新授权用原有--resume-transport机制及唯一jev-local-v4-retry3-resume1执行前缀恢复，main1通过哈希及audit_run校验后复用不发请求，main2从完整2974条重跑并保留旧attempt，接着main3/scale/load。剩余23run、13148测量+115预热，最多53052次API尝试，另合成探针最多4POST；这是预算上限。保持原始冻结计划、网络路径、30秒总期限和首次后3次重试，未修改核心代码。
