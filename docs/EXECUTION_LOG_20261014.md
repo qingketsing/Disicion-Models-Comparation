@@ -195,3 +195,11 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 用户再次要求网络传输错误重新跑实验。核验无Python实验进程、代理7897监听后，沿用冻结本地v3计划，新增运行器显式`--resume-transport`：只允许完成证据哈希与离线复算通过的完成项以及已审查的WatchdogTransportStop中断项，拒绝仍running或未知失败。使用suite原有`--retry-failed`机制，已完成checkpoint复用不发请求；main首轮从完整2974条重新开始，原中断attempt与请求目录保留，后续仍执行main2/main3、scale和load。新执行前缀jev-local-v3-retry1，未完成24run上限16242请求（16122测量、120预热），另连接探针1条，不修改冻结模型、数据、并发、网络路径或停止判据。新增恢复校验测试与watchdog测试共8项通过、Ruff通过。该授权为一次新完整尝试，不启用无限重试。
 
 01:12:30UTC（北京时间09:12:30）retry1实际启动，driverPID107920；鉴权GET与合成POST200，checkpoint原run哈希校验与离线审计通过直接复用，没有重发305请求。01:12:34UTC新main首轮开始，最初105条测量ok，新目录results/20261015T011234Z-main-full-seed42-rep1-jev-9bb20d4e；当前运行中，不作为完成结论。watchdog launcher71288，状态/日志jev-local-v3-retry1前缀，后台跟进仅监控此次运行避免重复启动。恢复前修改追踪表时曾因默认GBK解码UTF8失败，已显式UTF8修正，未影响冻结输入或请求。
+
+### retry1主测试网络中断与保存
+
+01:19UTC后台检查发现retry1已在01:15:21UTC（北京时间09:15:21）因首个network_error自动停止。第一轮main留下739条测量，738ok、1network_error（massive-en-US-test-14011）；5条预热全部ok。其余main/scale/load未执行。不能计为完成，也不把738条局部成功率作为完整test质量结论。checkpoint仍为原300条完成项，未重复执行。
+
+核验driver107920、watchdog71288、controller94044及锁PID103652均退出后，修正main manifest/suite为interrupted，追加attempt状态，移除匹配的陈旧锁。原warmup/requests字节哈希保持为`a5b97e25df84bff9234251b4bceb926fb47359eb9e409176efd6c02ddb2815c7`和`81b4a7fa36ba0529dcb40bb1d8f21c712cdc517445526db3b1ca3d46ed52f4e8`，回执`jev-local-v3-retry1-interruption.json`。旧attempt和全部原始记录保留。
+
+01:20:53UTC做10次无鉴权只读GET，均收到预期403，新增推理请求0；7897代理仍监听。本次诊断没有复现传输异常，但不能推翻刚发生的主测试网络错误或证明未来连接稳定；已有日志只记录transport_error，无法进一步定位中间代理/上游具体根因。停止计费请求及自动重跑并通知用户，不改变原网络路径、超时或阈值。完整冻结计划、三个v3 attempt及执行/诊断记录归档`dist/jev-local-v3-retry1-transport-stop-snapshot.tar.gz`及SHA256回执。当前 **QWEN_COMPLETE / JEV_STOPPED_NETWORK**，Jev最终报告与其余实验尚未完成。
