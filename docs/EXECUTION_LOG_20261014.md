@@ -227,3 +227,7 @@ v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/�
 01:47:52UTC（北京时间09:47:52）resume1实际启动，driver100844；连接探针GET/合成POST200，main1完成证据复用。01:47:54UTC重启main2，5预热ok，24条测量中23ok/1HTTP499，01:48:01UTC看门狗按既有HTTP失败策略停止。该请求耗时154.42ms，仅一次尝试，未追加重试，因为当前冻结策略只对httpx.RequestError/传输超时重试。HTTP499本身不能确定由代理还是上游发出，原始日志未保留响应体/服务器头，不把它认定为已证实的传输异常或凭据故障。未擅自扩大HTTP重试范围。
 
 核验driver100844/watchdog84040/controller87452/lock86600均已退出后，manifest/suite修正interrupted、error_type=WatchdogHTTPStop，原始请求哈希e131a8f0e4e69cdcd76c155c4e5af8968bdfb4ab50d397e558bc10152ad59d12保持不变，移除匹配陈旧锁。归档dist/jev-local-v4-retry3-resume1-http499-snapshot.tar.gz SHA256 ba038186a674031732be554fccedebc7a480707ba705d3650802b052306def95。当前main1完成，main2仍未完成，停止后续请求并通知用户此新错误；后台跟进暂停，避免未经处理反复计费重跑。
+
+## 用户说明网络波动后授权resume2
+
+用户再次要求现在重新开始。核验无Python实验进程、旧resume1已退出且suite无运行锁；保留已审计完成的v4 main1。旧resume1为HTTP499而非传输异常，新增外部运行器显式--resume-reviewed-http499开关，只有用户明确授权后使用；必须为已标记interrupted/WatchdogHTTPStop、manifest中断一致且所有失败行均HTTP499，拒绝401/429和未知失败。此选项只允许新完整尝试，不改变冻结HTTP不重试策略，不修改核心源码或原计划。相关11项恢复/watchdog测试通过。保持每请求网络最多追加3次/原30秒总期限，main2完整重跑；main1不重复。剩余23run、13148测量+115预热、最多53052次API尝试，另合成探针最多4POST。执行前缀jev-local-v4-retry3-resume2，旧现场与全部attempt保留。

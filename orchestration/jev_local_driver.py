@@ -15,7 +15,7 @@ from decisionbench.config import load_config
 from decisionbench.suite import completed_entry, verify_bundle
 
 
-def check_resume(spec, state, root):
+def check_resume(spec, state, root, reviewed_http499=False):
     """Reuse verified completions and allow only inspected transport interruptions."""
     jobs = {job["id"]: job for job in spec["jobs"]}
     if set(state["jobs"]) - set(jobs):
@@ -25,6 +25,29 @@ def check_resume(spec, state, root):
             if not completed_entry(entry, jobs[name], root):
                 raise ValueError(f"completed evidence changed: {name}")
             audit_run(root / entry["run_dir"])
+        elif (
+            reviewed_http499
+            and entry["state"] == "interrupted"
+            and entry.get("error_type") == "WatchdogHTTPStop"
+        ):
+            # Explicit user-authorized restart; this does not add HTTP retry behavior.
+            directory = root / entry["run_dir"]
+            manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
+            if manifest.get("state") != "interrupted":
+                raise ValueError("HTTP interruption manifest is inconsistent")
+            failures = []
+            for name in ("warmup_requests.jsonl", "requests.jsonl"):
+                path = directory / name
+                if path.exists():
+                    failures.extend(
+                        json.loads(line)
+                        for line in path.read_text(encoding="utf-8").splitlines()
+                        if json.loads(line)["status"] != "ok"
+                    )
+            if not failures or any(
+                row["status"] != "http_error" or row.get("http_status") != 499 for row in failures
+            ):
+                raise ValueError("only the reviewed HTTP499 interruption may restart")
         elif not (
             entry["state"] == "interrupted" and entry.get("error_type") == "WatchdogTransportStop"
         ):
@@ -40,7 +63,14 @@ def main():
         action="store_true",
         help="Preserve completed runs and restart inspected interrupted runs",
     )
+    parser.add_argument(
+        "--resume-reviewed-http499",
+        action="store_true",
+        help="Restart an inspected HTTP499 interruption after explicit user direction",
+    )
     args = parser.parse_args()
+    if args.resume_reviewed_http499 and not args.resume_transport:
+        parser.error("--resume-reviewed-http499 requires --resume-transport")
     root = Path.cwd()
     spec = json.loads(args.plan.read_text(encoding="utf-8"))
     verify_bundle(spec, root)
@@ -55,7 +85,7 @@ def main():
         existing = json.loads(index.read_text(encoding="utf-8"))
         if existing["plan_sha256"] != digest:
             raise SystemExit("resume plan hash mismatch")
-        check_resume(spec, existing, root)
+        check_resume(spec, existing, root, reviewed_http499=args.resume_reviewed_http499)
     elif index.exists():
         raise SystemExit("fresh driver requires an unused plan; inspect existing attempts first")
     status_path = Path(str(args.prefix) + "-status.json")
@@ -87,6 +117,7 @@ def main():
         completed_blocks=[],
         stop_on_final_request_error=True,
         resume_transport=args.resume_transport,
+        resume_reviewed_http499=args.resume_reviewed_http499,
         network_retries_per_request=retries,
     )
 
