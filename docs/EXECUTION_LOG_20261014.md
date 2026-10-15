@@ -179,3 +179,13 @@ v1第二轮在291条测量后因连续3条网络错误被watchdog于2026-10-14 1
 用户再次明确要求“由网络传输导致的错误重新跑实验”，授权恢复尝试。核验本地无Python实验进程、7897代理监听，使用原有运行器新建本地v3独立计划；模型、数据、目录、超时、并发、费用和传输错误停止条件均不改。计划SHA256 `8c98fb59b85ba60a8df751f220b82dcf19e44d0597a79eee25e7d0ef6d505483`，25run预算16547（测量16422、预热125），另连接探针1条。旧v1/v2结果及归档保留，不宣称网络已修复。运行器在连接探针通过后执行checkpoint/main/scale/load，任何传输错误会停止并留存，禁止无限重试。
 
 00:48:50UTC（北京时间2026-10-15 08:48:50）v3实际启动，driverPID97824；鉴权GET和合成POST均200，5条预热与最初99条测量均ok。状态和阶段日志采用jev-local-v3前缀，后台跟进恢复，仅监控该新尝试，避免启动重复控制器。此为运行中记录，不代表最终完成或网络稳定结论。
+
+### v3 checkpoint完成；主测试再次传输中断
+
+00:55UTC后台检查发现，运行器已在00:50:24UTC（北京时间08:50:24）停止。checkpoint于00:50:19UTC完成：300条测量、5条预热全部ok，离线audit_run复算通过；Accuracy87.6667%，60类Macro-F1=0.8645240870，supported59类=0.8791770377。测量费用0.024382008USD，usage完整，排除预热与后续失败尝试，非账单总额。该checkpoint不替代完整test主质量实验。
+
+第一轮main于00:50:20UTC开始，5条预热全部ok，5条测量中4ok、1network_error。watchdog按首个传输错误停止拥有树，未执行其余main、scale或load。核验driver97824、watchdog112604、controller89164及锁PID84540均不存在后，仅修正manifest和suite生命周期元数据为interrupted、移除匹配的陈旧锁。原始warmup/requests字节未改，哈希分别为`4010cb63453ebae56768ca2521dd74bb48e9f9ee0db928287648ea8a86606151`、`631347ce2c9aee7586d743600ca8ca0de71713de3cc52d6d8a8c7baa9f70eafd`，回执`jev-local-v3-interruption.json`。
+
+00:56:20UTC发起10次不携带鉴权的只读GET连接检查，无模型推理请求。其中9次收到预期403，另1次`RemoteProtocolError`；证实连只读连接也存在间歇性传输错误，不能归因于已证实的API密钥故障，也无法仅凭此确定代理节点、服务端或中间链路哪一处断开。诊断回执`jev-local-v3-readonly-diagnostic.json`。不擅自更换网络路径或通过静默重试掩盖错误，停止后续计费请求并通知用户，后台跟进暂停，等待连接故障处理后再恢复。
+
+v3已完成checkpoint、中断main、冻结计划、suite状态及完整执行/诊断记录归档为`dist/jev-local-v3-transport-stop-snapshot.tar.gz`与SHA256回执。当前状态 **QWEN_COMPLETE / JEV_STOPPED_NETWORK**，v1/v2/v3失败和费用继续保留用于最终报告。
