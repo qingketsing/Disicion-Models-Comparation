@@ -1,0 +1,9 @@
+{
+  "source_run": "results\\20261015T012952Z-main-full-seed42-rep1-jev-eaa8b9bc",
+  "requests_sha256": "8cdf7a7e012b823b5814aa4de605a56eef8d02eae7e191f937a8f40e672a57f0",
+  "total_errors": 415,
+  "selected": 40,
+  "selection": "First example of top20 confusion directions plus seeded42 remainder",
+  "reviewer_type": "AI, not human",
+  "ground_truth_modified": false
+}

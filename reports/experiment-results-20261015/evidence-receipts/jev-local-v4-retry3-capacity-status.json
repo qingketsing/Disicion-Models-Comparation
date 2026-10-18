@@ -1,0 +1,1094 @@
+{
+  "state": "completed",
+  "pid": 114740,
+  "pilot_driver_pid": 88332,
+  "started_at_utc": "2026-10-15T04:58:18.336757+00:00",
+  "plans": [
+    "experiments\\massive-jev-local-v4-retry3\\plan.json",
+    "experiments\\massive-jev-local-v4-retry3-formal\\plan.json"
+  ],
+  "stages": [
+    {
+      "plan": "experiments\\massive-jev-local-v4-retry3\\plan.json",
+      "duration_s": 120,
+      "rates": {
+        "4": {
+          "runs": [
+            {
+              "job": "load-rps4-seed42-rep1-jev",
+              "run": "results/20261015T044337Z-load-rps4-seed42-rep1-jev-ae841416",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 502.56039000232715,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 25.28479997999966,
+              "status_counts": {
+                "ok": 480
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 492,
+                "additional_attempts": 12,
+                "transport_failures": 12,
+                "recovered_requests": 11,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.039019722,
+                "usage_complete": false,
+                "cost_per_million_successful": 81.2910875,
+                "cost_per_million_slo_valid": 85.75763076923077,
+                "offered_requests": 480,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 240,
+                  "success_rate": 1.0,
+                  "p95_ms": 390.3497249295471,
+                  "max_scheduler_lag_ms": 25.28479997999966,
+                  "slo_valid_arrival_window_qps": 3.9166666666666665,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 240,
+                  "success_rate": 1.0,
+                  "p95_ms": 1298.5698649718,
+                  "max_scheduler_lag_ms": 23.12349993735552,
+                  "slo_valid_arrival_window_qps": 3.6666666666666665,
+                  "passed": false
+                }
+              ]
+            },
+            {
+              "job": "load-rps4-seed43-rep2-jev",
+              "run": "results/20261015T045345Z-load-rps4-seed43-rep2-jev-a51fb6b2",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 542.9292499553421,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 134.5386999892071,
+              "status_counts": {
+                "ok": 480
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 489,
+                "additional_attempts": 9,
+                "transport_failures": 9,
+                "recovered_requests": 9,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.039018,
+                "usage_complete": false,
+                "cost_per_million_successful": 81.2875,
+                "cost_per_million_slo_valid": 85.75384615384615,
+                "offered_requests": 480,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 240,
+                  "success_rate": 1.0,
+                  "p95_ms": 417.98569000093266,
+                  "max_scheduler_lag_ms": 27.328799944370985,
+                  "slo_valid_arrival_window_qps": 4.0,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 240,
+                  "success_rate": 1.0,
+                  "p95_ms": 1494.7508549841607,
+                  "max_scheduler_lag_ms": 134.5386999892071,
+                  "slo_valid_arrival_window_qps": 3.5833333333333335,
+                  "passed": false
+                }
+              ]
+            },
+            {
+              "job": "load-rps4-seed44-rep3-jev",
+              "run": "results/20261015T050855Z-load-rps4-seed44-rep3-jev-6a0e942d",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 255.09172489983033,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 27.257999987341464,
+              "status_counts": {
+                "ok": 480
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 480,
+                "additional_attempts": 0,
+                "transport_failures": 0,
+                "recovered_requests": 0,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.039016656000000004,
+                "usage_complete": true,
+                "cost_per_million_successful": 81.2847,
+                "cost_per_million_slo_valid": 81.45439665970773,
+                "offered_requests": 480,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 240,
+                  "success_rate": 1.0,
+                  "p95_ms": 244.34822499752048,
+                  "max_scheduler_lag_ms": 27.257999987341464,
+                  "slo_valid_arrival_window_qps": 4.0,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 240,
+                  "success_rate": 1.0,
+                  "p95_ms": 290.54423491470527,
+                  "max_scheduler_lag_ms": 27.06739993300289,
+                  "slo_valid_arrival_window_qps": 3.9833333333333334,
+                  "passed": false
+                }
+              ]
+            }
+          ],
+          "all_repeats_pass": false
+        },
+        "2": {
+          "runs": [
+            {
+              "job": "load-rps2-seed42-rep1-jev",
+              "run": "results/20261015T044610Z-load-rps2-seed42-rep1-jev-cd33104f",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 255.7866700924933,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 95.43159999884665,
+              "status_counts": {
+                "ok": 240
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 240,
+                "additional_attempts": 0,
+                "transport_failures": 0,
+                "recovered_requests": 0,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.019511352000000003,
+                "usage_complete": true,
+                "cost_per_million_successful": 81.2973,
+                "cost_per_million_slo_valid": 81.2973,
+                "offered_requests": 240,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 120,
+                  "success_rate": 1.0,
+                  "p95_ms": 238.0239850084763,
+                  "max_scheduler_lag_ms": 95.43159999884665,
+                  "slo_valid_arrival_window_qps": 2.0,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 120,
+                  "success_rate": 1.0,
+                  "p95_ms": 269.07253499957733,
+                  "max_scheduler_lag_ms": 29.430900001898408,
+                  "slo_valid_arrival_window_qps": 2.0,
+                  "passed": false
+                }
+              ]
+            },
+            {
+              "job": "load-rps2-seed43-rep2-jev",
+              "run": "results/20261015T045848Z-load-rps2-seed43-rep2-jev-805e1434",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 10740.228740073508,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 41.6085000615567,
+              "status_counts": {
+                "ok": 240
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 272,
+                "additional_attempts": 32,
+                "transport_failures": 32,
+                "recovered_requests": 20,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.019505976,
+                "usage_complete": false,
+                "cost_per_million_successful": 81.27490000000002,
+                "cost_per_million_slo_valid": 102.66303157894738,
+                "offered_requests": 240,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 120,
+                  "success_rate": 1.0,
+                  "p95_ms": 426.74709009006614,
+                  "max_scheduler_lag_ms": 28.753300081007183,
+                  "slo_valid_arrival_window_qps": 1.9333333333333333,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 120,
+                  "success_rate": 1.0,
+                  "p95_ms": 15054.631999990666,
+                  "max_scheduler_lag_ms": 41.6085000615567,
+                  "slo_valid_arrival_window_qps": 1.2333333333333334,
+                  "passed": false
+                }
+              ]
+            },
+            {
+              "job": "load-rps2-seed44-rep3-jev",
+              "run": "results/20261015T050352Z-load-rps2-seed44-rep3-jev-152182c8",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 451.4130950905383,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 27.73410000372678,
+              "status_counts": {
+                "ok": 240
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 245,
+                "additional_attempts": 5,
+                "transport_failures": 5,
+                "recovered_requests": 5,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.019508748000000003,
+                "usage_complete": false,
+                "cost_per_million_successful": 81.28645000000002,
+                "cost_per_million_slo_valid": 84.45345454545456,
+                "offered_requests": 240,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 120,
+                  "success_rate": 1.0,
+                  "p95_ms": 341.0908700665459,
+                  "max_scheduler_lag_ms": 27.73410000372678,
+                  "slo_valid_arrival_window_qps": 2.0,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 120,
+                  "success_rate": 1.0,
+                  "p95_ms": 1678.0303100473234,
+                  "max_scheduler_lag_ms": 25.808300008066,
+                  "slo_valid_arrival_window_qps": 1.85,
+                  "passed": false
+                }
+              ]
+            }
+          ],
+          "all_repeats_pass": false
+        },
+        "8": {
+          "runs": [
+            {
+              "job": "load-rps8-seed42-rep1-jev",
+              "run": "results/20261015T044841Z-load-rps8-seed42-rep1-jev-88b3e892",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 442.14232000522327,
+              "success_rate": 0.996875,
+              "max_scheduler_lag_ms": 68.29339999239892,
+              "status_counts": {
+                "ok": 957,
+                "client_overload": 3
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 986,
+                "additional_attempts": 29,
+                "transport_failures": 29,
+                "recovered_requests": 26,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.077786142,
+                "usage_complete": false,
+                "cost_per_million_successful": 81.28123510971787,
+                "cost_per_million_slo_valid": 84.73435947712419,
+                "offered_requests": 960,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 480,
+                  "success_rate": 1.0,
+                  "p95_ms": 264.92953499546275,
+                  "max_scheduler_lag_ms": 34.342599916271865,
+                  "slo_valid_arrival_window_qps": 7.966666666666667,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 480,
+                  "success_rate": 0.99375,
+                  "p95_ms": 3804.075879952864,
+                  "max_scheduler_lag_ms": 68.29339999239892,
+                  "slo_valid_arrival_window_qps": 7.333333333333333,
+                  "passed": false
+                }
+              ]
+            },
+            {
+              "job": "load-rps8-seed43-rep2-jev",
+              "run": "results/20261015T045616Z-load-rps8-seed43-rep2-jev-96556879",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 374.73363006138163,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 29.552799998782575,
+              "status_counts": {
+                "ok": 960
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 960,
+                "additional_attempts": 0,
+                "transport_failures": 0,
+                "recovered_requests": 0,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.07803881400000001,
+                "usage_complete": true,
+                "cost_per_million_successful": 81.29043125000001,
+                "cost_per_million_slo_valid": 82.05974132492115,
+                "offered_requests": 960,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 480,
+                  "success_rate": 1.0,
+                  "p95_ms": 292.2653049754445,
+                  "max_scheduler_lag_ms": 29.552799998782575,
+                  "slo_valid_arrival_window_qps": 7.983333333333333,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 480,
+                  "success_rate": 1.0,
+                  "p95_ms": 422.8548450453673,
+                  "max_scheduler_lag_ms": 26.613599970005453,
+                  "slo_valid_arrival_window_qps": 7.866666666666666,
+                  "passed": false
+                }
+              ]
+            },
+            {
+              "job": "load-rps8-seed44-rep3-jev",
+              "run": "results/20261015T051127Z-load-rps8-seed44-rep3-jev-b7a4ebaf",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 337.58181992452586,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 26.488999952562153,
+              "status_counts": {
+                "ok": 960
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 960,
+                "additional_attempts": 0,
+                "transport_failures": 0,
+                "recovered_requests": 0,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.07803058200000001,
+                "usage_complete": true,
+                "cost_per_million_successful": 81.28185625,
+                "cost_per_million_slo_valid": 82.13745473684212,
+                "offered_requests": 960,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 480,
+                  "success_rate": 1.0,
+                  "p95_ms": 312.1967449493241,
+                  "max_scheduler_lag_ms": 24.016099981963634,
+                  "slo_valid_arrival_window_qps": 7.85,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 480,
+                  "success_rate": 1.0,
+                  "p95_ms": 347.44164496078156,
+                  "max_scheduler_lag_ms": 26.488999952562153,
+                  "slo_valid_arrival_window_qps": 7.983333333333333,
+                  "passed": false
+                }
+              ]
+            }
+          ],
+          "all_repeats_pass": false
+        },
+        "1": {
+          "runs": [
+            {
+              "job": "load-rps1-seed42-rep1-jev",
+              "run": "results/20261015T045113Z-load-rps1-seed42-rep1-jev-58d66016",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 256.21018001111224,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 28.080400079488754,
+              "status_counts": {
+                "ok": 120
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 120,
+                "additional_attempts": 0,
+                "transport_failures": 0,
+                "recovered_requests": 0,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.009756138000000001,
+                "usage_complete": true,
+                "cost_per_million_successful": 81.30115,
+                "cost_per_million_slo_valid": 81.30115,
+                "offered_requests": 120,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 244.85595999285576,
+                  "max_scheduler_lag_ms": 25.597300031222403,
+                  "slo_valid_arrival_window_qps": 1.0,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 258.89375003171153,
+                  "max_scheduler_lag_ms": 28.080400079488754,
+                  "slo_valid_arrival_window_qps": 1.0,
+                  "passed": false
+                }
+              ]
+            },
+            {
+              "job": "load-rps1-seed43-rep2-jev",
+              "run": "results/20261015T050120Z-load-rps1-seed43-rep2-jev-3fb833f6",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 249.36591006699018,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 24.56809999421239,
+              "status_counts": {
+                "ok": 120
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 120,
+                "additional_attempts": 0,
+                "transport_failures": 0,
+                "recovered_requests": 0,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.009752232,
+                "usage_complete": true,
+                "cost_per_million_successful": 81.2686,
+                "cost_per_million_slo_valid": 81.2686,
+                "offered_requests": 120,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 235.12706505134702,
+                  "max_scheduler_lag_ms": 24.56809999421239,
+                  "slo_valid_arrival_window_qps": 1.0,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 255.01638501300474,
+                  "max_scheduler_lag_ms": 21.83880005031824,
+                  "slo_valid_arrival_window_qps": 1.0,
+                  "passed": false
+                }
+              ]
+            },
+            {
+              "job": "load-rps1-seed44-rep3-jev",
+              "run": "results/20261015T050624Z-load-rps1-seed44-rep3-jev-6344e201",
+              "duration_s": 120,
+              "passed": false,
+              "p95_ms": 456.5262500254902,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 24.732899968512356,
+              "status_counts": {
+                "ok": 120
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 120,
+                "additional_attempts": 0,
+                "transport_failures": 0,
+                "recovered_requests": 0,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.009753996000000001,
+                "usage_complete": true,
+                "cost_per_million_successful": 81.28330000000001,
+                "cost_per_million_slo_valid": 84.81735652173914,
+                "offered_requests": 120,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 420.72963996906765,
+                  "max_scheduler_lag_ms": 24.732899968512356,
+                  "slo_valid_arrival_window_qps": 1.0,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 612.3441699775867,
+                  "max_scheduler_lag_ms": 21.887299953959882,
+                  "slo_valid_arrival_window_qps": 0.9166666666666666,
+                  "passed": false
+                }
+              ]
+            }
+          ],
+          "all_repeats_pass": false
+        }
+      }
+    },
+    {
+      "plan": "experiments\\massive-jev-local-v4-retry3-formal\\plan.json",
+      "duration_s": 300,
+      "rates": {
+        "1": {
+          "runs": [
+            {
+              "job": "load-rps1-seed42-rep1-jev",
+              "run": "results/20261015T051342Z-load-rps1-seed42-rep1-jev-ec13b7af",
+              "duration_s": 300,
+              "passed": false,
+              "p95_ms": 3827.211750025164,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 26.10470005311072,
+              "status_counts": {
+                "ok": 300
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 327,
+                "additional_attempts": 27,
+                "transport_failures": 27,
+                "recovered_requests": 14,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.024388644,
+                "usage_complete": false,
+                "cost_per_million_successful": 81.29548,
+                "cost_per_million_slo_valid": 97.94636144578314,
+                "offered_requests": 300,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 16950.768039986724,
+                  "max_scheduler_lag_ms": 23.34389998577535,
+                  "slo_valid_arrival_window_qps": 0.7,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 714.4282949855551,
+                  "max_scheduler_lag_ms": 23.02279998548329,
+                  "slo_valid_arrival_window_qps": 0.9,
+                  "passed": false
+                },
+                {
+                  "start_s": 120,
+                  "end_s": 180,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 820.7438400422689,
+                  "max_scheduler_lag_ms": 20.562099991366267,
+                  "slo_valid_arrival_window_qps": 0.9,
+                  "passed": false
+                },
+                {
+                  "start_s": 180,
+                  "end_s": 240,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 478.07614006451314,
+                  "max_scheduler_lag_ms": 26.10470005311072,
+                  "slo_valid_arrival_window_qps": 0.95,
+                  "passed": false
+                },
+                {
+                  "start_s": 240,
+                  "end_s": 300,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 1090.6499800272281,
+                  "max_scheduler_lag_ms": 23.50280003156513,
+                  "slo_valid_arrival_window_qps": 0.7,
+                  "passed": false
+                }
+              ]
+            },
+            {
+              "job": "load-rps1-seed43-rep2-jev",
+              "run": "results/20261015T051914Z-load-rps1-seed43-rep2-jev-6502e06d",
+              "duration_s": 300,
+              "passed": false,
+              "p95_ms": 3795.938760059653,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 26.96230006404221,
+              "status_counts": {
+                "ok": 300
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 325,
+                "additional_attempts": 25,
+                "transport_failures": 25,
+                "recovered_requests": 13,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.024384066000000003,
+                "usage_complete": false,
+                "cost_per_million_successful": 81.28022000000001,
+                "cost_per_million_slo_valid": 108.37362666666668,
+                "offered_requests": 300,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 1242.6262100809251,
+                  "max_scheduler_lag_ms": 26.316800038330257,
+                  "slo_valid_arrival_window_qps": 0.6666666666666666,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 1242.157785093877,
+                  "max_scheduler_lag_ms": 24.37240001745522,
+                  "slo_valid_arrival_window_qps": 0.6833333333333333,
+                  "passed": false
+                },
+                {
+                  "start_s": 120,
+                  "end_s": 180,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 1512.703380052698,
+                  "max_scheduler_lag_ms": 25.765800033695996,
+                  "slo_valid_arrival_window_qps": 0.65,
+                  "passed": false
+                },
+                {
+                  "start_s": 180,
+                  "end_s": 240,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 13711.555255029816,
+                  "max_scheduler_lag_ms": 26.96230006404221,
+                  "slo_valid_arrival_window_qps": 0.75,
+                  "passed": false
+                },
+                {
+                  "start_s": 240,
+                  "end_s": 300,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 278.55747007415624,
+                  "max_scheduler_lag_ms": 26.253700023517013,
+                  "slo_valid_arrival_window_qps": 1.0,
+                  "passed": false
+                }
+              ]
+            },
+            {
+              "job": "load-rps1-seed44-rep3-jev",
+              "run": "results/20261015T052450Z-load-rps1-seed44-rep3-jev-59fb659b",
+              "duration_s": 300,
+              "passed": false,
+              "p95_ms": 3384.419375011933,
+              "success_rate": 1.0,
+              "max_scheduler_lag_ms": 24.74460005760193,
+              "status_counts": {
+                "ok": 300
+              },
+              "network_retry": {
+                "max_additional_retries": 3,
+                "total_request_deadline_s": 30,
+                "adapter_attempts": 326,
+                "additional_attempts": 26,
+                "transport_failures": 26,
+                "recovered_requests": 14,
+                "latency_scope": "original scheduled arrival through retries and backoff to completion"
+              },
+              "cost": {
+                "configured": true,
+                "billing": "api",
+                "currency": "USD",
+                "pricing": {
+                  "billing": "api",
+                  "currency": "USD",
+                  "input_price_per_million": 0.042,
+                  "output_price_per_million": 0,
+                  "price_source": "https://docs.typesafe.ai/models; user confirmed standard pricing",
+                  "price_date": "2026-10-14"
+                },
+                "total_measured_cost": 0.024387006000000003,
+                "usage_complete": false,
+                "cost_per_million_successful": 81.29002,
+                "cost_per_million_slo_valid": 88.03973285198556,
+                "offered_requests": 300,
+                "scope": "measurement and drain; warmup, training and idle time excluded",
+                "estimate_note": "API cost is a lower bound when usage_complete is false"
+              },
+              "windows": [
+                {
+                  "start_s": 0,
+                  "end_s": 60,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 1900.1931500795736,
+                  "max_scheduler_lag_ms": 24.47479998227209,
+                  "slo_valid_arrival_window_qps": 0.9166666666666666,
+                  "passed": false
+                },
+                {
+                  "start_s": 60,
+                  "end_s": 120,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 269.6063300187233,
+                  "max_scheduler_lag_ms": 23.13810004852712,
+                  "slo_valid_arrival_window_qps": 0.9833333333333333,
+                  "passed": false
+                },
+                {
+                  "start_s": 120,
+                  "end_s": 180,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 274.1886400443034,
+                  "max_scheduler_lag_ms": 24.329900043085217,
+                  "slo_valid_arrival_window_qps": 1.0,
+                  "passed": false
+                },
+                {
+                  "start_s": 180,
+                  "end_s": 240,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 13477.842445054557,
+                  "max_scheduler_lag_ms": 24.466500035487115,
+                  "slo_valid_arrival_window_qps": 0.7333333333333333,
+                  "passed": false
+                },
+                {
+                  "start_s": 240,
+                  "end_s": 300,
+                  "requests": 60,
+                  "success_rate": 1.0,
+                  "p95_ms": 374.61787507636467,
+                  "max_scheduler_lag_ms": 24.74460005760193,
+                  "slo_valid_arrival_window_qps": 0.9833333333333333,
+                  "passed": false
+                }
+              ]
+            }
+          ],
+          "all_repeats_pass": false
+        }
+      }
+    }
+  ],
+  "policy": "Three repeats; 500ms/.99/20ms and every60s window; original retry3; quota-screened expansion only after8 passes; minimum1RPS confirmation if no pass; no automatic retry of failed suites; existing main baselines reused.",
+  "selected_formal_rates": [
+    1
+  ],
+  "selection_reason": "No pilot rate passed; confirm the minimum tested offered rate without lowering thresholds.",
+  "active_plan": "experiments\\massive-jev-local-v4-retry3-formal\\plan.json",
+  "watchdog_launcher_pid": 82168,
+  "confirmed_capacity_rps": null,
+  "finished_at_utc": "2026-10-15T05:29:54.481669+00:00"
+}

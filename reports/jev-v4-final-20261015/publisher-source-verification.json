@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "generated_at_utc": "2026-10-15T05:50:55.350336+00:00",
+  "review_independence": "deterministic",
+  "acceptance_status": "accepted",
+  "publisher_url": "https://amazon-massive-nlu-dataset.s3.amazonaws.com/amazon-massive-dataset-1.1.tar.gz",
+  "publisher_archive": "data/raw/amazon-massive-dataset-1.1.tar.gz",
+  "publisher_sha256": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577",
+  "publisher_bytes": 40251390,
+  "native_partition_text_intent_and_ids_exact": true,
+  "split_sizes": {
+    "test": 2974,
+    "train": 11514,
+    "validation": 2033,
+    "checkpoint-300": 300
+  },
+  "normalized_sha256": {
+    "catalog.json": "1376ad0bf0fead111a0ab53232a399cbb60c617905220f4d22e9ce32e8c0e44c",
+    "checkpoint-300.jsonl": "c24d58f321de3e07dfa86d013bbb81fcaa943115421c048e9dbc547caf0b00c1",
+    "test.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d",
+    "train.jsonl": "80e270f2c5225cb8af8ed2f0ff045ae0aa8f5d3cfe0219e21777163cb2c0dc32",
+    "validation.jsonl": "f6baf150cb919ece086aa730bcefddf61045d572c03773d1048497068fe9aca2"
+  },
+  "normalization_script_sha256": "c3cd1377cdc658a71fa5559908e70ab3bfdbbfb58f60795e55707b8135ab452f",
+  "scope": "Exact publisher archive hash plus semantic row equality; no GT, catalog or frozen run bytes modified."
+}

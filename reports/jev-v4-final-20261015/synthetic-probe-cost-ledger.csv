@@ -1,0 +1,10 @@
+﻿probe,post_attempts,usage_complete,known_input_tokens,known_output_tokens,known_cost_usd,source_sha256
+results\execution-20261014\jev-local-probe.json,1,True,340,34,1.428e-05,bfa7a9c97e62ee0eb52b856008496107206741f139e215cdd542de538732811a
+results\execution-20261014\jev-local-v2-probe.json,1,True,340,34,1.428e-05,f74bab34f5eaa7e2b22eb1b36083740e850ccc7f716370cdef51f26a483ea78d
+results\execution-20261014\jev-local-v3-probe.json,1,True,340,34,1.428e-05,8624818659072c73832553ae4cba3bbb1aaf6cba4826d1a5e19df0e628cd8ef6
+results\execution-20261014\jev-local-v3-retry1-probe.json,1,True,340,34,1.428e-05,ea2a1fe936d276eabb892d8e17991923416d53fb3e16f1edfca64d92206386cd
+results\execution-20261014\jev-local-v4-retry3-probe.json,1,True,340,34,1.428e-05,7927bab101d70eb7108dbef16a8c1712275e550a12babf40ada60300acc9f889
+results\execution-20261014\jev-local-v4-retry3-resume1-probe.json,1,True,340,34,1.428e-05,5515251657a6f03ac1e59a2884349b18ad311ebaf0c6eb856c95db4195a3905a
+results\execution-20261014\jev-local-v4-retry3-resume2-probe.json,1,True,340,34,1.428e-05,6e307a36d22315ef425b648e190b98441abe32bb576b7122c5a027da3acdf464
+results\execution-20261014\jev-probe-local-v2.json,0,False,0,0,0.0,9ff7e33db1707be2a4ecb31f0b8370afabb65758966250a1b1099d8231c7ba92
+results\execution-20261014\jev-probe-local-v3.json,1,True,340,34,1.428e-05,e27480f1121f40de9136b96646e93ff7f686f111f11eb76069cb83b4bbacb458

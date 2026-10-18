@@ -1,0 +1,41 @@
+﻿sample_id,text,expected,prediction,status,selection
+massive-en-US-test-13175,check celebrity where abouts,general_quirky,qa_factoid,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-6725,remind me about my schedule for the afternoon,calendar_set,calendar_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-10038,i need good ideas for cooking,cooking_recipe,cooking_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-3600,remind me after ten minutes,calendar_set,alarm_set,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1127,play all songs on shuffle,play_music,music_settings,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1400,i mostly pay attention,weather_query,general_quirky,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-9233,open pandora,play_radio,play_music,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-11257,olly play next recording,play_podcasts,music_settings,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13044,i want tickets to the sold out concert on saturday night,general_quirky,recommendation_events,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-15185,birthday wishes,social_post,general_quirky,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-3598,how about you,general_quirky,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13074,why isn't adam sandler funny,qa_factoid,general_quirky,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13297,who is celebrity,qa_factoid,qa_definition,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1423,tell me about trump,news_query,qa_factoid,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-15364,can you let amazon know that this new phone case is junk,social_post,email_sendemail,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-15828,here is a new email address to be added to the contacts,email_sendemail,email_addcontact,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1744,what do you think,music_likeness,general_quirky,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-7113,will there any events downtown this weekend,calendar_query,recommendation_events,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-12310,give me the list of available train tickets from edinburgh to leeds,transport_query,transport_ticket,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13404,what store is having sales tomorrow,general_quirky,recommendation_locations,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-9895,keep playing secret garden,play_audiobook,play_game,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-7073,search my calendar for my next event and notify me before it occurs,calendar_set,calendar_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-9138,when does the super bowl officially start,qa_factoid,datetime_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-4973,olly play i can't feel my face,play_music,play_game,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13222,where does kate middleton buy her kids clothes,general_quirky,qa_factoid,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1401,i occasionally pay attention,weather_query,general_quirky,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-9760,stop play,play_audiobook,music_settings,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-8345,let me know when the meeting is gonna happen,calendar_set,calendar_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13547,where was will ferrell seen last night,general_quirky,qa_factoid,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-9986,boiling,cooking_recipe,qa_definition,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13298,what does celebrity do,qa_factoid,qa_definition,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-15966,send a reply if it is very important,email_query,email_sendemail,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-2451,seven hundred,datetime_convert,qa_maths,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-5134,find songs from my big band playlist,play_music,music_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13154,do you know jessica snout's phone number,qa_factoid,email_querycontact,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-11427,start the gilmore guys,play_podcasts,play_music,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-4001,what happened on the walking dead,news_query,qa_factoid,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-7876,what's been happening for the last two months,news_query,general_quirky,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-9291,put on,play_radio,iot_wemo_on,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-4955,would you love to see,iot_hue_lightchange,general_quirky,ok,top confusion pair or seeded remainder; first main repeat

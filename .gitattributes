@@ -1,0 +1,2 @@
+# Preserve the exact bytes of audited result tables, JSON receipts and figures.
+/reports/** -text whitespace=trailing-space,space-before-tab,cr-at-eol

@@ -1,0 +1,7 @@
+{
+  "source": "results/execution-20261014/jev-v4-final-completion.json",
+  "backup": "dist/jev-v4-final-completion.json",
+  "source_and_backup_sha256": "6d67074849e5798aea376d0eed9e84ceed90995313a938693835155eb92e0c63",
+  "both_copies_verified": true,
+  "generated_at_utc": "2026-10-15T05:59:35.530270+00:00"
+}

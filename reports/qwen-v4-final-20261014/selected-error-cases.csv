@@ -1,0 +1,41 @@
+﻿sample_id,text,expected,prediction,status,selection
+massive-en-US-test-12987,can you track my emotions based on the way i speak,general_quirky,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1047,i need a good cry can you play me sad rock songs,play_music,music_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-15763,please check for new emails,email_query,email_querycontact,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-6850,list out my schedule today,calendar_query,datetime_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13400,send a funny message to all of my friends,social_post,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13124,how big is the cosmos,qa_factoid,weather_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-10023,what do i need to make lamb pathia,cooking_recipe,cooking_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1351,will it be nice outside this week,weather_query,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-10772,remove my dentist's appointment from today's schedule,calendar_remove,alarm_remove,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-15756,please email my team,email_sendemail,email_addcontact,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13078,tell me billy crytals address,qa_factoid,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1276,i want a coffee,iot_coffee,cooking_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13177,remind me to move so there is no weight gain,calendar_set,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-15765,answer to pawel's email,email_sendemail,email_querycontact,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13457,tell me when i should leave for a scheduled event so that i am on time,calendar_set,datetime_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-11628,where is the pharmacy in leavenworth,recommendation_locations,transport_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1264,is my alarm set for tomorrow morning,alarm_query,alarm_set,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-12951,what is the highest building in the world,qa_factoid,datetime_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-12999,how old is mariah carey,qa_factoid,qa_definition,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13625,what is the largest desk,qa_definition,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-16271,refresh my inbox and inform me about new emails,email_query,email_querycontact,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-12367,what's the best way to sheffield,transport_query,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-6305,what do you want to do today,general_quirky,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-7014,give me the schedule for today's events,calendar_query,datetime_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-9542,let me listen the latest news program on radio,play_radio,news_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-11767,olly what events are happening in pondichery this weekend,recommendation_events,calendar_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-2451,seven hundred,datetime_convert,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-11164,away off from list,lists_remove,iot_wemo_off,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13591,what is the capitol of west virginia,qa_factoid,datetime_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-9528,turn on some n. p. r. and play them out of my speakers,play_radio,iot_hue_lighton,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-16914,do i have emails from this sender,email_query,email_querycontact,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-9284,play f. m.,play_radio,play_music,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1151,start vacuum cleaner,iot_cleaning,iot_coffee,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-1510,quiet mode on until i am home from work,audio_volume_mute,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-11180,my party planning,calendar_query,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-13464,why are we here,general_quirky,general_greet,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-14040,how tall is hulk hogan,qa_factoid,music_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-5258,save this song to playlist,music_likeness,music_query,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-14150,what are converse shoes,qa_definition,music_likeness,ok,top confusion pair or seeded remainder; first main repeat
+massive-en-US-test-8914,what time is my appointment on april fourth,calendar_query,datetime_query,ok,top confusion pair or seeded remainder; first main repeat

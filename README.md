@@ -1,5 +1,12 @@
 # DecisionBench
 
+## Qwen / Jev 实测结果（2026-10-14/15）
+
+[实验结果汇总](docs/EXPERIMENT_RESULTS_20261015.md) · [五组可视化图解](docs/VISUAL_EXPERIMENT_RESULTS_20261015.md) · [双方配对比较](docs/QWEN_JEV_COMPARISON_20261015.md)
+
+本次贡献仅包含最终报告、结果数据、图表、审计证据索引与绘图脚本。实验过程的工具改动与中间提交未合入；完整原始日志及冻结执行源码保存在报告列明的本地 SHA256 归档中。本页下方的原项目验证状态按原文保留，新增实测范围及限制以最终报告为准。
+
+
 Jev / Qwen / BERT 共用数据、测量和成本口径的实验框架。Controller 在本机或独立 CPU 主机产生请求，GPU Worker 按模型轮流运行。
 
 当前为新实现的 v0.1。用户提供的方案已保存在 `docs/ORIGINAL_PLAN.txt`，附件中没有 Starter ZIP。本项目不包含真实 Jev、Qwen 或 BERT 跑分。

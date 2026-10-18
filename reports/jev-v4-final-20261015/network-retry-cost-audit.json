@@ -1,0 +1,25 @@
+{
+  "totals": {
+    "measurement": {
+      "logical_requests": 17022,
+      "adapter_attempts": 17196,
+      "additional_attempts": 177,
+      "transport_failures": 177,
+      "recovered_requests": 118,
+      "known_cost_usd": 1.3282468500000002,
+      "usage_complete": false
+    },
+    "warmup": {
+      "logical_requests": 135,
+      "adapter_attempts": 138,
+      "additional_attempts": 3,
+      "transport_failures": 3,
+      "recovered_requests": 2,
+      "known_cost_usd": 0.009603846,
+      "usage_complete": false
+    }
+  },
+  "scope": "Distinct completed Jev runs in supplied plans; baselines deduplicated.",
+  "excluded": "Synthetic probes and old/interrupted attempts require separate historical ledger.",
+  "limitations": "Failed transport attempts may have billed unknown usage; known costs are lower bounds whenever usage_complete=false. Recovered logical success does not mean no network failure."
+}

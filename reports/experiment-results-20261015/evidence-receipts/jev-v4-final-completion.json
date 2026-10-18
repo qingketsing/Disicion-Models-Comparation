@@ -1,0 +1,39 @@
+{
+  "generated_at_utc": "2026-10-15T05:59:02.766901+00:00",
+  "status": "PASS",
+  "review_independence": "deterministic",
+  "acceptance_status": "accepted",
+  "git_head": "f36473c903684570a4f3a56611e876853bcc1376",
+  "archives": [
+    {
+      "archive": "dist/jev-v4-final-evidence-snapshot.tar.gz",
+      "archive_sha256": "511a7401a752ea06483997c9efad93e0b36adf684a86a26c46f9c9443f5bb91d",
+      "members_count": 2141
+    },
+    {
+      "archive": "dist/jev-v4-source-provenance-snapshot.tar.gz",
+      "archive_sha256": "9d81c77571c671b74212fd035d592c1c9881974c39088940f41f3d8fd15d7ca7",
+      "members_count": 12
+    },
+    {
+      "archive": "dist/jev-v4-final-deliverables-snapshot.tar.gz",
+      "archive_sha256": "b7769df59a79b725d4d0051baa540573005158cb680485214ed86535e166ee14",
+      "members_count": 89
+    }
+  ],
+  "member_stream_source_and_receipt_hashes": "PASS",
+  "audited_input_hashes": "PASS",
+  "required_deliverables_present": "PASS",
+  "tracked_working_tree": "clean",
+  "qwen_sealed_report_unchanged": true,
+  "semantic_audit_verdict": "WARN at reviewer cutoff; same-family/provisional",
+  "semantic_audit_c_delivery_finding": "CLOSED by these concrete artifact and member verifications",
+  "automation": {
+    "id": "jev",
+    "status": "PAUSED",
+    "verified_from_saved_toml": true
+  },
+  "api_requests_started_in_finalization": 0,
+  "finalized_at_utc": "2026-10-15T05:59:35.530270+00:00",
+  "api_request_scope": "Jev experiment inference only; publisher data retrieval and reviewer calls excluded."
+}

@@ -1,0 +1,167 @@
+{
+  "jev_plan_sha256": "e4af0d581f9306b49f0d1f72e8b84404510dfb44e905def4b6803bf756fdf267",
+  "qwen_report_audit_sha256": "5f39ecf6b96e2a238c6c07e37009c033047891400de4eeba97525bfc383f8d2c",
+  "unique_main_samples": 2974,
+  "repeats_per_model": 3,
+  "repeated_measurements_are_not_independent": true,
+  "input_comparison": "Exact ordered sample ID/text/GT and ordered catalog labels/descriptions/version; newline bytes may differ.",
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 42,
+    "unit": "unique sample within each paired repeat"
+  },
+  "comparisons": [
+    {
+      "repeat": 1,
+      "unique_samples": 2974,
+      "qwen_accuracy": 0.4593140551445864,
+      "jev_accuracy": 0.8604572965702757,
+      "accuracy_jev_minus_qwen": 0.4011432414256893,
+      "ci95_low": 0.38264963012777403,
+      "ci95_high": 0.41862811028917285,
+      "both_correct": 1323,
+      "qwen_only": 43,
+      "jev_only": 1236,
+      "both_wrong": 372
+    },
+    {
+      "repeat": 2,
+      "unique_samples": 2974,
+      "qwen_accuracy": 0.4593140551445864,
+      "jev_accuracy": 0.8614660390047074,
+      "accuracy_jev_minus_qwen": 0.4021519838601211,
+      "ci95_low": 0.3836583725622058,
+      "ci95_high": 0.41963685272360457,
+      "both_correct": 1321,
+      "qwen_only": 45,
+      "jev_only": 1241,
+      "both_wrong": 367
+    },
+    {
+      "repeat": 3,
+      "unique_samples": 2974,
+      "qwen_accuracy": 0.4593140551445864,
+      "jev_accuracy": 0.8618022864828514,
+      "accuracy_jev_minus_qwen": 0.40248823133826495,
+      "ci95_low": 0.3843308675184936,
+      "ci95_high": 0.41963685272360457,
+      "both_correct": 1322,
+      "qwen_only": 44,
+      "jev_only": 1241,
+      "both_wrong": 367
+    }
+  ],
+  "repeat_disagreements": [
+    {
+      "model": "qwen",
+      "repeat_a": 1,
+      "repeat_b": 2,
+      "unique_samples": 2974,
+      "prediction_differences": 0
+    },
+    {
+      "model": "qwen",
+      "repeat_a": 1,
+      "repeat_b": 3,
+      "unique_samples": 2974,
+      "prediction_differences": 0
+    },
+    {
+      "model": "qwen",
+      "repeat_a": 2,
+      "repeat_b": 3,
+      "unique_samples": 2974,
+      "prediction_differences": 0
+    },
+    {
+      "model": "jev",
+      "repeat_a": 1,
+      "repeat_b": 2,
+      "unique_samples": 2974,
+      "prediction_differences": 33
+    },
+    {
+      "model": "jev",
+      "repeat_a": 1,
+      "repeat_b": 3,
+      "unique_samples": 2974,
+      "prediction_differences": 36
+    },
+    {
+      "model": "jev",
+      "repeat_a": 2,
+      "repeat_b": 3,
+      "unique_samples": 2974,
+      "prediction_differences": 29
+    }
+  ],
+  "runs": [
+    {
+      "model": "qwen",
+      "run": "results\\20261014T104530Z-main-full-seed42-rep1-qwen-afe9222e",
+      "quality": {
+        "accuracy": 0.4593140551445864,
+        "macro_f1": 0.4872393742245591,
+        "macro_f1_supported_classes": 0.49549766870294143
+      },
+      "requests_sha256": "2d1a2e60386a09952cf41c87c392a7b02f4e0ebb5810ac2385b49be21d9f515b",
+      "manifest_sha256": "26e2ca4bc0208d86f6f75b84b642409f66f0b24d1a6003c3a8e872f9528b090c"
+    },
+    {
+      "model": "qwen",
+      "run": "results\\20261014T105118Z-main-full-seed43-rep2-qwen-cd262048",
+      "quality": {
+        "accuracy": 0.4593140551445864,
+        "macro_f1": 0.4872393742245591,
+        "macro_f1_supported_classes": 0.49549766870294143
+      },
+      "requests_sha256": "1dd0ed31ad4ce3f5c702ee64f177eb4c4348cdc4ff092ae0d1214bbb0e0ec66b",
+      "manifest_sha256": "905aa6167f7362293222b38572982039ce65fae09be9a719e22f62be76dc0ad5"
+    },
+    {
+      "model": "qwen",
+      "run": "results\\20261014T105708Z-main-full-seed44-rep3-qwen-17a6d750",
+      "quality": {
+        "accuracy": 0.4593140551445864,
+        "macro_f1": 0.4872393742245591,
+        "macro_f1_supported_classes": 0.49549766870294143
+      },
+      "requests_sha256": "fd66cded11994d673f2af80800e3b1e52b08f7d70eb4d76207d476a1f9b34d6f",
+      "manifest_sha256": "d956adfe42e7d3a0b2b165fdd38afd790a62c41b7d3356b6766d1e00ac2ba980"
+    },
+    {
+      "model": "jev",
+      "run": "results\\20261015T012952Z-main-full-seed42-rep1-jev-eaa8b9bc",
+      "quality": {
+        "accuracy": 0.8604572965702757,
+        "macro_f1": 0.8370084066665113,
+        "macro_f1_supported_classes": 0.8511949898303506
+      },
+      "requests_sha256": "8cdf7a7e012b823b5814aa4de605a56eef8d02eae7e191f937a8f40e672a57f0",
+      "manifest_sha256": "034dbf0611c5f1a8c0e9756526b2b3cfae5e6ad8fce19a58306553dd3c8b9f9c"
+    },
+    {
+      "model": "jev",
+      "run": "results\\20261015T040957Z-main-full-seed43-rep2-jev-efb6e432",
+      "quality": {
+        "accuracy": 0.8614660390047074,
+        "macro_f1": 0.8392506082172081,
+        "macro_f1_supported_classes": 0.8534751947971607
+      },
+      "requests_sha256": "340487694ca9a71189ad3f728dc84ac32480ff77e8f8a6ef3e2a1ca4839778ef",
+      "manifest_sha256": "9af1bd74aed0d41a12edf0e3d31cafd703e6e1ec62505965340d95f6165484db"
+    },
+    {
+      "model": "jev",
+      "run": "results\\20261015T042145Z-main-full-seed44-rep3-jev-9f7a81b5",
+      "quality": {
+        "accuracy": 0.8618022864828514,
+        "macro_f1": 0.8393599457591326,
+        "macro_f1_supported_classes": 0.853586385517762
+      },
+      "requests_sha256": "aacb377be2aee3f14cd89466ac211e0e84c0a4e488328028ddea348127705a8c",
+      "manifest_sha256": "13a5cb1ae54cd0603e5fe35b44ce7a66c35c46e1058369cbc16ca2ad88ae162e"
+    }
+  ],
+  "limitation": "Quality on this fixed dataset/catalog. Qwen remote GPU and Jev local Internet API use different deployment/network conditions and transport-retry policies; latency/cost are not controlled model-only comparisons."
+}
