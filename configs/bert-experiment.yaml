@@ -1,0 +1,32 @@
+name: massive-bert-native-v1
+data_dir: data/normalized/massive-bert-native-v1
+model_dir: models/bert-native-v1
+output_dir: results
+base_model: google-bert/bert-base-uncased
+# prepare resolves this once to an immutable commit in plan.json.
+revision: main
+seeds: [42, 43, 44]
+training:
+  epochs: 5
+  batch_size: 16
+  gradient_accumulation_steps: 1
+  learning_rate: 0.00002
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  max_length: 128
+  precision: fp32
+  device: cuda
+  torch_threads: 4
+  text_overlap: warn
+measurement:
+  warmup: 50
+  timeout_s: 30
+  slo_ms: 500
+  min_success_rate: 0.99
+  max_scheduler_lag_ms: 20
+  max_concurrency: 128
+  repeats: 3
+  pilot_rps: [1, 2, 4, 8, 16, 32, 64]
+  pilot_duration_s: 120
+  formal_duration_s: 300
+  cooldown_s: 30

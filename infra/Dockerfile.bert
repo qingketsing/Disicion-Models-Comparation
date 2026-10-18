@@ -1,0 +1,16 @@
+FROM python:3.12-slim
+ARG TORCH_FLAVOR=cu128
+WORKDIR /app
+COPY requirements-bert.txt requirements-bert.lock.txt pyproject.toml /app/
+RUN python -m pip install --no-cache-dir torch==2.9.1 --index-url https://download.pytorch.org/whl/${TORCH_FLAVOR} \
+    && python -m pip install --no-cache-dir -r requirements-bert.txt -c requirements-bert.lock.txt
+COPY decisionbench /app/decisionbench
+COPY services /app/services
+COPY scripts /app/scripts
+COPY configs /app/configs
+COPY reports/experiment-results-20261015/data-provenance /app/reports/experiment-results-20261015/data-provenance
+RUN python -m pip install --no-deps /app && python -m pip check
+ENV MODEL_PATH=/models/bert DEVICE=cuda TORCH_NUM_THREADS=4
+HEALTHCHECK --interval=30s --timeout=5s --start-period=120s \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health', timeout=4)"
+CMD ["uvicorn", "services.bert_server:app", "--host", "0.0.0.0", "--port", "8001", "--workers", "1"]

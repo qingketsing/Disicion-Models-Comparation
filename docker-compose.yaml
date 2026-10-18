@@ -25,8 +25,8 @@ services:
     profiles: [bert-cpu]
     build:
       context: .
-      dockerfile: infra/Dockerfile.serve
-      args: {EXTRA: bert}
+      dockerfile: infra/Dockerfile.bert
+      args: {TORCH_FLAVOR: cpu}
     ports: ["127.0.0.1:8001:8001"]
     volumes: ["${BERT_MODEL_PATH:-./models/bert}:/models/bert:ro"]
     environment:
@@ -38,8 +38,8 @@ services:
     profiles: [bert-gpu]
     build:
       context: .
-      dockerfile: infra/Dockerfile.serve
-      args: {EXTRA: bert}
+      dockerfile: infra/Dockerfile.bert
+      args: {TORCH_FLAVOR: "${BERT_TORCH_FLAVOR:-cu128}"}
     ports: ["127.0.0.1:8001:8001"]
     volumes: ["${BERT_MODEL_PATH:-./models/bert}:/models/bert:ro"]
     environment:

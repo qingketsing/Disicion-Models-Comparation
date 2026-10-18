@@ -143,7 +143,7 @@ def main():
         raise ValueError("source must provide nonempty train, validation and test splits")
     labels = sorted({r["label"] for rows in splits.values() for r in rows})
     descriptions = (
-        json.loads(args.descriptions.read_text())
+        json.loads(args.descriptions.read_text(encoding="utf-8"))
         if args.descriptions
         else {label: label.replace("_", " ") for label in labels}
     )
@@ -156,7 +156,7 @@ def main():
     ] = stratified_subset(splits["validation"], args.checkpoint_size, args.seed)
     args.out.mkdir(parents=True, exist_ok=True)
     for split, rows in splits.items():
-        with (args.out / f"{split}.jsonl").open("w", encoding="utf-8") as stream:
+        with (args.out / f"{split}.jsonl").open("w", encoding="utf-8", newline="\n") as stream:
             for row in sorted(rows, key=lambda r: r["sample_id"]):
                 stream.write(json.dumps(row, ensure_ascii=False) + "\n")
     signature = hashlib.sha256(json.dumps(descriptions, sort_keys=True).encode()).hexdigest()[:12]

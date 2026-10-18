@@ -39,7 +39,7 @@ def create_app(kind):
     @asynccontextmanager
     async def lifespan(app):
         directory = Path(os.environ.get("MODEL_PATH", f"models/{kind}"))
-        metadata = json.loads((directory / "metadata.json").read_text())
+        metadata = json.loads((directory / "metadata.json").read_text(encoding="utf-8"))
         for name, expected_hash in metadata["artifact_files"].items():
             if file_hash(directory / name) != expected_hash:
                 raise ValueError("model artifact hash mismatch")
@@ -54,15 +54,33 @@ def create_app(kind):
 
             torch.set_num_threads(int(os.environ.get("TORCH_NUM_THREADS", "4")))
             device = os.environ.get("DEVICE", "cpu")
+            if device not in {"cpu", "cuda"}:
+                raise ValueError("DEVICE must be cpu or cuda")
+            if device == "cuda" and not torch.cuda.is_available():
+                raise RuntimeError("CUDA service requested but CUDA is unavailable")
+            torch.backends.cuda.matmul.allow_tf32 = False
+            torch.backends.cudnn.allow_tf32 = False
+            model = (
+                AutoModelForSequenceClassification.from_pretrained(
+                    directory,
+                    local_files_only=True,
+                    attn_implementation=metadata.get("attention_implementation", "eager"),
+                )
+                .to(device)
+                .eval()
+            )
+            if [model.config.id2label[i] for i in range(model.config.num_labels)] != metadata[
+                "labels"
+            ]:
+                raise ValueError("model label mapping differs from artifact metadata")
             state.update(
                 torch=torch,
                 device=device,
                 tokenizer=AutoTokenizer.from_pretrained(directory, local_files_only=True),
-                model=AutoModelForSequenceClassification.from_pretrained(
-                    directory, local_files_only=True
-                )
-                .to(device)
-                .eval(),
+                model=model,
+                torch_threads=torch.get_num_threads(),
+                precision="fp32",
+                cuda_runtime=torch.version.cuda,
             )
         yield
         state.clear()
@@ -76,6 +94,10 @@ def create_app(kind):
             "kind": kind,
             "model_version": state.get("metadata", {}).get("model_version"),
             "device": state.get("device", "cpu"),
+            "torch_threads": state.get("torch_threads"),
+            "precision": state.get("precision"),
+            "cuda_runtime": state.get("cuda_runtime"),
+            "synthetic": state.get("metadata", {}).get("synthetic", False),
         }
 
     @app.get("/metadata")

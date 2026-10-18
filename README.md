@@ -1,5 +1,11 @@
 # DecisionBench
 
+## BERT 实验实现（2026-10-18）
+
+[BERT 节点执行手册](docs/BERT_RUNBOOK.md) · [实验方案](docs/BERT_EXPERIMENT_PLAN_20261018.md)
+
+BERT 现已提供独立环境安装/自检、原生 MASSIVE 数据准备、固定模型 commit、三种子训练、验证集最佳 checkpoint、断点续训、CPU/GPU 服务与完整 test/开放环负载入口、60 秒窗口及配对离线分析。按本次用户要求保留原生数据，文本重叠只警告并记录。本地小型 BERT 的 CPU 链路已验证；真实节点训练、CUDA 和容量结果仍待执行。后文 v0.1 状态描述为历史起点，BERT 当前入口以节点手册为准。
+
 ## Qwen / Jev 实测结果（2026-10-14/15）
 
 [实验结果汇总](docs/EXPERIMENT_RESULTS_20261015.md) · [五组可视化图解](docs/VISUAL_EXPERIMENT_RESULTS_20261015.md) · [双方配对比较](docs/QWEN_JEV_COMPARISON_20261015.md)

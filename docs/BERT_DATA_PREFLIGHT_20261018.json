@@ -1,0 +1,136 @@
+{
+  "source_sha256": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577",
+  "source_matches_pr": true,
+  "sizes": {
+    "train": 11514,
+    "validation": 2033,
+    "test": 2974,
+    "checkpoint-300": 300
+  },
+  "normalized_hashes": {
+    "catalog.json": {
+      "sha256": "96bb8ca2f0cba70f9caaa118c51465e549de146a3efbfec1bc963cd56b9a1cb1",
+      "matches_pr": false,
+      "crlf_matches_pr": false,
+      "lf_matches_pr": false
+    },
+    "checkpoint-300.jsonl": {
+      "sha256": "4729bdbf493ae3900a4849f8f4b12383aab915222dcd36f8147a245342fb6043",
+      "matches_pr": false,
+      "crlf_matches_pr": false,
+      "lf_matches_pr": true
+    },
+    "test.jsonl": {
+      "sha256": "15ad48b0967ea3112272a58984e920a7d550930d76a324ab1705e046cc371b41",
+      "matches_pr": false,
+      "crlf_matches_pr": false,
+      "lf_matches_pr": true
+    },
+    "train.jsonl": {
+      "sha256": "074be97a90e218c32030d82b78e0bf7435bd19a388d4e14e83013cda1a014861",
+      "matches_pr": false,
+      "crlf_matches_pr": false,
+      "lf_matches_pr": true
+    },
+    "validation.jsonl": {
+      "sha256": "bf054b42e4a9e0e7581831fa45e47ca373aeb6a3c78064c5f7a7bb8dcce2c95e",
+      "matches_pr": false,
+      "crlf_matches_pr": false,
+      "lf_matches_pr": true
+    }
+  },
+  "overlaps": {
+    "train/validation": {
+      "sample_id_overlap": 0,
+      "exact_shared_texts": 11,
+      "left_rows_with_exact_shared_text": 11,
+      "right_rows_with_exact_shared_text": 11,
+      "casefold_strip_shared_texts": 11
+    },
+    "train/test": {
+      "sample_id_overlap": 0,
+      "exact_shared_texts": 21,
+      "left_rows_with_exact_shared_text": 22,
+      "right_rows_with_exact_shared_text": 21,
+      "casefold_strip_shared_texts": 21
+    },
+    "validation/test": {
+      "sample_id_overlap": 0,
+      "exact_shared_texts": 5,
+      "left_rows_with_exact_shared_text": 5,
+      "right_rows_with_exact_shared_text": 5,
+      "casefold_strip_shared_texts": 5
+    }
+  },
+  "test_equals_pr_paired_rows_in_order": true,
+  "catalog_size": 60,
+  "support": {
+    "train": {
+      "num_supported_labels": 60,
+      "missing_labels": []
+    },
+    "validation": {
+      "num_supported_labels": 59,
+      "missing_labels": [
+        "audio_volume_other"
+      ]
+    },
+    "test": {
+      "num_supported_labels": 59,
+      "missing_labels": [
+        "cooking_query"
+      ]
+    },
+    "checkpoint-300": {
+      "num_supported_labels": 59,
+      "missing_labels": [
+        "audio_volume_other"
+      ]
+    }
+  },
+  "existing_training_input_check": "ValueError: training and validation texts overlap",
+  "publication_manifest_keys": [
+    "created_at_utc",
+    "branch",
+    "experiment_sealed_git_commit",
+    "scope",
+    "copied_source_paths",
+    "files_sha256",
+    "file_count_excluding_manifest"
+  ],
+  "proposed_overlap_policy": {
+    "status": "proposal_only_no_clean_files_written",
+    "normalization": "text.strip().casefold(); used only for overlap detection, not model input",
+    "priority": "test > validation > train",
+    "sizes": {
+      "train": 11481,
+      "validation": 2028,
+      "test": 2974
+    },
+    "removed": {
+      "train": 33,
+      "validation": 5,
+      "test": 0
+    },
+    "train_labels_remaining": 60
+  },
+  "publication_integrity": {
+    "checked": 66,
+    "failed": []
+  },
+  "local_gpu": {
+    "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "memory_mib": 8151,
+    "driver": "610.47",
+    "source": "nvidia-smi query on 2026-10-18; CUDA/PyTorch not verified"
+  },
+  "local_python": "3.13.11; project training environment not created",
+  "pr_head": "daeba5d0665c952d08582bd215b429d201e12ff9",
+  "generated_on": "2026-10-18 Asia/Shanghai",
+  "visualization_integrity": {
+    "checked": 10,
+    "failed": []
+  },
+  "catalog_description_mapping_sha256": "c243b3879e39392794d1d1a637bdde9adad42879f9e7f9a7104f55513f049b0d",
+  "catalog_restoration_status": "Description mapping restored; generated catalog file does not match historical catalog hash; version/metadata equivalence is not established."
+}

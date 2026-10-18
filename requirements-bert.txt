@@ -1,0 +1,17 @@
+# Tested direct dependencies. bootstrap_bert.py installs torch separately from its official index.
+# Each node also writes a complete pip freeze receipt after installation.
+torch==2.9.1
+transformers==4.57.1
+datasets==4.3.0
+accelerate==1.11.0
+numpy==2.3.4
+httpx==0.28.1
+PyYAML==6.0.3
+fastapi==0.119.1
+uvicorn==0.38.0
+prometheus-client==0.23.1
+pytest==8.4.2
+pytest-asyncio==1.2.0
+ruff==0.14.1
+scikit-learn==1.7.2
+joblib==1.5.2

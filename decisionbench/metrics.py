@@ -125,6 +125,19 @@ def request_cost(records, elapsed_s, pricing, slo_ms):
     n = len(records)
     successful = sum(r["status"] == "ok" for r in records)
     valid = sum(r["status"] == "ok" and r["e2e_latency_ms"] <= slo_ms for r in records)
+    correct = sum(
+        r["status"] == "ok"
+        and r.get("prediction") == r.get("expected_label")
+        and r.get("expected_label") is not None
+        for r in records
+    )
+    correct_valid = sum(
+        r["status"] == "ok"
+        and r["e2e_latency_ms"] <= slo_ms
+        and r.get("prediction") == r.get("expected_label")
+        and r.get("expected_label") is not None
+        for r in records
+    )
     price_keys = {
         "instance": ["instance_price_per_hour"],
         "api": ["input_price_per_million", "output_price_per_million"],
@@ -161,6 +174,10 @@ def request_cost(records, elapsed_s, pricing, slo_ms):
         "usage_complete": complete,
         "cost_per_million_successful": total * 1_000_000 / successful if successful else None,
         "cost_per_million_slo_valid": total * 1_000_000 / valid if valid else None,
+        "cost_per_million_correct": total * 1_000_000 / correct if correct else None,
+        "cost_per_million_slo_correct": total * 1_000_000 / correct_valid
+        if correct_valid
+        else None,
         "offered_requests": n,
         "scope": "measurement and drain; warmup, training and idle time excluded",
         "estimate_note": "API cost is a lower bound when usage_complete is false",

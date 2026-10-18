@@ -20,7 +20,9 @@ def file_hash(path: Path):
 
 def write_json(path, value):
     path.write_text(
-        json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n", encoding="utf-8"
+        json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
 
 
@@ -86,7 +88,8 @@ def create_run(root, config, config_path, dataset_path, catalog_paths):
         "mock_adapter": config.adapter["kind"] == "mock",
         "fixture_dataset": (root / "data/fixtures").resolve() in dataset_path.resolve().parents,
         "synthetic": config.adapter["kind"] == "mock"
-        or (root / "data/fixtures").resolve() in dataset_path.resolve().parents,
+        or (root / "data/fixtures").resolve() in dataset_path.resolve().parents
+        or bool(config.environment.get("service", {}).get("synthetic", False)),
         "notes": "Worker hardware/model revision must be supplied; Controller metadata is automatic.",
     }
     write_json(output / "manifest.json", manifest)
