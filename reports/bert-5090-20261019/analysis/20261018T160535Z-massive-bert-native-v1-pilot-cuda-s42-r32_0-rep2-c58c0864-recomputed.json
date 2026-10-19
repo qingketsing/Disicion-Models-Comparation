@@ -1,0 +1,3786 @@
+{
+  "summary": {
+    "mode": "load",
+    "offered_requests": 3840,
+    "attempted_requests": 3840,
+    "successful_requests": 3840,
+    "status_counts": {
+      "ok": 3840
+    },
+    "elapsed_s_including_drain": 120.05265490012243,
+    "slo_ms": 500,
+    "success_rate": 1.0,
+    "completed_throughput_qps": 31.985964851795075,
+    "goodput_qps": 31.985964851795075,
+    "correct_goodput_qps": 28.962291611898824,
+    "slo_valid_requests": 3840,
+    "latency_attempted": {
+      "p50_ms": 68.89370002318174,
+      "p95_ms": 101.51677018729971,
+      "p99_ms": 107.32508712681012
+    },
+    "latency_successful": {
+      "p50_ms": 68.89370002318174,
+      "p95_ms": 101.51677018729971,
+      "p99_ms": 107.32508712681012
+    },
+    "scheduler_lag": {
+      "p50_ms": 0.0,
+      "p95_ms": 5.683205183595426,
+      "p99_ms": 11.398787086363885,
+      "max_ms": 16.171600203961134
+    },
+    "client_measurement_valid": true,
+    "slo_capacity_candidate": true,
+    "quality": {
+      "accuracy": 0.90546875,
+      "accuracy_successful_only": 0.90546875,
+      "macro_f1": 0.8278691302933728,
+      "macro_f1_supported_classes": 0.8419008104678368,
+      "macro_f1_scope": "all frozen catalog labels; zero division = 0",
+      "reject_rate": 0.0,
+      "per_class": {
+        "alarm_query": {
+          "support": 43,
+          "precision": 0.9772727272727273,
+          "recall": 1.0,
+          "f1": 0.9885057471264368
+        },
+        "alarm_remove": {
+          "support": 34,
+          "precision": 0.9714285714285714,
+          "recall": 1.0,
+          "f1": 0.9855072463768116
+        },
+        "alarm_set": {
+          "support": 62,
+          "precision": 0.953125,
+          "recall": 0.9838709677419355,
+          "f1": 0.9682539682539683
+        },
+        "audio_volume_down": {
+          "support": 21,
+          "precision": 0.9130434782608695,
+          "recall": 1.0,
+          "f1": 0.9545454545454546
+        },
+        "audio_volume_mute": {
+          "support": 43,
+          "precision": 0.8297872340425532,
+          "recall": 0.9069767441860465,
+          "f1": 0.8666666666666667
+        },
+        "audio_volume_other": {
+          "support": 7,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "audio_volume_up": {
+          "support": 10,
+          "precision": 0.5882352941176471,
+          "recall": 1.0,
+          "f1": 0.7407407407407407
+        },
+        "calendar_query": {
+          "support": 153,
+          "precision": 0.821656050955414,
+          "recall": 0.8431372549019608,
+          "f1": 0.832258064516129
+        },
+        "calendar_remove": {
+          "support": 93,
+          "precision": 0.8942307692307693,
+          "recall": 1.0,
+          "f1": 0.9441624365482234
+        },
+        "calendar_set": {
+          "support": 272,
+          "precision": 0.9664179104477612,
+          "recall": 0.9522058823529411,
+          "f1": 0.9592592592592593
+        },
+        "cooking_query": {
+          "support": 0,
+          "precision": 0,
+          "recall": 0,
+          "f1": 0
+        },
+        "cooking_recipe": {
+          "support": 87,
+          "precision": 0.9239130434782609,
+          "recall": 0.9770114942528736,
+          "f1": 0.9497206703910615
+        },
+        "datetime_convert": {
+          "support": 17,
+          "precision": 1.0,
+          "recall": 0.6470588235294118,
+          "f1": 0.7857142857142857
+        },
+        "datetime_query": {
+          "support": 118,
+          "precision": 0.9435483870967742,
+          "recall": 0.9915254237288136,
+          "f1": 0.9669421487603306
+        },
+        "email_addcontact": {
+          "support": 26,
+          "precision": 0.75,
+          "recall": 0.8076923076923077,
+          "f1": 0.7777777777777778
+        },
+        "email_query": {
+          "support": 162,
+          "precision": 0.9565217391304348,
+          "recall": 0.9506172839506173,
+          "f1": 0.9535603715170279
+        },
+        "email_querycontact": {
+          "support": 32,
+          "precision": 0.7894736842105263,
+          "recall": 0.9375,
+          "f1": 0.8571428571428571
+        },
+        "email_sendemail": {
+          "support": 156,
+          "precision": 0.948051948051948,
+          "recall": 0.9358974358974359,
+          "f1": 0.9419354838709677
+        },
+        "general_greet": {
+          "support": 1,
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5
+        },
+        "general_joke": {
+          "support": 33,
+          "precision": 1.0,
+          "recall": 0.9090909090909091,
+          "f1": 0.9523809523809523
+        },
+        "general_quirky": {
+          "support": 209,
+          "precision": 0.7857142857142857,
+          "recall": 0.6842105263157895,
+          "f1": 0.731457800511509
+        },
+        "iot_cleaning": {
+          "support": 34,
+          "precision": 0.9375,
+          "recall": 0.8823529411764706,
+          "f1": 0.9090909090909091
+        },
+        "iot_coffee": {
+          "support": 43,
+          "precision": 0.9772727272727273,
+          "recall": 1.0,
+          "f1": 0.9885057471264368
+        },
+        "iot_hue_lightchange": {
+          "support": 43,
+          "precision": 0.8571428571428571,
+          "recall": 0.9767441860465116,
+          "f1": 0.9130434782608695
+        },
+        "iot_hue_lightdim": {
+          "support": 40,
+          "precision": 0.9743589743589743,
+          "recall": 0.95,
+          "f1": 0.9620253164556962
+        },
+        "iot_hue_lightoff": {
+          "support": 61,
+          "precision": 0.9230769230769231,
+          "recall": 0.9836065573770492,
+          "f1": 0.9523809523809523
+        },
+        "iot_hue_lighton": {
+          "support": 3,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "iot_hue_lightup": {
+          "support": 29,
+          "precision": 0.9629629629629629,
+          "recall": 0.896551724137931,
+          "f1": 0.9285714285714286
+        },
+        "iot_wemo_off": {
+          "support": 23,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "iot_wemo_on": {
+          "support": 14,
+          "precision": 1.0,
+          "recall": 0.9285714285714286,
+          "f1": 0.9629629629629629
+        },
+        "lists_createoradd": {
+          "support": 48,
+          "precision": 0.9545454545454546,
+          "recall": 0.875,
+          "f1": 0.9130434782608695
+        },
+        "lists_query": {
+          "support": 63,
+          "precision": 0.859375,
+          "recall": 0.873015873015873,
+          "f1": 0.8661417322834646
+        },
+        "lists_remove": {
+          "support": 66,
+          "precision": 0.9836065573770492,
+          "recall": 0.9090909090909091,
+          "f1": 0.9448818897637795
+        },
+        "music_dislikeness": {
+          "support": 4,
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "music_likeness": {
+          "support": 46,
+          "precision": 0.8,
+          "recall": 0.782608695652174,
+          "f1": 0.7912087912087912
+        },
+        "music_query": {
+          "support": 40,
+          "precision": 0.918918918918919,
+          "recall": 0.85,
+          "f1": 0.8831168831168831
+        },
+        "music_settings": {
+          "support": 11,
+          "precision": 0.75,
+          "recall": 0.2727272727272727,
+          "f1": 0.4
+        },
+        "news_query": {
+          "support": 176,
+          "precision": 0.8743169398907104,
+          "recall": 0.9090909090909091,
+          "f1": 0.8913649025069638
+        },
+        "play_audiobook": {
+          "support": 57,
+          "precision": 0.9148936170212766,
+          "recall": 0.7543859649122807,
+          "f1": 0.8269230769230769
+        },
+        "play_game": {
+          "support": 46,
+          "precision": 1.0,
+          "recall": 0.8695652173913043,
+          "f1": 0.9302325581395349
+        },
+        "play_music": {
+          "support": 208,
+          "precision": 0.8761061946902655,
+          "recall": 0.9519230769230769,
+          "f1": 0.9124423963133641
+        },
+        "play_podcasts": {
+          "support": 70,
+          "precision": 0.9710144927536232,
+          "recall": 0.9571428571428572,
+          "f1": 0.9640287769784173
+        },
+        "play_radio": {
+          "support": 90,
+          "precision": 0.8936170212765957,
+          "recall": 0.9333333333333333,
+          "f1": 0.9130434782608695
+        },
+        "qa_currency": {
+          "support": 57,
+          "precision": 1.0,
+          "recall": 0.9649122807017544,
+          "f1": 0.9821428571428571
+        },
+        "qa_definition": {
+          "support": 69,
+          "precision": 0.9154929577464789,
+          "recall": 0.9420289855072463,
+          "f1": 0.9285714285714286
+        },
+        "qa_factoid": {
+          "support": 149,
+          "precision": 0.8121212121212121,
+          "recall": 0.8993288590604027,
+          "f1": 0.8535031847133758
+        },
+        "qa_maths": {
+          "support": 31,
+          "precision": 0.96,
+          "recall": 0.7741935483870968,
+          "f1": 0.8571428571428571
+        },
+        "qa_stock": {
+          "support": 31,
+          "precision": 0.8823529411764706,
+          "recall": 0.967741935483871,
+          "f1": 0.9230769230769231
+        },
+        "recommendation_events": {
+          "support": 63,
+          "precision": 0.7833333333333333,
+          "recall": 0.746031746031746,
+          "f1": 0.7642276422764228
+        },
+        "recommendation_locations": {
+          "support": 46,
+          "precision": 0.8846153846153846,
+          "recall": 1.0,
+          "f1": 0.9387755102040817
+        },
+        "recommendation_movies": {
+          "support": 31,
+          "precision": 0.90625,
+          "recall": 0.9354838709677419,
+          "f1": 0.9206349206349206
+        },
+        "social_post": {
+          "support": 90,
+          "precision": 0.9444444444444444,
+          "recall": 0.9444444444444444,
+          "f1": 0.9444444444444444
+        },
+        "social_query": {
+          "support": 37,
+          "precision": 0.8709677419354839,
+          "recall": 0.7297297297297297,
+          "f1": 0.7941176470588235
+        },
+        "takeaway_order": {
+          "support": 19,
+          "precision": 0.8095238095238095,
+          "recall": 0.8947368421052632,
+          "f1": 0.85
+        },
+        "takeaway_query": {
+          "support": 46,
+          "precision": 0.9487179487179487,
+          "recall": 0.8043478260869565,
+          "f1": 0.8705882352941177
+        },
+        "transport_query": {
+          "support": 60,
+          "precision": 0.9019607843137255,
+          "recall": 0.7666666666666667,
+          "f1": 0.8288288288288288
+        },
+        "transport_taxi": {
+          "support": 33,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "transport_ticket": {
+          "support": 52,
+          "precision": 1.0,
+          "recall": 0.9423076923076923,
+          "f1": 0.9702970297029703
+        },
+        "transport_traffic": {
+          "support": 14,
+          "precision": 0.6086956521739131,
+          "recall": 1.0,
+          "f1": 0.7567567567567568
+        },
+        "weather_query": {
+          "support": 218,
+          "precision": 0.9728506787330317,
+          "recall": 0.9862385321100917,
+          "f1": 0.979498861047836
+        }
+      },
+      "confusion": [
+        {
+          "expected": "alarm_query",
+          "predicted": "alarm_query",
+          "count": 43
+        },
+        {
+          "expected": "alarm_remove",
+          "predicted": "alarm_remove",
+          "count": 34
+        },
+        {
+          "expected": "alarm_set",
+          "predicted": "alarm_set",
+          "count": 61
+        },
+        {
+          "expected": "alarm_set",
+          "predicted": "calendar_set",
+          "count": 1
+        },
+        {
+          "expected": "audio_volume_down",
+          "predicted": "audio_volume_down",
+          "count": 21
+        },
+        {
+          "expected": "audio_volume_mute",
+          "predicted": "alarm_remove",
+          "count": 1
+        },
+        {
+          "expected": "audio_volume_mute",
+          "predicted": "audio_volume_mute",
+          "count": 39
+        },
+        {
+          "expected": "audio_volume_mute",
+          "predicted": "calendar_remove",
+          "count": 1
+        },
+        {
+          "expected": "audio_volume_mute",
+          "predicted": "iot_cleaning",
+          "count": 2
+        },
+        {
+          "expected": "audio_volume_other",
+          "predicted": "audio_volume_down",
+          "count": 2
+        },
+        {
+          "expected": "audio_volume_other",
+          "predicted": "audio_volume_up",
+          "count": 3
+        },
+        {
+          "expected": "audio_volume_other",
+          "predicted": "music_query",
+          "count": 2
+        },
+        {
+          "expected": "audio_volume_up",
+          "predicted": "audio_volume_up",
+          "count": 10
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "calendar_query",
+          "count": 129
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "calendar_remove",
+          "count": 1
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "calendar_set",
+          "count": 7
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "datetime_query",
+          "count": 3
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "lists_query",
+          "count": 1
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "news_query",
+          "count": 1
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "play_radio",
+          "count": 4
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "recommendation_events",
+          "count": 3
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "transport_traffic",
+          "count": 4
+        },
+        {
+          "expected": "calendar_remove",
+          "predicted": "calendar_remove",
+          "count": 93
+        },
+        {
+          "expected": "calendar_set",
+          "predicted": "alarm_set",
+          "count": 2
+        },
+        {
+          "expected": "calendar_set",
+          "predicted": "calendar_query",
+          "count": 4
+        },
+        {
+          "expected": "calendar_set",
+          "predicted": "calendar_remove",
+          "count": 3
+        },
+        {
+          "expected": "calendar_set",
+          "predicted": "calendar_set",
+          "count": 259
+        },
+        {
+          "expected": "calendar_set",
+          "predicted": "general_quirky",
+          "count": 1
+        },
+        {
+          "expected": "calendar_set",
+          "predicted": "news_query",
+          "count": 2
+        },
+        {
+          "expected": "calendar_set",
+          "predicted": "weather_query",
+          "count": 1
+        },
+        {
+          "expected": "cooking_recipe",
+          "predicted": "cooking_recipe",
+          "count": 85
+        },
+        {
+          "expected": "cooking_recipe",
+          "predicted": "general_quirky",
+          "count": 1
+        },
+        {
+          "expected": "cooking_recipe",
+          "predicted": "takeaway_order",
+          "count": 1
+        },
+        {
+          "expected": "datetime_convert",
+          "predicted": "datetime_convert",
+          "count": 11
+        },
+        {
+          "expected": "datetime_convert",
+          "predicted": "datetime_query",
+          "count": 3
+        },
+        {
+          "expected": "datetime_convert",
+          "predicted": "qa_maths",
+          "count": 1
+        },
+        {
+          "expected": "datetime_convert",
+          "predicted": "transport_query",
+          "count": 2
+        },
+        {
+          "expected": "datetime_query",
+          "predicted": "calendar_query",
+          "count": 1
+        },
+        {
+          "expected": "datetime_query",
+          "predicted": "datetime_query",
+          "count": 117
+        },
+        {
+          "expected": "email_addcontact",
+          "predicted": "email_addcontact",
+          "count": 21
+        },
+        {
+          "expected": "email_addcontact",
+          "predicted": "email_query",
+          "count": 2
+        },
+        {
+          "expected": "email_addcontact",
+          "predicted": "email_querycontact",
+          "count": 2
+        },
+        {
+          "expected": "email_addcontact",
+          "predicted": "email_sendemail",
+          "count": 1
+        },
+        {
+          "expected": "email_query",
+          "predicted": "email_query",
+          "count": 154
+        },
+        {
+          "expected": "email_query",
+          "predicted": "email_sendemail",
+          "count": 4
+        },
+        {
+          "expected": "email_query",
+          "predicted": "general_quirky",
+          "count": 1
+        },
+        {
+          "expected": "email_query",
+          "predicted": "news_query",
+          "count": 1
+        },
+        {
+          "expected": "email_query",
+          "predicted": "weather_query",
+          "count": 2
+        },
+        {
+          "expected": "email_querycontact",
+          "predicted": "calendar_set",
+          "count": 1
+        },
+        {
+          "expected": "email_querycontact",
+          "predicted": "email_querycontact",
+          "count": 30
+        },
+        {
+          "expected": "email_querycontact",
+          "predicted": "qa_factoid",
+          "count": 1
+        },
+        {
+          "expected": "email_sendemail",
+          "predicted": "email_addcontact",
+          "count": 6
+        },
+        {
+          "expected": "email_sendemail",
+          "predicted": "email_sendemail",
+          "count": 146
+        },
+        {
+          "expected": "email_sendemail",
+          "predicted": "general_quirky",
+          "count": 2
+        },
+        {
+          "expected": "email_sendemail",
+          "predicted": "news_query",
+          "count": 2
+        },
+        {
+          "expected": "general_greet",
+          "predicted": "general_greet",
+          "count": 1
+        },
+        {
+          "expected": "general_joke",
+          "predicted": "alarm_set",
+          "count": 1
+        },
+        {
+          "expected": "general_joke",
+          "predicted": "general_joke",
+          "count": 30
+        },
+        {
+          "expected": "general_joke",
+          "predicted": "general_quirky",
+          "count": 2
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "calendar_query",
+          "count": 13
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "calendar_remove",
+          "count": 2
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "cooking_recipe",
+          "count": 1
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "general_greet",
+          "count": 2
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "general_quirky",
+          "count": 143
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "iot_coffee",
+          "count": 1
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "iot_hue_lightchange",
+          "count": 1
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "lists_query",
+          "count": 3
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "music_query",
+          "count": 1
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "news_query",
+          "count": 7
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "play_music",
+          "count": 3
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "play_podcasts",
+          "count": 1
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "qa_definition",
+          "count": 1
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "qa_factoid",
+          "count": 17
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "recommendation_events",
+          "count": 7
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "social_query",
+          "count": 4
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "transport_traffic",
+          "count": 1
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "weather_query",
+          "count": 1
+        },
+        {
+          "expected": "iot_cleaning",
+          "predicted": "alarm_query",
+          "count": 1
+        },
+        {
+          "expected": "iot_cleaning",
+          "predicted": "audio_volume_up",
+          "count": 3
+        },
+        {
+          "expected": "iot_cleaning",
+          "predicted": "iot_cleaning",
+          "count": 30
+        },
+        {
+          "expected": "iot_coffee",
+          "predicted": "iot_coffee",
+          "count": 43
+        },
+        {
+          "expected": "iot_hue_lightchange",
+          "predicted": "general_quirky",
+          "count": 1
+        },
+        {
+          "expected": "iot_hue_lightchange",
+          "predicted": "iot_hue_lightchange",
+          "count": 42
+        },
+        {
+          "expected": "iot_hue_lightdim",
+          "predicted": "iot_hue_lightchange",
+          "count": 2
+        },
+        {
+          "expected": "iot_hue_lightdim",
+          "predicted": "iot_hue_lightdim",
+          "count": 38
+        },
+        {
+          "expected": "iot_hue_lightoff",
+          "predicted": "general_quirky",
+          "count": 1
+        },
+        {
+          "expected": "iot_hue_lightoff",
+          "predicted": "iot_hue_lightoff",
+          "count": 60
+        },
+        {
+          "expected": "iot_hue_lighton",
+          "predicted": "iot_hue_lightchange",
+          "count": 2
+        },
+        {
+          "expected": "iot_hue_lighton",
+          "predicted": "iot_hue_lightup",
+          "count": 1
+        },
+        {
+          "expected": "iot_hue_lightup",
+          "predicted": "iot_hue_lightchange",
+          "count": 2
+        },
+        {
+          "expected": "iot_hue_lightup",
+          "predicted": "iot_hue_lightdim",
+          "count": 1
+        },
+        {
+          "expected": "iot_hue_lightup",
+          "predicted": "iot_hue_lightup",
+          "count": 26
+        },
+        {
+          "expected": "iot_wemo_off",
+          "predicted": "iot_wemo_off",
+          "count": 23
+        },
+        {
+          "expected": "iot_wemo_on",
+          "predicted": "iot_wemo_on",
+          "count": 13
+        },
+        {
+          "expected": "iot_wemo_on",
+          "predicted": "play_radio",
+          "count": 1
+        },
+        {
+          "expected": "lists_createoradd",
+          "predicted": "email_addcontact",
+          "count": 1
+        },
+        {
+          "expected": "lists_createoradd",
+          "predicted": "lists_createoradd",
+          "count": 42
+        },
+        {
+          "expected": "lists_createoradd",
+          "predicted": "lists_query",
+          "count": 4
+        },
+        {
+          "expected": "lists_createoradd",
+          "predicted": "play_music",
+          "count": 1
+        },
+        {
+          "expected": "lists_query",
+          "predicted": "email_querycontact",
+          "count": 3
+        },
+        {
+          "expected": "lists_query",
+          "predicted": "general_quirky",
+          "count": 1
+        },
+        {
+          "expected": "lists_query",
+          "predicted": "lists_query",
+          "count": 55
+        },
+        {
+          "expected": "lists_query",
+          "predicted": "news_query",
+          "count": 2
+        },
+        {
+          "expected": "lists_query",
+          "predicted": "takeaway_query",
+          "count": 2
+        },
+        {
+          "expected": "lists_remove",
+          "predicted": "calendar_remove",
+          "count": 4
+        },
+        {
+          "expected": "lists_remove",
+          "predicted": "iot_hue_lightoff",
+          "count": 2
+        },
+        {
+          "expected": "lists_remove",
+          "predicted": "lists_remove",
+          "count": 60
+        },
+        {
+          "expected": "music_dislikeness",
+          "predicted": "audio_volume_mute",
+          "count": 1
+        },
+        {
+          "expected": "music_dislikeness",
+          "predicted": "music_likeness",
+          "count": 3
+        },
+        {
+          "expected": "music_likeness",
+          "predicted": "lists_createoradd",
+          "count": 2
+        },
+        {
+          "expected": "music_likeness",
+          "predicted": "music_likeness",
+          "count": 36
+        },
+        {
+          "expected": "music_likeness",
+          "predicted": "news_query",
+          "count": 2
+        },
+        {
+          "expected": "music_likeness",
+          "predicted": "play_music",
+          "count": 4
+        },
+        {
+          "expected": "music_likeness",
+          "predicted": "recommendation_events",
+          "count": 2
+        },
+        {
+          "expected": "music_query",
+          "predicted": "music_likeness",
+          "count": 1
+        },
+        {
+          "expected": "music_query",
+          "predicted": "music_query",
+          "count": 34
+        },
+        {
+          "expected": "music_query",
+          "predicted": "play_audiobook",
+          "count": 2
+        },
+        {
+          "expected": "music_query",
+          "predicted": "play_radio",
+          "count": 3
+        },
+        {
+          "expected": "music_settings",
+          "predicted": "music_settings",
+          "count": 3
+        },
+        {
+          "expected": "music_settings",
+          "predicted": "play_music",
+          "count": 6
+        },
+        {
+          "expected": "music_settings",
+          "predicted": "social_post",
+          "count": 2
+        },
+        {
+          "expected": "news_query",
+          "predicted": "general_quirky",
+          "count": 4
+        },
+        {
+          "expected": "news_query",
+          "predicted": "news_query",
+          "count": 160
+        },
+        {
+          "expected": "news_query",
+          "predicted": "qa_factoid",
+          "count": 4
+        },
+        {
+          "expected": "news_query",
+          "predicted": "qa_stock",
+          "count": 4
+        },
+        {
+          "expected": "news_query",
+          "predicted": "recommendation_events",
+          "count": 1
+        },
+        {
+          "expected": "news_query",
+          "predicted": "social_post",
+          "count": 3
+        },
+        {
+          "expected": "play_audiobook",
+          "predicted": "audio_volume_mute",
+          "count": 7
+        },
+        {
+          "expected": "play_audiobook",
+          "predicted": "general_quirky",
+          "count": 1
+        },
+        {
+          "expected": "play_audiobook",
+          "predicted": "play_audiobook",
+          "count": 43
+        },
+        {
+          "expected": "play_audiobook",
+          "predicted": "play_music",
+          "count": 5
+        },
+        {
+          "expected": "play_audiobook",
+          "predicted": "play_podcasts",
+          "count": 1
+        },
+        {
+          "expected": "play_game",
+          "predicted": "play_audiobook",
+          "count": 2
+        },
+        {
+          "expected": "play_game",
+          "predicted": "play_game",
+          "count": 40
+        },
+        {
+          "expected": "play_game",
+          "predicted": "play_music",
+          "count": 4
+        },
+        {
+          "expected": "play_music",
+          "predicted": "audio_volume_up",
+          "count": 1
+        },
+        {
+          "expected": "play_music",
+          "predicted": "general_quirky",
+          "count": 2
+        },
+        {
+          "expected": "play_music",
+          "predicted": "music_likeness",
+          "count": 5
+        },
+        {
+          "expected": "play_music",
+          "predicted": "music_settings",
+          "count": 1
+        },
+        {
+          "expected": "play_music",
+          "predicted": "play_music",
+          "count": 198
+        },
+        {
+          "expected": "play_music",
+          "predicted": "play_radio",
+          "count": 1
+        },
+        {
+          "expected": "play_podcasts",
+          "predicted": "play_music",
+          "count": 2
+        },
+        {
+          "expected": "play_podcasts",
+          "predicted": "play_podcasts",
+          "count": 67
+        },
+        {
+          "expected": "play_podcasts",
+          "predicted": "play_radio",
+          "count": 1
+        },
+        {
+          "expected": "play_radio",
+          "predicted": "iot_hue_lightoff",
+          "count": 3
+        },
+        {
+          "expected": "play_radio",
+          "predicted": "play_music",
+          "count": 3
+        },
+        {
+          "expected": "play_radio",
+          "predicted": "play_radio",
+          "count": 84
+        },
+        {
+          "expected": "qa_currency",
+          "predicted": "qa_currency",
+          "count": 55
+        },
+        {
+          "expected": "qa_currency",
+          "predicted": "qa_factoid",
+          "count": 2
+        },
+        {
+          "expected": "qa_definition",
+          "predicted": "general_quirky",
+          "count": 4
+        },
+        {
+          "expected": "qa_definition",
+          "predicted": "qa_definition",
+          "count": 65
+        },
+        {
+          "expected": "qa_factoid",
+          "predicted": "calendar_query",
+          "count": 2
+        },
+        {
+          "expected": "qa_factoid",
+          "predicted": "datetime_query",
+          "count": 1
+        },
+        {
+          "expected": "qa_factoid",
+          "predicted": "email_querycontact",
+          "count": 1
+        },
+        {
+          "expected": "qa_factoid",
+          "predicted": "general_quirky",
+          "count": 7
+        },
+        {
+          "expected": "qa_factoid",
+          "predicted": "qa_definition",
+          "count": 2
+        },
+        {
+          "expected": "qa_factoid",
+          "predicted": "qa_factoid",
+          "count": 134
+        },
+        {
+          "expected": "qa_factoid",
+          "predicted": "weather_query",
+          "count": 2
+        },
+        {
+          "expected": "qa_maths",
+          "predicted": "general_quirky",
+          "count": 4
+        },
+        {
+          "expected": "qa_maths",
+          "predicted": "qa_definition",
+          "count": 3
+        },
+        {
+          "expected": "qa_maths",
+          "predicted": "qa_maths",
+          "count": 24
+        },
+        {
+          "expected": "qa_stock",
+          "predicted": "news_query",
+          "count": 1
+        },
+        {
+          "expected": "qa_stock",
+          "predicted": "qa_stock",
+          "count": 30
+        },
+        {
+          "expected": "recommendation_events",
+          "predicted": "calendar_query",
+          "count": 7
+        },
+        {
+          "expected": "recommendation_events",
+          "predicted": "general_quirky",
+          "count": 2
+        },
+        {
+          "expected": "recommendation_events",
+          "predicted": "recommendation_events",
+          "count": 47
+        },
+        {
+          "expected": "recommendation_events",
+          "predicted": "recommendation_locations",
+          "count": 4
+        },
+        {
+          "expected": "recommendation_events",
+          "predicted": "recommendation_movies",
+          "count": 3
+        },
+        {
+          "expected": "recommendation_locations",
+          "predicted": "recommendation_locations",
+          "count": 46
+        },
+        {
+          "expected": "recommendation_movies",
+          "predicted": "email_querycontact",
+          "count": 2
+        },
+        {
+          "expected": "recommendation_movies",
+          "predicted": "recommendation_movies",
+          "count": 29
+        },
+        {
+          "expected": "social_post",
+          "predicted": "email_sendemail",
+          "count": 3
+        },
+        {
+          "expected": "social_post",
+          "predicted": "general_quirky",
+          "count": 2
+        },
+        {
+          "expected": "social_post",
+          "predicted": "social_post",
+          "count": 85
+        },
+        {
+          "expected": "social_query",
+          "predicted": "calendar_query",
+          "count": 1
+        },
+        {
+          "expected": "social_query",
+          "predicted": "email_query",
+          "count": 5
+        },
+        {
+          "expected": "social_query",
+          "predicted": "news_query",
+          "count": 4
+        },
+        {
+          "expected": "social_query",
+          "predicted": "social_query",
+          "count": 27
+        },
+        {
+          "expected": "takeaway_order",
+          "predicted": "lists_query",
+          "count": 1
+        },
+        {
+          "expected": "takeaway_order",
+          "predicted": "lists_remove",
+          "count": 1
+        },
+        {
+          "expected": "takeaway_order",
+          "predicted": "takeaway_order",
+          "count": 17
+        },
+        {
+          "expected": "takeaway_query",
+          "predicted": "cooking_recipe",
+          "count": 6
+        },
+        {
+          "expected": "takeaway_query",
+          "predicted": "takeaway_order",
+          "count": 3
+        },
+        {
+          "expected": "takeaway_query",
+          "predicted": "takeaway_query",
+          "count": 37
+        },
+        {
+          "expected": "transport_query",
+          "predicted": "general_quirky",
+          "count": 1
+        },
+        {
+          "expected": "transport_query",
+          "predicted": "qa_factoid",
+          "count": 7
+        },
+        {
+          "expected": "transport_query",
+          "predicted": "recommendation_locations",
+          "count": 2
+        },
+        {
+          "expected": "transport_query",
+          "predicted": "transport_query",
+          "count": 46
+        },
+        {
+          "expected": "transport_query",
+          "predicted": "transport_traffic",
+          "count": 4
+        },
+        {
+          "expected": "transport_taxi",
+          "predicted": "transport_taxi",
+          "count": 33
+        },
+        {
+          "expected": "transport_ticket",
+          "predicted": "transport_query",
+          "count": 3
+        },
+        {
+          "expected": "transport_ticket",
+          "predicted": "transport_ticket",
+          "count": 49
+        },
+        {
+          "expected": "transport_traffic",
+          "predicted": "transport_traffic",
+          "count": 14
+        },
+        {
+          "expected": "weather_query",
+          "predicted": "general_quirky",
+          "count": 2
+        },
+        {
+          "expected": "weather_query",
+          "predicted": "news_query",
+          "count": 1
+        },
+        {
+          "expected": "weather_query",
+          "predicted": "weather_query",
+          "count": 215
+        }
+      ]
+    },
+    "offered_rps": 32.0,
+    "arrival_window_s": 120,
+    "observed_offered_rps": 32.0,
+    "quality_note": "Quality under load; use a separate quality run for semantic baseline.",
+    "cost": {
+      "configured": false
+    }
+  },
+  "windows": [
+    {
+      "mode": "load",
+      "offered_requests": 1920,
+      "attempted_requests": 1920,
+      "successful_requests": 1920,
+      "status_counts": {
+        "ok": 1920
+      },
+      "elapsed_s_including_drain": 60.08286379999481,
+      "slo_ms": 500,
+      "success_rate": 1.0,
+      "completed_throughput_qps": 31.955866923909273,
+      "goodput_qps": 31.955866923909273,
+      "correct_goodput_qps": 28.96000439979278,
+      "slo_valid_requests": 1920,
+      "latency_attempted": {
+        "p50_ms": 69.88525006454438,
+        "p95_ms": 101.74802500987425,
+        "p99_ms": 107.97787203220649
+      },
+      "latency_successful": {
+        "p50_ms": 69.88525006454438,
+        "p95_ms": 101.74802500987425,
+        "p99_ms": 107.97787203220649
+      },
+      "scheduler_lag": {
+        "p50_ms": 0.0,
+        "p95_ms": 5.623475194443016,
+        "p99_ms": 12.003273111768054,
+        "max_ms": 14.94210003875196
+      },
+      "client_measurement_valid": true,
+      "slo_capacity_candidate": true,
+      "quality": {
+        "accuracy": 0.90625,
+        "accuracy_successful_only": 0.90625,
+        "macro_f1": 0.820388202792548,
+        "macro_f1_supported_classes": 0.8486774511647048,
+        "macro_f1_scope": "all frozen catalog labels; zero division = 0",
+        "reject_rate": 0.0,
+        "per_class": {
+          "alarm_query": {
+            "support": 24,
+            "precision": 0.96,
+            "recall": 1.0,
+            "f1": 0.9795918367346939
+          },
+          "alarm_remove": {
+            "support": 18,
+            "precision": 0.9473684210526315,
+            "recall": 1.0,
+            "f1": 0.972972972972973
+          },
+          "alarm_set": {
+            "support": 36,
+            "precision": 0.9722222222222222,
+            "recall": 0.9722222222222222,
+            "f1": 0.9722222222222222
+          },
+          "audio_volume_down": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "audio_volume_mute": {
+            "support": 17,
+            "precision": 0.9333333333333333,
+            "recall": 0.8235294117647058,
+            "f1": 0.875
+          },
+          "audio_volume_other": {
+            "support": 4,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "audio_volume_up": {
+            "support": 6,
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.75
+          },
+          "calendar_query": {
+            "support": 76,
+            "precision": 0.84,
+            "recall": 0.8289473684210527,
+            "f1": 0.8344370860927153
+          },
+          "calendar_remove": {
+            "support": 43,
+            "precision": 0.8958333333333334,
+            "recall": 1.0,
+            "f1": 0.945054945054945
+          },
+          "calendar_set": {
+            "support": 140,
+            "precision": 0.9574468085106383,
+            "recall": 0.9642857142857143,
+            "f1": 0.9608540925266904
+          },
+          "cooking_query": {
+            "support": 0,
+            "precision": 0,
+            "recall": 0,
+            "f1": 0
+          },
+          "cooking_recipe": {
+            "support": 45,
+            "precision": 0.9772727272727273,
+            "recall": 0.9555555555555556,
+            "f1": 0.9662921348314607
+          },
+          "datetime_convert": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "datetime_query": {
+            "support": 58,
+            "precision": 0.9206349206349206,
+            "recall": 1.0,
+            "f1": 0.9586776859504132
+          },
+          "email_addcontact": {
+            "support": 7,
+            "precision": 0.6363636363636364,
+            "recall": 1.0,
+            "f1": 0.7777777777777778
+          },
+          "email_query": {
+            "support": 87,
+            "precision": 0.9878048780487805,
+            "recall": 0.9310344827586207,
+            "f1": 0.9585798816568047
+          },
+          "email_querycontact": {
+            "support": 16,
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1": 0.9411764705882353
+          },
+          "email_sendemail": {
+            "support": 79,
+            "precision": 0.9615384615384616,
+            "recall": 0.9493670886075949,
+            "f1": 0.9554140127388535
+          },
+          "general_greet": {
+            "support": 0,
+            "precision": 0,
+            "recall": 0,
+            "f1": 0
+          },
+          "general_joke": {
+            "support": 19,
+            "precision": 1.0,
+            "recall": 0.8947368421052632,
+            "f1": 0.9444444444444444
+          },
+          "general_quirky": {
+            "support": 96,
+            "precision": 0.8048780487804879,
+            "recall": 0.6875,
+            "f1": 0.7415730337078652
+          },
+          "iot_cleaning": {
+            "support": 18,
+            "precision": 0.9411764705882353,
+            "recall": 0.8888888888888888,
+            "f1": 0.9142857142857143
+          },
+          "iot_coffee": {
+            "support": 20,
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "f1": 0.975609756097561
+          },
+          "iot_hue_lightchange": {
+            "support": 22,
+            "precision": 0.8148148148148148,
+            "recall": 1.0,
+            "f1": 0.8979591836734694
+          },
+          "iot_hue_lightdim": {
+            "support": 20,
+            "precision": 0.9473684210526315,
+            "recall": 0.9,
+            "f1": 0.9230769230769231
+          },
+          "iot_hue_lightoff": {
+            "support": 29,
+            "precision": 0.9333333333333333,
+            "recall": 0.9655172413793104,
+            "f1": 0.9491525423728814
+          },
+          "iot_hue_lighton": {
+            "support": 2,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "iot_hue_lightup": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8888888888888888
+          },
+          "iot_wemo_off": {
+            "support": 15,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "iot_wemo_on": {
+            "support": 5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "lists_createoradd": {
+            "support": 25,
+            "precision": 1.0,
+            "recall": 0.84,
+            "f1": 0.9130434782608695
+          },
+          "lists_query": {
+            "support": 32,
+            "precision": 0.8571428571428571,
+            "recall": 0.9375,
+            "f1": 0.8955223880597015
+          },
+          "lists_remove": {
+            "support": 34,
+            "precision": 1.0,
+            "recall": 0.9117647058823529,
+            "f1": 0.9538461538461539
+          },
+          "music_dislikeness": {
+            "support": 2,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "music_likeness": {
+            "support": 25,
+            "precision": 0.75,
+            "recall": 0.72,
+            "f1": 0.7346938775510204
+          },
+          "music_query": {
+            "support": 16,
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1": 0.875
+          },
+          "music_settings": {
+            "support": 10,
+            "precision": 0.6666666666666666,
+            "recall": 0.2,
+            "f1": 0.3076923076923077
+          },
+          "news_query": {
+            "support": 77,
+            "precision": 0.8860759493670886,
+            "recall": 0.9090909090909091,
+            "f1": 0.8974358974358975
+          },
+          "play_audiobook": {
+            "support": 22,
+            "precision": 0.8571428571428571,
+            "recall": 0.8181818181818182,
+            "f1": 0.8372093023255814
+          },
+          "play_game": {
+            "support": 30,
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1": 0.9090909090909091
+          },
+          "play_music": {
+            "support": 102,
+            "precision": 0.8275862068965517,
+            "recall": 0.9411764705882353,
+            "f1": 0.8807339449541285
+          },
+          "play_podcasts": {
+            "support": 31,
+            "precision": 1.0,
+            "recall": 0.967741935483871,
+            "f1": 0.9836065573770492
+          },
+          "play_radio": {
+            "support": 44,
+            "precision": 0.9090909090909091,
+            "recall": 0.9090909090909091,
+            "f1": 0.9090909090909091
+          },
+          "qa_currency": {
+            "support": 30,
+            "precision": 1.0,
+            "recall": 0.9666666666666667,
+            "f1": 0.9830508474576272
+          },
+          "qa_definition": {
+            "support": 32,
+            "precision": 0.8333333333333334,
+            "recall": 0.9375,
+            "f1": 0.8823529411764706
+          },
+          "qa_factoid": {
+            "support": 69,
+            "precision": 0.7590361445783133,
+            "recall": 0.9130434782608695,
+            "f1": 0.8289473684210527
+          },
+          "qa_maths": {
+            "support": 15,
+            "precision": 1.0,
+            "recall": 0.7333333333333333,
+            "f1": 0.8461538461538461
+          },
+          "qa_stock": {
+            "support": 20,
+            "precision": 0.9047619047619048,
+            "recall": 0.95,
+            "f1": 0.926829268292683
+          },
+          "recommendation_events": {
+            "support": 33,
+            "precision": 0.8064516129032258,
+            "recall": 0.7575757575757576,
+            "f1": 0.78125
+          },
+          "recommendation_locations": {
+            "support": 28,
+            "precision": 0.9333333333333333,
+            "recall": 1.0,
+            "f1": 0.9655172413793104
+          },
+          "recommendation_movies": {
+            "support": 18,
+            "precision": 0.9444444444444444,
+            "recall": 0.9444444444444444,
+            "f1": 0.9444444444444444
+          },
+          "social_post": {
+            "support": 40,
+            "precision": 0.9069767441860465,
+            "recall": 0.975,
+            "f1": 0.9397590361445783
+          },
+          "social_query": {
+            "support": 17,
+            "precision": 0.8823529411764706,
+            "recall": 0.8823529411764706,
+            "f1": 0.8823529411764706
+          },
+          "takeaway_order": {
+            "support": 9,
+            "precision": 0.8888888888888888,
+            "recall": 0.8888888888888888,
+            "f1": 0.8888888888888888
+          },
+          "takeaway_query": {
+            "support": 17,
+            "precision": 1.0,
+            "recall": 0.9411764705882353,
+            "f1": 0.9696969696969697
+          },
+          "transport_query": {
+            "support": 34,
+            "precision": 0.8571428571428571,
+            "recall": 0.7058823529411765,
+            "f1": 0.7741935483870968
+          },
+          "transport_taxi": {
+            "support": 19,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "transport_ticket": {
+            "support": 35,
+            "precision": 1.0,
+            "recall": 0.9428571428571428,
+            "f1": 0.9705882352941176
+          },
+          "transport_traffic": {
+            "support": 11,
+            "precision": 0.6875,
+            "recall": 1.0,
+            "f1": 0.8148148148148148
+          },
+          "weather_query": {
+            "support": 111,
+            "precision": 0.9649122807017544,
+            "recall": 0.990990990990991,
+            "f1": 0.9777777777777777
+          }
+        },
+        "confusion": [
+          {
+            "expected": "alarm_query",
+            "predicted": "alarm_query",
+            "count": 24
+          },
+          {
+            "expected": "alarm_remove",
+            "predicted": "alarm_remove",
+            "count": 18
+          },
+          {
+            "expected": "alarm_set",
+            "predicted": "alarm_set",
+            "count": 35
+          },
+          {
+            "expected": "alarm_set",
+            "predicted": "calendar_set",
+            "count": 1
+          },
+          {
+            "expected": "audio_volume_down",
+            "predicted": "audio_volume_down",
+            "count": 10
+          },
+          {
+            "expected": "audio_volume_mute",
+            "predicted": "alarm_remove",
+            "count": 1
+          },
+          {
+            "expected": "audio_volume_mute",
+            "predicted": "audio_volume_mute",
+            "count": 14
+          },
+          {
+            "expected": "audio_volume_mute",
+            "predicted": "calendar_remove",
+            "count": 1
+          },
+          {
+            "expected": "audio_volume_mute",
+            "predicted": "iot_cleaning",
+            "count": 1
+          },
+          {
+            "expected": "audio_volume_other",
+            "predicted": "audio_volume_up",
+            "count": 3
+          },
+          {
+            "expected": "audio_volume_other",
+            "predicted": "music_query",
+            "count": 1
+          },
+          {
+            "expected": "audio_volume_up",
+            "predicted": "audio_volume_up",
+            "count": 6
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "calendar_query",
+            "count": 63
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "calendar_remove",
+            "count": 1
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "calendar_set",
+            "count": 5
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "datetime_query",
+            "count": 1
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "lists_query",
+            "count": 1
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "play_radio",
+            "count": 2
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "recommendation_events",
+            "count": 1
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "transport_traffic",
+            "count": 2
+          },
+          {
+            "expected": "calendar_remove",
+            "predicted": "calendar_remove",
+            "count": 43
+          },
+          {
+            "expected": "calendar_set",
+            "predicted": "calendar_query",
+            "count": 2
+          },
+          {
+            "expected": "calendar_set",
+            "predicted": "calendar_remove",
+            "count": 1
+          },
+          {
+            "expected": "calendar_set",
+            "predicted": "calendar_set",
+            "count": 135
+          },
+          {
+            "expected": "calendar_set",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "calendar_set",
+            "predicted": "weather_query",
+            "count": 1
+          },
+          {
+            "expected": "cooking_recipe",
+            "predicted": "cooking_recipe",
+            "count": 43
+          },
+          {
+            "expected": "cooking_recipe",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "cooking_recipe",
+            "predicted": "takeaway_order",
+            "count": 1
+          },
+          {
+            "expected": "datetime_convert",
+            "predicted": "datetime_convert",
+            "count": 5
+          },
+          {
+            "expected": "datetime_convert",
+            "predicted": "datetime_query",
+            "count": 3
+          },
+          {
+            "expected": "datetime_convert",
+            "predicted": "transport_query",
+            "count": 2
+          },
+          {
+            "expected": "datetime_query",
+            "predicted": "datetime_query",
+            "count": 58
+          },
+          {
+            "expected": "email_addcontact",
+            "predicted": "email_addcontact",
+            "count": 7
+          },
+          {
+            "expected": "email_query",
+            "predicted": "email_query",
+            "count": 81
+          },
+          {
+            "expected": "email_query",
+            "predicted": "email_sendemail",
+            "count": 2
+          },
+          {
+            "expected": "email_query",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "email_query",
+            "predicted": "news_query",
+            "count": 1
+          },
+          {
+            "expected": "email_query",
+            "predicted": "weather_query",
+            "count": 2
+          },
+          {
+            "expected": "email_querycontact",
+            "predicted": "email_querycontact",
+            "count": 16
+          },
+          {
+            "expected": "email_sendemail",
+            "predicted": "email_addcontact",
+            "count": 3
+          },
+          {
+            "expected": "email_sendemail",
+            "predicted": "email_sendemail",
+            "count": 75
+          },
+          {
+            "expected": "email_sendemail",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "general_joke",
+            "predicted": "alarm_set",
+            "count": 1
+          },
+          {
+            "expected": "general_joke",
+            "predicted": "general_joke",
+            "count": 17
+          },
+          {
+            "expected": "general_joke",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "calendar_query",
+            "count": 4
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "general_quirky",
+            "count": 66
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "iot_coffee",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "lists_query",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "music_query",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "news_query",
+            "count": 4
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "play_music",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "qa_definition",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "qa_factoid",
+            "count": 12
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "recommendation_events",
+            "count": 3
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "social_query",
+            "count": 2
+          },
+          {
+            "expected": "iot_cleaning",
+            "predicted": "alarm_query",
+            "count": 1
+          },
+          {
+            "expected": "iot_cleaning",
+            "predicted": "audio_volume_up",
+            "count": 1
+          },
+          {
+            "expected": "iot_cleaning",
+            "predicted": "iot_cleaning",
+            "count": 16
+          },
+          {
+            "expected": "iot_coffee",
+            "predicted": "iot_coffee",
+            "count": 20
+          },
+          {
+            "expected": "iot_hue_lightchange",
+            "predicted": "iot_hue_lightchange",
+            "count": 22
+          },
+          {
+            "expected": "iot_hue_lightdim",
+            "predicted": "iot_hue_lightchange",
+            "count": 2
+          },
+          {
+            "expected": "iot_hue_lightdim",
+            "predicted": "iot_hue_lightdim",
+            "count": 18
+          },
+          {
+            "expected": "iot_hue_lightoff",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "iot_hue_lightoff",
+            "predicted": "iot_hue_lightoff",
+            "count": 28
+          },
+          {
+            "expected": "iot_hue_lighton",
+            "predicted": "iot_hue_lightchange",
+            "count": 2
+          },
+          {
+            "expected": "iot_hue_lightup",
+            "predicted": "iot_hue_lightchange",
+            "count": 1
+          },
+          {
+            "expected": "iot_hue_lightup",
+            "predicted": "iot_hue_lightdim",
+            "count": 1
+          },
+          {
+            "expected": "iot_hue_lightup",
+            "predicted": "iot_hue_lightup",
+            "count": 8
+          },
+          {
+            "expected": "iot_wemo_off",
+            "predicted": "iot_wemo_off",
+            "count": 15
+          },
+          {
+            "expected": "iot_wemo_on",
+            "predicted": "iot_wemo_on",
+            "count": 5
+          },
+          {
+            "expected": "lists_createoradd",
+            "predicted": "email_addcontact",
+            "count": 1
+          },
+          {
+            "expected": "lists_createoradd",
+            "predicted": "lists_createoradd",
+            "count": 21
+          },
+          {
+            "expected": "lists_createoradd",
+            "predicted": "lists_query",
+            "count": 2
+          },
+          {
+            "expected": "lists_createoradd",
+            "predicted": "play_music",
+            "count": 1
+          },
+          {
+            "expected": "lists_query",
+            "predicted": "email_querycontact",
+            "count": 1
+          },
+          {
+            "expected": "lists_query",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "lists_query",
+            "predicted": "lists_query",
+            "count": 30
+          },
+          {
+            "expected": "lists_remove",
+            "predicted": "calendar_remove",
+            "count": 2
+          },
+          {
+            "expected": "lists_remove",
+            "predicted": "iot_hue_lightoff",
+            "count": 1
+          },
+          {
+            "expected": "lists_remove",
+            "predicted": "lists_remove",
+            "count": 31
+          },
+          {
+            "expected": "music_dislikeness",
+            "predicted": "music_likeness",
+            "count": 2
+          },
+          {
+            "expected": "music_likeness",
+            "predicted": "music_likeness",
+            "count": 18
+          },
+          {
+            "expected": "music_likeness",
+            "predicted": "news_query",
+            "count": 2
+          },
+          {
+            "expected": "music_likeness",
+            "predicted": "play_music",
+            "count": 3
+          },
+          {
+            "expected": "music_likeness",
+            "predicted": "recommendation_events",
+            "count": 2
+          },
+          {
+            "expected": "music_query",
+            "predicted": "music_query",
+            "count": 14
+          },
+          {
+            "expected": "music_query",
+            "predicted": "play_audiobook",
+            "count": 1
+          },
+          {
+            "expected": "music_query",
+            "predicted": "play_radio",
+            "count": 1
+          },
+          {
+            "expected": "music_settings",
+            "predicted": "music_settings",
+            "count": 2
+          },
+          {
+            "expected": "music_settings",
+            "predicted": "play_music",
+            "count": 6
+          },
+          {
+            "expected": "music_settings",
+            "predicted": "social_post",
+            "count": 2
+          },
+          {
+            "expected": "news_query",
+            "predicted": "general_quirky",
+            "count": 2
+          },
+          {
+            "expected": "news_query",
+            "predicted": "news_query",
+            "count": 70
+          },
+          {
+            "expected": "news_query",
+            "predicted": "qa_factoid",
+            "count": 1
+          },
+          {
+            "expected": "news_query",
+            "predicted": "qa_stock",
+            "count": 2
+          },
+          {
+            "expected": "news_query",
+            "predicted": "social_post",
+            "count": 2
+          },
+          {
+            "expected": "play_audiobook",
+            "predicted": "audio_volume_mute",
+            "count": 1
+          },
+          {
+            "expected": "play_audiobook",
+            "predicted": "play_audiobook",
+            "count": 18
+          },
+          {
+            "expected": "play_audiobook",
+            "predicted": "play_music",
+            "count": 3
+          },
+          {
+            "expected": "play_game",
+            "predicted": "play_audiobook",
+            "count": 2
+          },
+          {
+            "expected": "play_game",
+            "predicted": "play_game",
+            "count": 25
+          },
+          {
+            "expected": "play_game",
+            "predicted": "play_music",
+            "count": 3
+          },
+          {
+            "expected": "play_music",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "play_music",
+            "predicted": "music_likeness",
+            "count": 4
+          },
+          {
+            "expected": "play_music",
+            "predicted": "music_settings",
+            "count": 1
+          },
+          {
+            "expected": "play_music",
+            "predicted": "play_music",
+            "count": 96
+          },
+          {
+            "expected": "play_podcasts",
+            "predicted": "play_podcasts",
+            "count": 30
+          },
+          {
+            "expected": "play_podcasts",
+            "predicted": "play_radio",
+            "count": 1
+          },
+          {
+            "expected": "play_radio",
+            "predicted": "iot_hue_lightoff",
+            "count": 1
+          },
+          {
+            "expected": "play_radio",
+            "predicted": "play_music",
+            "count": 3
+          },
+          {
+            "expected": "play_radio",
+            "predicted": "play_radio",
+            "count": 40
+          },
+          {
+            "expected": "qa_currency",
+            "predicted": "qa_currency",
+            "count": 29
+          },
+          {
+            "expected": "qa_currency",
+            "predicted": "qa_factoid",
+            "count": 1
+          },
+          {
+            "expected": "qa_definition",
+            "predicted": "general_quirky",
+            "count": 2
+          },
+          {
+            "expected": "qa_definition",
+            "predicted": "qa_definition",
+            "count": 30
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "calendar_query",
+            "count": 1
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "datetime_query",
+            "count": 1
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "qa_definition",
+            "count": 2
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "qa_factoid",
+            "count": 63
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "weather_query",
+            "count": 1
+          },
+          {
+            "expected": "qa_maths",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "qa_maths",
+            "predicted": "qa_definition",
+            "count": 3
+          },
+          {
+            "expected": "qa_maths",
+            "predicted": "qa_maths",
+            "count": 11
+          },
+          {
+            "expected": "qa_stock",
+            "predicted": "news_query",
+            "count": 1
+          },
+          {
+            "expected": "qa_stock",
+            "predicted": "qa_stock",
+            "count": 19
+          },
+          {
+            "expected": "recommendation_events",
+            "predicted": "calendar_query",
+            "count": 5
+          },
+          {
+            "expected": "recommendation_events",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "recommendation_events",
+            "predicted": "recommendation_events",
+            "count": 25
+          },
+          {
+            "expected": "recommendation_events",
+            "predicted": "recommendation_locations",
+            "count": 1
+          },
+          {
+            "expected": "recommendation_events",
+            "predicted": "recommendation_movies",
+            "count": 1
+          },
+          {
+            "expected": "recommendation_locations",
+            "predicted": "recommendation_locations",
+            "count": 28
+          },
+          {
+            "expected": "recommendation_movies",
+            "predicted": "email_querycontact",
+            "count": 1
+          },
+          {
+            "expected": "recommendation_movies",
+            "predicted": "recommendation_movies",
+            "count": 17
+          },
+          {
+            "expected": "social_post",
+            "predicted": "email_sendemail",
+            "count": 1
+          },
+          {
+            "expected": "social_post",
+            "predicted": "social_post",
+            "count": 39
+          },
+          {
+            "expected": "social_query",
+            "predicted": "email_query",
+            "count": 1
+          },
+          {
+            "expected": "social_query",
+            "predicted": "news_query",
+            "count": 1
+          },
+          {
+            "expected": "social_query",
+            "predicted": "social_query",
+            "count": 15
+          },
+          {
+            "expected": "takeaway_order",
+            "predicted": "lists_query",
+            "count": 1
+          },
+          {
+            "expected": "takeaway_order",
+            "predicted": "takeaway_order",
+            "count": 8
+          },
+          {
+            "expected": "takeaway_query",
+            "predicted": "cooking_recipe",
+            "count": 1
+          },
+          {
+            "expected": "takeaway_query",
+            "predicted": "takeaway_query",
+            "count": 16
+          },
+          {
+            "expected": "transport_query",
+            "predicted": "qa_factoid",
+            "count": 6
+          },
+          {
+            "expected": "transport_query",
+            "predicted": "recommendation_locations",
+            "count": 1
+          },
+          {
+            "expected": "transport_query",
+            "predicted": "transport_query",
+            "count": 24
+          },
+          {
+            "expected": "transport_query",
+            "predicted": "transport_traffic",
+            "count": 3
+          },
+          {
+            "expected": "transport_taxi",
+            "predicted": "transport_taxi",
+            "count": 19
+          },
+          {
+            "expected": "transport_ticket",
+            "predicted": "transport_query",
+            "count": 2
+          },
+          {
+            "expected": "transport_ticket",
+            "predicted": "transport_ticket",
+            "count": 33
+          },
+          {
+            "expected": "transport_traffic",
+            "predicted": "transport_traffic",
+            "count": 11
+          },
+          {
+            "expected": "weather_query",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "weather_query",
+            "predicted": "weather_query",
+            "count": 110
+          }
+        ]
+      },
+      "offered_rps": 32.0,
+      "arrival_window_s": 60,
+      "observed_offered_rps": 32.0,
+      "quality_note": "Quality under load; use a separate quality run for semantic baseline.",
+      "cost": {
+        "configured": false
+      },
+      "window": 0,
+      "start_s": 0,
+      "end_s": 60,
+      "attribution": "scheduled arrival; completion may be after window end"
+    },
+    {
+      "mode": "load",
+      "offered_requests": 1920,
+      "attempted_requests": 1920,
+      "successful_requests": 1920,
+      "status_counts": {
+        "ok": 1920
+      },
+      "elapsed_s_including_drain": 60.05255320016295,
+      "slo_ms": 500,
+      "success_rate": 1.0,
+      "completed_throughput_qps": 31.971996154774487,
+      "goodput_qps": 31.971996154774487,
+      "correct_goodput_qps": 28.92466527127254,
+      "slo_valid_requests": 1920,
+      "latency_attempted": {
+        "p50_ms": 67.60780001059175,
+        "p95_ms": 101.00033511407672,
+        "p99_ms": 106.80950611131266
+      },
+      "latency_successful": {
+        "p50_ms": 67.60780001059175,
+        "p95_ms": 101.00033511407672,
+        "p99_ms": 106.80950611131266
+      },
+      "scheduler_lag": {
+        "p50_ms": 0.0,
+        "p95_ms": 5.759095179382711,
+        "p99_ms": 11.171505032107232,
+        "max_ms": 16.171600203961134
+      },
+      "client_measurement_valid": true,
+      "slo_capacity_candidate": true,
+      "quality": {
+        "accuracy": 0.9046875,
+        "accuracy_successful_only": 0.9046875,
+        "macro_f1": 0.8352583513789426,
+        "macro_f1_supported_classes": 0.849415272588755,
+        "macro_f1_scope": "all frozen catalog labels; zero division = 0",
+        "reject_rate": 0.0,
+        "per_class": {
+          "alarm_query": {
+            "support": 19,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "alarm_remove": {
+            "support": 16,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "alarm_set": {
+            "support": 26,
+            "precision": 0.9285714285714286,
+            "recall": 1.0,
+            "f1": 0.9629629629629629
+          },
+          "audio_volume_down": {
+            "support": 11,
+            "precision": 0.8461538461538461,
+            "recall": 1.0,
+            "f1": 0.9166666666666666
+          },
+          "audio_volume_mute": {
+            "support": 26,
+            "precision": 0.78125,
+            "recall": 0.9615384615384616,
+            "f1": 0.8620689655172413
+          },
+          "audio_volume_other": {
+            "support": 3,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "audio_volume_up": {
+            "support": 4,
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "f1": 0.7272727272727273
+          },
+          "calendar_query": {
+            "support": 77,
+            "precision": 0.8048780487804879,
+            "recall": 0.8571428571428571,
+            "f1": 0.8301886792452831
+          },
+          "calendar_remove": {
+            "support": 50,
+            "precision": 0.8928571428571429,
+            "recall": 1.0,
+            "f1": 0.9433962264150944
+          },
+          "calendar_set": {
+            "support": 132,
+            "precision": 0.9763779527559056,
+            "recall": 0.9393939393939394,
+            "f1": 0.9575289575289575
+          },
+          "cooking_query": {
+            "support": 0,
+            "precision": 0,
+            "recall": 0,
+            "f1": 0
+          },
+          "cooking_recipe": {
+            "support": 42,
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1": 0.9333333333333333
+          },
+          "datetime_convert": {
+            "support": 7,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.9230769230769231
+          },
+          "datetime_query": {
+            "support": 60,
+            "precision": 0.9672131147540983,
+            "recall": 0.9833333333333333,
+            "f1": 0.9752066115702479
+          },
+          "email_addcontact": {
+            "support": 19,
+            "precision": 0.8235294117647058,
+            "recall": 0.7368421052631579,
+            "f1": 0.7777777777777778
+          },
+          "email_query": {
+            "support": 75,
+            "precision": 0.9240506329113924,
+            "recall": 0.9733333333333334,
+            "f1": 0.948051948051948
+          },
+          "email_querycontact": {
+            "support": 16,
+            "precision": 0.7,
+            "recall": 0.875,
+            "f1": 0.7777777777777778
+          },
+          "email_sendemail": {
+            "support": 77,
+            "precision": 0.9342105263157895,
+            "recall": 0.922077922077922,
+            "f1": 0.9281045751633987
+          },
+          "general_greet": {
+            "support": 1,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          "general_joke": {
+            "support": 14,
+            "precision": 1.0,
+            "recall": 0.9285714285714286,
+            "f1": 0.9629629629629629
+          },
+          "general_quirky": {
+            "support": 113,
+            "precision": 0.77,
+            "recall": 0.6814159292035398,
+            "f1": 0.7230046948356808
+          },
+          "iot_cleaning": {
+            "support": 16,
+            "precision": 0.9333333333333333,
+            "recall": 0.875,
+            "f1": 0.9032258064516129
+          },
+          "iot_coffee": {
+            "support": 23,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "iot_hue_lightchange": {
+            "support": 21,
+            "precision": 0.9090909090909091,
+            "recall": 0.9523809523809523,
+            "f1": 0.9302325581395349
+          },
+          "iot_hue_lightdim": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "iot_hue_lightoff": {
+            "support": 32,
+            "precision": 0.9142857142857143,
+            "recall": 1.0,
+            "f1": 0.9552238805970149
+          },
+          "iot_hue_lighton": {
+            "support": 1,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "iot_hue_lightup": {
+            "support": 19,
+            "precision": 0.9473684210526315,
+            "recall": 0.9473684210526315,
+            "f1": 0.9473684210526315
+          },
+          "iot_wemo_off": {
+            "support": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "iot_wemo_on": {
+            "support": 9,
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1": 0.9411764705882353
+          },
+          "lists_createoradd": {
+            "support": 23,
+            "precision": 0.9130434782608695,
+            "recall": 0.9130434782608695,
+            "f1": 0.9130434782608695
+          },
+          "lists_query": {
+            "support": 31,
+            "precision": 0.8620689655172413,
+            "recall": 0.8064516129032258,
+            "f1": 0.8333333333333334
+          },
+          "lists_remove": {
+            "support": 32,
+            "precision": 0.9666666666666667,
+            "recall": 0.90625,
+            "f1": 0.9354838709677419
+          },
+          "music_dislikeness": {
+            "support": 2,
+            "precision": 0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "music_likeness": {
+            "support": 21,
+            "precision": 0.8571428571428571,
+            "recall": 0.8571428571428571,
+            "f1": 0.8571428571428571
+          },
+          "music_query": {
+            "support": 24,
+            "precision": 0.9523809523809523,
+            "recall": 0.8333333333333334,
+            "f1": 0.8888888888888888
+          },
+          "music_settings": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "news_query": {
+            "support": 99,
+            "precision": 0.8653846153846154,
+            "recall": 0.9090909090909091,
+            "f1": 0.8866995073891626
+          },
+          "play_audiobook": {
+            "support": 35,
+            "precision": 0.9615384615384616,
+            "recall": 0.7142857142857143,
+            "f1": 0.819672131147541
+          },
+          "play_game": {
+            "support": 16,
+            "precision": 1.0,
+            "recall": 0.9375,
+            "f1": 0.967741935483871
+          },
+          "play_music": {
+            "support": 106,
+            "precision": 0.9272727272727272,
+            "recall": 0.9622641509433962,
+            "f1": 0.9444444444444444
+          },
+          "play_podcasts": {
+            "support": 39,
+            "precision": 0.9487179487179487,
+            "recall": 0.9487179487179487,
+            "f1": 0.9487179487179487
+          },
+          "play_radio": {
+            "support": 46,
+            "precision": 0.88,
+            "recall": 0.9565217391304348,
+            "f1": 0.9166666666666666
+          },
+          "qa_currency": {
+            "support": 27,
+            "precision": 1.0,
+            "recall": 0.9629629629629629,
+            "f1": 0.9811320754716981
+          },
+          "qa_definition": {
+            "support": 37,
+            "precision": 1.0,
+            "recall": 0.9459459459459459,
+            "f1": 0.9722222222222222
+          },
+          "qa_factoid": {
+            "support": 80,
+            "precision": 0.8658536585365854,
+            "recall": 0.8875,
+            "f1": 0.8765432098765432
+          },
+          "qa_maths": {
+            "support": 16,
+            "precision": 0.9285714285714286,
+            "recall": 0.8125,
+            "f1": 0.8666666666666667
+          },
+          "qa_stock": {
+            "support": 11,
+            "precision": 0.8461538461538461,
+            "recall": 1.0,
+            "f1": 0.9166666666666666
+          },
+          "recommendation_events": {
+            "support": 30,
+            "precision": 0.7586206896551724,
+            "recall": 0.7333333333333333,
+            "f1": 0.7457627118644068
+          },
+          "recommendation_locations": {
+            "support": 18,
+            "precision": 0.8181818181818182,
+            "recall": 1.0,
+            "f1": 0.9
+          },
+          "recommendation_movies": {
+            "support": 13,
+            "precision": 0.8571428571428571,
+            "recall": 0.9230769230769231,
+            "f1": 0.8888888888888888
+          },
+          "social_post": {
+            "support": 50,
+            "precision": 0.9787234042553191,
+            "recall": 0.92,
+            "f1": 0.9484536082474226
+          },
+          "social_query": {
+            "support": 20,
+            "precision": 0.8571428571428571,
+            "recall": 0.6,
+            "f1": 0.7058823529411765
+          },
+          "takeaway_order": {
+            "support": 10,
+            "precision": 0.75,
+            "recall": 0.9,
+            "f1": 0.8181818181818182
+          },
+          "takeaway_query": {
+            "support": 29,
+            "precision": 0.9130434782608695,
+            "recall": 0.7241379310344828,
+            "f1": 0.8076923076923077
+          },
+          "transport_query": {
+            "support": 26,
+            "precision": 0.9565217391304348,
+            "recall": 0.8461538461538461,
+            "f1": 0.8979591836734694
+          },
+          "transport_taxi": {
+            "support": 14,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "transport_ticket": {
+            "support": 17,
+            "precision": 1.0,
+            "recall": 0.9411764705882353,
+            "f1": 0.9696969696969697
+          },
+          "transport_traffic": {
+            "support": 3,
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6
+          },
+          "weather_query": {
+            "support": 107,
+            "precision": 0.9813084112149533,
+            "recall": 0.9813084112149533,
+            "f1": 0.9813084112149533
+          }
+        },
+        "confusion": [
+          {
+            "expected": "alarm_query",
+            "predicted": "alarm_query",
+            "count": 19
+          },
+          {
+            "expected": "alarm_remove",
+            "predicted": "alarm_remove",
+            "count": 16
+          },
+          {
+            "expected": "alarm_set",
+            "predicted": "alarm_set",
+            "count": 26
+          },
+          {
+            "expected": "audio_volume_down",
+            "predicted": "audio_volume_down",
+            "count": 11
+          },
+          {
+            "expected": "audio_volume_mute",
+            "predicted": "audio_volume_mute",
+            "count": 25
+          },
+          {
+            "expected": "audio_volume_mute",
+            "predicted": "iot_cleaning",
+            "count": 1
+          },
+          {
+            "expected": "audio_volume_other",
+            "predicted": "audio_volume_down",
+            "count": 2
+          },
+          {
+            "expected": "audio_volume_other",
+            "predicted": "music_query",
+            "count": 1
+          },
+          {
+            "expected": "audio_volume_up",
+            "predicted": "audio_volume_up",
+            "count": 4
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "calendar_query",
+            "count": 66
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "calendar_set",
+            "count": 2
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "datetime_query",
+            "count": 2
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "news_query",
+            "count": 1
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "play_radio",
+            "count": 2
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "recommendation_events",
+            "count": 2
+          },
+          {
+            "expected": "calendar_query",
+            "predicted": "transport_traffic",
+            "count": 2
+          },
+          {
+            "expected": "calendar_remove",
+            "predicted": "calendar_remove",
+            "count": 50
+          },
+          {
+            "expected": "calendar_set",
+            "predicted": "alarm_set",
+            "count": 2
+          },
+          {
+            "expected": "calendar_set",
+            "predicted": "calendar_query",
+            "count": 2
+          },
+          {
+            "expected": "calendar_set",
+            "predicted": "calendar_remove",
+            "count": 2
+          },
+          {
+            "expected": "calendar_set",
+            "predicted": "calendar_set",
+            "count": 124
+          },
+          {
+            "expected": "calendar_set",
+            "predicted": "news_query",
+            "count": 2
+          },
+          {
+            "expected": "cooking_recipe",
+            "predicted": "cooking_recipe",
+            "count": 42
+          },
+          {
+            "expected": "datetime_convert",
+            "predicted": "datetime_convert",
+            "count": 6
+          },
+          {
+            "expected": "datetime_convert",
+            "predicted": "qa_maths",
+            "count": 1
+          },
+          {
+            "expected": "datetime_query",
+            "predicted": "calendar_query",
+            "count": 1
+          },
+          {
+            "expected": "datetime_query",
+            "predicted": "datetime_query",
+            "count": 59
+          },
+          {
+            "expected": "email_addcontact",
+            "predicted": "email_addcontact",
+            "count": 14
+          },
+          {
+            "expected": "email_addcontact",
+            "predicted": "email_query",
+            "count": 2
+          },
+          {
+            "expected": "email_addcontact",
+            "predicted": "email_querycontact",
+            "count": 2
+          },
+          {
+            "expected": "email_addcontact",
+            "predicted": "email_sendemail",
+            "count": 1
+          },
+          {
+            "expected": "email_query",
+            "predicted": "email_query",
+            "count": 73
+          },
+          {
+            "expected": "email_query",
+            "predicted": "email_sendemail",
+            "count": 2
+          },
+          {
+            "expected": "email_querycontact",
+            "predicted": "calendar_set",
+            "count": 1
+          },
+          {
+            "expected": "email_querycontact",
+            "predicted": "email_querycontact",
+            "count": 14
+          },
+          {
+            "expected": "email_querycontact",
+            "predicted": "qa_factoid",
+            "count": 1
+          },
+          {
+            "expected": "email_sendemail",
+            "predicted": "email_addcontact",
+            "count": 3
+          },
+          {
+            "expected": "email_sendemail",
+            "predicted": "email_sendemail",
+            "count": 71
+          },
+          {
+            "expected": "email_sendemail",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "email_sendemail",
+            "predicted": "news_query",
+            "count": 2
+          },
+          {
+            "expected": "general_greet",
+            "predicted": "general_greet",
+            "count": 1
+          },
+          {
+            "expected": "general_joke",
+            "predicted": "general_joke",
+            "count": 13
+          },
+          {
+            "expected": "general_joke",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "calendar_query",
+            "count": 9
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "calendar_remove",
+            "count": 2
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "cooking_recipe",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "general_greet",
+            "count": 2
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "general_quirky",
+            "count": 77
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "iot_hue_lightchange",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "lists_query",
+            "count": 2
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "news_query",
+            "count": 3
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "play_music",
+            "count": 2
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "play_podcasts",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "qa_factoid",
+            "count": 5
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "recommendation_events",
+            "count": 4
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "social_query",
+            "count": 2
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "transport_traffic",
+            "count": 1
+          },
+          {
+            "expected": "general_quirky",
+            "predicted": "weather_query",
+            "count": 1
+          },
+          {
+            "expected": "iot_cleaning",
+            "predicted": "audio_volume_up",
+            "count": 2
+          },
+          {
+            "expected": "iot_cleaning",
+            "predicted": "iot_cleaning",
+            "count": 14
+          },
+          {
+            "expected": "iot_coffee",
+            "predicted": "iot_coffee",
+            "count": 23
+          },
+          {
+            "expected": "iot_hue_lightchange",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "iot_hue_lightchange",
+            "predicted": "iot_hue_lightchange",
+            "count": 20
+          },
+          {
+            "expected": "iot_hue_lightdim",
+            "predicted": "iot_hue_lightdim",
+            "count": 20
+          },
+          {
+            "expected": "iot_hue_lightoff",
+            "predicted": "iot_hue_lightoff",
+            "count": 32
+          },
+          {
+            "expected": "iot_hue_lighton",
+            "predicted": "iot_hue_lightup",
+            "count": 1
+          },
+          {
+            "expected": "iot_hue_lightup",
+            "predicted": "iot_hue_lightchange",
+            "count": 1
+          },
+          {
+            "expected": "iot_hue_lightup",
+            "predicted": "iot_hue_lightup",
+            "count": 18
+          },
+          {
+            "expected": "iot_wemo_off",
+            "predicted": "iot_wemo_off",
+            "count": 8
+          },
+          {
+            "expected": "iot_wemo_on",
+            "predicted": "iot_wemo_on",
+            "count": 8
+          },
+          {
+            "expected": "iot_wemo_on",
+            "predicted": "play_radio",
+            "count": 1
+          },
+          {
+            "expected": "lists_createoradd",
+            "predicted": "lists_createoradd",
+            "count": 21
+          },
+          {
+            "expected": "lists_createoradd",
+            "predicted": "lists_query",
+            "count": 2
+          },
+          {
+            "expected": "lists_query",
+            "predicted": "email_querycontact",
+            "count": 2
+          },
+          {
+            "expected": "lists_query",
+            "predicted": "lists_query",
+            "count": 25
+          },
+          {
+            "expected": "lists_query",
+            "predicted": "news_query",
+            "count": 2
+          },
+          {
+            "expected": "lists_query",
+            "predicted": "takeaway_query",
+            "count": 2
+          },
+          {
+            "expected": "lists_remove",
+            "predicted": "calendar_remove",
+            "count": 2
+          },
+          {
+            "expected": "lists_remove",
+            "predicted": "iot_hue_lightoff",
+            "count": 1
+          },
+          {
+            "expected": "lists_remove",
+            "predicted": "lists_remove",
+            "count": 29
+          },
+          {
+            "expected": "music_dislikeness",
+            "predicted": "audio_volume_mute",
+            "count": 1
+          },
+          {
+            "expected": "music_dislikeness",
+            "predicted": "music_likeness",
+            "count": 1
+          },
+          {
+            "expected": "music_likeness",
+            "predicted": "lists_createoradd",
+            "count": 2
+          },
+          {
+            "expected": "music_likeness",
+            "predicted": "music_likeness",
+            "count": 18
+          },
+          {
+            "expected": "music_likeness",
+            "predicted": "play_music",
+            "count": 1
+          },
+          {
+            "expected": "music_query",
+            "predicted": "music_likeness",
+            "count": 1
+          },
+          {
+            "expected": "music_query",
+            "predicted": "music_query",
+            "count": 20
+          },
+          {
+            "expected": "music_query",
+            "predicted": "play_audiobook",
+            "count": 1
+          },
+          {
+            "expected": "music_query",
+            "predicted": "play_radio",
+            "count": 2
+          },
+          {
+            "expected": "music_settings",
+            "predicted": "music_settings",
+            "count": 1
+          },
+          {
+            "expected": "news_query",
+            "predicted": "general_quirky",
+            "count": 2
+          },
+          {
+            "expected": "news_query",
+            "predicted": "news_query",
+            "count": 90
+          },
+          {
+            "expected": "news_query",
+            "predicted": "qa_factoid",
+            "count": 3
+          },
+          {
+            "expected": "news_query",
+            "predicted": "qa_stock",
+            "count": 2
+          },
+          {
+            "expected": "news_query",
+            "predicted": "recommendation_events",
+            "count": 1
+          },
+          {
+            "expected": "news_query",
+            "predicted": "social_post",
+            "count": 1
+          },
+          {
+            "expected": "play_audiobook",
+            "predicted": "audio_volume_mute",
+            "count": 6
+          },
+          {
+            "expected": "play_audiobook",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "play_audiobook",
+            "predicted": "play_audiobook",
+            "count": 25
+          },
+          {
+            "expected": "play_audiobook",
+            "predicted": "play_music",
+            "count": 2
+          },
+          {
+            "expected": "play_audiobook",
+            "predicted": "play_podcasts",
+            "count": 1
+          },
+          {
+            "expected": "play_game",
+            "predicted": "play_game",
+            "count": 15
+          },
+          {
+            "expected": "play_game",
+            "predicted": "play_music",
+            "count": 1
+          },
+          {
+            "expected": "play_music",
+            "predicted": "audio_volume_up",
+            "count": 1
+          },
+          {
+            "expected": "play_music",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "play_music",
+            "predicted": "music_likeness",
+            "count": 1
+          },
+          {
+            "expected": "play_music",
+            "predicted": "play_music",
+            "count": 102
+          },
+          {
+            "expected": "play_music",
+            "predicted": "play_radio",
+            "count": 1
+          },
+          {
+            "expected": "play_podcasts",
+            "predicted": "play_music",
+            "count": 2
+          },
+          {
+            "expected": "play_podcasts",
+            "predicted": "play_podcasts",
+            "count": 37
+          },
+          {
+            "expected": "play_radio",
+            "predicted": "iot_hue_lightoff",
+            "count": 2
+          },
+          {
+            "expected": "play_radio",
+            "predicted": "play_radio",
+            "count": 44
+          },
+          {
+            "expected": "qa_currency",
+            "predicted": "qa_currency",
+            "count": 26
+          },
+          {
+            "expected": "qa_currency",
+            "predicted": "qa_factoid",
+            "count": 1
+          },
+          {
+            "expected": "qa_definition",
+            "predicted": "general_quirky",
+            "count": 2
+          },
+          {
+            "expected": "qa_definition",
+            "predicted": "qa_definition",
+            "count": 35
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "calendar_query",
+            "count": 1
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "email_querycontact",
+            "count": 1
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "general_quirky",
+            "count": 6
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "qa_factoid",
+            "count": 71
+          },
+          {
+            "expected": "qa_factoid",
+            "predicted": "weather_query",
+            "count": 1
+          },
+          {
+            "expected": "qa_maths",
+            "predicted": "general_quirky",
+            "count": 3
+          },
+          {
+            "expected": "qa_maths",
+            "predicted": "qa_maths",
+            "count": 13
+          },
+          {
+            "expected": "qa_stock",
+            "predicted": "qa_stock",
+            "count": 11
+          },
+          {
+            "expected": "recommendation_events",
+            "predicted": "calendar_query",
+            "count": 2
+          },
+          {
+            "expected": "recommendation_events",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "recommendation_events",
+            "predicted": "recommendation_events",
+            "count": 22
+          },
+          {
+            "expected": "recommendation_events",
+            "predicted": "recommendation_locations",
+            "count": 3
+          },
+          {
+            "expected": "recommendation_events",
+            "predicted": "recommendation_movies",
+            "count": 2
+          },
+          {
+            "expected": "recommendation_locations",
+            "predicted": "recommendation_locations",
+            "count": 18
+          },
+          {
+            "expected": "recommendation_movies",
+            "predicted": "email_querycontact",
+            "count": 1
+          },
+          {
+            "expected": "recommendation_movies",
+            "predicted": "recommendation_movies",
+            "count": 12
+          },
+          {
+            "expected": "social_post",
+            "predicted": "email_sendemail",
+            "count": 2
+          },
+          {
+            "expected": "social_post",
+            "predicted": "general_quirky",
+            "count": 2
+          },
+          {
+            "expected": "social_post",
+            "predicted": "social_post",
+            "count": 46
+          },
+          {
+            "expected": "social_query",
+            "predicted": "calendar_query",
+            "count": 1
+          },
+          {
+            "expected": "social_query",
+            "predicted": "email_query",
+            "count": 4
+          },
+          {
+            "expected": "social_query",
+            "predicted": "news_query",
+            "count": 3
+          },
+          {
+            "expected": "social_query",
+            "predicted": "social_query",
+            "count": 12
+          },
+          {
+            "expected": "takeaway_order",
+            "predicted": "lists_remove",
+            "count": 1
+          },
+          {
+            "expected": "takeaway_order",
+            "predicted": "takeaway_order",
+            "count": 9
+          },
+          {
+            "expected": "takeaway_query",
+            "predicted": "cooking_recipe",
+            "count": 5
+          },
+          {
+            "expected": "takeaway_query",
+            "predicted": "takeaway_order",
+            "count": 3
+          },
+          {
+            "expected": "takeaway_query",
+            "predicted": "takeaway_query",
+            "count": 21
+          },
+          {
+            "expected": "transport_query",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "transport_query",
+            "predicted": "qa_factoid",
+            "count": 1
+          },
+          {
+            "expected": "transport_query",
+            "predicted": "recommendation_locations",
+            "count": 1
+          },
+          {
+            "expected": "transport_query",
+            "predicted": "transport_query",
+            "count": 22
+          },
+          {
+            "expected": "transport_query",
+            "predicted": "transport_traffic",
+            "count": 1
+          },
+          {
+            "expected": "transport_taxi",
+            "predicted": "transport_taxi",
+            "count": 14
+          },
+          {
+            "expected": "transport_ticket",
+            "predicted": "transport_query",
+            "count": 1
+          },
+          {
+            "expected": "transport_ticket",
+            "predicted": "transport_ticket",
+            "count": 16
+          },
+          {
+            "expected": "transport_traffic",
+            "predicted": "transport_traffic",
+            "count": 3
+          },
+          {
+            "expected": "weather_query",
+            "predicted": "general_quirky",
+            "count": 1
+          },
+          {
+            "expected": "weather_query",
+            "predicted": "news_query",
+            "count": 1
+          },
+          {
+            "expected": "weather_query",
+            "predicted": "weather_query",
+            "count": 105
+          }
+        ]
+      },
+      "offered_rps": 32.0,
+      "arrival_window_s": 60,
+      "observed_offered_rps": 32.0,
+      "quality_note": "Quality under load; use a separate quality run for semantic baseline.",
+      "cost": {
+        "configured": false
+      },
+      "window": 1,
+      "start_s": 60,
+      "end_s": 120,
+      "attribution": "scheduled arrival; completion may be after window end"
+    }
+  ]
+}

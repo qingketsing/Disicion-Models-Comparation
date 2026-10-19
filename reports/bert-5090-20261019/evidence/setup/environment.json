@@ -1,0 +1,24 @@
+{
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+  "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.9.1+cu128",
+    "transformers": "4.57.1",
+    "datasets": "4.3.0",
+    "accelerate": "1.11.0",
+    "numpy": "2.3.4",
+    "tokenizers": "0.22.2"
+  },
+  "nvidia_smi": "NVIDIA GeForce RTX 5090, 32607 MiB, 595.71.05",
+  "status": "PASS",
+  "device": "cuda",
+  "cuda_runtime": "12.8",
+  "smoke_loss": 1.0937939882278442,
+  "synthetic": true,
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "capability": [
+    12,
+    0
+  ],
+  "bf16_supported": true
+}

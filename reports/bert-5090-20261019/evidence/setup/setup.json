@@ -1,0 +1,7 @@
+{
+  "device": "cuda",
+  "torch_index": "https://download.pytorch.org/whl/cu128",
+  "python": "/root/autodl-tmp/Disicion-Models-Comparation/.venv-bert/bin/python",
+  "python_version": "3.12",
+  "created_at_utc": "2026-10-18T15:33:10.443195+00:00"
+}

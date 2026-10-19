@@ -1,0 +1,27 @@
+{
+  "train": "/root/autodl-tmp/Disicion-Models-Comparation/data/normalized/massive-bert-native-v1/train.jsonl",
+  "validation": "/root/autodl-tmp/Disicion-Models-Comparation/data/normalized/massive-bert-native-v1/validation.jsonl",
+  "catalog": "/root/autodl-tmp/Disicion-Models-Comparation/data/normalized/massive-bert-native-v1/catalog.json",
+  "out": "/root/autodl-tmp/Disicion-Models-Comparation/models/bert-native-v1/seed-42",
+  "base_model": "google-bert/bert-base-uncased",
+  "revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+  "epochs": 5,
+  "batch_size": 16,
+  "gradient_accumulation_steps": 1,
+  "max_length": 128,
+  "learning_rate": 2e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "seed": 42,
+  "device": "cuda",
+  "precision": "fp32",
+  "torch_threads": 4,
+  "text_overlap": "warn",
+  "full_determinism": true,
+  "max_steps": -1,
+  "input_sha256": {
+    "train": "80e270f2c5225cb8af8ed2f0ff045ae0aa8f5d3cfe0219e21777163cb2c0dc32",
+    "validation": "f6baf150cb919ece086aa730bcefddf61045d572c03773d1048497068fe9aca2",
+    "catalog": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+  }
+}

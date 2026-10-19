@@ -1,0 +1,12 @@
+..........................................                               [100%]
+=============================== warnings summary ===============================
+tests/test_bert.py::test_real_tiny_training_best_checkpoint_and_http
+  /root/autodl-tmp/Disicion-Models-Comparation/.venv-bert/lib/python3.12/site-packages/starlette/testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_bert.py::test_real_tiny_training_best_checkpoint_and_http
+  /root/autodl-tmp/Disicion-Models-Comparation/.venv-bert/lib/python3.12/site-packages/transformers/trainer.py:4380: UserWarning: mtime may not be reliable on this filesystem, falling back to numerical ordering
+    warnings.warn("mtime may not be reliable on this filesystem, falling back to numerical ordering")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+42 passed, 2 warnings in 7.27s

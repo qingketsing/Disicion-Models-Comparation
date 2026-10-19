@@ -1,0 +1,15 @@
+{
+  "stage": "cuda-smoke",
+  "command": [
+    "/root/autodl-tmp/Disicion-Models-Comparation/.venv-bert/bin/python",
+    "-m",
+    "scripts.smoke_bert",
+    "--device",
+    "cuda",
+    "--out",
+    "/root/autodl-tmp/Disicion-Models-Comparation/results/node-5090-20261018/cuda-smoke"
+  ],
+  "exit_code": 0,
+  "wall_s": 17.355625544209033,
+  "finished_at": "2026-10-18T15:34:05.335881+00:00"
+}

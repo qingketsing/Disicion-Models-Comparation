@@ -1,0 +1,17 @@
+{
+  "verified_at_utc": "2026-10-18T16:27:41.896640+00:00",
+  "archive_sha256": "a72221fb45d39ef0ee1f026e162f05b3cf011d9d3c2c152c524efcb2a37cfcdc",
+  "archive_size": 1417134080,
+  "archive_files": 666,
+  "verified_files": 665,
+  "validated_models": {
+    "42": "bert:faad5c920150b6d1",
+    "43": "bert:ebf03676ca195940",
+    "44": "bert:8a709f1b845eb953"
+  },
+  "preserved_checkout_placeholders": [
+    "results/.gitkeep"
+  ],
+  "frozen_plan_sha256": "783c1d1433b52427915db22514289ddd192a474c16543a8d1001c8d7b4594c5c",
+  "core_repository_clean": true
+}

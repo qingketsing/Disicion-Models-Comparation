@@ -1,0 +1,9 @@
+{
+  "captured_at_utc": "2026-10-18T16:00:13.673165+00:00",
+  "cpu_model": "Intel(R) Xeon(R) Platinum 8470Q",
+  "cpu_quota": "2500000 100000",
+  "memory_limit_bytes": 128849018880,
+  "visible_cpu_count": 208,
+  "cpu_affinity_count": 208,
+  "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB, 595.71.05"
+}

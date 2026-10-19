@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-10-19T08:02:41.551729+00:00",
+  "full_raw_reanalysis": "PASS: all 15 recomputed summaries, run table, 12 windows, 54 paired rows and audit match publication after documented path normalization",
+  "measurement_requests": 61326,
+  "quality_requests": 26766,
+  "pilot_requests": 34560,
+  "native_split_overlaps": {
+    "train/validation": {
+      "exact_shared_texts": 11,
+      "sample_id_overlap": 0
+    },
+    "train/test": {
+      "exact_shared_texts": 21,
+      "sample_id_overlap": 0
+    },
+    "validation/test": {
+      "exact_shared_texts": 5,
+      "sample_id_overlap": 0
+    }
+  },
+  "formal_capacity_points": [],
+  "documentation_links": "PASS"
+}

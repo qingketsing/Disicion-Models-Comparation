@@ -1,0 +1,12 @@
+{
+  "stage": "pytest",
+  "command": [
+    "/root/autodl-tmp/Disicion-Models-Comparation/.venv-bert/bin/python",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "exit_code": 0,
+  "wall_s": 8.749222713056952,
+  "finished_at": "2026-10-18T15:34:14.085608+00:00"
+}

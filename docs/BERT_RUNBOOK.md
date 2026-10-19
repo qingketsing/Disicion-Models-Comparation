@@ -1,8 +1,8 @@
 # BERT 节点执行手册
 
-实现分支：`codex/bert-experiments`，基于 PR #2。按用户要求保留 MASSIVE 原生 train/dev/test（11,514 / 2,033 / 2,974），不去重；文本重叠只警告并写入训练产物。模型、输入、配置、训练源代码和环境均留证。
+实现已合入 `main`，提交 `820625e53d082219f571dee64bd12a46c478f24c`，基于 PR #2。按用户要求保留 MASSIVE 原生 train/dev/test（11,514 / 2,033 / 2,974），不去重；文本重叠只警告并写入训练产物。模型、输入、配置、训练源代码和环境均留证。
 
-本地已验证的是 Python 3.12 + CPU 的小型 BERT 训练、最佳 checkpoint 导出、续训、真实 HTTP、quality/load 与离线分析链路。正式 BERT-base、目标节点 CUDA、容器构建和真实性能需在节点上执行后确认。后续将按用户提供的节点配置环境并运行，不需要现在手工提供模型参数。
+本地已验证 Python 3.12 + CPU 的小型 BERT 训练、最佳 checkpoint 导出、续训、真实 HTTP、quality/load 与离线分析链路。2026-10-18/19 已在 RTX 5090 / Python 3.12.3 / PyTorch 2.9.1+cu128 上完成实际 CUDA 前向、反向与优化器更新、端到端 smoke、42 项测试，以及三种子 BERT-base 训练和九轮完整质量评测。独立 Windows Controller 经 SSH 的 32 RPS 初测通过、64 RPS 失败，正式容量尚未确认；容器构建未在本轮验证。详见[节点报告](../reports/bert-5090-20261019/REPORT.md)与[复现说明](../reports/bert-5090-20261019/REPRODUCE.md)。其他节点仍需执行下述环境自检。
 
 ## 1. 上传与安装
 
@@ -69,7 +69,7 @@ python -m scripts.bert_experiment serve \
   --plan experiments/bert-native-v1/plan.json --seed 42 --device cuda
 ```
 
-依次对 42/43/44 执行质量评测；切换时停止当前服务，再启动下一个。省略 `--seed` 会按 dev 指标选部署模型，需要全部训练 seed 已完成。CPU 对照只将 `--device` 改为 `cpu`，默认4线程，使用同一权重。服务启动核验文件哈希和类别顺序，默认单进程、FP32、batch=1、串行推理。
+依次对 42/43/44 执行质量评测；切换时等待当前服务退出，再启动下一个。启动后通过 `/health` 和 `/metadata` 核对模型版本及训练 seed 与目标一致，不能仅检查 `ready`，以免误认尚未退出的旧服务。省略 `--seed` 会按 dev 指标选部署模型，需要全部训练 seed 已完成。CPU 对照只将 `--device` 改为 `cpu`，默认4线程，使用同一权重。服务启动核验文件哈希和类别顺序，默认单进程、FP32、batch=1、串行推理。
 
 独立 Controller 使用同版本源代码、计划/回执和冻结的数据目录，无需拷贝模型权重。通过 SSH 隧道访问 Worker 的回环服务：
 
