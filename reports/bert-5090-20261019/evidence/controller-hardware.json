@@ -1,0 +1,17 @@
+{
+  "captured_at_utc": "2026-10-18T15:59:35.7352139Z",
+  "cpu": [
+    {
+      "Name": "AMD Ryzen 9 8940HX with Radeon Graphics        ",
+      "NumberOfCores": 16,
+      "NumberOfLogicalProcessors": 32
+    }
+  ],
+  "os": {
+    "Caption": "Microsoft Windows 11 家庭版 中文版",
+    "Version": "10.0.26200",
+    "TotalVisibleMemorySize": 15949080
+  },
+  "network": "Windows controller to RTX 5090 worker via SSH tunnel",
+  "requested_timer_period_ms": 1
+}

@@ -1,0 +1,341 @@
+{
+  "experiment_source_commit": "820625e53d082219f571dee64bd12a46c478f24c",
+  "scope": "Completed three-seed supervised BERT quality experiment and independent-controller 32/64 RPS pilot; no formal capacity claim.",
+  "archives_published_to_github": false,
+  "notes": [
+    "Raw requests and final weights are retained in separately hashed worker/controller archives.",
+    "sample-predictions.csv contains each seed prediction once after verifying all three inference repeats agree; all responses are ok.",
+    "Published SHA256 values cover exact bytes; .gitattributes preserves reports/** bytes.",
+    "This manifest excludes its own hash."
+  ],
+  "copied_sources": {
+    "quality-summary.json": {
+      "source": "results/node-5090-20261018/quality-summary.json",
+      "source_sha256": "4954009e6305bc194035629aebdc32f04a2e5aba59adaf567415aba93e78598b"
+    },
+    "baseline-metrics.json": {
+      "source": "results/node-5090-20261018/baseline-metrics.json",
+      "source_sha256": "8fccaf4d660de8b5d8aa1b6a714675f79695cfd5f0acc267f743fd40cb96b3d1"
+    },
+    "per-class-comparison.csv": {
+      "source": "results/node-5090-20261018/per-class-comparison.csv",
+      "source_sha256": "3f4f344b36a43eff9e28f671239545c5e790318b0bc53c79d805f2fb9dc1cdc8"
+    },
+    "class-summary.json": {
+      "source": "results/node-5090-20261018/class-summary.json",
+      "source_sha256": "eb3f0784f79f58f9cdd53cd0a12e46538da115042602aa7160a631123afe15e7"
+    },
+    "analysis-validation.json": {
+      "source": "results/node-5090-20261018/analysis-validation.json",
+      "source_sha256": "17d3a4225d3ccf1d96cd46a82669a4c780fd1a0f326d3d579cdf49df29045754"
+    },
+    "analysis/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450-recomputed.json",
+      "source_sha256": "e1a3f42cec94097833fd06005f7198c90034f03a59c04c28b8b3b8ff1dc12156"
+    },
+    "analysis/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3-recomputed.json",
+      "source_sha256": "c1724e3c9fe928f188aa9ba9e9b567d80bbdb73004db857453f84e59276586ec"
+    },
+    "analysis/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1-recomputed.json",
+      "source_sha256": "6ab61205e1855c3c08196d3d198052b00563229028db4ccb6288d09a15f21bbb"
+    },
+    "analysis/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712-recomputed.json",
+      "source_sha256": "70bfa56bb2ec84686e748eba9c9b96ac10b78d2874b5c5da20ead544565f27f0"
+    },
+    "analysis/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b-recomputed.json",
+      "source_sha256": "464b311ac23261d7916b2140ff4ff3e579585ae14cf94858fea69d7901a0f587"
+    },
+    "analysis/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec-recomputed.json",
+      "source_sha256": "3aabf8c923198a9621ffa25b3ab794e54a8896e936638d83c26e84015a9885f3"
+    },
+    "analysis/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f-recomputed.json",
+      "source_sha256": "d20dcd09488bda970e6a79d492b95f645561b8cf0d2dcf9492264db7fdba40b4"
+    },
+    "analysis/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b-recomputed.json",
+      "source_sha256": "c49cd6b62ec6c7857552d50a500906109915b096c51bdfc49ac9c33a2121fa8c"
+    },
+    "analysis/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765-recomputed.json",
+      "source_sha256": "8633d26fce86da36eca9d280e65765be1baa57612e5298e04c572aa4a6fce02f"
+    },
+    "analysis/20261018T160301Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep1-4ea8ff38-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T160301Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep1-4ea8ff38-recomputed.json",
+      "source_sha256": "72f074d1f88487ef5fee4679f6affe9f77b847d59f27d7f12d699700af5ab8cc"
+    },
+    "analysis/20261018T160535Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep2-c58c0864-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T160535Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep2-c58c0864-recomputed.json",
+      "source_sha256": "1c97535f76133b1a0f52a81780b599ff8ed85314f60d29e87da36216ec8415fe"
+    },
+    "analysis/20261018T160809Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep3-aea6bfc7-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T160809Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep3-aea6bfc7-recomputed.json",
+      "source_sha256": "14065aa9dc4027ecfb299f1d6ebf90c206a2cbaee663c41bf76bf92d704d0ad1"
+    },
+    "analysis/20261018T161043Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep1-fc120358-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T161043Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep1-fc120358-recomputed.json",
+      "source_sha256": "a1665cd6fb27aed0aad52cefb929eb71c3e641f1946ef283f85ca1a6ebff11ba"
+    },
+    "analysis/20261018T161318Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep2-9c12e08d-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T161318Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep2-9c12e08d-recomputed.json",
+      "source_sha256": "aeea3e33cfca319caf4c31044face1bc23095d1c5b0e0f2d1a30aeee47655300"
+    },
+    "analysis/20261018T161554Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep3-c0bad2d4-recomputed.json": {
+      "source": "results/node-5090-20261018/analysis/20261018T161554Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep3-c0bad2d4-recomputed.json",
+      "source_sha256": "6ddd28e2657a6274498d0a67a142bd7045f765154b00aa4c50e2a300d815670b"
+    },
+    "analysis/audit.json": {
+      "source": "results/node-5090-20261018/analysis/audit.json",
+      "source_sha256": "3f824c01cab4288b70d8e6526cbddb56a17f7fff7b0fbb7f829d97919f57b831"
+    },
+    "analysis/paired-comparisons.csv": {
+      "source": "results/node-5090-20261018/analysis/paired-comparisons.csv",
+      "source_sha256": "3d534b33060b686e71667d4bc7e1e7a4fcbfcbcc8baaef2093ccc10802f3fe67"
+    },
+    "analysis/runs.csv": {
+      "source": "results/node-5090-20261018/analysis/runs.csv",
+      "source_sha256": "12c9e43b564c666b99c56c99ab7947b8b9b84edda5f8ae4ada688102c98b6e76"
+    },
+    "analysis/steady-60s-windows.csv": {
+      "source": "results/node-5090-20261018/analysis/steady-60s-windows.csv",
+      "source_sha256": "ae53605eb64019ce5d66b303dd0802289c2b53c5b5db23cdef15ae654d7c6ca5"
+    },
+    "evidence/local-verification.json": {
+      "source": "results/node-5090-20261018/local-verification.json",
+      "source_sha256": "a33835a5a09c66bd3d6d890849e69548090a354db93fab43ba624193ceb5e9be"
+    },
+    "evidence/worker-file-manifest.json": {
+      "source": "results/node-5090-20261018/worker-file-manifest.json",
+      "source_sha256": "6a07d6c1cbc19d2fe33a4898208f2e2bfc58684c832ce2e9743f0d01bfef8c30"
+    },
+    "evidence/base-model-origin.json": {
+      "source": "results/node-5090-20261018/base-model-origin.json",
+      "source_sha256": "6e0bea5ac715c6862ffd921e595ce4e90667a25f02c7f48210954279ca1a8f6f"
+    },
+    "evidence/base-model-verified.json": {
+      "source": "results/node-5090-20261018/base-model-verified.json",
+      "source_sha256": "70c59b99c6cbbc9a9c3189379bdfe68c329c61f4a36666f1a0ff303525924115"
+    },
+    "evidence/worker-hardware.json": {
+      "source": "results/node-5090-20261018/worker-hardware.json",
+      "source_sha256": "56cd998b698b3f2e023a5bd115374bbe2acfda91ed6cc71f5f529dcb648de0be"
+    },
+    "evidence/controller-hardware.json": {
+      "source": "results/node-5090-20261018/controller-hardware.json",
+      "source_sha256": "cd7f2433fa3d0c102ec25bad602fbcf3218c5d67a91492471e19d0ec8af02b97"
+    },
+    "evidence/pytest.json": {
+      "source": "results/node-5090-20261018/pytest.json",
+      "source_sha256": "c66535022f414b22c2c6477e95796123541f0b3589ab0b4a0de13310eede5296"
+    },
+    "evidence/pytest.log": {
+      "source": "results/node-5090-20261018/pytest.log",
+      "source_sha256": "e944256b78477c8383a2ce6be8c10d8607fb07be3674d55e8ea5659030ffa3b6"
+    },
+    "evidence/cuda-smoke.json": {
+      "source": "results/node-5090-20261018/cuda-smoke.json",
+      "source_sha256": "76274c8bc9feb52f577263ed66f2c16a00f046d7ad20725908b1348a2ecd69e8"
+    },
+    "evidence/setup/environment.json": {
+      "source": "results/node-5090-20261018/bert-setup-20261018T153310Z/environment.json",
+      "source_sha256": "52693c96d43bb7d832b52480fa0251b858459908e17fe04d12b2230d9b55bc45"
+    },
+    "evidence/setup/pip-freeze.txt": {
+      "source": "results/node-5090-20261018/bert-setup-20261018T153310Z/pip-freeze.txt",
+      "source_sha256": "5dcb0f15cf1b61e1cb5f4fd50cd9cced8fd05ba1a15b94fa3a60ffce80a9bd25"
+    },
+    "evidence/setup/setup.json": {
+      "source": "results/node-5090-20261018/bert-setup-20261018T153310Z/setup.json",
+      "source_sha256": "ac2312bd0e821b9bab7b99fc36ce4ba26d31237593f1894ca079da214fd3c2ff"
+    },
+    "frozen-plan/plan.json": {
+      "source": "experiments/bert-native-v1/plan.json",
+      "source_sha256": "783c1d1433b52427915db22514289ddd192a474c16543a8d1001c8d7b4594c5c"
+    },
+    "frozen-plan/plan.sha256.json": {
+      "source": "experiments/bert-native-v1/plan.sha256.json",
+      "source_sha256": "23438d2387641c851759eb2ff5f4161d40ef48ecb008a4386511a0872a3f7a8e"
+    },
+    "data-provenance/catalog.json": {
+      "source": "data/normalized/massive-bert-native-v1/catalog.json",
+      "source_sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "data-provenance/provenance.json": {
+      "source": "data/normalized/massive-bert-native-v1/provenance.json",
+      "source_sha256": "3ef8471d12622722bcef1671c4e54dbf7915f186067feb46a280e5dc1367d36d"
+    },
+    "training/selection.json": {
+      "source": "models/bert-native-v1/selection.json",
+      "source_sha256": "fdfec3adee57d10528c4dc3fbe8d01b7d78748e3c2dbb31e60da6ed027fb753e"
+    },
+    "training/seed-42/metadata.json": {
+      "source": "models/bert-native-v1/seed-42/metadata.json",
+      "source_sha256": "65991aa217431eb48ed32f2c780321cb6d4ea9901213ceae1feb512efced75d6"
+    },
+    "training/seed-42/learning-curve.json": {
+      "source": "models/bert-native-v1/seed-42/learning-curve.json",
+      "source_sha256": "70a9c38661e1f51efa8af8d125190f19b6239214a141fb3ccda72350bb1bb211"
+    },
+    "training/seed-42/environment.json": {
+      "source": "models/bert-native-v1/seed-42/environment.json",
+      "source_sha256": "c087618885c5651d1c9d133a55fa1b74e03cc0b9cab58db4b59077a2caa6486e"
+    },
+    "training/seed-42/training-request.json": {
+      "source": "models/bert-native-v1/seed-42/training-request.json",
+      "source_sha256": "7797c9ec362c8718e2fbef739f19b5b0f7f103a6b73618f7d250abfb8a5d72a0"
+    },
+    "training/seed-42/token-lengths.json": {
+      "source": "models/bert-native-v1/seed-42/token-lengths.json",
+      "source_sha256": "44c38c6d34e5cf6df005e80574e2dca8b86d26b3c938e15e63b9a4a1e96f488f"
+    },
+    "training/seed-42/overlap-audit.json": {
+      "source": "models/bert-native-v1/seed-42/overlap-audit.json",
+      "source_sha256": "6363e3c91c32ade2848f320a0559eea44fd7307f5c8cfd16443504f03e6a565e"
+    },
+    "training/seed-43/metadata.json": {
+      "source": "models/bert-native-v1/seed-43/metadata.json",
+      "source_sha256": "c6e8cb08cf57d8a2fbd9c56f5670c686d27c1c8513fa75007cbbd9df8fc27c13"
+    },
+    "training/seed-43/learning-curve.json": {
+      "source": "models/bert-native-v1/seed-43/learning-curve.json",
+      "source_sha256": "6b0f8d429e41a26462651a5a9582519768dd34f33be4f25eeb5dec962e99a937"
+    },
+    "training/seed-43/environment.json": {
+      "source": "models/bert-native-v1/seed-43/environment.json",
+      "source_sha256": "c087618885c5651d1c9d133a55fa1b74e03cc0b9cab58db4b59077a2caa6486e"
+    },
+    "training/seed-43/training-request.json": {
+      "source": "models/bert-native-v1/seed-43/training-request.json",
+      "source_sha256": "531b7b5c91a3aae5d843f2c7e39990265a2550fb59bedecc9ae88b30eaa55bc2"
+    },
+    "training/seed-43/token-lengths.json": {
+      "source": "models/bert-native-v1/seed-43/token-lengths.json",
+      "source_sha256": "44c38c6d34e5cf6df005e80574e2dca8b86d26b3c938e15e63b9a4a1e96f488f"
+    },
+    "training/seed-43/overlap-audit.json": {
+      "source": "models/bert-native-v1/seed-43/overlap-audit.json",
+      "source_sha256": "6363e3c91c32ade2848f320a0559eea44fd7307f5c8cfd16443504f03e6a565e"
+    },
+    "training/seed-44/metadata.json": {
+      "source": "models/bert-native-v1/seed-44/metadata.json",
+      "source_sha256": "8f30105967c10c2127661ffee8464ce1d6d3a3abeb71f8d854f3702f0a991c1a"
+    },
+    "training/seed-44/learning-curve.json": {
+      "source": "models/bert-native-v1/seed-44/learning-curve.json",
+      "source_sha256": "2ad1d8c5d182a04fc885a238d55c572e2005bbbad8c07c384442291b94573231"
+    },
+    "training/seed-44/environment.json": {
+      "source": "models/bert-native-v1/seed-44/environment.json",
+      "source_sha256": "c087618885c5651d1c9d133a55fa1b74e03cc0b9cab58db4b59077a2caa6486e"
+    },
+    "training/seed-44/training-request.json": {
+      "source": "models/bert-native-v1/seed-44/training-request.json",
+      "source_sha256": "1bc40ed451973d5fe4cfbea62045a2c655549b3874151748a51d43a61b8f54c9"
+    },
+    "training/seed-44/token-lengths.json": {
+      "source": "models/bert-native-v1/seed-44/token-lengths.json",
+      "source_sha256": "44c38c6d34e5cf6df005e80574e2dca8b86d26b3c938e15e63b9a4a1e96f488f"
+    },
+    "training/seed-44/overlap-audit.json": {
+      "source": "models/bert-native-v1/seed-44/overlap-audit.json",
+      "source_sha256": "6363e3c91c32ade2848f320a0559eea44fd7307f5c8cfd16443504f03e6a565e"
+    },
+    "evidence/bert-5090-20261018-worker.tar.sha256.json": {
+      "source": "dist/bert-5090-20261018-worker.tar.sha256.json",
+      "source_sha256": "4c527e6072800c85505901647680a2eed467fb6516f1d11faf3f8e87647ae517"
+    },
+    "evidence/bert-5090-20261018-controller.tar.gz.sha256.json": {
+      "source": "dist/bert-5090-20261018-controller.tar.gz.sha256.json",
+      "source_sha256": "87eed31aaa76a67e5ceda3f595087d5a9bb485eb0dae966e9e5d704747d03811"
+    },
+    "run_controller.py": {
+      "source": "results/node-5090-20261018/run_controller.py",
+      "source_sha256": "b111c33e0d9effd39d307c58fc0a6b6c8c6232fd38e2dd38acb00f77b92250f6"
+    }
+  },
+  "transformations": {
+    "quality-summary.json": "Absolute controller checkout prefix becomes '.'; path separators become '/'; UTF-8/LF serialization. Metrics and raw-input hashes unchanged.",
+    "baseline-metrics.json": "Absolute controller checkout prefix becomes '.'; path separators become '/'; UTF-8/LF serialization. Metrics and raw-input hashes unchanged.",
+    "per-class-comparison.csv": "Absolute controller checkout prefix becomes '.'; path separators become '/'; UTF-8/LF serialization. Metrics and raw-input hashes unchanged.",
+    "class-summary.json": "Absolute controller checkout prefix becomes '.'; path separators become '/'; UTF-8/LF serialization. Metrics and raw-input hashes unchanged.",
+    "analysis-validation.json": "Absolute controller checkout prefix becomes '.'; path separators become '/'; UTF-8/LF serialization. Metrics and raw-input hashes unchanged.",
+    "analysis/audit.json": "Absolute controller checkout prefix becomes '.'; path separators become '/'; UTF-8/LF serialization. Metrics and raw-input hashes unchanged.",
+    "analysis/paired-comparisons.csv": "Absolute controller checkout prefix becomes '.'; path separators become '/'; UTF-8/LF serialization. Metrics and raw-input hashes unchanged.",
+    "analysis/runs.csv": "Absolute controller checkout prefix becomes '.'; path separators become '/'; UTF-8/LF serialization. Metrics and raw-input hashes unchanged.",
+    "analysis/steady-60s-windows.csv": "Absolute controller checkout prefix becomes '.'; path separators become '/'; UTF-8/LF serialization. Metrics and raw-input hashes unchanged."
+  },
+  "files_sha256": {
+    "analysis/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450-recomputed.json": "e1a3f42cec94097833fd06005f7198c90034f03a59c04c28b8b3b8ff1dc12156",
+    "analysis/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3-recomputed.json": "c1724e3c9fe928f188aa9ba9e9b567d80bbdb73004db857453f84e59276586ec",
+    "analysis/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1-recomputed.json": "6ab61205e1855c3c08196d3d198052b00563229028db4ccb6288d09a15f21bbb",
+    "analysis/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712-recomputed.json": "70bfa56bb2ec84686e748eba9c9b96ac10b78d2874b5c5da20ead544565f27f0",
+    "analysis/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b-recomputed.json": "464b311ac23261d7916b2140ff4ff3e579585ae14cf94858fea69d7901a0f587",
+    "analysis/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec-recomputed.json": "3aabf8c923198a9621ffa25b3ab794e54a8896e936638d83c26e84015a9885f3",
+    "analysis/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f-recomputed.json": "d20dcd09488bda970e6a79d492b95f645561b8cf0d2dcf9492264db7fdba40b4",
+    "analysis/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b-recomputed.json": "c49cd6b62ec6c7857552d50a500906109915b096c51bdfc49ac9c33a2121fa8c",
+    "analysis/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765-recomputed.json": "8633d26fce86da36eca9d280e65765be1baa57612e5298e04c572aa4a6fce02f",
+    "analysis/20261018T160301Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep1-4ea8ff38-recomputed.json": "72f074d1f88487ef5fee4679f6affe9f77b847d59f27d7f12d699700af5ab8cc",
+    "analysis/20261018T160535Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep2-c58c0864-recomputed.json": "1c97535f76133b1a0f52a81780b599ff8ed85314f60d29e87da36216ec8415fe",
+    "analysis/20261018T160809Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep3-aea6bfc7-recomputed.json": "14065aa9dc4027ecfb299f1d6ebf90c206a2cbaee663c41bf76bf92d704d0ad1",
+    "analysis/20261018T161043Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep1-fc120358-recomputed.json": "a1665cd6fb27aed0aad52cefb929eb71c3e641f1946ef283f85ca1a6ebff11ba",
+    "analysis/20261018T161318Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep2-9c12e08d-recomputed.json": "aeea3e33cfca319caf4c31044face1bc23095d1c5b0e0f2d1a30aeee47655300",
+    "analysis/20261018T161554Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep3-c0bad2d4-recomputed.json": "6ddd28e2657a6274498d0a67a142bd7045f765154b00aa4c50e2a300d815670b",
+    "analysis/audit.json": "add45d11ae21a062fa5eef36a70ad9541ac0a5bc4e99ad9e51dde20300c5c819",
+    "analysis/paired-comparisons.csv": "973adfffd4478edd3b251683afec62d75ea2319ff00302f5f85da64afa33ae7c",
+    "analysis/runs.csv": "529ba3b1cf15d7bf03f6f5dcdcb5ceaf67ac8377a3d15444b77a1d3df41d9e79",
+    "analysis/steady-60s-windows.csv": "bc3513d52f387389873d8d9fdeba7c0c403250f803bde3e0f2a61df0fef71b10",
+    "analysis-validation.json": "17d3a4225d3ccf1d96cd46a82669a4c780fd1a0f326d3d579cdf49df29045754",
+    "baseline-metrics.json": "aa0cb913078b866791b4236d65ab0234d8356c21a5e1d49a8dc148057b0c1885",
+    "class-summary.json": "e9f47925324b4722b06469ca1955cb4e7699d50a0cf2005d12352431e2ecf24f",
+    "data-provenance/catalog.json": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd",
+    "data-provenance/provenance.json": "3ef8471d12622722bcef1671c4e54dbf7915f186067feb46a280e5dc1367d36d",
+    "evidence/base-model-origin.json": "6e0bea5ac715c6862ffd921e595ce4e90667a25f02c7f48210954279ca1a8f6f",
+    "evidence/base-model-verified.json": "70c59b99c6cbbc9a9c3189379bdfe68c329c61f4a36666f1a0ff303525924115",
+    "evidence/bert-5090-20261018-controller.tar.gz.sha256.json": "87eed31aaa76a67e5ceda3f595087d5a9bb485eb0dae966e9e5d704747d03811",
+    "evidence/bert-5090-20261018-worker.tar.sha256.json": "4c527e6072800c85505901647680a2eed467fb6516f1d11faf3f8e87647ae517",
+    "evidence/controller-hardware.json": "cd7f2433fa3d0c102ec25bad602fbcf3218c5d67a91492471e19d0ec8af02b97",
+    "evidence/cuda-smoke.json": "76274c8bc9feb52f577263ed66f2c16a00f046d7ad20725908b1348a2ecd69e8",
+    "evidence/local-verification.json": "a33835a5a09c66bd3d6d890849e69548090a354db93fab43ba624193ceb5e9be",
+    "evidence/publication-validation.json": "20275d337b5529b2ae6dad49c66a3327931e1488a1811980affd7b982b770809",
+    "evidence/pytest.json": "c66535022f414b22c2c6477e95796123541f0b3589ab0b4a0de13310eede5296",
+    "evidence/pytest.log": "e944256b78477c8383a2ce6be8c10d8607fb07be3674d55e8ea5659030ffa3b6",
+    "evidence/setup/environment.json": "52693c96d43bb7d832b52480fa0251b858459908e17fe04d12b2230d9b55bc45",
+    "evidence/setup/pip-freeze.txt": "5dcb0f15cf1b61e1cb5f4fd50cd9cced8fd05ba1a15b94fa3a60ffce80a9bd25",
+    "evidence/setup/setup.json": "ac2312bd0e821b9bab7b99fc36ce4ba26d31237593f1894ca079da214fd3c2ff",
+    "evidence/worker-file-manifest.json": "6a07d6c1cbc19d2fe33a4898208f2e2bfc58684c832ce2e9743f0d01bfef8c30",
+    "evidence/worker-hardware.json": "56cd998b698b3f2e023a5bd115374bbe2acfda91ed6cc71f5f529dcb648de0be",
+    "frozen-plan/plan.json": "783c1d1433b52427915db22514289ddd192a474c16543a8d1001c8d7b4594c5c",
+    "frozen-plan/plan.sha256.json": "23438d2387641c851759eb2ff5f4161d40ef48ecb008a4386511a0872a3f7a8e",
+    "per-class-comparison.csv": "668e96b5bc62a848751ea32013f099a3ebc506de8deafcc67c5e6b77ca892cec",
+    "quality-summary.json": "c5bfccc53dc1ddd02c4d81c321a1c0c7bf229fb7b4c47748be0b879c2f021cf9",
+    "REPORT.md": "bc8fb7bdebf726def28f4591417394cfd7010748e6cac38c5fca83a1bd2c4447",
+    "REPRODUCE.md": "400c07a4a1d5086da24dafec4850be7ac95594a309f063a128e60aec29c6e557",
+    "run_controller.py": "b111c33e0d9effd39d307c58fc0a6b6c8c6232fd38e2dd38acb00f77b92250f6",
+    "sample-predictions.csv": "42ff5277b6f1397e1285e7a2286802caa54095c82bb568971810f1ae0de043f6",
+    "training/seed-42/environment.json": "c087618885c5651d1c9d133a55fa1b74e03cc0b9cab58db4b59077a2caa6486e",
+    "training/seed-42/learning-curve.json": "70a9c38661e1f51efa8af8d125190f19b6239214a141fb3ccda72350bb1bb211",
+    "training/seed-42/metadata.json": "65991aa217431eb48ed32f2c780321cb6d4ea9901213ceae1feb512efced75d6",
+    "training/seed-42/overlap-audit.json": "6363e3c91c32ade2848f320a0559eea44fd7307f5c8cfd16443504f03e6a565e",
+    "training/seed-42/token-lengths.json": "44c38c6d34e5cf6df005e80574e2dca8b86d26b3c938e15e63b9a4a1e96f488f",
+    "training/seed-42/training-request.json": "7797c9ec362c8718e2fbef739f19b5b0f7f103a6b73618f7d250abfb8a5d72a0",
+    "training/seed-43/environment.json": "c087618885c5651d1c9d133a55fa1b74e03cc0b9cab58db4b59077a2caa6486e",
+    "training/seed-43/learning-curve.json": "6b0f8d429e41a26462651a5a9582519768dd34f33be4f25eeb5dec962e99a937",
+    "training/seed-43/metadata.json": "c6e8cb08cf57d8a2fbd9c56f5670c686d27c1c8513fa75007cbbd9df8fc27c13",
+    "training/seed-43/overlap-audit.json": "6363e3c91c32ade2848f320a0559eea44fd7307f5c8cfd16443504f03e6a565e",
+    "training/seed-43/token-lengths.json": "44c38c6d34e5cf6df005e80574e2dca8b86d26b3c938e15e63b9a4a1e96f488f",
+    "training/seed-43/training-request.json": "531b7b5c91a3aae5d843f2c7e39990265a2550fb59bedecc9ae88b30eaa55bc2",
+    "training/seed-44/environment.json": "c087618885c5651d1c9d133a55fa1b74e03cc0b9cab58db4b59077a2caa6486e",
+    "training/seed-44/learning-curve.json": "2ad1d8c5d182a04fc885a238d55c572e2005bbbad8c07c384442291b94573231",
+    "training/seed-44/metadata.json": "8f30105967c10c2127661ffee8464ce1d6d3a3abeb71f8d854f3702f0a991c1a",
+    "training/seed-44/overlap-audit.json": "6363e3c91c32ade2848f320a0559eea44fd7307f5c8cfd16443504f03e6a565e",
+    "training/seed-44/token-lengths.json": "44c38c6d34e5cf6df005e80574e2dca8b86d26b3c938e15e63b9a4a1e96f488f",
+    "training/seed-44/training-request.json": "1bc40ed451973d5fe4cfbea62045a2c655549b3874151748a51d43a61b8f54c9",
+    "training/selection.json": "fdfec3adee57d10528c4dc3fbe8d01b7d78748e3c2dbb31e60da6ed027fb753e",
+    "verify_publication.py": "209aff2914e72e86f260ecd95eafb74920acec5909612731861a4925f6812083"
+  }
+}

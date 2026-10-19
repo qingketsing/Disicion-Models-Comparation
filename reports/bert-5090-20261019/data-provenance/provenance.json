@@ -1,0 +1,29 @@
+{
+  "dataset": "massive",
+  "locale": "en-US",
+  "seed": 42,
+  "source_urls": [],
+  "source_sha256": {
+    "/root/autodl-tmp/Disicion-Models-Comparation/data/raw/amazon-massive-dataset-1.1.tar.gz": "4cba5faa11c71437928e17cb1b9b3d8b8e727e7ea363a3a9a8045e19c0491577"
+  },
+  "banking_revision": null,
+  "sizes": {
+    "test": 2974,
+    "train": 11514,
+    "validation": 2033,
+    "checkpoint-300": 300
+  },
+  "split_policy": "MASSIVE native splits; no deduplication",
+  "descriptions_reviewed": true,
+  "description_note": "PR #2 AI-reviewed mapping; not human-reviewed",
+  "license": "CC BY 4.0; retain publisher attribution in reports",
+  "normalized_sha256": {
+    "catalog.json": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd",
+    "checkpoint-300.jsonl": "c24d58f321de3e07dfa86d013bbb81fcaa943115421c048e9dbc547caf0b00c1",
+    "test.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d",
+    "train.jsonl": "80e270f2c5225cb8af8ed2f0ff045ae0aa8f5d3cfe0219e21777163cb2c0dc32",
+    "validation.jsonl": "f6baf150cb919ece086aa730bcefddf61045d572c03773d1048497068fe9aca2"
+  },
+  "description_reviewer": "ai",
+  "catalog_note": "New BERT experiment version; historical catalog bytes not restored"
+}

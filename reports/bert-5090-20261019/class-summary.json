@@ -1,0 +1,210 @@
+{
+  "selected_seed": 42,
+  "bert_run": "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450",
+  "comparison": "BERT inference repeat 1 vs mean of the three historical Jev repeats",
+  "lowest_f1_differences": [
+    {
+      "label": "music_dislikeness",
+      "train_support": 14,
+      "test_support": 4,
+      "bert_precision": 0,
+      "bert_recall": 0.0,
+      "bert_f1": 0.0,
+      "jev_mean_f1": 1.0,
+      "bert_minus_jev_f1": -1.0
+    },
+    {
+      "label": "audio_volume_other",
+      "train_support": 18,
+      "test_support": 6,
+      "bert_precision": 0,
+      "bert_recall": 0.0,
+      "bert_f1": 0.0,
+      "jev_mean_f1": 0.6984126984126984,
+      "bert_minus_jev_f1": -0.6984126984126984
+    },
+    {
+      "label": "iot_hue_lighton",
+      "train_support": 22,
+      "test_support": 3,
+      "bert_precision": 0,
+      "bert_recall": 0.0,
+      "bert_f1": 0.0,
+      "jev_mean_f1": 0.46296296296296297,
+      "bert_minus_jev_f1": -0.46296296296296297
+    },
+    {
+      "label": "transport_traffic",
+      "train_support": 117,
+      "test_support": 15,
+      "bert_precision": 0.6818181818181818,
+      "bert_recall": 1.0,
+      "bert_f1": 0.8108108108108109,
+      "jev_mean_f1": 0.9576612903225806,
+      "bert_minus_jev_f1": -0.14685047951176977
+    },
+    {
+      "label": "qa_maths",
+      "train_support": 78,
+      "test_support": 25,
+      "bert_precision": 0.84,
+      "bert_recall": 0.84,
+      "bert_f1": 0.84,
+      "jev_mean_f1": 0.9375727929187049,
+      "bert_minus_jev_f1": -0.09757279291870491
+    },
+    {
+      "label": "audio_volume_mute",
+      "train_support": 110,
+      "test_support": 32,
+      "bert_precision": 0.8787878787878788,
+      "bert_recall": 0.90625,
+      "bert_f1": 0.8923076923076924,
+      "jev_mean_f1": 0.967741935483871,
+      "bert_minus_jev_f1": -0.07543424317617864
+    },
+    {
+      "label": "datetime_convert",
+      "train_support": 52,
+      "test_support": 15,
+      "bert_precision": 1.0,
+      "bert_recall": 0.6,
+      "bert_f1": 0.75,
+      "jev_mean_f1": 0.8148148148148148,
+      "bert_minus_jev_f1": -0.06481481481481477
+    },
+    {
+      "label": "lists_query",
+      "train_support": 198,
+      "test_support": 51,
+      "bert_precision": 0.8775510204081632,
+      "bert_recall": 0.8431372549019608,
+      "bert_f1": 0.86,
+      "jev_mean_f1": 0.9103665521191294,
+      "bert_minus_jev_f1": -0.05036655211912944
+    },
+    {
+      "label": "audio_volume_down",
+      "train_support": 52,
+      "test_support": 11,
+      "bert_precision": 0.9166666666666666,
+      "bert_recall": 1.0,
+      "bert_f1": 0.9565217391304348,
+      "jev_mean_f1": 1.0,
+      "bert_minus_jev_f1": -0.04347826086956519
+    },
+    {
+      "label": "iot_hue_lightoff",
+      "train_support": 153,
+      "test_support": 43,
+      "bert_precision": 0.9512195121951219,
+      "bert_recall": 0.9069767441860465,
+      "bert_f1": 0.9285714285714286,
+      "jev_mean_f1": 0.963855421686747,
+      "bert_minus_jev_f1": -0.03528399311531838
+    }
+  ],
+  "highest_f1_differences": [
+    {
+      "label": "calendar_set",
+      "train_support": 810,
+      "test_support": 209,
+      "bert_precision": 0.9468599033816425,
+      "bert_recall": 0.937799043062201,
+      "bert_f1": 0.9423076923076923,
+      "jev_mean_f1": 0.8830618778014114,
+      "bert_minus_jev_f1": 0.05924581450628086
+    },
+    {
+      "label": "play_podcasts",
+      "train_support": 193,
+      "test_support": 63,
+      "bert_precision": 0.9666666666666667,
+      "bert_recall": 0.9206349206349206,
+      "bert_f1": 0.943089430894309,
+      "jev_mean_f1": 0.87978057237489,
+      "bert_minus_jev_f1": 0.06330885851941892
+    },
+    {
+      "label": "qa_factoid",
+      "train_support": 544,
+      "test_support": 141,
+      "bert_precision": 0.8206896551724138,
+      "bert_recall": 0.8439716312056738,
+      "bert_f1": 0.8321678321678322,
+      "jev_mean_f1": 0.7418668975744989,
+      "bert_minus_jev_f1": 0.09030093459333333
+    },
+    {
+      "label": "recommendation_events",
+      "train_support": 190,
+      "test_support": 43,
+      "bert_precision": 0.7906976744186046,
+      "bert_recall": 0.7906976744186046,
+      "bert_f1": 0.7906976744186046,
+      "jev_mean_f1": 0.6976744186046512,
+      "bert_minus_jev_f1": 0.09302325581395343
+    },
+    {
+      "label": "general_quirky",
+      "train_support": 555,
+      "test_support": 169,
+      "bert_precision": 0.6903225806451613,
+      "bert_recall": 0.6331360946745562,
+      "bert_f1": 0.6604938271604939,
+      "jev_mean_f1": 0.5551859167948743,
+      "bert_minus_jev_f1": 0.1053079103656196
+    },
+    {
+      "label": "cooking_recipe",
+      "train_support": 207,
+      "test_support": 72,
+      "bert_precision": 0.9333333333333333,
+      "bert_recall": 0.9722222222222222,
+      "bert_f1": 0.9523809523809523,
+      "jev_mean_f1": 0.8461538461538461,
+      "bert_minus_jev_f1": 0.10622710622710618
+    },
+    {
+      "label": "alarm_set",
+      "train_support": 182,
+      "test_support": 41,
+      "bert_precision": 0.9523809523809523,
+      "bert_recall": 0.975609756097561,
+      "bert_f1": 0.963855421686747,
+      "jev_mean_f1": 0.8530349901690656,
+      "bert_minus_jev_f1": 0.1108204315176814
+    },
+    {
+      "label": "recommendation_locations",
+      "train_support": 173,
+      "test_support": 31,
+      "bert_precision": 0.8611111111111112,
+      "bert_recall": 1.0,
+      "bert_f1": 0.9253731343283582,
+      "jev_mean_f1": 0.8087263613579403,
+      "bert_minus_jev_f1": 0.11664677297041792
+    },
+    {
+      "label": "music_settings",
+      "train_support": 51,
+      "test_support": 6,
+      "bert_precision": 0.6666666666666666,
+      "bert_recall": 0.3333333333333333,
+      "bert_f1": 0.4444444444444444,
+      "jev_mean_f1": 0.2474747474747475,
+      "bert_minus_jev_f1": 0.19696969696969693
+    },
+    {
+      "label": "general_greet",
+      "train_support": 25,
+      "test_support": 1,
+      "bert_precision": 0.5,
+      "bert_recall": 1.0,
+      "bert_f1": 0.6666666666666666,
+      "jev_mean_f1": 0.2222222222222222,
+      "bert_minus_jev_f1": 0.4444444444444444
+    }
+  ],
+  "note": "Exploratory per-class error analysis, not an additional model selection step."
+}

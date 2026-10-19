@@ -1,0 +1,67 @@
+{
+  "source": "reports/qwen-jev-main-paired-20261015/paired-sample-outcomes.csv",
+  "source_sha256": "da65d98816634e79027c8f74902ebb3f212c0d9aaea320cbe6cb21cb0cbd74ad",
+  "metrics": [
+    {
+      "model": "qwen",
+      "repeat": 1,
+      "unique_samples": 2974,
+      "accuracy": 0.4593140551445864,
+      "macro_f1_full60": 0.48723937422455904,
+      "unsupported_labels": [
+        "cooking_query"
+      ]
+    },
+    {
+      "model": "qwen",
+      "repeat": 2,
+      "unique_samples": 2974,
+      "accuracy": 0.4593140551445864,
+      "macro_f1_full60": 0.48723937422455904,
+      "unsupported_labels": [
+        "cooking_query"
+      ]
+    },
+    {
+      "model": "qwen",
+      "repeat": 3,
+      "unique_samples": 2974,
+      "accuracy": 0.4593140551445864,
+      "macro_f1_full60": 0.48723937422455904,
+      "unsupported_labels": [
+        "cooking_query"
+      ]
+    },
+    {
+      "model": "jev",
+      "repeat": 1,
+      "unique_samples": 2974,
+      "accuracy": 0.8604572965702757,
+      "macro_f1_full60": 0.8370084066665113,
+      "unsupported_labels": [
+        "cooking_query"
+      ]
+    },
+    {
+      "model": "jev",
+      "repeat": 2,
+      "unique_samples": 2974,
+      "accuracy": 0.8614660390047074,
+      "macro_f1_full60": 0.839250608217208,
+      "unsupported_labels": [
+        "cooking_query"
+      ]
+    },
+    {
+      "model": "jev",
+      "repeat": 3,
+      "unique_samples": 2974,
+      "accuracy": 0.8618022864828514,
+      "macro_f1_full60": 0.8393599457591326,
+      "unsupported_labels": [
+        "cooking_query"
+      ]
+    }
+  ],
+  "note": "Offline recomputation from paired predictions; no new Qwen or Jev calls. BERT is supervised fine-tuned, historical models use their recorded setups."
+}

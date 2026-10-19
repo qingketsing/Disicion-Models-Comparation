@@ -1,0 +1,2673 @@
+{
+  "created_at_utc": "2026-10-18T16:19:16.336661+00:00",
+  "git_commit": "820625e53d082219f571dee64bd12a46c478f24c",
+  "git_dirty": false,
+  "files": {
+    "results/.gitkeep": {
+      "size": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/inputs/catalog-0.json": {
+      "size": 5669,
+      "sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/inputs/config.yaml": {
+      "size": 7874,
+      "sha256": "06b232332f64f022a6116344f45128275adfd15ad6cb1da22e78e8e88557863c"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/inputs/dataset.jsonl": {
+      "size": 338626,
+      "sha256": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/manifest.json": {
+      "size": 22090,
+      "sha256": "bcde59cea4f9f46e03aeb8b5f08a962411c6afcc3c73ecc0db2efe6cb252e3df"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/requests.jsonl": {
+      "size": 9444033,
+      "sha256": "af738633a4855f06d3c83b97e2193ef513a67412d787ff29cf2ad5083fc089d5"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/summary.json": {
+      "size": 37245,
+      "sha256": "a4376da9293e59025e94a8703a8fc7c0530cda8c25122299f22d36cb0884c0df"
+    },
+    "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450/warmup_requests.jsonl": {
+      "size": 158974,
+      "sha256": "d145000a0206fe8d241060adfecb1df30913ae1f295c03cffce458dad92c8386"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/inputs/catalog-0.json": {
+      "size": 5669,
+      "sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/inputs/config.yaml": {
+      "size": 7874,
+      "sha256": "5cd3e9c9f4437ee828765245e7967e9ea5ca16660f98637668d48fadea5084b3"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/inputs/dataset.jsonl": {
+      "size": 338626,
+      "sha256": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/manifest.json": {
+      "size": 22089,
+      "sha256": "961fdd4a60c877bc87d65a5b438aa963bf8dacf99ccb2f49df082b21eabb7728"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/requests.jsonl": {
+      "size": 9443787,
+      "sha256": "2b5e2da2c9b1d64dc0c86988ddd34085f89f8e94790fa96ab0948054c9653263"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/summary.json": {
+      "size": 37244,
+      "sha256": "aa01c80e22a0d3e64db7a8f26a62f3eefcc992bc619fcb633d4dba54ca125d81"
+    },
+    "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3/warmup_requests.jsonl": {
+      "size": 159052,
+      "sha256": "d1c55aec32537dfc08bdea9a040642dbdee4425bd5a98ac1d311d4b6249244cc"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/inputs/catalog-0.json": {
+      "size": 5669,
+      "sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/inputs/config.yaml": {
+      "size": 7874,
+      "sha256": "6cd273d9639dc1c5238523a292e451d00c72d25f97bb3d2fe4d2bb67efba2a3c"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/inputs/dataset.jsonl": {
+      "size": 338626,
+      "sha256": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/manifest.json": {
+      "size": 22089,
+      "sha256": "9f23df4d26d7f53f9116a689828ece7407cf2be1eb5ff01abf63fd7e83a6f811"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/requests.jsonl": {
+      "size": 9443538,
+      "sha256": "a58e880928d78fada05de64041f03995b54259e290c5555e1c83659672035f6c"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/summary.json": {
+      "size": 37246,
+      "sha256": "76ad309d7c483b8e9db5f0d8feaad57176f56ea0f830867d3282b331fba6c681"
+    },
+    "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1/warmup_requests.jsonl": {
+      "size": 159040,
+      "sha256": "bc2d53c1d55da05c1176c95565a8ca05f281a9f547ad0b97d83458b96a9c5faf"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/inputs/catalog-0.json": {
+      "size": 5669,
+      "sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/inputs/config.yaml": {
+      "size": 7874,
+      "sha256": "42cda17d76bcf6b963c3ffebbc4393f244bb851a35e0b3943905e779e2e4b18c"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/inputs/dataset.jsonl": {
+      "size": 338626,
+      "sha256": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/manifest.json": {
+      "size": 22089,
+      "sha256": "2bf9760b636482a2db75f047fc3cc4627d99dcdbc4934bc6bd2d9a53138ce367"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/requests.jsonl": {
+      "size": 9449007,
+      "sha256": "d577ab5472e59d8d08dd8958d0d65638675a73fc973dbf808a91939a2c336c58"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/summary.json": {
+      "size": 37184,
+      "sha256": "db3aca3bfdd22a07a0639519901884d5d9c91b9773630ab568882583994eace9"
+    },
+    "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712/warmup_requests.jsonl": {
+      "size": 158915,
+      "sha256": "eabcaadedb492bdb72baf5a03d29c506673a69d7bbd609e6bd5266c375c5d45f"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/inputs/catalog-0.json": {
+      "size": 5669,
+      "sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/inputs/config.yaml": {
+      "size": 7874,
+      "sha256": "9551e01b1179ebcc1f2b268648dd729d9a53456985ecc1a0ce842cfe26f5a7db"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/inputs/dataset.jsonl": {
+      "size": 338626,
+      "sha256": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/manifest.json": {
+      "size": 22090,
+      "sha256": "5cedbf09e8c7ffb03965a7e1b7075b467d615ff8bc70cba4ea704a031b79a8cc"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/requests.jsonl": {
+      "size": 9450319,
+      "sha256": "ee582321aebcd2304baa4343350f67a726b39fbd4037ef955967e7b55c80972e"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/summary.json": {
+      "size": 37184,
+      "sha256": "34dcff206bd38ba007bdfecdc6c9cbbb0c3959cbcadfd0ce86a942276bc8e358"
+    },
+    "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b/warmup_requests.jsonl": {
+      "size": 158954,
+      "sha256": "8706e4a690ed2693513fcc83a08226c56c6c8c58b676bbad26673e7a68742fc4"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/inputs/catalog-0.json": {
+      "size": 5669,
+      "sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/inputs/config.yaml": {
+      "size": 7874,
+      "sha256": "eb235f4fd118bb044069ecae8a028301cc59c3fbc7d2467bcc115e53ac443aab"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/inputs/dataset.jsonl": {
+      "size": 338626,
+      "sha256": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/manifest.json": {
+      "size": 22089,
+      "sha256": "4a41071ba509e44737bcd8f19bac9087113f69891a0b83efee86c0342bcc3795"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/requests.jsonl": {
+      "size": 9452181,
+      "sha256": "9243029f8029f3ee933d0ffb6428d62004b22b951055c4eca3dc1a4e189b6887"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/summary.json": {
+      "size": 37183,
+      "sha256": "b035066678e731d8c34c1b2cf29e8925d252653245717f9d854f48420043683a"
+    },
+    "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec/warmup_requests.jsonl": {
+      "size": 158942,
+      "sha256": "29ebda500b5db7089a6514ae0dc81305f258f6cbb5c8d9c65e19b0e684ba3047"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/inputs/catalog-0.json": {
+      "size": 5669,
+      "sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/inputs/config.yaml": {
+      "size": 7873,
+      "sha256": "fd09e372bdc4cac6d4583b6a131da99bdc81598dfb2c33b81715b4807d6e80e4"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/inputs/dataset.jsonl": {
+      "size": 338626,
+      "sha256": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/manifest.json": {
+      "size": 22087,
+      "sha256": "5b9cfb48d5bc183aee05f682efc422516d3f2a6aec8ea609228085147afe548f"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/requests.jsonl": {
+      "size": 9448189,
+      "sha256": "9d6125b0e570b97b344ce333d2960ce6763d7d125efaa82cd7ce7d10c98d4536"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/summary.json": {
+      "size": 36732,
+      "sha256": "574b7c22df6347cb4bdd07b0f382e60ff57ff8db6898a5ccafd63c5f54f9dc1d"
+    },
+    "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f/warmup_requests.jsonl": {
+      "size": 159036,
+      "sha256": "1bb6a7533cacb9226e3d0bdab549c14c94e7269ea6f3f1c40f1cf4a18974dbc2"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/inputs/catalog-0.json": {
+      "size": 5669,
+      "sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/inputs/config.yaml": {
+      "size": 7873,
+      "sha256": "4a04f5e21f905bb2972354dac80b8363f9414327e49cd7d4b83894c41f910522"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/inputs/dataset.jsonl": {
+      "size": 338626,
+      "sha256": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/manifest.json": {
+      "size": 22088,
+      "sha256": "109fd1fdb514d0cc3001eee3c365d82382a717fd87f024bc117b3a1648457f23"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/requests.jsonl": {
+      "size": 9449346,
+      "sha256": "9465068a3ce8d6d54194eada623f61a8d925b8a53e0bd2ee0a42054baff2410a"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/summary.json": {
+      "size": 36731,
+      "sha256": "d6189923f026c73f7b7a3eb56fc754eb8804150e1c0912eda7acac281a582f4c"
+    },
+    "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b/warmup_requests.jsonl": {
+      "size": 159099,
+      "sha256": "22042358760ff19869ca5f2c89724509fe966cbb5c4655b8ed9afb4340dfea30"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/inputs/catalog-0.json": {
+      "size": 5669,
+      "sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/inputs/config.yaml": {
+      "size": 7873,
+      "sha256": "7dd70fd074e16a19970fea8f32cc645b955fcca8c872f7d0929b488f20c27014"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/inputs/dataset.jsonl": {
+      "size": 338626,
+      "sha256": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/manifest.json": {
+      "size": 22087,
+      "sha256": "fc50bfa88f3a55c73ef8bfb8d9ed2b4302ec34554ab0c684e0dfe982734e2d49"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/requests.jsonl": {
+      "size": 9447088,
+      "sha256": "5e447486a928d8df4d8d98877746e7fecee426df387526c3d90b941f666fb293"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/summary.json": {
+      "size": 36729,
+      "sha256": "d29d0dbf6d3ec191da752e02e59058355d2ea89840fcbef67d0f9772b1536ff3"
+    },
+    "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765/warmup_requests.jsonl": {
+      "size": 159068,
+      "sha256": "7a3aca736143652ef9dec0bc42c6fa298dea2ec71cea1400a812ef0b07ef2a97"
+    },
+    "results/bert-setup-20261018T153310Z/environment.json": {
+      "size": 635,
+      "sha256": "52693c96d43bb7d832b52480fa0251b858459908e17fe04d12b2230d9b55bc45"
+    },
+    "results/bert-setup-20261018T153310Z/pip-freeze.txt": {
+      "size": 1738,
+      "sha256": "5dcb0f15cf1b61e1cb5f4fd50cd9cced8fd05ba1a15b94fa3a60ffce80a9bd25"
+    },
+    "results/bert-setup-20261018T153310Z/setup.json": {
+      "size": 248,
+      "sha256": "ac2312bd0e821b9bab7b99fc36ce4ba26d31237593f1894ca079da214fd3c2ff"
+    },
+    "results/massive-bert-native-v1-quality-20261018T154916107912Z/index.json": {
+      "size": 7179,
+      "sha256": "ed03f90525b575571dc9f9eff048d71521f85c8327feb704ec9201ab2df4a60f"
+    },
+    "results/massive-bert-native-v1-quality-20261018T154916107912Z/rNone-repeat1.json": {
+      "size": 7874,
+      "sha256": "06b232332f64f022a6116344f45128275adfd15ad6cb1da22e78e8e88557863c"
+    },
+    "results/massive-bert-native-v1-quality-20261018T154916107912Z/rNone-repeat2.json": {
+      "size": 7874,
+      "sha256": "5cd3e9c9f4437ee828765245e7967e9ea5ca16660f98637668d48fadea5084b3"
+    },
+    "results/massive-bert-native-v1-quality-20261018T154916107912Z/rNone-repeat3.json": {
+      "size": 7874,
+      "sha256": "6cd273d9639dc1c5238523a292e451d00c72d25f97bb3d2fe4d2bb67efba2a3c"
+    },
+    "results/massive-bert-native-v1-quality-20261018T155417633132Z/index.json": {
+      "size": 7179,
+      "sha256": "2aec9ac42525cea5c22168ad41ac7f6ea374a8511642647edc11860e8ef0048a"
+    },
+    "results/massive-bert-native-v1-quality-20261018T155417633132Z/rNone-repeat1.json": {
+      "size": 7874,
+      "sha256": "42cda17d76bcf6b963c3ffebbc4393f244bb851a35e0b3943905e779e2e4b18c"
+    },
+    "results/massive-bert-native-v1-quality-20261018T155417633132Z/rNone-repeat2.json": {
+      "size": 7874,
+      "sha256": "9551e01b1179ebcc1f2b268648dd729d9a53456985ecc1a0ce842cfe26f5a7db"
+    },
+    "results/massive-bert-native-v1-quality-20261018T155417633132Z/rNone-repeat3.json": {
+      "size": 7874,
+      "sha256": "eb235f4fd118bb044069ecae8a028301cc59c3fbc7d2467bcc115e53ac443aab"
+    },
+    "results/massive-bert-native-v1-quality-20261018T155813909767Z/index.json": {
+      "size": 7178,
+      "sha256": "fdb23f9ab7fd949b0f4247efeb0dc8b14eab2f53f2bdd37f694360b7d07ec889"
+    },
+    "results/massive-bert-native-v1-quality-20261018T155813909767Z/rNone-repeat1.json": {
+      "size": 7873,
+      "sha256": "fd09e372bdc4cac6d4583b6a131da99bdc81598dfb2c33b81715b4807d6e80e4"
+    },
+    "results/massive-bert-native-v1-quality-20261018T155813909767Z/rNone-repeat2.json": {
+      "size": 7873,
+      "sha256": "4a04f5e21f905bb2972354dac80b8363f9414327e49cd7d4b83894c41f910522"
+    },
+    "results/massive-bert-native-v1-quality-20261018T155813909767Z/rNone-repeat3.json": {
+      "size": 7873,
+      "sha256": "7dd70fd074e16a19970fea8f32cc645b955fcca8c872f7d0929b488f20c27014"
+    },
+    "results/node-5090-20261018/backup_node.py": {
+      "size": 2929,
+      "sha256": "724e287861dcf2c4ed9693d11309cef386e24be934b8f9787eaf5be66bb2f509"
+    },
+    "results/node-5090-20261018/base-model-origin.json": {
+      "size": 959,
+      "sha256": "6e0bea5ac715c6862ffd921e595ce4e90667a25f02c7f48210954279ca1a8f6f"
+    },
+    "results/node-5090-20261018/base-model-verified.json": {
+      "size": 855,
+      "sha256": "70c59b99c6cbbc9a9c3189379bdfe68c329c61f4a36666f1a0ff303525924115"
+    },
+    "results/node-5090-20261018/bootstrap.log": {
+      "size": 33447,
+      "sha256": "fdafe90b2a26e293774a31b660363d8072e561f15dc36fb0d6ce48002625f98c"
+    },
+    "results/node-5090-20261018/capture_hardware.py": {
+      "size": 926,
+      "sha256": "64d838cb1683dce6f198da55c203d064da7b5d715bfb873ed7b93fe824b3334a"
+    },
+    "results/node-5090-20261018/class-analysis.log": {
+      "size": 6205,
+      "sha256": "eb3f0784f79f58f9cdd53cd0a12e46538da115042602aa7160a631123afe15e7"
+    },
+    "results/node-5090-20261018/class-summary.json": {
+      "size": 6205,
+      "sha256": "eb3f0784f79f58f9cdd53cd0a12e46538da115042602aa7160a631123afe15e7"
+    },
+    "results/node-5090-20261018/compare_per_class.py": {
+      "size": 2725,
+      "sha256": "4c2a494937c22f1c6f4c964ec5d6a7478edb40f1fa5660b34305b9c30848a59d"
+    },
+    "results/node-5090-20261018/cuda-smoke/analysis/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899-recomputed.json": {
+      "size": 1849,
+      "sha256": "46129645bcc9784cf54e7699be485302ee9bbb7dcc9f8a1df701cda71a3eed4e"
+    },
+    "results/node-5090-20261018/cuda-smoke/analysis/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53-recomputed.json": {
+      "size": 4232,
+      "sha256": "aeeaa28793ad2418a53b7f11e49bb195019be7085e13f629b69501e14a467058"
+    },
+    "results/node-5090-20261018/cuda-smoke/analysis/audit.json": {
+      "size": 1129,
+      "sha256": "e4e48ef600e5224610dc269e2de4c31e3d509ff136b0609aee64a9104000dcc2"
+    },
+    "results/node-5090-20261018/cuda-smoke/analysis/runs.csv": {
+      "size": 1087,
+      "sha256": "0046c0e2d5d589d5c4b51a842b4c982d8d9250cfa9ceb87d3787b6b8a9579d9e"
+    },
+    "results/node-5090-20261018/cuda-smoke/analysis/steady-60s-windows.csv": {
+      "size": 279,
+      "sha256": "2f98daed54739e75526da31ae2da6dd25559b2ed720533d12f1b94dd8c9f5693"
+    },
+    "results/node-5090-20261018/cuda-smoke/catalog.json": {
+      "size": 113,
+      "sha256": "9dcf393d7023050dc786e91fcc14f040a25d6730bf13447bf7da61c43c9db0b6"
+    },
+    "results/node-5090-20261018/cuda-smoke/load-config.json": {
+      "size": 1008,
+      "sha256": "6ba8cb5f9b783775561e3e02196010d04cf1559022e857049b3b516299c5a90d"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/catalog.json": {
+      "size": 137,
+      "sha256": "eeeddbd9f860743e927055cba93cbb712caa172a72a93a5794ab0bf1c4aa4802"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/config.json": {
+      "size": 743,
+      "sha256": "07cbaffe5beb1ac9935212c293847aadc3cd07be0824d0216c205a6d320433d5"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/environment.json": {
+      "size": 499,
+      "sha256": "c087618885c5651d1c9d133a55fa1b74e03cc0b9cab58db4b59077a2caa6486e"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/learning-curve.json": {
+      "size": 1372,
+      "sha256": "cc64675546ec20dc285d2731027f86b516f85f30c32fd7d69ce29c04cefcb105"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/metadata.json": {
+      "size": 4957,
+      "sha256": "d8b68c22013b7239367c06e251c470d0c7bdd3c8b4ac6b88326b39a422021894"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/model.safetensors": {
+      "size": 46304,
+      "sha256": "8e2c35ac36dc8c7bc4658ac19d26c5a2eaa5add4b8bc00da5406b44468ba6477"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/overlap-audit.json": {
+      "size": 269,
+      "sha256": "a5eff97d5fefb6ca7eac16de6c2ce22c405a079db095d57564e28bc9e3e0dab3"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/special_tokens_map.json": {
+      "size": 695,
+      "sha256": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/token-lengths.json": {
+      "size": 168,
+      "sha256": "9fac975b87132a84d0cf9fb3edafd268f2fe76c0eb9fe1e62a4d69091fd627e6"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/tokenizer.json": {
+      "size": 2885,
+      "sha256": "326f2a87975bc647092b00560526a810b8ec3fb7a4fc60055073802086597234"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/tokenizer_config.json": {
+      "size": 1292,
+      "sha256": "0088a6f8bcdd4014184fb068b83ebb12896a9db2bb269a71f73de83fef24bceb"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-request.json": {
+      "size": 1746,
+      "sha256": "4cd729a02c40413c81f9a9f8c1fd382a7a0726ff6b43f71d1cb00b722bf651db"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/requirements-bert.lock.txt": {
+      "size": 1309,
+      "sha256": "dc5919dfd74026b2774982717e9c7e1818fcd1a17bbc9a78b2c31e631920f245"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training-state.json": {
+      "size": 204,
+      "sha256": "c2bd3a80354427f94a90ff9f24fa9e25583df7b02bf1ecad09da8669a10f6b0b"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/training_args.bin": {
+      "size": 5969,
+      "sha256": "91680bd85474da2311851643e89436e59fea1c21fd762d5faaad28630e93a171"
+    },
+    "results/node-5090-20261018/cuda-smoke/model/vocab.txt": {
+      "size": 51,
+      "sha256": "5c77c65c72961c6d61198c996e37777e59a9f9e43960dd2675ff39fa0a792e58"
+    },
+    "results/node-5090-20261018/cuda-smoke/quality-config.json": {
+      "size": 1014,
+      "sha256": "05890c44276594433f670757748a05fa829aebd107501808bbe405e99d0c05d0"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/inputs/catalog-0.json": {
+      "size": 113,
+      "sha256": "9dcf393d7023050dc786e91fcc14f040a25d6730bf13447bf7da61c43c9db0b6"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/inputs/config.yaml": {
+      "size": 1014,
+      "sha256": "05890c44276594433f670757748a05fa829aebd107501808bbe405e99d0c05d0"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/inputs/dataset.jsonl": {
+      "size": 134,
+      "sha256": "6eded93cd1c606f1599aa2dfee3692eeb49b2c8880ca8554e64987d6ceb0ea70"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/manifest.json": {
+      "size": 8100,
+      "sha256": "ed1f6b060e2922f75205c576e991b8a362e59e9db0b3993096dd436584b218e0"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/requests.jsonl": {
+      "size": 1487,
+      "sha256": "b619d922d270124de4829a5ab38a3eab95e678474517929def7273843eb57297"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/summary.json": {
+      "size": 1720,
+      "sha256": "20dbcaf1d954b75e6b65ed278baebee1dd64c72c6710f95eb2c30d546914cffd"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153401Z-synthetic-bert-smoke-quality-de9e3899/warmup_requests.jsonl": {
+      "size": 736,
+      "sha256": "f372f022d9ed7f0930d9c64e81abe67ce8fac948ee492dd8bec1dc578a9af90e"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/inputs/catalog-0.json": {
+      "size": 113,
+      "sha256": "9dcf393d7023050dc786e91fcc14f040a25d6730bf13447bf7da61c43c9db0b6"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/inputs/config.yaml": {
+      "size": 1008,
+      "sha256": "6ba8cb5f9b783775561e3e02196010d04cf1559022e857049b3b516299c5a90d"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/inputs/dataset.jsonl": {
+      "size": 134,
+      "sha256": "6eded93cd1c606f1599aa2dfee3692eeb49b2c8880ca8554e64987d6ceb0ea70"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/manifest.json": {
+      "size": 8092,
+      "sha256": "80474cee1cf06cd24c84c9ef40d351658b09f16268759cc669ab6b1d0eca0592"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/requests.jsonl": {
+      "size": 7315,
+      "sha256": "03f9ed16d5022c4ff0b79a7b03693018c0ceca2890d81e6f79c3d55e9b7ee66c"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/docker-compose.yaml": {
+      "size": 2192,
+      "sha256": "2278f47be0f61bbb4732ac1599f5c500353497acdd50823dc946b4d94069fe02"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/requirements-controller.lock.txt": {
+      "size": 659,
+      "sha256": "e3fd6b1ac0056e02161f41337ef4d4dca56b02560d415b4c3f7c28178481f502"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/aggregate.py": {
+      "size": 1713,
+      "sha256": "e49a1b65fa54ea41719909ea064927805b224dd9d54deec99648ffb386dba952"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/analyze_bert.py": {
+      "size": 8265,
+      "sha256": "be00fe6aae2253ecc342cc1577456d5bcc1ac1e861063932ef9bbf13e896f048"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/bert_experiment.py": {
+      "size": 19203,
+      "sha256": "e670dc831a353b2469159db431af5eea261bf133ab8ece46185ea4d68a5243df"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/bootstrap_bert.py": {
+      "size": 3562,
+      "sha256": "dd4e3b2fc358940510a44e8ef99bb68572ac527f2675e8bbf15e795a2d1230ef"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/check_bert_environment.py": {
+      "size": 2622,
+      "sha256": "0a089ef7061347316a35c15e80ca8cd7977d6f5c24b37bc8a2caa219fbdc2704"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/export_parquet.py": {
+      "size": 462,
+      "sha256": "1184d8656e91c307b9636c4b5d9018e66b64ccbcb099049bee927de9885d8a45"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/monthly_tco.py": {
+      "size": 1045,
+      "sha256": "dd150621c10959364015c41ae41d178fc7f9ee88eb806cebffe49d61f7bb49af"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/package_bert_worker.py": {
+      "size": 3067,
+      "sha256": "f42ffa5ee267bb6175134f6481db78959e8cc7b32884bffea022aebd75ad4e6d"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/prepare_datasets.py": {
+      "size": 7916,
+      "sha256": "e8bd3d5096706e7bd536e46db71a271d72085d663147e10dc9dcfe20406623ff"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/smoke_bert.py": {
+      "size": 7521,
+      "sha256": "9bc1decf10ad8b2aeda140faeae615a2b7ba5e1a0ec40f4a0b00a197834fae67"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/scripts/visualize_experiment_results.py": {
+      "size": 14484,
+      "sha256": "c22458eddca7615a277b6792dddf8051abb29641cafe44e2fc0a3dc6dc628793"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/summary.json": {
+      "size": 1881,
+      "sha256": "cce64d69f7cc6d7ae352e19dfaa6c16864529a82ffe1a602d9057b09d98ea6cb"
+    },
+    "results/node-5090-20261018/cuda-smoke/runs/20261018T153402Z-synthetic-bert-smoke-load-71fe3e53/warmup_requests.jsonl": {
+      "size": 737,
+      "sha256": "9a62c1720e2174ec325272ca019e3aece27bcb78df368c8e130fa834d7b99fc0"
+    },
+    "results/node-5090-20261018/cuda-smoke/service.log": {
+      "size": 1246,
+      "sha256": "999f4b63ba4f11f882c0388243b5665f0b534ace289e62d291988bf52674a2b7"
+    },
+    "results/node-5090-20261018/cuda-smoke/smoke-result.json": {
+      "size": 469,
+      "sha256": "115b2bbb6465cce98522898a97996531ed2be4a9599770164ca42f30dd6a2e1c"
+    },
+    "results/node-5090-20261018/cuda-smoke/test.jsonl": {
+      "size": 134,
+      "sha256": "6eded93cd1c606f1599aa2dfee3692eeb49b2c8880ca8554e64987d6ceb0ea70"
+    },
+    "results/node-5090-20261018/cuda-smoke/tiny-base/config.json": {
+      "size": 568,
+      "sha256": "ca6a12386b3bc03aace93b497fb34db9566e8dfd5f7e3c8bc5157ff9c692c0e0"
+    },
+    "results/node-5090-20261018/cuda-smoke/tiny-base/model.safetensors": {
+      "size": 45896,
+      "sha256": "76c24a546c799cac5336d0e4eeb2d09fe1eb972f14f6b429942124ffd35b7e36"
+    },
+    "results/node-5090-20261018/cuda-smoke/tiny-base/special_tokens_map.json": {
+      "size": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+    },
+    "results/node-5090-20261018/cuda-smoke/tiny-base/tokenizer.json": {
+      "size": 2789,
+      "sha256": "0bd779a3b8513505f3f1b5f9c9fbe97e0275b469787b93a65717656d18a7f939"
+    },
+    "results/node-5090-20261018/cuda-smoke/tiny-base/tokenizer_config.json": {
+      "size": 1292,
+      "sha256": "0088a6f8bcdd4014184fb068b83ebb12896a9db2bb269a71f73de83fef24bceb"
+    },
+    "results/node-5090-20261018/cuda-smoke/tiny-base/vocab.txt": {
+      "size": 51,
+      "sha256": "5c77c65c72961c6d61198c996e37777e59a9f9e43960dd2675ff39fa0a792e58"
+    },
+    "results/node-5090-20261018/cuda-smoke/train.jsonl": {
+      "size": 136,
+      "sha256": "c82f06f1a55b9492ad1907cf650abd763a48ad217721fa2c3ddd8c5c25fb8089"
+    },
+    "results/node-5090-20261018/cuda-smoke/training.log": {
+      "size": 3287,
+      "sha256": "b2e97bcfcdfc8d133866426e0f1d695f34b91563ddf40c96a946f94153ba3e83"
+    },
+    "results/node-5090-20261018/cuda-smoke/validation.jsonl": {
+      "size": 146,
+      "sha256": "d57205ec553b1ff050135a9a4fa7dee383fb61bee9a91eea488b2e4b860506da"
+    },
+    "results/node-5090-20261018/cuda-smoke.json": {
+      "size": 391,
+      "sha256": "76274c8bc9feb52f577263ed66f2c16a00f046d7ad20725908b1348a2ecd69e8"
+    },
+    "results/node-5090-20261018/cuda-smoke.log": {
+      "size": 703,
+      "sha256": "9ae737f947bcbb48334b297062d0239e806bbc4f88c1ddb951a3630563f8409c"
+    },
+    "results/node-5090-20261018/env.sh": {
+      "size": 473,
+      "sha256": "79b5657ec42734738bedf25e94be98a6ec0259b3f508391bd861d2fab818e270"
+    },
+    "results/node-5090-20261018/job-all.log": {
+      "size": 1010,
+      "sha256": "6d362302f13ef6240b7589cc1c8f52d110b97eee59751ceacb427a7b226617b6"
+    },
+    "results/node-5090-20261018/job-quality.log": {
+      "size": 203,
+      "sha256": "cfa56b2e1695406e866d25a35539db3a2e231886be368161ef8c0f1f459638a3"
+    },
+    "results/node-5090-20261018/job-state-previous-20261018T155411899605Z.json": {
+      "size": 350,
+      "sha256": "050478556d363484fac64a891b8eb2d04f38766455f24941d402607904b1c4d3"
+    },
+    "results/node-5090-20261018/job-state.json": {
+      "size": 259,
+      "sha256": "461a3543bf67f89ee3b5413622d822ba1469f3002d0f03cd018ee0b0e528678e"
+    },
+    "results/node-5090-20261018/launch_job.py": {
+      "size": 798,
+      "sha256": "fd96565a696d748e16b05614dc94601456bcb167739eb3099a9e0e9742344b3b"
+    },
+    "results/node-5090-20261018/node_job.py": {
+      "size": 7345,
+      "sha256": "c59c4cc87567a0bd6c6221fc7cde81241f7489015fbf6ae1b3d3330af778da9f"
+    },
+    "results/node-5090-20261018/node_service.py": {
+      "size": 1966,
+      "sha256": "04fd6d17e671f5a75acdf12a4d1d4501bd6ea05e8096162683625def678520d7"
+    },
+    "results/node-5090-20261018/node_status.py": {
+      "size": 2940,
+      "sha256": "8de96301ed3f59445b792f324c8261bccdd0d60d2182d83ffa847de016ffc81e"
+    },
+    "results/node-5090-20261018/per-class-comparison.csv": {
+      "size": 6465,
+      "sha256": "3f4f344b36a43eff9e28f671239545c5e790318b0bc53c79d805f2fb9dc1cdc8"
+    },
+    "results/node-5090-20261018/prefetch-setup.log": {
+      "size": 5974,
+      "sha256": "d59df31ebb7a1b4c31729c8f5729481cf2c8134cfeedabb797d34bc2140636c1"
+    },
+    "results/node-5090-20261018/prefetch-verified.json": {
+      "size": 445,
+      "sha256": "ea13da6fa16198941a57e16b17f83dbaeb88bcb41584220838f1dbf488f3fdb9"
+    },
+    "results/node-5090-20261018/prefetch.log": {
+      "size": 511,
+      "sha256": "11a1ddb963bc17b2b48791f6180330e71977cf3c6e08324747264d30a6faf8da"
+    },
+    "results/node-5090-20261018/prefetch_model.py": {
+      "size": 1081,
+      "sha256": "05962021cdcc13b7fa374fdd9150f6ea093aef8f6827a9d016435fed554e7989"
+    },
+    "results/node-5090-20261018/prepare.json": {
+      "size": 334,
+      "sha256": "0b5d56c3be3438ea5d42d7f9ea8694c32c90be287f754533ea38e35a154000ed"
+    },
+    "results/node-5090-20261018/prepare.log": {
+      "size": 236,
+      "sha256": "424a9c7f165e618c944d3dfdd1bafe8c7dc516a6e4eaaacd2067f28b3d1bd826"
+    },
+    "results/node-5090-20261018/pytest.json": {
+      "size": 253,
+      "sha256": "c66535022f414b22c2c6477e95796123541f0b3589ab0b4a0de13310eede5296"
+    },
+    "results/node-5090-20261018/pytest.log": {
+      "size": 1036,
+      "sha256": "e944256b78477c8383a2ce6be8c10d8607fb07be3674d55e8ea5659030ffa3b6"
+    },
+    "results/node-5090-20261018/quality-seed-42.json": {
+      "size": 486,
+      "sha256": "2fa6cf5ac39bb3df3e5b20afb553e61eae71cc48d5f9d14d1426dbd24d124972"
+    },
+    "results/node-5090-20261018/quality-seed-42.log": {
+      "size": 1049,
+      "sha256": "a0348206e453bf90b1bf127274075bca270b7109802e8273ddd2e3ff02f0fd63"
+    },
+    "results/node-5090-20261018/quality-seed-43-previous-20261018T155417452161Z.log": {
+      "size": 4888,
+      "sha256": "84da05e5efb0538256e7dc93316ed4a288f1c829566045ad82b12dd3abc25922"
+    },
+    "results/node-5090-20261018/quality-seed-43-previous-20261018T155417452318Z.json": {
+      "size": 487,
+      "sha256": "0372a99fe93189e3e7026b8a77e5325b36c8f240189864443590def38afbf060"
+    },
+    "results/node-5090-20261018/quality-seed-43.json": {
+      "size": 486,
+      "sha256": "685f134944c7ebedacaac4fb8d53de2ec3df273695745fa8f14ccb6d6d39fbbd"
+    },
+    "results/node-5090-20261018/quality-seed-43.log": {
+      "size": 1048,
+      "sha256": "7b4b1acd0747a9f6dfd4e036fcbeb1ccfc2b0637b9c2ac69e80f3421cfce4aab"
+    },
+    "results/node-5090-20261018/quality-seed-44.json": {
+      "size": 487,
+      "sha256": "5fe21d41ae78d694a73f244a27fff45300093ff475a52c4d25847190254b360e"
+    },
+    "results/node-5090-20261018/quality-seed-44.log": {
+      "size": 1047,
+      "sha256": "bc31d24d69e309269fec6afa555f6bb13e85bd8195bf7f457d1b3886edede361"
+    },
+    "results/node-5090-20261018/quality-summary.json": {
+      "size": 8991,
+      "sha256": "4954009e6305bc194035629aebdc32f04a2e5aba59adaf567415aba93e78598b"
+    },
+    "results/node-5090-20261018/quality-summary.log": {
+      "size": 8991,
+      "sha256": "4954009e6305bc194035629aebdc32f04a2e5aba59adaf567415aba93e78598b"
+    },
+    "results/node-5090-20261018/selected-service.json": {
+      "size": 420,
+      "sha256": "4cac28ca9fcf367f88b2c1e2512668d7e7432417a4f7a9ffbcf38e20b8c3f242"
+    },
+    "results/node-5090-20261018/selected-service.log": {
+      "size": 2023349,
+      "sha256": "34548ea0406e39a51632c8348315499c7c8b0c985a4859d61d3fde85a62a6cba"
+    },
+    "results/node-5090-20261018/service-seed-42.log": {
+      "size": 545255,
+      "sha256": "1da396e5b019d5628e1506d9e90d08cad205d580d3d8b17a0c60cb028c4a8abe"
+    },
+    "results/node-5090-20261018/service-seed-43-previous-20261018T155411964915Z.log": {
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/node-5090-20261018/service-seed-43.log": {
+      "size": 545315,
+      "sha256": "3af08bef144de5b9970e7eedf0a4d9abca42f9f240760327d329753ac77f063e"
+    },
+    "results/node-5090-20261018/service-seed-44.log": {
+      "size": 545257,
+      "sha256": "01f647bbc36bf4219e80e88413618a92e9168e4a253faed2fe7e0c56bede62ee"
+    },
+    "results/node-5090-20261018/summarize_node.py": {
+      "size": 4997,
+      "sha256": "db9f69435c0b7f7b7d34dea73053323ce62d6433f1a6e28e574b98d439de3a50"
+    },
+    "results/node-5090-20261018/train.json": {
+      "size": 330,
+      "sha256": "51307c8171f248e4ecbfc87880ac5d5cbbe125bf70c852b4d75f2c15465710f8"
+    },
+    "results/node-5090-20261018/train.log": {
+      "size": 390,
+      "sha256": "c4029ac353f6bf8fc10a7a2be4b971a6afc427e3a2080057f66bf293248b2886"
+    },
+    "results/node-5090-20261018/worker-hardware.json": {
+      "size": 296,
+      "sha256": "56cd998b698b3f2e023a5bd115374bbe2acfda91ed6cc71f5f529dcb648de0be"
+    },
+    "models/bert-native-v1/logs/seed-42-20261018T153423554560Z.log": {
+      "size": 123727,
+      "sha256": "351a78dd0b49c9dd91c5ed526b6d68566dd7e237520bcf88491fe77d6a8985c2"
+    },
+    "models/bert-native-v1/logs/seed-43-20261018T153916875232Z.log": {
+      "size": 123542,
+      "sha256": "cc62c109b80c8f3f17893096d2d402340ca7a7306887b9ce89f3a247687fc968"
+    },
+    "models/bert-native-v1/logs/seed-44-20261018T154411805694Z.log": {
+      "size": 123731,
+      "sha256": "7af5d6c337c996abd7c75db7996817d97c11378209eee186d5b1c920f5fb2cb5"
+    },
+    "models/bert-native-v1/seed-42/catalog.json": {
+      "size": 5693,
+      "sha256": "d3b29edaba444e7762bdcdac705d50daeddb1b667910e27dec18018b411225b6"
+    },
+    "models/bert-native-v1/seed-42/config.json": {
+      "size": 3913,
+      "sha256": "706a154121bbc6d734969c33fc345ad541daaec4eef9cb38ea09a998e96ebc0d"
+    },
+    "models/bert-native-v1/seed-42/environment.json": {
+      "size": 499,
+      "sha256": "c087618885c5651d1c9d133a55fa1b74e03cc0b9cab58db4b59077a2caa6486e"
+    },
+    "models/bert-native-v1/seed-42/learning-curve.json": {
+      "size": 2871,
+      "sha256": "70a9c38661e1f51efa8af8d125190f19b6239214a141fb3ccda72350bb1bb211"
+    },
+    "models/bert-native-v1/seed-42/metadata.json": {
+      "size": 6238,
+      "sha256": "65991aa217431eb48ed32f2c780321cb6d4ea9901213ceae1feb512efced75d6"
+    },
+    "models/bert-native-v1/seed-42/model.safetensors": {
+      "size": 438137056,
+      "sha256": "c67e174ef72a9c7607c7c657d75af06a9f41aa88033332055f2121968440ed0b"
+    },
+    "models/bert-native-v1/seed-42/overlap-audit.json": {
+      "size": 3315,
+      "sha256": "6363e3c91c32ade2848f320a0559eea44fd7307f5c8cfd16443504f03e6a565e"
+    },
+    "models/bert-native-v1/seed-42/special_tokens_map.json": {
+      "size": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+    },
+    "models/bert-native-v1/seed-42/token-lengths.json": {
+      "size": 177,
+      "sha256": "44c38c6d34e5cf6df005e80574e2dca8b86d26b3c938e15e63b9a4a1e96f488f"
+    },
+    "models/bert-native-v1/seed-42/tokenizer.json": {
+      "size": 711494,
+      "sha256": "79ea220416a57ca8acdf069d71875d5d2ddadef66021aeb6c120a7c546c04344"
+    },
+    "models/bert-native-v1/seed-42/tokenizer_config.json": {
+      "size": 1221,
+      "sha256": "1f92c93d2e31974acffab86d48e80a9357acb18c68346c5472ef1d12c72d5d77"
+    },
+    "models/bert-native-v1/seed-42/training-request.json": {
+      "size": 1131,
+      "sha256": "7797c9ec362c8718e2fbef739f19b5b0f7f103a6b73618f7d250abfb8a5d72a0"
+    },
+    "models/bert-native-v1/seed-42/training-source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "models/bert-native-v1/seed-42/training-source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "models/bert-native-v1/seed-42/training-source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "models/bert-native-v1/seed-42/training-source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "models/bert-native-v1/seed-42/training-source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "models/bert-native-v1/seed-42/training-source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "models/bert-native-v1/seed-42/training-source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "models/bert-native-v1/seed-42/training-source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "models/bert-native-v1/seed-42/training-source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "models/bert-native-v1/seed-42/training-source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "models/bert-native-v1/seed-42/training-source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "models/bert-native-v1/seed-42/training-source/requirements-bert.lock.txt": {
+      "size": 1309,
+      "sha256": "dc5919dfd74026b2774982717e9c7e1818fcd1a17bbc9a78b2c31e631920f245"
+    },
+    "models/bert-native-v1/seed-42/training-source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "models/bert-native-v1/seed-42/training-source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "models/bert-native-v1/seed-42/training-source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "models/bert-native-v1/seed-42/training-source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "models/bert-native-v1/seed-42/training-source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "models/bert-native-v1/seed-42/training-source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "models/bert-native-v1/seed-42/training-source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "models/bert-native-v1/seed-42/training-source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "models/bert-native-v1/seed-42/training-state.json": {
+      "size": 204,
+      "sha256": "823169a33bd86af8851e72a6f1f6e4d5210bc33161fe85ccf3f076b861cc5f34"
+    },
+    "models/bert-native-v1/seed-42/training_args.bin": {
+      "size": 5969,
+      "sha256": "4a3712b2bb6da6a7aa1affe76161ffbdf297b34ed697015961e50f0d6d6ef8e0"
+    },
+    "models/bert-native-v1/seed-42/vocab.txt": {
+      "size": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    "models/bert-native-v1/seed-43/catalog.json": {
+      "size": 5693,
+      "sha256": "d3b29edaba444e7762bdcdac705d50daeddb1b667910e27dec18018b411225b6"
+    },
+    "models/bert-native-v1/seed-43/config.json": {
+      "size": 3913,
+      "sha256": "706a154121bbc6d734969c33fc345ad541daaec4eef9cb38ea09a998e96ebc0d"
+    },
+    "models/bert-native-v1/seed-43/environment.json": {
+      "size": 499,
+      "sha256": "c087618885c5651d1c9d133a55fa1b74e03cc0b9cab58db4b59077a2caa6486e"
+    },
+    "models/bert-native-v1/seed-43/learning-curve.json": {
+      "size": 2866,
+      "sha256": "6b0f8d429e41a26462651a5a9582519768dd34f33be4f25eeb5dec962e99a937"
+    },
+    "models/bert-native-v1/seed-43/metadata.json": {
+      "size": 6238,
+      "sha256": "c6e8cb08cf57d8a2fbd9c56f5670c686d27c1c8513fa75007cbbd9df8fc27c13"
+    },
+    "models/bert-native-v1/seed-43/model.safetensors": {
+      "size": 438137056,
+      "sha256": "c1d4bea8900a105868d51ef880fdfba116f54db1b0153d716753a65366e8a5fe"
+    },
+    "models/bert-native-v1/seed-43/overlap-audit.json": {
+      "size": 3315,
+      "sha256": "6363e3c91c32ade2848f320a0559eea44fd7307f5c8cfd16443504f03e6a565e"
+    },
+    "models/bert-native-v1/seed-43/special_tokens_map.json": {
+      "size": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+    },
+    "models/bert-native-v1/seed-43/token-lengths.json": {
+      "size": 177,
+      "sha256": "44c38c6d34e5cf6df005e80574e2dca8b86d26b3c938e15e63b9a4a1e96f488f"
+    },
+    "models/bert-native-v1/seed-43/tokenizer.json": {
+      "size": 711494,
+      "sha256": "79ea220416a57ca8acdf069d71875d5d2ddadef66021aeb6c120a7c546c04344"
+    },
+    "models/bert-native-v1/seed-43/tokenizer_config.json": {
+      "size": 1221,
+      "sha256": "1f92c93d2e31974acffab86d48e80a9357acb18c68346c5472ef1d12c72d5d77"
+    },
+    "models/bert-native-v1/seed-43/training-request.json": {
+      "size": 1131,
+      "sha256": "531b7b5c91a3aae5d843f2c7e39990265a2550fb59bedecc9ae88b30eaa55bc2"
+    },
+    "models/bert-native-v1/seed-43/training-source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "models/bert-native-v1/seed-43/training-source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "models/bert-native-v1/seed-43/training-source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "models/bert-native-v1/seed-43/training-source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "models/bert-native-v1/seed-43/training-source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "models/bert-native-v1/seed-43/training-source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "models/bert-native-v1/seed-43/training-source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "models/bert-native-v1/seed-43/training-source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "models/bert-native-v1/seed-43/training-source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "models/bert-native-v1/seed-43/training-source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "models/bert-native-v1/seed-43/training-source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "models/bert-native-v1/seed-43/training-source/requirements-bert.lock.txt": {
+      "size": 1309,
+      "sha256": "dc5919dfd74026b2774982717e9c7e1818fcd1a17bbc9a78b2c31e631920f245"
+    },
+    "models/bert-native-v1/seed-43/training-source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "models/bert-native-v1/seed-43/training-source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "models/bert-native-v1/seed-43/training-source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "models/bert-native-v1/seed-43/training-source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "models/bert-native-v1/seed-43/training-source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "models/bert-native-v1/seed-43/training-source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "models/bert-native-v1/seed-43/training-source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "models/bert-native-v1/seed-43/training-source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "models/bert-native-v1/seed-43/training-state.json": {
+      "size": 204,
+      "sha256": "c127a07e1b9b72244a30a1f29e42da7c560f4fb381f00d280bb164d7b571e4ee"
+    },
+    "models/bert-native-v1/seed-43/training_args.bin": {
+      "size": 5969,
+      "sha256": "25e23844318dd786b57d34baa5e93bb50a12dc61cc9313e864fcc1ce39386840"
+    },
+    "models/bert-native-v1/seed-43/vocab.txt": {
+      "size": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    "models/bert-native-v1/seed-44/catalog.json": {
+      "size": 5693,
+      "sha256": "d3b29edaba444e7762bdcdac705d50daeddb1b667910e27dec18018b411225b6"
+    },
+    "models/bert-native-v1/seed-44/config.json": {
+      "size": 3913,
+      "sha256": "706a154121bbc6d734969c33fc345ad541daaec4eef9cb38ea09a998e96ebc0d"
+    },
+    "models/bert-native-v1/seed-44/environment.json": {
+      "size": 499,
+      "sha256": "c087618885c5651d1c9d133a55fa1b74e03cc0b9cab58db4b59077a2caa6486e"
+    },
+    "models/bert-native-v1/seed-44/learning-curve.json": {
+      "size": 2867,
+      "sha256": "2ad1d8c5d182a04fc885a238d55c572e2005bbbad8c07c384442291b94573231"
+    },
+    "models/bert-native-v1/seed-44/metadata.json": {
+      "size": 6237,
+      "sha256": "8f30105967c10c2127661ffee8464ce1d6d3a3abeb71f8d854f3702f0a991c1a"
+    },
+    "models/bert-native-v1/seed-44/model.safetensors": {
+      "size": 438137056,
+      "sha256": "bd3ea8694f5ae0835cb895d97557852a376b6a7198f4144e9d95e0ac3be5402c"
+    },
+    "models/bert-native-v1/seed-44/overlap-audit.json": {
+      "size": 3315,
+      "sha256": "6363e3c91c32ade2848f320a0559eea44fd7307f5c8cfd16443504f03e6a565e"
+    },
+    "models/bert-native-v1/seed-44/special_tokens_map.json": {
+      "size": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+    },
+    "models/bert-native-v1/seed-44/token-lengths.json": {
+      "size": 177,
+      "sha256": "44c38c6d34e5cf6df005e80574e2dca8b86d26b3c938e15e63b9a4a1e96f488f"
+    },
+    "models/bert-native-v1/seed-44/tokenizer.json": {
+      "size": 711494,
+      "sha256": "79ea220416a57ca8acdf069d71875d5d2ddadef66021aeb6c120a7c546c04344"
+    },
+    "models/bert-native-v1/seed-44/tokenizer_config.json": {
+      "size": 1221,
+      "sha256": "1f92c93d2e31974acffab86d48e80a9357acb18c68346c5472ef1d12c72d5d77"
+    },
+    "models/bert-native-v1/seed-44/training-request.json": {
+      "size": 1131,
+      "sha256": "1bc40ed451973d5fe4cfbea62045a2c655549b3874151748a51d43a61b8f54c9"
+    },
+    "models/bert-native-v1/seed-44/training-source/decisionbench/__init__.py": {
+      "size": 72,
+      "sha256": "e2ff1cd19eec0eb4d84d6434837b11c3e31a527b39691c614bdc87471db82492"
+    },
+    "models/bert-native-v1/seed-44/training-source/decisionbench/adapters.py": {
+      "size": 7488,
+      "sha256": "49a54513f1fc49a50fd1166e53c19f0e3a52ffbbef8a0a26e7483715fcfea4ab"
+    },
+    "models/bert-native-v1/seed-44/training-source/decisionbench/artifacts.py": {
+      "size": 3735,
+      "sha256": "516132bcea02262fc09be54e54db36f2500967e869395f427f70f72fdd5752e6"
+    },
+    "models/bert-native-v1/seed-44/training-source/decisionbench/bert_analysis.py": {
+      "size": 5178,
+      "sha256": "628c410ef9dcc4b3ae61dc94c03c2d0f60bd5f84284d066430a0ab3a6a89183a"
+    },
+    "models/bert-native-v1/seed-44/training-source/decisionbench/cli.py": {
+      "size": 6571,
+      "sha256": "c0f4ae4af77fc1a074f0e2a1905a700ecce948d2ccf82b25bb40e39e7b557af6"
+    },
+    "models/bert-native-v1/seed-44/training-source/decisionbench/config.py": {
+      "size": 2989,
+      "sha256": "6410fed9472c6743a7d4ce901210b99ed657e4915ca7a962c929cf57ec55db36"
+    },
+    "models/bert-native-v1/seed-44/training-source/decisionbench/datasets.py": {
+      "size": 2208,
+      "sha256": "78a317fb0afd45eb7c8b591f57e07b3a62621b43765523debfb85a9ced884817"
+    },
+    "models/bert-native-v1/seed-44/training-source/decisionbench/metrics.py": {
+      "size": 8787,
+      "sha256": "84661091315433e35d1c169cafab8fa1c3b3c032fe12b911ac322b88edc06f4a"
+    },
+    "models/bert-native-v1/seed-44/training-source/decisionbench/protocol.py": {
+      "size": 2555,
+      "sha256": "97de2957f81739a4e80007dc6882671051f633b67be27bb60895c68fc44994e9"
+    },
+    "models/bert-native-v1/seed-44/training-source/decisionbench/runners.py": {
+      "size": 7296,
+      "sha256": "5e6239ce0618f420b1dec65bb212ccd5b42f25276465bcac1887bfbbb43a2703"
+    },
+    "models/bert-native-v1/seed-44/training-source/pyproject.toml": {
+      "size": 981,
+      "sha256": "93774b0d0b9277a1726d26351271cc041ee4a7133af58601c1110ad8263b6ed0"
+    },
+    "models/bert-native-v1/seed-44/training-source/requirements-bert.lock.txt": {
+      "size": 1309,
+      "sha256": "dc5919dfd74026b2774982717e9c7e1818fcd1a17bbc9a78b2c31e631920f245"
+    },
+    "models/bert-native-v1/seed-44/training-source/services/__init__.py": {
+      "size": 55,
+      "sha256": "1130fce96150e5678db29a5dedbef97050e11ce2eac6cf275379e946e27b4dd3"
+    },
+    "models/bert-native-v1/seed-44/training-source/services/bert_server.py": {
+      "size": 65,
+      "sha256": "175f0bdbf6520e30935dbbe3bb56bc36e8853d960102d0afb3517af983d6eb6b"
+    },
+    "models/bert-native-v1/seed-44/training-source/services/bert_support.py": {
+      "size": 2026,
+      "sha256": "356349ec68b0ac5450f524f10c6599c6ba878d20942488b1c3febf551c913558"
+    },
+    "models/bert-native-v1/seed-44/training-source/services/classic_server.py": {
+      "size": 68,
+      "sha256": "8c75aa2c8d70f4a7f1410cf0335ec3e755b5992a8ad724f7a9fe348b171cf0b3"
+    },
+    "models/bert-native-v1/seed-44/training-source/services/common.py": {
+      "size": 2410,
+      "sha256": "4eaa7bae9611e0eea9cffc64ba3e9a3a9dda6b52de5b7a76c594cae022d9e4b2"
+    },
+    "models/bert-native-v1/seed-44/training-source/services/server.py": {
+      "size": 6199,
+      "sha256": "ceb4d798f90db288c6d4e930a858d05e1feed7fa9db1a72cba8ce00a4a336c28"
+    },
+    "models/bert-native-v1/seed-44/training-source/services/train_bert.py": {
+      "size": 13491,
+      "sha256": "900e4dc902711b95a4cb83730d0db53b180a83f4366f9c53124a7946d01f92e4"
+    },
+    "models/bert-native-v1/seed-44/training-source/services/train_classic.py": {
+      "size": 1347,
+      "sha256": "db5a5e516177819468ddb8d4d3ea34392d9369da0201b7c7b4509e6979c4229b"
+    },
+    "models/bert-native-v1/seed-44/training-state.json": {
+      "size": 205,
+      "sha256": "f874e04b579df581dfd16777598f4c8e7b2c8481620237e49bffaf7f72968686"
+    },
+    "models/bert-native-v1/seed-44/training_args.bin": {
+      "size": 5969,
+      "sha256": "2cbd17b6f3c2b36ec4bc07c4d1b195b1479ff4106de1922c9ef93421ac05f6ef"
+    },
+    "models/bert-native-v1/seed-44/vocab.txt": {
+      "size": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    "models/bert-native-v1/selection.json": {
+      "size": 123,
+      "sha256": "fdfec3adee57d10528c4dc3fbe8d01b7d78748e3c2dbb31e60da6ed027fb753e"
+    },
+    "experiments/bert-native-v1/plan.json": {
+      "size": 5109,
+      "sha256": "783c1d1433b52427915db22514289ddd192a474c16543a8d1001c8d7b4594c5c"
+    },
+    "experiments/bert-native-v1/plan.sha256.json": {
+      "size": 88,
+      "sha256": "23438d2387641c851759eb2ff5f4161d40ef48ecb008a4386511a0872a3f7a8e"
+    },
+    "data/normalized/massive-bert-native-v1/catalog.json": {
+      "size": 5669,
+      "sha256": "2addd6f63ec98d3b526a814c6051e8056c06101176583b5681c9c841fff19afd"
+    },
+    "data/normalized/massive-bert-native-v1/checkpoint-300.jsonl": {
+      "size": 35654,
+      "sha256": "c24d58f321de3e07dfa86d013bbb81fcaa943115421c048e9dbc547caf0b00c1"
+    },
+    "data/normalized/massive-bert-native-v1/provenance.json": {
+      "size": 1235,
+      "sha256": "3ef8471d12622722bcef1671c4e54dbf7915f186067feb46a280e5dc1367d36d"
+    },
+    "data/normalized/massive-bert-native-v1/test.jsonl": {
+      "size": 338626,
+      "sha256": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "data/normalized/massive-bert-native-v1/train.jsonl": {
+      "size": 1329133,
+      "sha256": "80e270f2c5225cb8af8ed2f0ff045ae0aa8f5d3cfe0219e21777163cb2c0dc32"
+    },
+    "data/normalized/massive-bert-native-v1/validation.jsonl": {
+      "size": 244202,
+      "sha256": "f6baf150cb919ece086aa730bcefddf61045d572c03773d1048497068fe9aca2"
+    }
+  },
+  "note": "Final weights included; optimizer checkpoints excluded and retained on worker. This manifest excludes its own hash; archive SHA256 is supplied separately.",
+  "best_checkpoint_weight_hashes": {
+    "42": "c67e174ef72a9c7607c7c657d75af06a9f41aa88033332055f2121968440ed0b",
+    "43": "c1d4bea8900a105868d51ef880fdfba116f54db1b0153d716753a65366e8a5fe",
+    "44": "bd3ea8694f5ae0835cb895d97557852a376b6a7198f4144e9d95e0ac3be5402c"
+  }
+}

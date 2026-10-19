@@ -1,0 +1,327 @@
+{
+  "seeds": [
+    {
+      "seed": 42,
+      "model_version": "bert:faad5c920150b6d1",
+      "dev_accuracy": 0.8898180029513035,
+      "dev_macro_f1": 0.8353578469178368,
+      "best_checkpoint": "/root/autodl-tmp/Disicion-Models-Comparation/models/bert-native-v1/seed-42/checkpoints/checkpoint-2880",
+      "training_wall_s": 291.9950998048298,
+      "cuda_peak_allocated_bytes": 2211149824,
+      "test_accuracy": [
+        0.8880295897780767,
+        0.8880295897780767,
+        0.8880295897780767
+      ],
+      "test_macro_f1": [
+        0.8183915328008826,
+        0.8183915328008826,
+        0.8183915328008826
+      ],
+      "success_rate": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_correct": 2641,
+      "test_samples": 2974,
+      "inference_repeats": 3,
+      "repeat_prediction_disagreements": [
+        0,
+        0
+      ],
+      "top_confusions": [
+        {
+          "expected": "general_quirky",
+          "predicted": "qa_factoid",
+          "count": 16
+        },
+        {
+          "expected": "qa_factoid",
+          "predicted": "general_quirky",
+          "count": 10
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "calendar_query",
+          "count": 9
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "news_query",
+          "count": 9
+        },
+        {
+          "expected": "calendar_set",
+          "predicted": "calendar_query",
+          "count": 6
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "calendar_set",
+          "count": 6
+        },
+        {
+          "expected": "lists_remove",
+          "predicted": "calendar_remove",
+          "count": 5
+        },
+        {
+          "expected": "transport_query",
+          "predicted": "transport_traffic",
+          "count": 5
+        },
+        {
+          "expected": "qa_definition",
+          "predicted": "general_quirky",
+          "count": 5
+        },
+        {
+          "expected": "social_post",
+          "predicted": "general_quirky",
+          "count": 5
+        },
+        {
+          "expected": "datetime_convert",
+          "predicted": "datetime_query",
+          "count": 4
+        },
+        {
+          "expected": "email_sendemail",
+          "predicted": "email_addcontact",
+          "count": 4
+        }
+      ],
+      "runs": [
+        "results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450",
+        "results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3",
+        "results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1"
+      ]
+    },
+    {
+      "seed": 43,
+      "model_version": "bert:ebf03676ca195940",
+      "dev_accuracy": 0.8908017707820954,
+      "dev_macro_f1": 0.8309763329886443,
+      "best_checkpoint": "/root/autodl-tmp/Disicion-Models-Comparation/models/bert-native-v1/seed-43/checkpoints/checkpoint-3600",
+      "training_wall_s": 293.6459300527349,
+      "cuda_peak_allocated_bytes": 2210428928,
+      "test_accuracy": [
+        0.8940820443846671,
+        0.8940820443846671,
+        0.8940820443846671
+      ],
+      "test_macro_f1": [
+        0.8224907423217725,
+        0.8224907423217725,
+        0.8224907423217725
+      ],
+      "success_rate": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_correct": 2659,
+      "test_samples": 2974,
+      "inference_repeats": 3,
+      "repeat_prediction_disagreements": [
+        0,
+        0
+      ],
+      "top_confusions": [
+        {
+          "expected": "general_quirky",
+          "predicted": "qa_factoid",
+          "count": 15
+        },
+        {
+          "expected": "qa_factoid",
+          "predicted": "general_quirky",
+          "count": 10
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "news_query",
+          "count": 9
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "calendar_query",
+          "count": 8
+        },
+        {
+          "expected": "calendar_set",
+          "predicted": "calendar_query",
+          "count": 6
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "calendar_set",
+          "count": 6
+        },
+        {
+          "expected": "qa_definition",
+          "predicted": "general_quirky",
+          "count": 5
+        },
+        {
+          "expected": "play_music",
+          "predicted": "play_audiobook",
+          "count": 5
+        },
+        {
+          "expected": "transport_query",
+          "predicted": "recommendation_locations",
+          "count": 4
+        },
+        {
+          "expected": "qa_maths",
+          "predicted": "general_quirky",
+          "count": 4
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "play_music",
+          "count": 4
+        },
+        {
+          "expected": "news_query",
+          "predicted": "general_quirky",
+          "count": 4
+        }
+      ],
+      "runs": [
+        "results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712",
+        "results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b",
+        "results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec"
+      ]
+    },
+    {
+      "seed": 44,
+      "model_version": "bert:8a709f1b845eb953",
+      "dev_accuracy": 0.8888342351205115,
+      "dev_macro_f1": 0.8197645756298558,
+      "best_checkpoint": "/root/autodl-tmp/Disicion-Models-Comparation/models/bert-native-v1/seed-44/checkpoints/checkpoint-3600",
+      "training_wall_s": 295.74253482418135,
+      "cuda_peak_allocated_bytes": 2208593920,
+      "test_accuracy": [
+        0.8913920645595158,
+        0.8913920645595158,
+        0.8913920645595158
+      ],
+      "test_macro_f1": [
+        0.827693589040889,
+        0.827693589040889,
+        0.827693589040889
+      ],
+      "success_rate": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_correct": 2651,
+      "test_samples": 2974,
+      "inference_repeats": 3,
+      "repeat_prediction_disagreements": [
+        0,
+        0
+      ],
+      "top_confusions": [
+        {
+          "expected": "general_quirky",
+          "predicted": "qa_factoid",
+          "count": 15
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "news_query",
+          "count": 10
+        },
+        {
+          "expected": "general_quirky",
+          "predicted": "calendar_query",
+          "count": 8
+        },
+        {
+          "expected": "qa_factoid",
+          "predicted": "general_quirky",
+          "count": 7
+        },
+        {
+          "expected": "qa_definition",
+          "predicted": "general_quirky",
+          "count": 6
+        },
+        {
+          "expected": "calendar_query",
+          "predicted": "calendar_set",
+          "count": 6
+        },
+        {
+          "expected": "lists_remove",
+          "predicted": "calendar_remove",
+          "count": 5
+        },
+        {
+          "expected": "audio_volume_other",
+          "predicted": "audio_volume_up",
+          "count": 5
+        },
+        {
+          "expected": "weather_query",
+          "predicted": "general_quirky",
+          "count": 5
+        },
+        {
+          "expected": "calendar_set",
+          "predicted": "calendar_query",
+          "count": 5
+        },
+        {
+          "expected": "play_radio",
+          "predicted": "play_music",
+          "count": 5
+        },
+        {
+          "expected": "play_game",
+          "predicted": "play_music",
+          "count": 4
+        }
+      ],
+      "runs": [
+        "results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f",
+        "results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b",
+        "results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765"
+      ]
+    }
+  ],
+  "selection": {
+    "seed": 42,
+    "criterion": "validation macro_f1, accuracy, smaller seed",
+    "model_version": "bert:faad5c920150b6d1"
+  },
+  "selected_test_accuracy": 0.8880295897780767,
+  "mean_accuracy_across_training_seeds": 0.8911678995740865,
+  "sample_sd_accuracy_across_training_seeds": 0.003032447715415521,
+  "mean_macro_f1_across_training_seeds": 0.822858621387848,
+  "sample_sd_macro_f1_across_training_seeds": 0.004661927050963229,
+  "total_training_wall_s": 881.3835646817461,
+  "baseline_accuracy": {
+    "qwen": [
+      0.4593140551445864,
+      0.4593140551445864,
+      0.4593140551445864
+    ],
+    "jev": [
+      0.8604572965702757,
+      0.8614660390047074,
+      0.8618022864828514
+    ]
+  },
+  "note": "Native MASSIVE en-US splits retained. One unique test set of 2974 rows; inference repeats are not independent samples. Same-node quality latency is not independent-controller capacity.",
+  "test_token_lengths": {
+    "count": 2974,
+    "max_tokens": 64,
+    "truncated_count_at_128": 0
+  }
+}

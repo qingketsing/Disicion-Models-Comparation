@@ -1,0 +1,5 @@
+{
+  "seed": 42,
+  "criterion": "validation macro_f1, accuracy, smaller seed",
+  "model_version": "bert:faad5c920150b6d1"
+}

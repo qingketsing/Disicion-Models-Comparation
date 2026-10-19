@@ -1,10 +1,10 @@
 # DecisionBench
 
-## BERT 实验实现（2026-10-18）
+## BERT 实验实现与 RTX 5090 实测（2026-10-18/19）
 
-[BERT 节点执行手册](docs/BERT_RUNBOOK.md) · [实验方案](docs/BERT_EXPERIMENT_PLAN_20261018.md)
+[BERT 实测报告](reports/bert-5090-20261019/REPORT.md) · [复算与复现](reports/bert-5090-20261019/REPRODUCE.md) · [BERT 节点执行手册](docs/BERT_RUNBOOK.md) · [实验方案](docs/BERT_EXPERIMENT_PLAN_20261018.md)
 
-BERT 现已提供独立环境安装/自检、原生 MASSIVE 数据准备、固定模型 commit、三种子训练、验证集最佳 checkpoint、断点续训、CPU/GPU 服务与完整 test/开放环负载入口、60 秒窗口及配对离线分析。按本次用户要求保留原生数据，文本重叠只警告并记录。本地小型 BERT 的 CPU 链路已验证；真实节点训练、CUDA 和容量结果仍待执行。后文 v0.1 状态描述为历史起点，BERT 当前入口以节点手册为准。
+BERT 现已提供独立环境安装/自检、原生 MASSIVE 数据准备、固定模型 commit、三种子训练、验证集最佳 checkpoint、断点续训、CPU/GPU 服务与完整 test/开放环负载入口、60 秒窗口及配对离线分析。按本次用户要求保留原生数据，文本重叠只警告并记录。RTX 5090 上已完成 CUDA 验证、42 项测试、三种子 BERT-base 训练与九轮完整质量评测：训练种子平均 Accuracy 89.12%、全 60 类 Macro-F1 82.29%。独立 Windows Controller 经 SSH 的 32 RPS 初测三轮通过、64 RPS 三轮失败；尚未执行正式容量确认。后文 v0.1 状态描述为历史起点，BERT 当前入口与验证范围以节点手册及实测报告为准。
 
 ## Qwen / Jev 实测结果（2026-10-14/15）
 

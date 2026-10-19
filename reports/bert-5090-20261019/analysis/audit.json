@@ -1,0 +1,82 @@
+{
+  "inputs": {
+    "./results/20261018T154916Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep1-3ec62450": {
+      "manifest.json": "bcde59cea4f9f46e03aeb8b5f08a962411c6afcc3c73ecc0db2efe6cb252e3df",
+      "requests.jsonl": "af738633a4855f06d3c83b97e2193ef513a67412d787ff29cf2ad5083fc089d5",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T155035Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep2-4e1ab7e3": {
+      "manifest.json": "961fdd4a60c877bc87d65a5b438aa963bf8dacf99ccb2f49df082b21eabb7728",
+      "requests.jsonl": "2b5e2da2c9b1d64dc0c86988ddd34085f89f8e94790fa96ab0948054c9653263",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T155157Z-massive-bert-native-v1-quality-cuda-s42-rNone-rep3-f79ca1d1": {
+      "manifest.json": "9f23df4d26d7f53f9116a689828ece7407cf2be1eb5ff01abf63fd7e83a6f811",
+      "requests.jsonl": "a58e880928d78fada05de64041f03995b54259e290c5555e1c83659672035f6c",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T155417Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep1-2e22c712": {
+      "manifest.json": "2bf9760b636482a2db75f047fc3cc4627d99dcdbc4934bc6bd2d9a53138ce367",
+      "requests.jsonl": "d577ab5472e59d8d08dd8958d0d65638675a73fc973dbf808a91939a2c336c58",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T155543Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep2-b5b9525b": {
+      "manifest.json": "5cedbf09e8c7ffb03965a7e1b7075b467d615ff8bc70cba4ea704a031b79a8cc",
+      "requests.jsonl": "ee582321aebcd2304baa4343350f67a726b39fbd4037ef955967e7b55c80972e",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T155703Z-massive-bert-native-v1-quality-cuda-s43-rNone-rep3-f10968ec": {
+      "manifest.json": "4a41071ba509e44737bcd8f19bac9087113f69891a0b83efee86c0342bcc3795",
+      "requests.jsonl": "9243029f8029f3ee933d0ffb6428d62004b22b951055c4eca3dc1a4e189b6887",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T155813Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep1-cbb8427f": {
+      "manifest.json": "5b9cfb48d5bc183aee05f682efc422516d3f2a6aec8ea609228085147afe548f",
+      "requests.jsonl": "9d6125b0e570b97b344ce333d2960ce6763d7d125efaa82cd7ce7d10c98d4536",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T155937Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep2-81e2bb2b": {
+      "manifest.json": "109fd1fdb514d0cc3001eee3c365d82382a717fd87f024bc117b3a1648457f23",
+      "requests.jsonl": "9465068a3ce8d6d54194eada623f61a8d925b8a53e0bd2ee0a42054baff2410a",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T160053Z-massive-bert-native-v1-quality-cuda-s44-rNone-rep3-5a080765": {
+      "manifest.json": "fc50bfa88f3a55c73ef8bfb8d9ed2b4302ec34554ab0c684e0dfe982734e2d49",
+      "requests.jsonl": "5e447486a928d8df4d8d98877746e7fecee426df387526c3d90b941f666fb293",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T160301Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep1-4ea8ff38": {
+      "manifest.json": "9d356b48ab81a839c3b8c0ba4b71c57101bc024e9cd601860d0458660db602d0",
+      "requests.jsonl": "dd51bfa1fa9637c77a9decc4dcd591838ebe094bffea74ab5730f6413bdecfba",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T160535Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep2-c58c0864": {
+      "manifest.json": "00446f5130475bf6d4e73beed6838134afd2304a67b29d861b1fd6a1c194ee7e",
+      "requests.jsonl": "64212f802d35deb81126b844a70402633447a5a35e10dcfc3f3e79bb3db5cf76",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T160809Z-massive-bert-native-v1-pilot-cuda-s42-r32_0-rep3-aea6bfc7": {
+      "manifest.json": "1114cf40e347d617a246e8b5a5fc11926f4637aca1803c83d76b72cdcc5d954d",
+      "requests.jsonl": "d7e99908de86be132cd665ce569b03162d14272d3de2246bd313e26b49324242",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T161043Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep1-fc120358": {
+      "manifest.json": "201f830a2e755f4f05d4ee4cb0e86ebc176a336fdfe6383afb6d4c3b4f081717",
+      "requests.jsonl": "2f64fb7dd259d55e93755f396c7f950adccada4912feba4a6d456533599cb172",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T161318Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep2-9c12e08d": {
+      "manifest.json": "81beb8980c6478890cd33986026b724760027647128d42ba3cb623005e219989",
+      "requests.jsonl": "2ede8d4b1cd2b1ba9da3172e285afc6b95172b260cfec6bb72a4b79b8146273d",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    },
+    "./results/20261018T161554Z-massive-bert-native-v1-pilot-cuda-s42-r64_0-rep3-c0bad2d4": {
+      "manifest.json": "f4a2795a5db7650ee9b2e413e5ebdcf7fe19a4945496681ddaae4fc16d78dbb6",
+      "requests.jsonl": "296add83371318114ccb496f971ecd864b7afcba233354285eab6da0d7162659",
+      "inputs/dataset.jsonl": "a31f42390e72950b60518ec8ddb121136650fa2d875619a41dc9654df7af471d"
+    }
+  },
+  "capacity_points": [],
+  "baseline_sha256": "da65d98816634e79027c8f74902ebb3f212c0d9aaea320cbe6cb21cb0cbd74ad",
+  "note": "Repeated samples are not pooled. Capacity is deployment-specific and technical only. Training uncertainty and sample bootstrap uncertainty must be reported separately."
+}
